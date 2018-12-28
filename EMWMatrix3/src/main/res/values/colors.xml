@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey"> #ebebeb</color>
+    <color name="gary">#898989</color>
+    <color name="gray_bg">#f5f5f5</color>
+    <color name="darkgrey"> #999999</color>
+    <color name="base_title_color">#464a4d</color>
+    <color name="img_preesed_color">#4d5255</color>
+
+
+    <color name="theme_body">#cc22292c</color>
+    <color name="status_bar">#303135</color>
+    <!-- 公用 start -->
+    <color name="list_view_bg">#80FAFBFD</color>
+    <color name="listmove_bg">#14acae</color>
+    <color name="login_bg">#E95506</color>
+    <color name="cm_bg">#FAFBFD</color>
+    <color name="cm_new_page_bg">#EDEEEF</color>
+    <color name="cm_header_bg">#FF335B9D</color>
+    <color name="cm_tabstrip_bg">#F3F6FA</color>
+    <color name="cm_tabstrip_indicator">#337DD7</color>
+    <color name="cm_main_text">#FF4C0D</color>
+    <color name="cm_text">#202020</color>
+    <color name="cm_texthint">#FF808389</color>
+    <color name="cm_select_text">#2097EF</color>
+    <color name="cm_search_texthint">#9FA9BA</color>
+    <color name="cm_empty_text">#858585</color>
+    <color name="cm_network_text">#626262</color>
+    <color name="cm_divider_bg">#1A000000</color>
+    <color name="cm_headimg_border">#E5E5E5</color>
+    <color name="cm_dialog_bg">#80000000</color>
+    <color name="cm_dialogcontent_bg">#F8F8F8</color>
+    <!--<color name="segmentedgroup_tint_text">#169BFF</color>-->
+    <color name="segmentedgroup_tint_text">@color/cm_main_text</color>
+    <color name="segmentedgroup_checked_text">#FFFFFF</color>
+    <color name="light_blue">#335B9D</color>
+    <color name="cm_me_exit">#E2604E</color>
+    <color name="cm_intimate_title">#5FC26D</color>
+    <color name="activity_divider_bg">#D3E6F7</color>
+    <color name="title_back">#D2604A</color>
+    <color name="map_nei">#20D0021B</color>
+    <color name="map_wai">#90D0021B</color>
+    <color name="alertdialog_del_text">#E2604E</color>
+    <color name="image_selected_color">#7f000000</color>
+
+    <color name="icon_color1">#335b9d</color>
+    <color name="icon_color2">#5C74D8</color>
+    <color name="icon_color3">#4FA5E2</color>
+    <color name="icon_color4">#0074FF</color>
+    <color name="icon_color5">#169BFF</color>
+    <color name="icon_color6">#00C4E0</color>
+    <color name="icon_color7">#1ABC9C</color>
+    <color name="icon_color8">#5ECBB0</color>
+    <color name="icon_color9">#FF953B</color>
+    <color name="icon_color10">#DC6E6E</color>
+    <!-- 公用 end -->
+
+    <!-- 引导 start -->
+    <color name="guide_viewpager_bg">#BDBDBD</color>
+    <!-- 引导 end -->
+
+    <!-- 登录 start -->
+    <color name="login_texthint">#BBBBBB</color>
+    <color name="login_divider_bg">#CBCBCB</color>
+    <!-- 登录 end -->
+
+    <!-- 主界面 start -->
+    <color name="main_menu_bg">#38454F</color>
+    <color name="main_menuitem_bg">#2B343C</color>
+    <color name="main_menuitem_pressed">#E2604E</color>
+    <color name="main_divider_bg">#CDCDCD</color>
+    <color name="main_tabtext_normal">#979797</color>
+    <color name="main_tabtext_select">#169BFF</color>
+    <color name="maincontact_tabstrip_bg">#FFFFFF</color>
+    <color name="mainme_text">#333333</color>
+    <color name="mainme_numbar_bg">#6A7CA0</color>
+    <color name="mainme_numbar_text">#595968</color>
+    <!-- 主界面 end -->
+
+    <!-- 动态 start -->
+    <color name="dynamic_name_text">@color/cm_text</color>
+    <color name="dynamic_content_text">@color/cm_text</color>
+    <color name="dynamic_time_text">@color/cm_texthint</color>
+    <color name="dynamic_count_text">#989898</color>
+    <color name="dynamic_other_bg">#F8F8FC</color>
+    <color name="dynamic_title_text">@color/cm_text</color>
+    <color name="dynamicdetail__text">#585D68</color>
+    <color name="dynamicdetail_divider_bg">#E1E3E6</color>
+    <color name="dynamicdetail_content_bg">#F3F6FA</color>
+    <color name="dynamicdetail_content_texthint">#6484AB</color>
+    <color name="dynamicreply_name_text">#4A90E2</color>
+    <color name="dynamicreply_reply_text">#585D68</color>
+    <color name="dynamicschedule_date_text">#595968</color>
+    <color name="dynamicshareto_name_text">#7BADE9</color>
+    <color name="dynamiclink_urlname_text">@color/cm_text</color>
+    <color name="dynamiclink_url_text">#757575</color>
+    <color name="dynamicvote_count_text">#9A9A9A</color>
+    <color name="dynamicvote_vote_text">#333333</color>
+    <color name="dynamicfile_name_text">#101010</color>
+    <color name="dynamicfile_size_text">#989898</color>
+    <color name="dynamicvote_name_text">@color/cm_texthint</color>
+    <color name="dynamicvote_percent_text">@color/cm_texthint</color>
+    <color name="dynamicplan_content_text">#263238</color>
+    <color name="dynamicplan_finishtime_text">#999999</color>
+    <color name="dynamicallot_name_text">@color/cm_text</color>
+    <color name="dynamicallot_desc_text">#757575</color>
+    <color name="dynamicallot_time_text">#989898</color>
+    <color name="dynamicdate_name_text">#101010</color>
+    <color name="dynamicdate_address_text">#989898</color>
+    <color name="dynamicdate_desc_text">#757575</color>
+
+    <color name="dynamicadd_tab_text">#989898</color>
+    <color name="dynamicadd_tabselect_text">#FA8E00</color>
+    <color name="dynamicadd_add_text">#00A2ED</color>
+    <color name="dynamicadd_sharetitle_text">#9B9B9B</color>
+    <color name="dynamicadd_sharelink_text">#354052</color>
+    <color name="dynamicadd_sharevote_text">#595968</color>
+    <color name="dynamicadd_shareto_text">#169BFF</color>
+    <color name="dynamicadd_allot_text">#6484AB</color>
+    <color name="dynamicadd_plan_text">#6484AB</color>
+    <!-- 动态 end -->
+
+    <!-- 知识库 start -->
+    <color name="filelist_more_text">#808080</color>
+    <color name="filedetail_title_text">#6484AB</color>
+    <color name="filedetail_divider_bg">#E7E7E7</color>
+    <color name="filecreate_title_text">#8D8E97</color>
+    <!-- 知识库 end -->
+
+    <!-- 聊天 start -->
+    <color name="chat_btn">#169BFF</color>
+    <color name="chat_time_text">#515151</color>
+    <!-- 聊天 end -->
+
+    <!-- 我 start -->
+    <color name="meconcern_text">#333333</color>
+    <color name="mewait_sort_text">#169BFF</color>
+    <color name="mewait_time_text">#7F7F7F</color>
+    <color name="meabout_text">#333333</color>
+    <color name="mesetting_title_text">#354052</color>
+    <color name="mechange_title_text">#6484AB</color>
+    <color name="mesuggestion_title_text">#6484AB</color>
+    <!-- 我 end -->
+
+    <!-- 任务 start -->
+    <color name="task_title_text">#6484AB</color>
+    <color name="task_group_text">#666666</color>
+    <color name="tasksummarize_bottom_text">#169BFF</color>
+    <color name="tasksprint_time_text">#7F7F7F</color>
+    <color name="task_modify_charge">#101010</color>
+    <color name="task_group_processing_text">#33D0E7</color>
+    <color name="task_group_unstart_text">#FB7B94</color>
+    <color name="task_group_finish_text">#3CC56D</color>
+    <color name="task_create_text">#595968</color>
+    <color name="task_normal">#00C4E0</color>
+    <color name="task_emergency">#FF7E00</color>
+    <color name="task_very_emergency">#F95A79</color>
+    <color name="delay_time_color">#E6676A</color>
+
+    <!-- 任务 end -->
+
+    <!-- 项目 start -->
+    <color name="project_title1_text">#6484AB</color>
+    <color name="project_title2_text">#666666</color>
+
+    <!-- project 颜色 -->
+    <color name="project_color1">#4CC1FF</color>
+    <color name="project_color2">#FF9E4B</color>
+    <color name="project_color3">#FF5D5D</color>
+    <color name="project_color4">#2599F3</color>
+
+    <!-- 状态颜色 -->
+    <color name="state_color_unstart">#F5A623</color>
+    <color name="state_color_processing">#3BBBFF</color>
+    <color name="state_color_finished">#37B248</color>
+    <color name="state_color_delay">#FF362B</color>
+
+    <!-- 任务颜色 -->
+    <color name="task_color1">#3BBBFF</color>
+    <color name="task_color2">#FBB172</color>
+    <color name="task_color3">#F15151</color>
+
+    <color name="project_state_color1">#3BBBFF</color>
+    <color name="project_state_color2">#F5A623</color>
+    <color name="project_state_color3">#37B248</color>
+    <color name="project_state_color4">#D0021B</color>
+    <color name="invite_title_color">#7F8FA4</color>
+    <color name="project_color_CBCBCB">#CBCBCB</color>
+    <color name="project_color_335B9D">#335B9D</color>
+    <!-- 项目 end -->
+
+    <!-- 通讯录 -->
+    <color name="contact_group_info_title">#4E4E4E</color>
+    <color name="contact_group_member_tv">#4E4E4E</color>
+    <color name="contact_edit_text">#333333</color>
+    <color name="contact_edit_text_hint">#999999</color>
+    <color name="contact_un_into">#F5F5FA</color>
+    <color name="contact_person_list_bg">#F5F5FA</color>
+    <color name="contact_person_info_title_tv">#6484AB</color>
+    <color name="contact_person_info_scan">#4E4E4E</color>
+    <color name="contact_group_member_bg">#F5F5FA</color>
+    <color name="contact_group_member_department">#666666</color>
+    <color name="contact_group_eidt_tv_name">#4E4E4E</color>
+    <!-- 通讯录 -->
+
+    <!-- 日程 -->
+    <color name="cal_color0">#6E8191</color>
+    <color name="cal_color1">#800099E1</color>
+    <color name="cal_color2">#80FF9900</color>
+    <color name="cal_color3">#80FF9900</color>
+    <color name="cal_color4">#80E34900</color>
+    <color name="cal_color5">#80FA3A2E</color>
+    <color name="cal_color6">#8000B257</color>
+    <color name="cal_tag">#332E4960</color>
+    <color name="cal_tag1">#3333BAB0</color>
+    <color name="cal_tag2">#33FF7E00</color>
+    <color name="cal_tag3">#335FBE7D</color>
+    <color name="cal_tag4">#3355ABE5</color>
+    <color name="cal_tag5">#335D74D8</color>
+    <color name="cal_tag6">#33E48BB5</color>
+    <color name="cal_tag7">#33CE4A27</color>
+    <color name="cal_create_bg">#F5F5FA</color>
+    <color name="cal_text_name">#6484AB</color>
+    <color name="cal_edit_text">#354052</color>
+    <color name="cal_edit_text_hint">#999999</color>
+    <color name="cal_month_time_tips">#FF4E4E4E</color>
+    <color name="cal_month_day_btn_text">#333333</color>
+    <color name="cal_day_current_month_tag">#B6C6DB</color>
+    <color name="cal_edit_bg">#F5F5FA</color>
+    <color name="cal_pinlv_tv">#FF4CC1FF</color>
+    <!-- 日程 -->
+
+    <!-- 表单 begin-->
+    <color name="vivi_black">#101010</color>
+    <!-- 表单 end-->
+
+    <!-- 页面背景色 -->
+    <color name="item_pressed_color">#3C61B1</color>
+    <color name="radio_button_selected_color">#ff33b5e5</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+    <color name="background_tab_pressed">#00000000</color>
+    <color name="main_menu_item_pressed">#E2604E</color>
+    <color name="pop_menu_item_pressed">#EEEEEE</color>
+    <color name="share_circle1">#C05ECBB0</color>
+    <color name="share_circle2">#C0FF7E00</color>
+    <color name="share_circle3">#C03CC56D</color>
+    <color name="share_circle4">#C000C4E0</color>
+    <color name="share_circle5">#C05C74D8</color>
+    <color name="share_circle6">#C0F95A79</color>
+    <color name="share_circle_border">#3C61B1</color>
+    <color name="time_start">#515151</color>
+    <color name="main_bottom_tab_textcolor_normal">#999999</color>
+    <color name="main_bottom_tab_textcolor_selected">#46c01b</color>
+    <color name="main_contact_tab_selected">#00C4E0</color>
+    <color name="transulte">#00000000</color>
+    <!-- 白色 -->
+    <color name="white_2">#f7f7f7</color>
+    <color name="white_3">#cdcdcd</color>
+    <color name="white_4">#f3f3f5</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- 灰色 -->
+    <color name="gray_1">#e6e6e6</color>
+    <color name="gray_2">#8d8e97</color>
+    <color name="gray_10">#d4d3d8</color>
+    <color name="gray_14">#c7c7c7</color>
+    <color name="gray_20">#666666</color>
+    <color name="gray_3">#989898</color>
+
+    <!-- 蓝色 -->
+    <color name="blue_1">#59a6fb</color>
+    <color name="blue_19">#6484AB</color>
+    <color name="blue_20">#A4CFEE</color>
+    <color name="blue_21">#8EB270</color>
+
+    <color name="yellow">#FFFF00</color>
+    <!-- 黄色 -->
+
+    <color name="gold">#FFD700</color>
+    <!-- 金色 -->
+
+    <color name="pink">#FFC0CB</color>
+    <!-- 粉红色 -->
+
+    <color name="orange">#FFA500</color>
+    <!-- 橙色 -->
+
+    <color name="red">#FF0000</color>
+    <!-- 红色 -->
+
+    <color name="gray">#DDDEE2</color>
+    <color name="gray_4">#e5e5e5</color>
+    <!-- 灰色 -->
+
+    <color name="lightgrey">#D3D3D3</color>
+    <!-- 亮灰色 -->
+
+    <color name="green">#008000</color>
+    <!-- 绿色 -->
+
+    <color name="blue">#2FA6FF</color>
+    <color name="blue_2">#5192fa</color>
+    <color name="blue_3">#4b8aeb</color>
+    <!-- 蓝色 -->
+
+    <color name="black">#000000</color>
+    <!-- 黑色 -->
+
+    <color name="azure">#F0FFFF</color>
+    <!-- 天蓝色 -->
+
+    <color name="transparent">#00000000</color>
+
+
+    <!-- ptr -->
+    <color name="ptr_red">#FFC93437</color>
+    <color name="ptr_blue">#FF375BF1</color>
+    <color name="ptr_yellow">#FFF7D23E</color>
+    <color name="ptr_green">#FF34A350</color>
+
+    <!-- SwitchButton -->
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_ripple_checked">#33019285</color>
+    <color name="ksw_md_solid_shadow">#33000000</color>
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_checked">#019285</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+
+    <!-- WeekView -->
+    <color name="toolbar">#efefef</color>
+    <color name="toolbar_text">#999999</color>
+    <color name="accent">#2789e4</color>
+    <color name="textview_color">#FF333333</color>
+    <color name="textview_color2">#FF999999</color>
+    <!-- weChat -->
+    <color name="navpage">#FFE1E8EB</color>
+    <!-- weChat -->
+    <!-- miui calendar -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccents">#14acae</color>
+    <color name="chatTeamShow">#FF9a9a9a</color>
+    <color name="chatTeamShow2">#FFFFFFFF</color>
+
+    <color name="black_deep">#FF000000</color>
+    <color name="purple">#8d8e97</color>
+    <color name="last_msg_tv_color">#ffaaaaaa</color>
+    <color name="reds">#71AAF3</color>
+    <color name="common_bg">#EBEBEB</color>
+    <color name="gray_pressed">#666667</color>
+    <color name="news_time_color">#9a9a9a</color>
+    <!-- miui calendar -->
+    <color name="partTranslucent">#39000000</color>
+    <color name="textlight">#546e7a</color>
+    <color name="red500">#db4437</color>
+
+    <color name="list_divider_color">#DADADA</color>
+
+    <color name="color_381902">#381902</color>
+    <color name="camera_progress_three">#24ff00</color>
+    <color name="color_4e3d31">#4e3d31</color>
+    <color name="grey8">#888888</color>
+    <color name="transparent_black_85">#DA000000</color>
+
+    <color name="week_gray">#9A8E8E</color>
+    <color name="week_red">#7A3151</color>
+    <color name="week_line">#CFCFCF</color>
+    <color name="week_yellow">#F5A623</color>
+    <color name="week_green">#41BF5F</color>
+</resources>

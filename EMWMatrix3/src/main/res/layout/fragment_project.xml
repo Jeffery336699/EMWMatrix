@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/co"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/cm_search_bar"
+            android:visibility="gone" />
+
+        <!--<include layout="@layout/cm_header_bar" />-->
+
+        <include layout="@layout/cm_header_bar3" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/project_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/pageIndicatorView" />
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/pageIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/btn_create"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="69dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/circle_add"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                custom:iconCode="ea07" />
+            <!--<LinearLayout-->
+            <!--android:id="@+id/network_error_ll"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="invisible">-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawablePadding="30dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/network_error"-->
+            <!--android:textSize="16sp"/>-->
+            <!--</LinearLayout>-->
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

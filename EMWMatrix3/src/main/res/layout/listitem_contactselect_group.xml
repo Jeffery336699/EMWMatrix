@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_contactselect_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cm_bg"
+        android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="3dip"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp"
+        android:text="A" />
+	
+</LinearLayout>

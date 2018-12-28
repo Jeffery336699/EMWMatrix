@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_fit_hz_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ll_never_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_listviews"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="永不"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ll_day_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_listviews"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="每天"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ll_week_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_listviews"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="每周"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ll_week_twice_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_listviews"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="每两周"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ll_month_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_listviews"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="每月"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ll_year_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_listviews"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="每年"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_free_switch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/all_content_leftright">
+
+        <TextView
+            android:id="@+id/ll_free_repeat"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="44dp"
+            android:text="自定"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+
+        <cc.emw.mobile.view.SwitchButton
+            android:id="@+id/sb_calendar_repeat_free"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswBackMeasureRatio="1.5"
+            app:kswThumbDrawable="@mipmap/ios_thumb"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/free_calendar_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/scroll_calendar_free"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cm_divider_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_calendar_repeat_result"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/cm_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="48dp"
+                android:paddingRight="18dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="每"
+                    android:textColor="@color/cal_edit_text"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_rr_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/cal_pinlv_tv"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_pl_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天"
+                    android:textColor="@color/cal_pinlv_tv"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cm_divider_bg" />
+
+            <LinearLayout
+                android:id="@+id/optionspicker_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cm_bg"
+                android:orientation="horizontal">
+
+                <com.bigkoo.pickerview.lib.WheelView
+                    android:id="@+id/options1_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.bigkoo.pickerview.lib.WheelView
+                    android:id="@+id/options1_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_week_select_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cm_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:visibility="invisible">
+
+                <CheckBox
+                    android:id="@+id/cb_week_select7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="日"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_week_select6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="六"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_week_select5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="五"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_week_select4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="四"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_week_select3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="三"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+
+
+                <CheckBox
+                    android:id="@+id/cb_week_select2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="二"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_week_select1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_calendar_week"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="一"
+                    android:textColor="@color/calendar_week_text"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_dialog_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        android:layout_marginLeft="@dimen/dialog_margin"
+        android:layout_marginRight="@dimen/dialog_margin"
+        android:layout_marginTop="@dimen/dialog_margin_headtop"
+        android:background="@drawable/activity_dialog_bg"
+        android:orientation="vertical"
+        android:paddingBottom="4dp">
+
+        <include
+            layout="@layout/cm_header_bar"
+            android:visibility="gone" />
+        <!--搜索框-->
+        <LinearLayout
+            android:id="@+id/ll_contact_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#A9A9A9"
+                android:textSize="16dp"
+                app:iconCode="e990" />
+
+            <EditText
+                android:id="@+id/et_contact_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@null"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/load_more_list_view_ptr_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+                        android:id="@+id/load_more_list_view_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ListView
+                            android:id="@+id/lv_task_attach"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:listSelector="@android:color/transparent" />
+                    </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
+
+                    <LinearLayout
+                        android:id="@+id/ll_task_blank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/cm_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="30dp"
+                            android:drawableTop="@drawable/blank_ico_renwu"
+                            android:gravity="center"
+                            android:text="@string/task_empty"
+                            android:textColor="@color/cm_empty_text"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <include layout="@layout/network_tips" />
+                </FrameLayout>
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="18dp">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/iv_task_attachement_add"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_add"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:iconCode="e969" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

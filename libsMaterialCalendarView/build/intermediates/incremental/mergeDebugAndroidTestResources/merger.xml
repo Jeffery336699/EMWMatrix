@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="output$Generated" generated="true"><source path="C:\Users\tao.zhou\.android\build-cache\ccdae58f9c502f8e4eeb86be38aaf6de22e1b318\output\res"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\androidTest\res"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\rs\androidTest\debug"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\resValues\androidTest\debug"/></dataSet><dataSet config="output" from-dependency="true" generated-set="output$Generated"><source path="C:\Users\tao.zhou\.android\build-cache\ccdae58f9c502f8e4eeb86be38aaf6de22e1b318\output\res"/></dataSet><dataSet config="debug" from-dependency="true" generated-set="debug$Generated"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res"><file name="mcv_text_date_dark" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\color\mcv_text_date_dark.xml" qualifiers="" type="color"/><file name="mcv_text_date_day" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\color\mcv_text_date_day.xml" qualifiers="" type="color"/><file name="mcv_text_date_light" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\color\mcv_text_date_light.xml" qualifiers="" type="color"/><file name="mcv_text_date_weekday" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\color\mcv_text_date_weekday.xml" qualifiers="" type="color"/><file name="circle_today" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\drawable\circle_today.xml" qualifiers="" type="drawable"/><file name="decorator_today" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\drawable\decorator_today.xml" qualifiers="" type="drawable"/><file name="mcv_action_next" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\drawable-xxxhdpi-v4\mcv_action_next.png" qualifiers="xxxhdpi-v4" type="drawable"/><file name="mcv_action_previous" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\drawable-xxxhdpi-v4\mcv_action_previous.png" qualifiers="xxxhdpi-v4" type="drawable"/><file path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\intermediates\bundles\debug\res\values\values.xml" qualifiers=""><color name="mcv_day_text_disable">#A4CFEE</color><item name="mcv_pager" type="id"/><color name="mcv_day_text_normal">#595968</color><string name="previous">Go to previous</string><color name="mcv_event_normal">#FF9D4A</color><color name="mcv_arrow_normal">#979797</color><style name="TextAppearance.MaterialCalendarWidget.WeekDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mcv_text_date_weekday</item>
+    </style><style name="TextAppearance.MaterialCalendarWidget.Date" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/mcv_text_date_day</item>
+    </style><style name="TextAppearance.MaterialCalendarWidget.Header" parent="android:TextAppearance.DeviceDefault.Small">
+        
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/mcv_header_text_normal</item>
+    </style><string name="next">Go to next</string><color name="mcv_day_text_checked">#ff7e00</color><declare-styleable name="MaterialCalendarView"><attr format="reference" name="mcv_dateTextAppearance"/><attr format="reference" name="mcv_weekDayTextAppearance"/><attr format="reference" name="mcv_headerTextAppearance"/><attr format="color" name="mcv_arrowColor"/><attr format="reference" name="mcv_leftArrowMask"/><attr format="reference" name="mcv_rightArrowMask"/><attr format="color" name="mcv_selectionColor"/><attr format="integer" name="mcv_showOtherDates">
+            <flag name="none" value="0"/>
+            <flag name="other_months" value="1"/>
+            <flag name="out_of_range" value="2"/>
+            <flag name="decorated_disabled" value="4"/>
+            <flag name="defaults" value="4"/>
+            <flag name="all" value="7"/>
+        </attr><attr format="boolean" name="mcv_allowClickDaysOutsideCurrentMonth"/><attr format="reference" name="mcv_weekDayLabels"/><attr format="reference" name="mcv_monthLabels"/><attr format="dimension" name="mcv_tileSize"/><attr format="dimension" name="mcv_tileHeight"/><attr format="dimension" name="mcv_tileWidth"/><attr format="enum" name="mcv_firstDayOfWeek">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr><attr format="enum" name="mcv_calendarMode">
+            <enum name="month" value="0"/>
+            <enum name="week" value="1"/>
+        </attr></declare-styleable><color name="mcv_weekday_text_disable">#8d8e97</color><color name="mcv_header_text_normal">#4E4E4E</color><string name="calendar">Calendar</string><color name="mcv_weekday_text_normal">#8d8e97</color></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\androidTest\res"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\rs\androidTest\debug"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="MaterialCalendarView"><attr format="reference" name="mcv_dateTextAppearance"/><attr format="reference" name="mcv_weekDayTextAppearance"/><attr format="reference" name="mcv_headerTextAppearance"/><attr format="color" name="mcv_arrowColor"/><attr format="reference" name="mcv_leftArrowMask"/><attr format="reference" name="mcv_rightArrowMask"/><attr format="color" name="mcv_selectionColor"/><attr format="integer" name="mcv_showOtherDates">
+            <flag name="none" value="0"/>
+            <flag name="other_months" value="1"/>
+            <flag name="out_of_range" value="2"/>
+            <flag name="decorated_disabled" value="4"/>
+            <flag name="defaults" value="4"/>
+            <flag name="all" value="7"/>
+        </attr><attr format="boolean" name="mcv_allowClickDaysOutsideCurrentMonth"/><attr format="reference" name="mcv_weekDayLabels"/><attr format="reference" name="mcv_monthLabels"/><attr format="dimension" name="mcv_tileSize"/><attr format="dimension" name="mcv_tileHeight"/><attr format="dimension" name="mcv_tileWidth"/><attr format="enum" name="mcv_firstDayOfWeek">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr><attr format="enum" name="mcv_calendarMode">
+            <enum name="month" value="0"/>
+            <enum name="week" value="1"/>
+        </attr></declare-styleable></configuration></mergedItems></merger>

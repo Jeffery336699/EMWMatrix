@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/root"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/cm_header_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_btn_left9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_back_bg"
+            android:gravity="center"
+            android:textColor="#7f8fa4"
+            android:textSize="14dp"
+            custom:iconCode="ea64" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_tv_right8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dialog_back_bg"
+            android:gravity="center"
+            android:textColor="#7f8fa4"
+            android:textSize="14dp"
+            custom:iconCode="e92e" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_tv_right9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_ok_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            custom:iconCode="e931" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dialog_margin_headtop"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        android:layout_marginLeft="@dimen/dialog_margin"
+        android:layout_marginRight="@dimen/dialog_margin"
+        android:background="@drawable/activity_dialog_bg"
+        android:orientation="vertical">
+        <include layout="@layout/cm_header_bar"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cm_border_bg"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="#8d8e97"
+                android:textSize="16dp"
+                custom:iconCode="ecdc"/>
+            <EditText
+                android:id="@+id/team_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/trans"
+                android:hint="圈子名称"
+                android:singleLine="true"
+                android:textColor="#354052"
+                android:textColorHint="#7F8FA4"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/team_private_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cm_border_bg"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="#8d8e97"
+                android:textSize="16dp"
+                custom:iconCode="ea5c"/>
+            <TextView
+                android:id="@+id/team_private_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/trans"
+                android:editable="false"
+                android:hint="权限"
+                android:textColor="#354052"
+                android:textColorHint="#354052"
+                android:textSize="16sp"/>
+            <include layout="@layout/segmented_private"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginRight="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

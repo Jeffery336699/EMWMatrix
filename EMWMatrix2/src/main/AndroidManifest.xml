@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.emw.mobile"
+    android:versionCode="11"
+    android:versionName="0.1.1">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!-- 云之讯 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 云之讯 -->
+
+    <!-- 银联支付 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <!-- 银联支付 -->
+
+    <application
+        android:name=".EMWApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--
+             <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="099b075c388b42a9850ae8558473ef4d" />
+        -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="099b075c388b42a9850ae8558473ef4d" />
+
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name=".login.TestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".main.BomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="cc.emw.mobile.chat.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity
+            android:name=".main.SaleOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".main.MainActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".main.PhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".contact.ContactSelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".file.FileListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".file.FileDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".file.FileCreateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".file.FileCreateActivitys"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".file.FileSelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".dynamic.DynamicDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".dynamic.ShareActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".dynamic.ShareToActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".dynamic.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".dynamic.PlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".dynamic.AllotActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 通讯录 -->
+        <activity
+            android:name=".contact.PersonActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.PersonMoreInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.GroupsCreateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".contact.GroupUnIntoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.GroupIntoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.GroupMemberListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".contact.GroupSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.BzmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".contact.RelationProjectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".contact.RelationTaskActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".contact.RelationFileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".contact.RelationCalendarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 通讯录 -->
+
+
+        <!-- 我的信息 -->
+        <activity
+            android:name=".me.CollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.ConcernActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.ReleaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.WaitHandleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.MentionMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".me.SuggestionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".me.PwCheckingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".me.PwChangeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 我的信息 -->
+
+
+        <!-- 日程 -->
+        <activity
+            android:name=".calendar.CalendarCreateActivitys"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".calendar.CalendarEditActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".calendar.CalendarRepeatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".calendar.CalendarTxActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".calendar.CalendarTxEndActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".calendar.CalendarFreeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".calendar.CalendarDayActivitys"
+            android:screenOrientation="portrait" />
+        <!-- 日程 -->
+
+
+        <!-- 任务详情界面 -->
+        <activity
+            android:name=".task.TaskDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme" />
+        <activity
+            android:name=".task.TaskModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".task.WorkProjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".task.WorkProjectMutiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".task.SprintActivity"
+            android:screenOrientation="portrait" />
+        <!-- 任务详情界面 -->
+
+
+        <!-- 项目页面 Begin -->
+        <activity
+            android:name=".project.view.ModifyProjectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".project.view.RelativeTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project.view.ProjectDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project.view.RelativeScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project.view.AddSprintActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".project.view.SaleFormActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeForm"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".project.view.SingleScheduleActivity"
+            android:screenOrientation="portrait" />
+        <!-- 项目页面 End -->
+
+
+        <!-- form begin -->
+        <activity
+            android:name=".project.view.SearchActivity"
+            android:label="@string/title_activity_search" />
+        <activity android:name=".project.view.FormMultiSelectActivity" />
+        <!-- form end -->
+
+        <activity
+            android:name=".sale.RetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".sale.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".sale.ScannerPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".sale.RetailCreateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".sale.RetailOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".sale.RetailDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+
+        <!-- 云之讯 -->
+        <activity
+            android:name="com.yzx.im_demo.ConverseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yzx.im_demo.AudioConverseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yzx.im_demo.VideoConverseActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity
+            android:name="com.yzxdemo.activity.AudioCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yzxdemo.activity.AudioConverseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yzxdemo.activity.ConferenceConverseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yzxdemo.activity.ConverseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.yzxdemo.activity.TerminalLoginDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+
+        <!-- 高德地图 -->
+        <activity
+            android:name=".map.RouteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map.BusRouteDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map.DriveRouteDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map.TraBanCheLineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map.WalkRouteDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".map.LocationsPersonalListActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 微信 -->
+        <activity
+            android:name="net.sourceforge.simcpux.WXPayActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="net.sourceforge.simcpux.PayActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="net.sourceforge.simcpux.GetFromWXActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.sourceforge.simcpux.SendToWXActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.sourceforge.simcpux.wxapi.WXEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.sourceforge.simcpux.wxapi.WXPayEntryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name="net.sourceforge.simcpux.AddFavoriteToWXActivity" />
+        <activity android:name="net.sourceforge.simcpux.ShowFromWXActivity" />
+
+        <!-- 银联支付 -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service android:name=".service.EMWService" />
+        <service android:name=".service.DLService" />
+
+        <!-- 云之讯 -->
+        <service
+            android:name="com.yzx.service.ConnectionService"
+            android:launchMode="singleInstance" />
+        <service android:name="com.yzxtcp.service.YzxIMCoreService" />
+
+        <receiver android:name="com.yzxtcp.tools.tcp.receiver.AlarmReceiver" />
+        <receiver android:name="com.yzxtcp.tools.tcp.receiver.MsgBackReceiver" />
+        <receiver android:name="com.yzx.tools.RtppReceiver" />
+        <!-- 高德地图定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- 推送服务 -->
+        <service
+            android:name="com.farsunset.cim.client.android.CIMPushService"
+            android:process=":cimpush" />
+        <!-- 消息接受广播注册 -->
+        <receiver
+            android:name=".chat.receiver.CustomCIMMessageReceiver"
+            android:exported="false">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 网络变化广播 -->
+                <action android:name="com.farsunset.cim.MESSAGE_RECEIVED" />
+                <!-- 消息广播action -->
+                <action android:name="com.farsunset.cim.SENT_FAILED" />
+                <!-- 发送sendbody失败广播 -->
+                <action android:name="com.farsunset.cim.SENT_SUCCESS" />
+                <!-- 发送sendbody成功广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_CLOSED" />
+                <!-- 链接意外关闭广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_FAILED" />
+                <!-- 链接失败广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_SUCCESS" />
+                <!-- 链接成功广播 -->
+                <action android:name="com.farsunset.cim.REPLY_RECEIVED" />
+                <!-- 发送sendbody成功后获得replaybody回应广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_STATUS" />
+                <!-- 获取到与服务端连接状态广播 -->
+                <!-- 【可选】 一些常用的系统广播，增强pushservice的复活机会 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- we chat -->
+        <receiver android:name="net.sourceforge.simcpux.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".contact.ModifyUserInfoActivity" />
+    </application>
+
+</manifest>

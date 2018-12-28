@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.contact.fragment.GroupFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!--<GridView-->
+            <cc.emw.mobile.view.SwipeBackGridView
+                android:id="@+id/group_grid_view_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:columnWidth="168dp"
+                android:gravity="center"
+                android:horizontalSpacing="12dp"
+                android:listSelector="@null"
+                android:numColumns="2"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="15dp" />
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/iv_add_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="49dp"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:src="@drawable/chat_add"
+        app:fab_shadow="false" />
+
+</FrameLayout>

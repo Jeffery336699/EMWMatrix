@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\debug\\drawable\\decorator_today.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsMaterialCalendarView\\src\\main\\res\\drawable\\decorator_today.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\debug\\drawable\\circle_today.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsMaterialCalendarView\\src\\main\\res\\drawable\\circle_today.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\debug\\drawable\\circle_today.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\src\\main\\res\\drawable\\circle_today.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\debug\\drawable\\decorator_today.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\src\\main\\res\\drawable\\decorator_today.xml"
+    }
+]

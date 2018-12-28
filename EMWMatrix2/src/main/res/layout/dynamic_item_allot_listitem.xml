@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_dynamicallot_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_ico_red" />
+
+    <TextView
+        android:id="@+id/tv_dynamicallot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_dynamicallot_finishtime"
+        android:layout_toRightOf="@id/iv_dynamicallot_tag"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:text="负责人"
+        android:textColor="@color/cm_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_dynamicallot_finishtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:text="完成时间"
+        android:textColor="@color/cm_texthint"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_dynamicallot_taskname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dynamicallot_name"
+        android:layout_toLeftOf="@+id/cpv_dynamicallot_progress"
+        android:layout_alignLeft="@id/tv_dynamicallot_name"
+        android:gravity="top"
+        android:text="任务名称"
+        android:textColor="@color/cm_text"
+        android:textSize="14sp" />
+
+    <at.grabner.circleprogress.CircleProgressView
+        xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cpv_dynamicallot_progress"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        CircleProgressView:cpv_autoTextSize="true"
+        CircleProgressView:cpv_barColor="#83D662"
+        CircleProgressView:cpv_barWidth="3dp"
+        CircleProgressView:cpv_contourColor="#CCCCCC"
+        CircleProgressView:cpv_contourSize="0.5dp"
+        CircleProgressView:cpv_maxValue="100"
+        CircleProgressView:cpv_rimColor="#E5E5E5"
+        CircleProgressView:cpv_rimWidth="3dp"
+        CircleProgressView:cpv_seekMode="false"
+        CircleProgressView:cpv_showUnit="true"
+        CircleProgressView:cpv_textColor="#333333"
+        CircleProgressView:cpv_unit="%"
+        CircleProgressView:cpv_unitColor="#333333"
+        android:visibility="gone" />
+
+</RelativeLayout>

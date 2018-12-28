@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:background="@color/transparent">
+<View
+	android:layout_width="1dp"
+	android:layout_height="match_parent"
+	android:layout_marginLeft="@dimen/activity_margin_left"
+	android:background="@color/activity_divider_bg" />
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/cm_bg">
+    
+    <include layout="@layout/cm_header_bar" />
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+        <!-- <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+            android:id="@+id/load_more_list_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"> -->
+            <ListView
+                android:id="@+id/load_more_small_image_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+        		android:listSelector="@drawable/selector_listview"
+        		android:background="@color/white"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dip"
+                android:fadingEdge="none"
+                android:scrollbarStyle="outsideOverlay"
+                android:headerDividersEnabled="false"
+                android:footerDividersEnabled="true" />
+        <!-- </in.srain.cube.views.loadmore.LoadMoreListViewContainer> -->
+
+			<LinearLayout
+				android:id="@+id/ll_file_blank"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/cm_bg"
+				android:gravity="center"
+				android:orientation="vertical"
+				android:visibility="gone">
+				<!--android:drawableTop="@drawable/blank_ico_zhishiku"-->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+
+					android:drawablePadding="30dp"
+					android:gravity="center"
+					android:text="暂无数据"
+					android:textColor="@color/cm_empty_text"
+					android:textSize="16sp" />
+			</LinearLayout>
+
+			<include layout="@layout/network_tips" />
+		</FrameLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>
+</LinearLayout>

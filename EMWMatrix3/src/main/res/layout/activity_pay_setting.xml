@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_setting_title_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="微信支付"
+        android:textColor="#808389"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_wei_pay"
+        android:layout_width="206dp"
+        android:layout_height="206dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chat_pay_qr_code_icon">
+        <RelativeLayout
+            android:id="@+id/rl_chat_wei_pay_item"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_chat_wei_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chat_wei_pay" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_chat_wei_pay"
+                android:layout_marginTop="20dp"
+                android:text="上传二维码" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_chat_wei_pay_rq_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_bar_wei"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="支付宝支付"
+        android:textColor="#808389"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_ali_pay"
+        android:layout_width="206dp"
+        android:layout_height="206dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chat_pay_qr_code_icon"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rl_chat_ali_pay_item"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_chat_ali_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chat_ali_pay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_chat_ali_pay"
+                android:layout_marginTop="20dp"
+                android:text="上传二维码" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_chat_ali_pay_rq_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:id="@+id/progress_bar_ali"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 分享\关注 -->
+    <LinearLayout
+        android:id="@+id/bace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/view_message_tag_information_concern"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/oval_message_tag"
+            android:visibility="invisible" />
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border" />
+
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/textview_color2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/textview_color2"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!--退出群组-->
+    <LinearLayout
+        android:id="@+id/ll_exit_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/view_message_tag_group_exit"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/oval_message_tag"
+            android:visibility="invisible" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/ic_tv_exit_group"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="#335B9D"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:iconCode="ea28" />
+
+
+        <TextView
+            android:id="@+id/tv_message_info_exit_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="@color/textview_color2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time_exit_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textview_color2"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!--申请添加好友-->
+    <LinearLayout
+        android:id="@+id/ll_apply_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/view_message_tag_information_add_friend"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/oval_message_tag"
+            android:visibility="invisible" />
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/add_friend_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border" />
+
+        <TextView
+            android:id="@+id/tv_works_group_what"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="请求添加你为好友"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/add_friend_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_blue"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="同意"
+            android:textColor="#8EB270"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/add_friend_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="拒绝"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/add_friend_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textview_color2"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!--  收藏动态 -->
+    <LinearLayout
+        android:id="@+id/dongtai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view_message_tag_information_dongtai"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/oval_message_tag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_message_enjoy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="他们收藏了你的动态" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/textview_color2"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/dynamic_other_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/dongtaiming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text=""
+                android:textColor="#169bff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/dongtainierong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/textview_color2"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/heads"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border" />
+
+    </LinearLayout>
+
+    <!-- 动态评论 -->
+    <LinearLayout
+        android:id="@+id/dongtai_pl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view_message_tag_talker_dongtai"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/oval_message_tag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你的动态收到了一条新的评论" />
+
+            <TextView
+                android:id="@+id/times_pl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/textview_color2"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:background="@color/dynamic_other_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/dongtaiming_talker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="sa"
+                android:textColor="#169bff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/dongtainierong_pl"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <cc.emw.mobile.view.CircleImageView
+                android:id="@+id/heads_pl"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/cm_img_head"
+                app:border_color="@color/cm_headimg_border" />
+
+            <TextView
+                android:id="@+id/project_names"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/textview_color2" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

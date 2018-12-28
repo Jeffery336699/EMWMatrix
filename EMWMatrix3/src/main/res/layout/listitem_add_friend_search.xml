@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/civ_add_friend_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/cm_img_head" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_add_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="**"
+            android:textColor="#FF101010"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_same_friend_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共同好友：无"
+            android:textColor="#FF989898"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_add_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text=""
+        android:textColor="#FF1DA1F3"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:transitionName="shareNames">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/cm_search_bars"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <cc.emw.mobile.view.CircleImageView
+                android:id="@+id/ic_civ_head"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cm_img_head"
+                app:border_color="@color/cm_headimg_border"
+                app:border_width="0.5dp" />
+            <LinearLayout
+                android:id="@+id/ll_et_search_keywords"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/contact_search_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#A9A9A9"
+                    android:textSize="16dp"
+                    app:iconCode="e990" />
+
+                <EditText
+                    android:id="@+id/et_search_keywords"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="none"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textNoSuggestions"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="#a1a1a1"
+                    android:textSize="12sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/ic_et_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#a1a1a1"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:iconCode="e92e" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/contact_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!--app:cardCornerRadius="0dp"-->
+        <!--app:cardElevation="15dp"-->
+        <!--app:cardMaxElevation="15dp"-->
+        <!--app:cardPreventCornerOverlap="true"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/up_down_shape2" />
+
+            <RadioGroup
+                android:id="@+id/cm_bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ic_tv_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/chat_selector"
+                    android:gravity="center"
+                    android:paddingBottom="1dp"
+                    android:paddingTop="8dp"
+                    android:text="首页"
+                    android:textColor="@color/contact_text_color"
+                    android:textSize="9sp" />
+
+                <RadioButton
+                    android:id="@+id/ic_tv_group"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:button="@null"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/group_selector"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="8dp"
+                    android:text="协同"
+                    android:textColor="@color/contact_text_color"
+                    android:textSize="9sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/ic_tv_people"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:button="@null"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/people_selector"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="8dp"
+                    android:text="用户"
+                    android:textColor="@color/contact_text_color"
+                    android:textSize="9sp" />
+
+                <RadioButton
+                    android:id="@+id/ic_tv_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:button="@null"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/me_selector"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="8dp"
+                    android:text="我"
+                    android:textColor="@color/contact_text_color"
+                    android:textSize="9sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.gc.materialdesign.views.AutoHideButtonFloat
+        android:id="@+id/im_contact_play"
+        android:layout_width="45dp"
+        android:background="#ffffff"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/contact_play" />
+
+</RelativeLayout>

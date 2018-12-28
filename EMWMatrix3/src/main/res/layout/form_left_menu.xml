@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_sale_left"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ExpandableListView
+        android:id="@+id/left_exListview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/cm_divider_bg"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:groupIndicator="@color/blue"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sale_btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/white_and_blue"
+            android:text="@string/reset"
+            android:textColor="@color/black_and_white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/cm_divider_bg" />
+
+        <Button
+            android:id="@+id/sale_btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/white_and_blue"
+            android:text="@string/finish"
+            android:textColor="@color/black_and_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_contact_person_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg" >
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ExpandableListView
+            android:id="@+id/contact_elv_person"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:cacheColorHint="@android:color/transparent"
+            android:childDivider="@color/cm_divider_bg"
+            android:dividerHeight="0.5dp"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:groupIndicator="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarSize="3dip"
+            android:scrollbarStyle="outsideOverlay" />
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <TextView
+        android:id="@+id/contact_tv_letter"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_char"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <cc.emw.mobile.view.SideBar
+        android:id="@+id/contact_sidebar"
+        android:layout_width="25dip"
+        android:layout_height="300dp"
+        android:layout_gravity="right|center" />
+
+
+
+</FrameLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/transparent">
+<View
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_margin_left"
+    android:background="@color/activity_divider_bg" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cm_bg">
+
+    <include layout="@layout/cm_header_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="15dp"
+        android:scrollbars="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/cm_input" />
+            <include layout="@layout/share_tab_file" />
+            <include layout="@layout/share_tab_image" />
+            <include layout="@layout/share_tab_link" />
+            <include layout="@layout/share_tab_vote" />
+            <include layout="@layout/cm_select" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/share_tab" />
+
+</LinearLayout>
+</LinearLayout>

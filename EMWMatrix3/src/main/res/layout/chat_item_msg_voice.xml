@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/chat_time"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+    <!--语音-->
+    <RelativeLayout
+        android:id="@+id/rl_chat_item_msg_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_msg_time">
+
+        <RelativeLayout
+            android:id="@+id/rl_msg_voice_rece_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_chatItem_msg_voice_rece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!--消息头像-->
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/civ_chat_msg_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_msg_voice_rece"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_toRightOf="@+id/civ_chat_msg_head"
+                    android:background="@drawable/chat_message_other_bg"
+                    android:minHeight="40dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:id="@+id/itv_chat_voice_open_rece"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#B5BACB"
+                        android:textSize="26sp"
+                        app:iconCode="ea06" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:id="@+id/itv_chat_voice_show_rece"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#B5BACB"
+                        android:textSize="26sp"
+                        app:iconCode="ea03" />
+
+                    <cc.emw.mobile.chat.view.MySeekBar
+                        android:id="@+id/seekbar_chat_voice_rece"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:maxHeight="1dp"
+                        android:progressDrawable="@drawable/seek_progress_drawable" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_msg_voice_rece"
+                        android:layout_width="wrap_content"
+                        android:layout_height="13dp"
+                        android:layout_alignLeft="@+id/seekbar_chat_voice_rece"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/seekbar_chat_voice_rece"
+                        android:layout_marginBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:text=""
+                        android:textColor="#B5BACB"
+                        android:textSize="10sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:id="@+id/itv_chat_audio_bt_rece"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#B5BACB"
+                        android:textSize="15sp"
+                        app:iconCode="eb70" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_msg_voice_send_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_msg_voice_send"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/mine"
+                android:minHeight="40dp">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_chat_voice_open_send"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    app:iconCode="ea06" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_chat_voice_show_send"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp"
+                    app:iconCode="ea03" />
+
+                <cc.emw.mobile.chat.view.MySeekBar
+                    android:id="@+id/seekbar_chat_voice_send"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:maxHeight="1dp"
+                    android:progressDrawable="@drawable/seek_progress_drawable" />
+
+                <TextView
+                    android:id="@+id/tv_chat_msg_voice_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:layout_alignLeft="@+id/seekbar_chat_voice_send"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/seekbar_chat_voice_send"
+                    android:layout_marginBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_chat_audio_bt_send"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:iconCode="eb70" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/itv_chat_msg_state_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/rl_chat_item_msg_voice"
+        android:layout_alignRight="@id/rl_chat_item_msg_voice"
+        android:layout_below="@id/rl_chat_item_msg_voice"
+        android:layout_centerInParent="true"
+        android:textColor="#DE5246"
+        android:textSize="12sp"
+        app:iconCode="e9d8" />
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_chat_time_msg"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignEnd="@+id/rl_chat_item_msg_voice"-->
+    <!--android:layout_alignRight="@+id/rl_chat_item_msg_voice"-->
+    <!--android:layout_below="@+id/rl_chat_item_msg_voice">-->
+    <!--<include layout="@layout/chat_item_msg_time_link"/>-->
+    <!--</RelativeLayout>-->
+</RelativeLayout>

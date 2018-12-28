@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cm_header_bar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/cm_header_bg2"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="5dp">
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/cm_header_btn_menu_pre"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/cm_header_tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/unkonw"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/cm_header_rg_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/cm_header_rb_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/nav_rb_new"
+            android:checked="true" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/cm_header_rb_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/nav_rb_concern"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/cm_header_middle_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/cm_header_rb_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/nav_rb_concern"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/cm_header_btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="0dp"
+            android:src="@drawable/nav_btn_sort"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_more_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:padding="0dp"
+        android:src="@drawable/nav_done"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_more_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:padding="0dp"
+        android:src="@drawable/nav_subtasks"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="0dp"
+        android:src="@drawable/nav_btn_notice"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/cm_header_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingRight="0dp"
+        android:paddingTop="5dp"
+        android:text="@string/unkonw"
+        android:textColor="#5FC26D"
+        android:textSize="18sp"
+        android:visibility="gone" />
+</LinearLayout>

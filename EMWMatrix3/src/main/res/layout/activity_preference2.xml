@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_out_side"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_divider_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:text="请选择登录超时时间"
+                android:textColor="#FF263238"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeout_5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="5分钟"
+                android:textColor="#FF263238"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeout_10"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="10分钟"
+                android:textColor="#FF263238"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeout_15"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="15分钟"
+                android:textColor="#FF263238"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeout_20"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="20分钟"
+                android:textColor="#FF263238"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeout_none"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="从不"
+                android:textColor="#FF263238"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

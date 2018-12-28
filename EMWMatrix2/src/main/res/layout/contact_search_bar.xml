@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_contact_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cm_bg"
+    android:orientation="vertical" ><!-- android:background="#cac9c7" -->
+
+    <EditText
+        android:id="@+id/et_contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/peronnel_search"
+        android:drawableLeft="@drawable/contact_img_search"
+        android:drawablePadding="10.0dip"
+        android:ellipsize="none"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:paddingLeft="10.0dip"
+        android:singleLine="true"
+	    android:imeOptions="actionSearch"
+        android:textColor="@color/cm_text"
+        android:textColorHint="@color/cm_texthint"
+        android:textSize="13sp" />
+
+</LinearLayout>

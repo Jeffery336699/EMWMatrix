@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cc.emw.mobile.chat.view.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoClipPanel="false"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="false"
+    sothree:umanoPanelHeight="40dp"
+    sothree:umanoParallaxOffset="0dp"
+    sothree:umanoScrollableView="@+id/list"
+    sothree:umanoShadowHeight="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/video_record_slid" />
+    </LinearLayout>
+</cc.emw.mobile.chat.view.SlidingUpPanelLayout>

@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cm_bg">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<cc.emw.mobile.contact.widget.AutoLoadRecyclerView-->
+            <cc.emw.mobile.view.SwipeBackRecyclerView
+                android:id="@+id/rlv_chat_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/kongbai"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/goutong" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/ic_tv_add_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="49dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/chat_add"
+        android:background="@null"
+        app:fab_shadow="false"
+        />
+
+</RelativeLayout>

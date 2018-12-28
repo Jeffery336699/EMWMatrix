@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/share_btn_file"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="center"
+        android:background="@null"
+        android:src="@drawable/talker_btn_wenjian" />
+    
+    <ImageButton
+        android:id="@+id/share_btn_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="center"
+        android:background="@null"
+        android:src="@drawable/talker_btn_tupian" />
+    
+    <ImageButton
+        android:id="@+id/share_btn_link"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="center"
+        android:background="@null"
+        android:src="@drawable/talker_btn_lianjie" />
+    
+    <ImageButton
+        android:id="@+id/share_btn_vote"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:scaleType="center"
+        android:background="@null"
+        android:src="@drawable/talker_btn_toupiao" />
+	
+</LinearLayout>

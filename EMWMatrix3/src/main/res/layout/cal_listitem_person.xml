@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_cal_listitem_person"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:gravity="center_vertical|left"
+    android:orientation="horizontal">
+
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/cal_listitem_person_head"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/cm_img_head" />
+
+    <TextView
+        android:id="@+id/cal_listitem_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#101010"
+        android:textSize="14sp" />
+
+</LinearLayout>

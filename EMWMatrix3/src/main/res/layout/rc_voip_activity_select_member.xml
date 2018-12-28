@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+<!--    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@id/rc_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rc_dialog_cancel"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/cm_main_text"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_gravity="left" />
+
+
+        <TextView
+            android:id="@id/rc_btn_ok"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rc_dialog_ok"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/rc_voip_check_disable"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/rc_voip_select_member"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/rc_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="20dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/cm_main_text"
+            android:textSize="16dp"
+            app:iconCode="eb68" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rc_voip_select_member"
+            android:textColor="#2B2B2B"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/rc_btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:paddingTop="2dp"
+            android:text="开始"
+            android:textColor="@color/rc_voip_check_disable"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_recyclerview_select_member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <ListView
+        android:paddingLeft="16dp"
+        android:id="@+id/rc_listview_select_member"
+        android:divider="#9AB2C2"
+        android:dividerHeight="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

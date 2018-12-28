@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.contact.SaoYiSaoActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_sao_yi_sao"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/head_bg"
+        android:gravity="center_vertical">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            android:textColor="#EA5404"
+            android:textSize="20dp"
+            app:iconCode="eb68" />
+
+        <cc.emw.mobile.view.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/segmented_plan_type"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="12dp"
+            android:orientation="horizontal"
+            segmentedgroup:sc_border_width="1dp"
+            segmentedgroup:sc_checked_text_color="@color/segmentedgroup_checked_text"
+            segmentedgroup:sc_corner_radius="5dp"
+            segmentedgroup:sc_tint_color="@color/segmentedgroup_tint_text">
+
+            <RadioButton
+                android:id="@+id/rb_business_card"
+                style="@style/RadioButton"
+                android:layout_width="92.5dp"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:gravity="center"
+                android:text="我的名片" />
+
+            <RadioButton
+                android:id="@+id/rb_sao_yi_sao"
+                style="@style/RadioButton"
+                android:layout_width="92.5dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="扫描二维码" />
+
+        </cc.emw.mobile.view.SegmentedGroup>
+
+    </RelativeLayout>
+
+    <!--阴影-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_add_friend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

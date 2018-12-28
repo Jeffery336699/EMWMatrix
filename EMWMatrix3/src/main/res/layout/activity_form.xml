@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_header_bar3" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.xlf.nrl.NsRefreshLayout
+                android:id="@+id/nrl_test"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:auto_load_more="false"
+                app:pull_refresh_enable="false">
+
+                <com.inqbarna.tablefixheaders.TableFixHeaders
+                    android:id="@+id/table"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="horizontal|vertical" />
+            </com.xlf.nrl.NsRefreshLayout>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/iv_indicator_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="#8d8e97"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:iconCode="e9e5" />
+
+            <Button
+                android:id="@+id/create_new_btn"
+                android:layout_width="120dp"
+                android:layout_height="44dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_corner_green"
+                android:text="新建"
+                android:textColor="#37B248"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/iv_indicator_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#8d8e97"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:iconCode="e9e6" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/form_left_menu" />
+
+        <include layout="@layout/form_right_menu" />
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

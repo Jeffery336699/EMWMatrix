@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_share_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_dialog_bar2" />
+
+    <ScrollView
+        android:id="@+id/main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <include layout="@layout/cm_input" />
+
+            <LinearLayout
+                android:id="@+id/ll_dynamic_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/dynamicadd_tab_text"
+                    android:textSize="16dp"
+                    app:iconCode="ea45" />
+
+                <TextView
+                    android:id="@+id/tv_dynamic_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="深圳市"
+                    android:textColor="@color/dynamicadd_tab_text"
+                    android:textSize="14sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_shareLocation_del"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="18dp"
+                    android:textColor="#404040"
+                    android:textSize="18dp"
+                    app:iconCode="ec71" />
+
+            </LinearLayout>
+
+            <include layout="@layout/share_tab_file" />
+
+            <include layout="@layout/share_tab_image" />
+
+            <include layout="@layout/share_tab_link" />
+
+            <include layout="@layout/share_tab_vote" />
+
+            <include layout="@layout/share_tab_video" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_dynamic_camera_img_list_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_single_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_dynamic_img_select_single"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@color/gray" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_select_img_del"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:textColor="#404040"
+                    android:textSize="18dp"
+                    app:iconCode="ec71" />
+
+            </RelativeLayout>
+
+            <include
+                layout="@layout/cm_select"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_btn_go_to_camera"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="相机"
+                android:textColor="#FF808389"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_dynamic_camera_img_list"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <include layout="@layout/share_tab" />
+
+</LinearLayout>

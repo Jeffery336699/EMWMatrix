@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_filecreate_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<include layout="@layout/cm_dialog_bar" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dialog_margin_headtop"
+    android:layout_marginBottom="@dimen/dialog_margin"
+    android:layout_marginLeft="@dimen/dialog_margin"
+    android:layout_marginRight="@dimen/dialog_margin"
+    android:background="@drawable/activity_dialog_bg"
+    android:orientation="vertical"
+    android:clickable="true" >
+    <include layout="@layout/cm_header_bar"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_scrollview_marginTop"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/filecreate_name"
+            android:textColor="@color/filecreate_title_text"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_filecreate_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/cm_border_bg"
+            android:singleLine="true"
+            android:hint="@string/filecreate_name_hint"
+            android:textColor="#848B96"
+            android:textColorHint="#7F8FA4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/filecreate_desc"
+            android:textColor="@color/filecreate_title_text"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_filecreate_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/cm_border_bg"
+            android:singleLine="true"
+            android:hint="@string/filecreate_desc_hint"
+            android:textColor="#848B96"
+            android:textColorHint="#7F8FA4"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.me.IntimateActivity">
+
+    <include layout="@layout/cm_setting_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/cm_border_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_self_all"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="所有人"
+                android:textColor="@color/cal_edit_text"
+                android:textSize="16sp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cb_self_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:textColor="#3cc56d"
+                android:textSize="16sp"
+                app:iconCode="e924" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/cm_divider_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_self_concern"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="关注的"
+                android:textColor="@color/cal_edit_text"
+                android:textSize="16sp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cb_self_concern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:textColor="#3cc56d"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:iconCode="e924" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/cm_divider_bg" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_self_group"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="组内人"
+                android:textColor="@color/cal_edit_text"
+                android:textSize="16sp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cb_self_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:textColor="#3cc56d"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:iconCode="e924" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_self_group"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:button="@null"
+            android:drawableRight="@drawable/list_btn_next"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:text="群组"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/cm_divider_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_self_complete"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:text="只有我"
+                android:textColor="@color/cal_edit_text"
+                android:textSize="16sp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cb_self_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:textColor="#3cc56d"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:iconCode="e924" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

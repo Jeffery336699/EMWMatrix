@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/share_btn_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/dynamicadd_tab_text"
+        android:textSize="18dp"
+        app:iconCode="eaa1" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/share_btn_video"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/dynamicadd_tab_text"
+        android:textSize="20dp"
+        app:iconCode="ea23" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/share_btn_vote"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/dynamicadd_tab_text"
+        android:textSize="16dp"
+        app:iconCode="e9e3" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/share_btn_file"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/dynamicadd_tab_text"
+        android:textSize="18dp"
+        app:iconCode="eaa0" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/share_btn_link"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:textColor="@color/dynamicadd_tab_text"
+        android:textSize="18dp"
+        app:iconCode="eaa2" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/share_btn_location"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:textColor="@color/dynamicadd_tab_text"
+        android:textSize="20dp"
+        app:iconCode="ea45" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share_select_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp">
+
+        <TextView
+            android:id="@+id/tv_share_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公开"
+            android:textColor="@color/cm_main_text"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/cm_main_text"
+            android:textSize="10dp"
+            app:iconCode="ec77" />
+    </LinearLayout>
+</LinearLayout>

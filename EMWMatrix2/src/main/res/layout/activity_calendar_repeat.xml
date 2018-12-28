@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/cm_header_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_never_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="永不"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_day_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每天"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_week_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每周"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_week_twice_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每两周"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_month_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每月"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_year_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每年"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        />
+    
+    <LinearLayout
+        android:id="@+id/ll_free_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="18dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

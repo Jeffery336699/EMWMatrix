@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <cc.emw.mobile.chat.view.ScrollToRecyclerView
+        android:id="@+id/chat_importance_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFBFD"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/gray_1"
+        android:dividerHeight="0dip"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:transcriptMode="normal"
+        android:transitionName="shareNames" />
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_sharevideo_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cm_border_bg"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/share_video"
+            android:textColor="@color/dynamicadd_sharetitle_text"
+            android:textSize="13sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_sharevideo_del"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#404040"
+            android:textSize="18dp"
+            app:iconCode="ec71" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sharevideo_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btn_sharevideo_record"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:text="@string/share_add_record"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:br_textColor="@color/cm_main_text" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btn_sharevideo_add"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:text="@string/share_add_video"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:br_textColor="@color/cm_main_text" />
+    </LinearLayout>
+
+</LinearLayout>

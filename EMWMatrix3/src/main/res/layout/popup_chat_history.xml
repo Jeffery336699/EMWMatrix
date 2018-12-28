@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="0dp">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@null"
+    android:visibility="visible" >
+    <TextView
+        android:id="@+id/tv_history_video"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:textColor="@color/cm_texthint"
+        android:textSize="14sp"
+        android:text="视频聊天"/>
+    <TextView
+        android:id="@+id/tv_history_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:textColor="@color/cm_texthint"
+        android:textSize="14sp"
+        android:text="语音聊天"/>
+    <TextView
+        android:id="@+id/tv_history_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:textColor="@color/cm_texthint"
+        android:textSize="14sp"
+        android:text="发起聊天"/>
+</LinearLayout>
+</android.support.v7.widget.CardView>

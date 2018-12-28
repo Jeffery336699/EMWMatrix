@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="horizontal"
+    android:gravity="center" >
+	<ImageView 
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:src="@drawable/index_ico_link"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+		<TextView
+	        android:id="@+id/tv_dynamiclink_urlname"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textColor="@color/cm_text"
+	        android:textSize="14sp"
+	        android:text="链接描述" />
+	    <TextView
+	        android:id="@+id/tv_dynamiclink_url"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textColor="@color/dynamiclink_url_text"
+	        android:textSize="12sp"
+	        android:text="链接地址" />
+	</LinearLayout>
+
+</LinearLayout>

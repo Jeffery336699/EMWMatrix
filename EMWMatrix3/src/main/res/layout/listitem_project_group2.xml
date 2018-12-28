@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <cc.emw.mobile.view.RoundedImageView
+        android:id="@+id/project_group_portrait"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:background="#B4B4B4"
+        app:riv_mutate_background="true"
+        app:riv_corner_radius="3dp"/>
+    <TextView
+        android:id="@+id/project_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/project_group_portrait"
+        android:layout_alignTop="@+id/project_group_portrait"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/project_group_indicate"
+        android:layout_toRightOf="@id/project_group_portrait"
+        android:gravity="center|left"
+        android:text="页面设置"
+        android:textColor="@color/cm_text"
+        android:textSize="14sp"/>
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/project_group_indicate"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/project_group_portrait"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/project_group_portrait"
+        android:layout_marginRight="12dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:iconCode="eb67"/>
+    <!-- 底部分割线 -->
+    <View
+        android:id="@+id/project_group_line"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/project_group_portrait"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cm_divider_bg" />
+
+    <!-- 项目部分 -->
+    <RelativeLayout
+        android:id="@+id/project_group_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_group_portrait"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:visibility="gone">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/round_corner_stripe"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cm_divider_bg"/>
+        <!-- 存放项目的容器 -->
+        <LinearLayout
+            android:id="@+id/project_group_projects_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_portal"
+            android:orientation="vertical"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/project_group_projects_ll"
+            android:layout_marginTop="10dp"
+            android:background="@color/cm_divider_bg"/>
+    </RelativeLayout>
+</RelativeLayout>

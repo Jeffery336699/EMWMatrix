@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    android:orientation="vertical" >
+
+    <include layout="@layout/cm_header_bar" />
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="订单编号："
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/retailpay_tv_orderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="123456789"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="订单金额："
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/retailpay_tv_ordertotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="100.00"
+            android:textColor="#FF0000"
+            android:textSize="14sp" />
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="元"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:text="请选择支付方式："
+        android:textColor="#666666"
+        android:textSize="14sp" />
+    <Button
+	    android:id="@+id/retailpay_btn_cash"
+	    android:layout_width="200dp"
+	    android:layout_height="30dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_gravity="center"
+	    android:background="@drawable/button_blue_blue"
+	    android:text="现金支付"
+	    android:textColor="@color/white"
+	    android:textSize="14sp" />
+	
+    <Button
+	    android:id="@+id/retailpay_btn_alipay"
+	    android:layout_width="200dp"
+	    android:layout_height="30dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_gravity="center"
+	    android:background="@drawable/button_blue_blue"
+	    android:text="支付宝支付"
+	    android:textColor="@color/white"
+	    android:textSize="14sp" />
+    
+    <Button
+	    android:id="@+id/retailpay_btn_weixin"
+	    android:layout_width="200dp"
+	    android:layout_height="30dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_gravity="center"
+	    android:background="@drawable/button_blue_blue"
+	    android:text="微信支付"
+	    android:textColor="@color/white"
+	    android:textSize="14sp" />
+    
+    <Button
+	    android:id="@+id/retailpay_btn_unionpay"
+	    android:layout_width="200dp"
+	    android:layout_height="30dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_gravity="center"
+	    android:background="@drawable/button_blue_blue"
+	    android:text="银联支付"
+	    android:textColor="@color/white"
+	    android:textSize="14sp" />
+    
+    <TextView 
+        android:id="@+id/retailpay_tv_errormsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+</LinearLayout>

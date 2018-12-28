@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <!--<LinearLayout
+        android:id="@+id/ll_dynamic_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/dynamic_circletime" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#DBDBDB" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_dynamic_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="-5dp"
+            android:text="今天"
+            android:textColor="#7F8FA4"
+            android:textSize="12sp" />
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--<cc.emw.mobile.view.IconTextView
+                android:id="@+id/itv_dynamic_type"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/dynamic_circlelink_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:iconCode="eb05" />-->
+            <ImageView
+                android:id="@+id/itv_dynamic_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dynamictype_ic_file"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/cm_divider_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dynamic_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:orientation="vertical"><!--android:background="@drawable/talker_content_bg"-->
+
+            <LinearLayout
+                android:id="@+id/itv_dynamic_iv_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/itv_dynamic_iv_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:background="@drawable/dynamictype_ic_file"
+                        />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:id="@+id/itv_dynamic_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textColor="#ADB5C5"
+                        android:textSize="16dp"
+                        app:iconCode="ec7d" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:background="@color/cm_divider_bg" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/iv_dynamic_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="0dp" />
+
+                <TextView
+                    android:id="@+id/tv_dynamic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_dynamic_head"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/iv_dynamic_head"
+                    android:text="@string/unkonw"
+                    android:textColor="@color/dynamic_name_text"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tv_dynamic_roles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tv_dynamic_name"
+                    android:layout_alignBottom="@id/tv_dynamic_name"
+                    android:layout_marginLeft="10dp"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#337AB7"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tv_dynamic_dept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_dynamic_head"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_dynamic_head"
+                    android:text="@string/unkonw"
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_dynamic_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_dynamic_dept"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/tv_dynamic_time"
+                    android:layout_toRightOf="@+id/tv_dynamic_dept"
+                    android:text="@string/unkonw"
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_dynamic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_dynamic_name"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/unkonw"
+                    android:textColor="@color/dynamic_time_text"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+<!--
+            <TextView
+                android:id="@+id/tv_dynamic_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/unkonw"
+                android:textColor="@color/dynamic_content_text"
+                android:textSize="14sp"
+                />
+                -->
+            <!--android:ellipsize="end"
+            android:maxLines="3"-->
+            <!--
+            <TextView
+                android:id="@+id/tv_dynamic_content_showall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="5dp"
+                android:text="全文"
+                android:textColor="@color/blue_2"
+                android:visibility="gone"
+                android:textSize="14sp" />
+               -->
+            <cc.emw.mobile.view.DynamicTextView
+                android:id="@+id/desc_dynamic_tv_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/ll_dynamic_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="6dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="10dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="0dp"
+                android:visibility="gone"/>
+            <!--<LinearLayout
+                android:id="@+id/ll_dynamic_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:background="@color/dynamic_other_bg"
+                android:orientation="vertical"
+                android:paddingTop="0dp"
+                android:visibility="gone"/>-->
+
+            <cc.emw.mobile.view.FlowLayout
+                android:id="@+id/fl_dynamic_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_dynamic_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone" />
+
+            <!-- 视频 -->
+            <!--<cc.emw.mobile.record.jcvideoplayer_lib.JCVideoPlayerStandard-->
+                <!--android:id="@+id/video_player"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/cm_divider_bg"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/tv_dynamic_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/index_ico_zhuanfa"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="2"
+                    android:textColor="@color/dynamic_count_text"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/cm_divider_bg" />
+                <TextView
+                    android:id="@+id/tv_dynamic_discuss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/index_ico_pinglun"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="1000"
+                    android:textColor="@color/dynamic_count_text"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/cm_divider_bg" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_dynamic_collect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.ThumbUpView
+                        android:id="@+id/tuv_dynamic_collect"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:clickable="false"
+                        app:cracksColor="#FFFFFF"
+                        app:edgeColor="#999999"
+                        app:fillColor="#F15151"
+                        app:unlikeType="1" />
+
+                    <TextView
+                        android:id="@+id/tv_dynamic_collect"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center"
+                        android:text="0"
+                        android:textColor="@color/dynamic_count_text"
+                        android:textSize="12sp" />
+                    <!-- android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/index_ico_dianzan" -->
+                </LinearLayout>
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_dynamic_more1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#ADB5C5"
+                    android:textSize="16dp"
+                    android:visibility="gone"
+                    app:iconCode="ec7d" />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/ll_dynamic_favour"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@null"
+                    android:visibility="gone" />
+                <LinearLayout
+                    android:id="@+id/ll_dynamic_nodiscuss"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@drawable/dynamic_nodiscuss_bg"
+                    android:visibility="gone" >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/dynamic_time_text"
+                        android:textSize="14sp"
+                        android:text="说点什么吧！"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cm_main_text"
+                        android:textSize="14sp"
+                        android:text="评论"/>
+                </LinearLayout>
+            </FrameLayout>
+            <cc.emw.mobile.view.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_dynamic_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                app:el_duration="300"
+                app:el_expanded="false">
+                <cc.emw.mobile.view.ExListView
+                    android:id="@+id/lv_dynamic_discuss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="0dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="20dp"
+                    android:listSelector="@android:color/transparent" />
+            </cc.emw.mobile.view.expandablelayout.ExpandableLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/cm_divider_bg"
+                android:visibility="gone"/>
+     <!--       <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_dynamic_collect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.ThumbUpView
+                        android:id="@+id/tuv_dynamic_collect"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginRight="5dp"
+                        android:clickable="false"
+                        app:cracksColor="#FFFFFF"
+                        app:edgeColor="#999999"
+                        app:fillColor="#F15151"
+                        app:unlikeType="1" />
+
+                    <TextView
+                        android:id="@+id/tv_dynamic_collect"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center"
+                        android:text="0"
+                        android:textColor="@color/dynamic_count_text"
+                        android:textSize="12sp" />-->
+                    <!-- android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/index_ico_dianzan" -->
+              <!--  </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_dynamic_discuss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/index_ico_pinglun"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="1000"
+                    android:textColor="@color/dynamic_count_text"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_dynamic_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/index_ico_zhuanfa"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="2"
+                    android:textColor="@color/dynamic_count_text"
+                    android:textSize="12sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_dynamic_more1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#ADB5C5"
+                    android:textSize="16dp"
+                    android:visibility="invisible"
+                    app:iconCode="ec7d" />
+            </LinearLayout>
+-->
+            <TextView
+                android:id="@+id/tv_dynamic_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="middle"
+                android:maxLines="3"
+                android:text="设计部小叶、开发部小黑、设计部小黄、设计部小戴、开发部小黄、设计部小白、开发部小陈、设计部小黑、开发部小文、设计部小灰、设计部小飞飞等663人已收藏"
+                android:textColor="#4A90E2"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

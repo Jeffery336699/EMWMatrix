@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cm_header_bar2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="18dp"
+    android:layout_marginRight="18dp"
+    android:layout_marginTop="12dp">
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/cm_header_btn_left9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_back_bg"
+        android:gravity="center"
+        android:textColor="#7f8fa4"
+        android:textSize="14dp"
+        custom:iconCode="ea64"/>
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/cm_header_tv_right9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/dialog_ok_bg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        custom:iconCode="e931"/>
+</RelativeLayout>

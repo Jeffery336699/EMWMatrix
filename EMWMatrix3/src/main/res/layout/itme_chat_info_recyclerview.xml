@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="16dp"
+        android:text="圈子设置"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/rl_group_new_seebar_but"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="是否公开"
+            android:textColor="#354052"
+            android:textSize="16sp" />
+        <!-- style="@style/SwitchButtonStyleMD"-->
+        <cc.emw.mobile.view.SwitchButton
+            android:id="@+id/sb_group_new_but"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:enabled="false"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswBackMeasureRatio="1.4"
+            app:kswThumbDrawable="@mipmap/ios_thumb"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_group_message_hide"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="屏蔽此群"
+            android:textColor="#354052"
+            android:textSize="16sp" />
+        <!-- style="@style/SwitchButtonStyleMD"-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <cc.emw.mobile.view.SwitchButton
+                android:id="@+id/sb_group_message_hide"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:enabled="false"
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswBackMeasureRatio="1.4"
+                app:kswThumbDrawable="@mipmap/ios_thumb"
+                app:kswThumbMarginBottom="-8dp"
+                app:kswThumbMarginLeft="-5dp"
+                app:kswThumbMarginRight="-5dp"
+                app:kswThumbMarginTop="-2.5dp" />
+            <ProgressBar
+                android:layout_centerInParent="true"
+                android:id="@+id/pb_group_message_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_color"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_listview"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="8dp"
+        android:visibility="visible">
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:textColor="#8d8e97"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:iconCode="eba7" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="团队颜色"
+            android:textColor="#354052"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_calendar_color_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:src="@drawable/share_circle1_nor" />
+
+        <ImageView
+            android:id="@+id/iv_color_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_btn_next" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_media_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="分享的媒体"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp" />
+
+            <cc.emw.mobile.view.MyGridView
+                android:id="@+id/gd_chat_player"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:minHeight="94dp"
+                android:numColumns="4" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_group_new_palyer_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="26dp"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="位置信息"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_group_in_nearby"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:textColor="#8d8e97"
+            android:textSize="16sp"
+            app:iconCode="ea45" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp"
+            android:text="附近的人"
+            android:textColor="#354052"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="管理员"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_group_create"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/civ_chat_create_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border" />
+
+        <TextView
+            android:id="@+id/tv_chat_team_create_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF4A4A4A"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_group_new_user_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="成员 (0人)"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp" />
+
+    <include
+        android:id="@+id/ll_group_member_edit"
+        layout="@layout/item_chat_team_add_user"
+        android:visibility="gone" />
+
+    <cc.emw.mobile.view.MyListView
+        android:id="@+id/lv_group_user2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#00000000"
+        android:dividerHeight="0dp" />
+</LinearLayout>

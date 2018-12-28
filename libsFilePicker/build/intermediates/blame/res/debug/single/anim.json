@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_main_show_amination.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_main_show_amination.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\snackbar_hide_animation.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\snackbar_hide_animation.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_main_hide_amination.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_main_hide_amination.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_root_show_amin.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_root_show_amin.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_root_show_amin.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_root_show_amin.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\snackbar_show_animation.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\snackbar_show_animation.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\snackbar_hide_animation.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\snackbar_hide_animation.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_root_hide_amin.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_root_hide_amin.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_main_hide_amination.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_main_hide_amination.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_main_show_amination.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_main_show_amination.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\progress_indeterminate_animation.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\progress_indeterminate_animation.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\snackbar_show_animation.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\snackbar_show_animation.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\progress_indeterminate_animation.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\progress_indeterminate_animation.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\tao.zhou\\.android\\build-cache\\0e1fe72e36d43c4870122a782e0a379fc1710794\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\dialog_root_hide_amin.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\MaterialDesign\\build\\intermediates\\bundles\\default\\res\\anim\\dialog_root_hide_amin.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsFilePicker\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\shaobo.zhuang\\.android\\build-cache\\8e92712727b556cba5c59bbca2edbb73edd6986d\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    }
+]

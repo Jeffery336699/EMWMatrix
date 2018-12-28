@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/contact_iv_icon"
+        android:layout_width="@dimen/usersitem_iv_size"
+        android:layout_height="@dimen/usersitem_iv_size"
+        android:layout_marginBottom="@dimen/usersitem_iv_bottom"
+        android:layout_marginLeft="@dimen/usersitem_iv_left"
+        android:layout_marginTop="@dimen/usersitem_iv_top"
+        android:src="@drawable/cm_img_head"
+        app:border_width="2dp"
+        app:border_color="@color/cm_headimg_border" />
+
+    <TextView
+        android:id="@+id/contact_tv_name"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/usersitem_ll_info_left"
+        android:layout_marginRight="@dimen/usersitem_iv_info_right"
+        android:layout_weight="1.0"
+        android:text="@string/unkonw"
+        android:textColor="@color/black"
+        android:textSize="@dimen/usersitem_tv_name" />
+	
+     <ImageButton
+        android:id="@+id/contact_btn_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="25dip"
+        android:padding="5dp"
+        android:src="@drawable/contact_btn_follow"
+        android:background="@null"
+        android:visibility="gone"/>
+
+</LinearLayout>

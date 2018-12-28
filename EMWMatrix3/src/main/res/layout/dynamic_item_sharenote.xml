@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:background="#F8F8FC"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:id="@+id/share_user_head"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginBottom="0dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="10dp"
+		android:orientation="horizontal">
+
+		<cc.emw.mobile.view.CircleImageView
+			android:id="@+id/share_iv_dynamic_head"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:src="@drawable/cm_img_head"
+			app:border_color="@color/cm_headimg_border"
+			app:border_width="0dp" />
+
+		<TextView
+			android:id="@+id/share_tv_dynamic_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/share_iv_dynamic_head"
+			android:text="@string/unkonw"
+			android:textColor="@color/dynamic_name_text"
+			android:layout_marginLeft="6dp"
+			android:textSize="14sp" />
+		<!--android:layout_toRightOf="@+id/share_iv_dynamic_head" android:layout_alignTop="@+id/share_iv_dynamic_head"-->
+		<TextView
+			android:id="@+id/share_tv_dynamic_roles"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toEndOf="@id/share_tv_dynamic_name"
+			android:layout_alignBottom="@id/share_tv_dynamic_name"
+			android:layout_marginLeft="10dp"
+			android:maxLines="1"
+			android:text=""
+			android:textColor="#337AB7"
+			android:textSize="13sp" />
+		<TextView
+			android:id="@+id/share_tv_dynamic_dept"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/share_iv_dynamic_head"
+			android:layout_marginBottom="3dp"
+			android:layout_marginLeft="10dp"
+			android:layout_toRightOf="@+id/share_iv_dynamic_head"
+			android:text="@string/unkonw"
+			android:textColor="#757575"
+			android:textSize="12sp"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/share_tv_dynamic_location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/share_tv_dynamic_dept"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_toLeftOf="@+id/tv_dynamic_time"
+			android:layout_toRightOf="@+id/share_tv_dynamic_dept"
+			android:text="@string/unkonw"
+			android:textColor="#757575"
+			android:textSize="12sp"
+			android:visibility="gone"/>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/share_tv_dynamic_date"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/unkonw"
+				android:textColor="@color/dynamic_time_text"
+				android:textSize="12sp" />
+			<TextView
+				android:id="@+id/share_tv_dynamic_time"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="@string/unkonw"
+				android:textColor="@color/dynamic_time_text"
+				android:textSize="12sp"
+				android:layout_below="@id/share_tv_dynamic_date"/>
+		</LinearLayout>
+
+	</RelativeLayout>
+
+	<cc.emw.mobile.view.DynamicTextView
+		android:id="@+id/share_desc_dynamic_tv_all"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="10dp"
+		/>
+
+	<TextView
+		android:id="@+id/tv_dynamicshare_content"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_marginBottom="0dp"
+		android:layout_marginTop="10dp"
+		android:ellipsize="end"
+		android:maxLines="3"
+		android:text="@string/unkonw"
+		android:textColor="@color/dynamic_content_text"
+		android:textSize="14sp"
+		android:visibility="gone"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#F8F8FC"
+		android:orientation="vertical">
+		<android.support.v7.widget.CardView
+			android:id="@+id/ll_dynamicshare_other"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="0dp"
+			android:layout_marginRight="0dp"
+			android:layout_marginTop="0dp"
+			app:cardBackgroundColor="@color/white"
+			app:cardCornerRadius="2dp"
+			app:cardElevation="5dp"
+			app:cardMaxElevation="10dp"
+			app:cardPreventCornerOverlap="true"
+			app:cardUseCompatPadding="true"
+			app:contentPadding="0dp"
+			android:visibility="gone"/>
+	</LinearLayout>
+
+	<cc.emw.mobile.view.FlowLayout
+		android:id="@+id/fl_dynamicshare_image"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp">
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#EAEBED"
+            android:layout_centerHorizontal="true"/>
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_corner_red"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingLeft="12dp">
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/iv_filehistory_head"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border"
+            app:border_width="0dp" />
+        <TextView
+            android:id="@+id/tv_filehistory_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_filehistory_head"
+            android:layout_alignTop="@+id/iv_filehistory_head"
+            android:layout_marginLeft="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="@string/unkonw"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_filehistory_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_filehistory_head"
+            android:layout_marginRight="12dp"
+            android:text="@string/unkonw"
+            android:textColor="@color/cm_texthint"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_filehistory_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_filehistory_name"
+            android:layout_below="@+id/tv_filehistory_time"
+            android:layout_marginTop="5dp"
+            android:text="@string/unkonw"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/tv_filehistory_desc"
+            android:layout_marginRight="12dp"
+            android:textColor="#4A90E2"
+            android:textSize="20dp"
+            app:iconCode="e950" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/iv_filehistory_head"
+            android:layout_marginTop="16dp"
+            android:background="#EAEBED"/>
+    </RelativeLayout>
+
+</LinearLayout>

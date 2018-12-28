@@ -1,0 +1,194 @@
+[
+    {
+        "outputFile": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 875,
+                    "endColumn": 61,
+                    "endOffset": 932
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 875,
+                        "endColumn": 61,
+                        "endOffset": 932
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 937,
+                    "endLine": 22,
+                    "endColumn": 12,
+                    "endOffset": 1568
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 937,
+                        "endLine": 22,
+                        "endColumn": 12,
+                        "endOffset": 1568
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1573,
+                    "endLine": 38,
+                    "endColumn": 12,
+                    "endOffset": 2202
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1573,
+                        "endLine": 38,
+                        "endColumn": 12,
+                        "endOffset": 2202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 2207,
+                    "endLine": 53,
+                    "endColumn": 12,
+                    "endOffset": 2840
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2207,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 2840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 2845,
+                    "endLine": 68,
+                    "endColumn": 12,
+                    "endOffset": 3478
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 2845,
+                        "endLine": 68,
+                        "endColumn": 12,
+                        "endOffset": 3478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 3483,
+                    "endLine": 84,
+                    "endColumn": 12,
+                    "endOffset": 4118
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 3483,
+                        "endLine": 84,
+                        "endColumn": 12,
+                        "endOffset": 4118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 4123,
+                    "endLine": 99,
+                    "endColumn": 12,
+                    "endOffset": 4754
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 4123,
+                        "endLine": 99,
+                        "endColumn": 12,
+                        "endOffset": 4754
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 4759,
+                    "endLine": 114,
+                    "endColumn": 12,
+                    "endOffset": 5393
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 100,
+                        "startColumn": 4,
+                        "startOffset": 4759,
+                        "endLine": 114,
+                        "endColumn": 12,
+                        "endOffset": 5393
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 5398,
+                    "endLine": 129,
+                    "endColumn": 12,
+                    "endOffset": 6030
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 5398,
+                        "endLine": 129,
+                        "endColumn": 12,
+                        "endOffset": 6030
+                    }
+                }
+            }
+        ]
+    }
+]

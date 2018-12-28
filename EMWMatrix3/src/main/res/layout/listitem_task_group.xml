@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+
+    <TextView
+        android:id="@+id/tv_task_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="项目一"
+        android:textColor="@color/task_group_processing_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_task_group_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_task_group_name"
+        android:text="2"
+        android:textColor="@color/task_group_processing_text"
+        android:textSize="14sp" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/iv_task_group_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="#00c4e0"
+        android:textSize="16dp"
+        app:iconCode="ea6c" />
+    <View
+        android:id="@+id/view_task_group_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tv_task_group_name"
+        android:layout_marginTop="6dp"
+        android:background="@color/task_group_processing_text" />
+
+</RelativeLayout>

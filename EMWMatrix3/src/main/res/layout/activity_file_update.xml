@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:background="@color/transparent">
+<View
+	android:layout_width="1dp"
+	android:layout_height="match_parent"
+	android:layout_marginLeft="@dimen/activity_margin_left"
+	android:background="@color/activity_divider_bg" />
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/cm_bg">
+
+    <include layout="@layout/cm_header_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="12dp"
+				android:textColor="#8D8E97"
+				android:textSize="12sp"
+				android:text="当前"/>
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="6dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="12dp"
+				android:paddingRight="12dp"
+				android:background="@drawable/cm_border_bg">
+				<ImageView
+					android:id="@+id/iv_fileupdate_curicon"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:src="@drawable/list_ico_folder" />
+				<TextView
+					android:id="@+id/tv_fileupdate_curname"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignTop="@+id/iv_fileupdate_curicon"
+					android:layout_toRightOf="@+id/iv_fileupdate_curicon"
+					android:layout_marginLeft="10dp"
+					android:ellipsize="middle"
+					android:singleLine="true"
+					android:text="@string/unkonw"
+					android:textColor="#595968"
+					android:textSize="14sp" />
+				<TextView
+					android:id="@+id/tv_fileupdate_curtime"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignBottom="@+id/iv_fileupdate_curicon"
+					android:layout_alignLeft="@+id/tv_fileupdate_curname"
+					android:text="@string/unkonw"
+					android:textColor="#8D8E97"
+					android:textSize="12sp" />
+				<TextView
+					android:id="@+id/tv_fileupdate_cursize"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignBottom="@+id/iv_fileupdate_curicon"
+					android:layout_toRightOf="@+id/tv_fileupdate_curtime"
+					android:layout_marginLeft="10dp"
+					android:text="@string/unkonw"
+					android:textColor="#8D8E97"
+					android:textSize="12sp" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:layout_marginLeft="12dp">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:textColor="#8D8E97"
+					android:textSize="12sp"
+					android:text="更新"/>
+				<cc.emw.mobile.view.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:textColor="#E2604E"
+					android:textSize="20dp"
+					app:iconCode="eb67" />
+			</RelativeLayout>
+
+			<LinearLayout
+				android:id="@+id/ll_fileupdate_add"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginTop="6dp"
+				android:background="@drawable/selector_border"
+				android:orientation="horizontal"
+				android:gravity="center"
+				android:paddingLeft="12dp"
+				android:paddingRight="12dp">
+				<cc.emw.mobile.view.IconTextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:textColor="#3CC56D"
+					android:textSize="20dp"
+					app:iconCode="e969" />
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginLeft="10dp"
+					android:gravity="center_vertical"
+					android:textSize="16sp"
+					android:textColor="@color/cm_text"
+					android:text="添加文件"/>
+			</LinearLayout>
+			<RelativeLayout
+				android:id="@+id/rl_fileupdate_update"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_marginTop="6dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:paddingLeft="12dp"
+				android:paddingRight="12dp"
+				android:background="@drawable/cm_border_bg"
+				android:visibility="gone">
+				<ImageView
+					android:id="@+id/iv_fileupdate_icon"
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:src="@drawable/list_ico_folder" />
+				<TextView
+					android:id="@+id/tv_fileupdate_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignTop="@+id/iv_fileupdate_icon"
+					android:layout_toRightOf="@+id/iv_fileupdate_icon"
+					android:layout_marginLeft="10dp"
+					android:ellipsize="middle"
+					android:singleLine="true"
+					android:text="@string/unkonw"
+					android:textColor="#595968"
+					android:textSize="14sp" />
+				<TextView
+					android:id="@+id/tv_fileupdate_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignBottom="@+id/iv_fileupdate_icon"
+					android:layout_alignLeft="@+id/tv_fileupdate_name"
+					android:text="@string/unkonw"
+					android:textColor="#8D8E97"
+					android:textSize="12sp" />
+				<TextView
+					android:id="@+id/tv_fileupdate_size"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignBottom="@+id/iv_fileupdate_icon"
+					android:layout_toRightOf="@+id/tv_fileupdate_time"
+					android:layout_marginLeft="10dp"
+					android:text="@string/unkonw"
+					android:textColor="#8D8E97"
+					android:textSize="12sp" />
+				<cc.emw.mobile.view.IconTextView
+					android:id="@+id/itv_fileupdate_del"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:padding="6dp"
+					android:textSize="14dp"
+					android:textColor="#404040"
+					app:iconCode="ea79"/>
+			</RelativeLayout>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="12dp"
+				android:textColor="#8D8E97"
+				android:textSize="12sp"
+				android:text="添加描述"/>
+			<EditText
+				android:id="@+id/et_fileupdate_desc"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="6dp"
+				android:background="@drawable/cm_border_bg"
+				android:paddingTop="5dp"
+				android:paddingBottom="5dp"
+				android:paddingLeft="12dp"
+				android:paddingRight="12dp"
+				android:gravity="top"
+				android:lines="4"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+</LinearLayout>

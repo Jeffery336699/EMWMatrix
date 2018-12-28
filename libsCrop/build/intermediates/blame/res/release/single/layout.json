@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsCrop\\build\\intermediates\\res\\merged\\release\\layout\\crop__layout_done_cancel.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsCrop\\src\\main\\res\\layout\\crop__layout_done_cancel.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsCrop\\build\\intermediates\\res\\merged\\release\\layout\\crop__activity_crop.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsCrop\\src\\main\\res\\layout\\crop__activity_crop.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsCrop\\build\\intermediates\\res\\merged\\release\\layout\\crop__activity_crop.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsCrop\\src\\main\\res\\layout\\crop__activity_crop.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsCrop\\build\\intermediates\\res\\merged\\release\\layout\\crop__layout_done_cancel.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsCrop\\src\\main\\res\\layout\\crop__layout_done_cancel.xml"
+    }
+]

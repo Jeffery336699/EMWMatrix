@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 项目部分 -->
+    <RelativeLayout
+        android:id="@+id/project_group_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_group_portrait"
+        android:background="@color/white">
+        <View
+            android:id="@+id/project_group_stripe1"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/round_corner_stripe" />
+        <View
+            android:id="@+id/project_group_stripe2"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cm_divider_bg"/>
+        <!-- 存放项目的容器 -->
+        <LinearLayout
+            android:id="@+id/project_group_projects_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/pj_bg"
+            android:orientation="vertical">
+            <include layout="@layout/listitem_project"/>
+        </LinearLayout>
+        <View
+            android:id="@+id/project_group_stripe3"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/project_group_projects_ll"
+            android:layout_marginTop="10dp"
+            android:background="@color/cm_divider_bg"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#4CC1FF"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/welcome_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/guide_phone" />
+
+    <Button
+        android:id="@+id/btn_into_login"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|top"
+        android:background="@null"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/guide_faxian"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="144dp"
+        android:alpha="@integer/animation_default_duration"
+        android:src="@drawable/guide_faxian"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/guide_lianjie"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="256dp"
+        android:alpha="@integer/animation_default_duration"
+        android:src="@drawable/guide_lianjie"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/guide_xietong"
+        android:layout_width="58.8dp"
+        android:layout_height="58.8dp"
+        android:layout_marginLeft="256dp"
+        android:layout_marginTop="396dp"
+        android:alpha="@integer/animation_default_duration"
+        android:src="@drawable/guide_xietong"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gudie_corner_tips" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/gudie_corner_tips_nor" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/gudie_corner_tips_nor" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/gudie_corner_tips_nor" />
+
+    </LinearLayout>
+
+</FrameLayout>

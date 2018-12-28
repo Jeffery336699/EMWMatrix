@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cm_bg">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/cm_header_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/form_top_meun_white_bg"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_btn_left9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/cm_text"
+            android:textSize="14dp"
+            app:iconCode="ea64" />
+
+        <TextView
+            android:id="@+id/cm_header_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/cm_text"
+            android:textSize="14dp"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/cm_header_btn_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/nav_btn_edit"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_teamdetail_newtask"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone">
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#5FC26D"
+            android:textSize="20dp"
+            app:iconCode="eaa8" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="新建任务"
+            android:textColor="#5FC26D"
+            android:textSize="14sp" />
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CBCBCB"
+            android:textSize="12dp"
+            app:iconCode="eb69" />
+    </LinearLayout>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_teamdetail_tasknum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.ExListView
+                        android:id="@+id/lv_teamdetail_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/cm_border_bg"
+                        android:divider="@null"
+                        android:listSelector="@android:color/transparent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_teamdetail_creator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_border"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textColor="#8d8e97"
+                            android:textSize="16dp"
+                            app:iconCode="ecd0" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="团队创建人"
+                            android:textColor="@color/cm_text"
+                            android:textSize="14sp" />
+                        <cc.emw.mobile.view.CircleImageView
+                            android:id="@+id/civ_teamdetail_creatorhead"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/cm_img_head"
+                            app:border_color="@color/cm_bg"
+                            app:border_width="0dp" />
+                        <TextView
+                            android:id="@+id/tv_teamdetail_creatorname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="12dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/cm_texthint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minHeight="48dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/cm_border_bg">
+
+                        <LinearLayout
+                            android:id="@+id/ll_teamdetail_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp">
+                            <cc.emw.mobile.view.IconTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/team"
+                                android:textColor="#8d8e97"
+                                android:textSize="16dp"
+                                app:iconCode="ecd0" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:text="团队成员"
+                                android:textColor="@color/cm_text"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/tv_teamdetail_membernum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7人"
+                                android:textColor="@color/cm_texthint"
+                                android:textSize="14sp" />
+                            <cc.emw.mobile.view.IconTextView
+                                android:id="@+id/itv_teamdetail_memberarrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:textColor="#cbcbcb"
+                                android:textSize="12dp"
+                                app:iconCode="eb69" />
+                        </LinearLayout>
+
+                        <cc.emw.mobile.view.MyGridView
+                            android:id="@+id/gv_teamdetail_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0.5dp"
+                            android:background="@color/white"
+                            android:columnWidth="50dp"
+                            android:gravity="center"
+                            android:listSelector="@android:color/transparent"
+                            android:numColumns="5"
+                            android:stretchMode="columnWidth" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <include layout="@layout/network_tips" />
+        </FrameLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll_teamdetail_chat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_listview"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:textColor="#5FC26D"
+            android:textSize="20dp"
+            app:iconCode="ea34" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发起沟通"
+            android:textColor="#5FC26D"
+            android:textSize="16dp" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

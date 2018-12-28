@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_calendar_create_outs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_new_page_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_dialog_bar2" />
+
+    <cc.emw.mobile.view.SwipeBackScrollView
+        android:id="@+id/main_calendar_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/cm_input_et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="@string/content_hint"
+                    android:lines="2"
+                    android:paddingBottom="58dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_calendarcreate_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:hint="日程标题"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_calendarcreate_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="日程描述"
+                    android:maxLines="3"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--电子围栏-->
+                <LinearLayout
+                    android:id="@+id/ll_calendar_modify_location_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="ec5a" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="电子围栏"
+                        android:singleLine="true"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/schedule_ll_allday"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/icon_all_day" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:text="全天事件"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.SwitchButton
+                        android:id="@+id/schedule_sb_allday"
+                        style="@style/SwitchButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:enabled="false"
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/ios_back_drawable"
+                        app:kswBackMeasureRatio="1.5"
+                        app:kswThumbDrawable="@mipmap/ios_thumb"
+                        app:kswThumbMarginBottom="-8dp"
+                        app:kswThumbMarginLeft="-5dp"
+                        app:kswThumbMarginRight="-5dp"
+                        app:kswThumbMarginTop="-2.5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_schedule_startdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="开始时间"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_btn_startdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:textColor="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#CBCBCB"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_schedule_enddate"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="结束时间"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_btn_enddate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:textColor="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#CBCBCB"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/icon_repeat" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="重复"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_repeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_repeat_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="16dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="重复截止"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_repeat_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_remind"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="16dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e908" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="提醒"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_remind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--标签-->
+                <LinearLayout
+                    android:id="@+id/ll_tag_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e91a" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="标签"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/cm_select_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#CBCBCB"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+
+                </LinearLayout>
+
+                <!--附件-->
+                <LinearLayout
+                    android:id="@+id/file_relation"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="eb05" />
+
+                    <TextView
+                        android:id="@+id/tv_calendar_relation_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="附件"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_calendar_file_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/cm_select_text"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#CBCBCB"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/cm_select2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <include
+                layout="@layout/cm_worker"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </cc.emw.mobile.view.SwipeBackScrollView>
+
+</LinearLayout>

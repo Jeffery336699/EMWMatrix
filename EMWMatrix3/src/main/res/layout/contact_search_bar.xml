@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_contact_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cm_border_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <cc.emw.mobile.view.IconTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#A9A9A9"
+        android:textSize="16dp"
+        app:iconCode="e990" />
+
+    <EditText
+        android:id="@+id/et_contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@null"
+        android:ellipsize="none"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="10.0dip"
+        android:singleLine="true"
+        android:textColor="@color/cm_text"
+        android:textColorHint="@color/cm_texthint"
+        android:textSize="14sp" />
+
+</LinearLayout>

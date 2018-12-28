@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/root_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <!--<View-->
+    <!--android:layout_width="1dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="@dimen/activity_margin_left"-->
+    <!--android:background="@color/activity_divider_bg" />-->
+
+    <LinearLayout
+        android:id="@+id/root_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <!--<include layout="@layout/activity_dialog_title"/>-->
+
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/form_top_meun_white_bg"
+            android:orientation="horizontal">
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cm_header_btn_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:textColor="#101010"
+                android:textSize="16dp"
+                app:iconCode="ea64"/>
+
+            <TextView
+                android:id="@+id/cm_header_tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/cm_text"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/cm_header_tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:text="筛选"
+                android:textColor="@color/cm_text"
+                android:textSize="16dp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+                    android:id="@+id/load_more_list_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <ListView
+                        android:id="@+id/load_more_small_image_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@color/cm_divider_bg"
+                        android:dividerHeight="0dip"
+                        android:fadingEdge="none"
+                        android:footerDividersEnabled="false"
+                        android:headerDividersEnabled="false"
+                        android:listSelector="@android:color/transparent"
+                        android:padding="0dp"
+                        android:scrollbarStyle="outsideOverlay"/>
+                </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
+
+                <LinearLayout
+                    android:id="@+id/ll_task_blank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cm_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_relation_blank_tag"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:contentDescription="blank_task"
+                        android:src="@drawable/blank_ico_renwu"/>
+
+                    <TextView
+                        android:id="@+id/tv_relation_blank_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30dp"
+                        android:gravity="center"
+                        android:text="@string/task_empty"
+                        android:textColor="@color/cm_empty_text"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include layout="@layout/network_tips"/>
+            </FrameLayout>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

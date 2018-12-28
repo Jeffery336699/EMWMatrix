@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * 尝试与服务端建立连接
+     */
+    private void attemptToBindService() {
+        Log.e(getLocalClassName(), "service connecting start");
+        Intent intent = new Intent(this, AIDLService.class);
+//        intent.setAction("cc.emw.mobile.userInfo.aidl");
+        intent.setPackage("cc.emw.mobile");
+        bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (!mBound) {
+            attemptToBindService();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mBound) {
+            unbindService(mServiceConnection);
+            mBound = false;
+        }
+    }
+
+    private ServiceConnection mServiceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.e(getLocalClassName(), "service connected");
+            mUserInfoManager = UserInfoManager.Stub.asInterface(service);
+            mBound = true;
+
+            if (mUserInfoManager != null) {
+                try {
+                    mUserInfos = mUserInfoManager.getUserInfos();
+//                    Toast.makeText(ChatActivity.this, mUserInfos.get(0).Name, Toast.LENGTH_SHORT).show();
+//                    EMWApplication.personMap = (SparseArray<UserInfo>) mUserInfoManager.getUserMap();
+//                    Integer keys = 0;
+                    for (Object in : mUserInfoManager.getUserMap().keySet()) {
+                        //map.keySet()返回的是所有key的值
+                        cc.emw.mobile.contact.bean.UserInfo userInfos = (cc.emw.mobile.contact.bean.UserInfo) mUserInfoManager.getUserMap().get(in);//得到每个key多对用value的值
+                        UserInfo userInfo = new UserInfo();
+                        userInfo.Name = userInfos.Name;
+                        userInfo.ID = userInfos.ID;
+                        EMWApplication.personMap.put((Integer) in,userInfo);
+                    }
+                    Log.e(getLocalClassName(), mUserInfos.toString());
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Toast.makeText(ChatActivity.this, "当前与服务端处于未连接状态，正在尝试重连，请稍后再试", Toast.LENGTH_SHORT).show();
+            Log.e(getLocalClassName(), "service disconnected");
+            mBound = false;
+        }
+    };

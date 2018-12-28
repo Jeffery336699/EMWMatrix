@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cal_text">#FF2E4960</color>
+    <color name="cal_text1">#FF33BAB0</color>
+    <color name="cal_text2">#FFFF7E00</color>
+    <color name="cal_text3">#FF5FBE7D</color>
+    <color name="cal_text4">#FF55ABE5</color>
+    <color name="cal_text5">#FF5D74D8</color>
+    <color name="cal_text6">#FFE48BB5</color>
+    <color name="cal_text7">#FFCE4A27</color>
+</resources>

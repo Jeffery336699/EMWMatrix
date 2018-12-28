@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <!--<View-->
+    <!--android:layout_width="1dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="@dimen/activity_margin_left"-->
+    <!--android:background="@color/activity_divider_bg" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/cm_setting_title_bar2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--<ImageView
+                    android:layout_width="87dp"
+                    android:layout_height="87dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="10.7dp"
+                    android:gravity="center_horizontal"
+                    android:text="EMW Matrix"
+                    android:textColor="@color/meabout_text"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="54dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="0.3dp"
+                    android:gravity="center_horizontal"
+                    android:text="版本：2.0"
+                    android:textColor="@color/cm_text"
+                    android:textSize="12sp" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="70dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="One World!"
+                        android:textColor="#d60a0a"
+                        android:textSize="32sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:gravity="center"
+                        android:text="EMW Matrix"
+                        android:textColor="#616873"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="left"
+                    android:text="EMW Matrix强调移动先行，把工作装进口袋，随时随地保持沟通，高效工作。带给您丰富、强大的移动体验，日程、项目、订单、客户、商机等所有业务一手掌控。"
+                    android:textColor="#4e4e4e"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_listview"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_about_current"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:text="当前版本"
+                            android:textColor="@color/cm_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_about_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingRight="12dp"
+                            android:text="2.0"
+                            android:textColor="#7f8fa4" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:background="@color/cm_divider_bg" />
+
+                    <TextView
+                        android:id="@+id/tv_about_upgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/selector_listview"
+                        android:drawableRight="@drawable/list_btn_next"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:text="检查升级"
+                        android:textColor="@color/cm_text"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cm_divider_bg" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <TextView
+                    android:id="@+id/tv_about_suggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:drawableRight="@drawable/list_btn_next"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="意见反馈"
+                    android:textColor="@color/cm_text"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="©2008-2016 EMW Corpation\n中天博日版权所有"
+                    android:textColor="@color/cm_texthint"
+                    android:textSize="12sp" />-->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

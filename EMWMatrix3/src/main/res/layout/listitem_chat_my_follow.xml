@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_my_follow"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="10dp"
+        android:text="我的关注"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/line_follow_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <HorizontalScrollView
+        android:id="@+id/hscr_my_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_chat_follow_contain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/line_follow_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_long_chat"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="10dp"
+        android:text="非活跃"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/line_follow_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+</LinearLayout>

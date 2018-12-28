@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_calendar_tag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.calendar.CalendarTagActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="30dp"
+            android:orientation="vertical">
+
+            <cc.emw.mobile.view.MyListView
+                android:id="@+id/lv_calendar_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/trans"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/tv_calendar_new_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="44dp"
+                android:text="新建标签"
+                android:textColor="@color/cal_edit_text"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:textColor="#cbcbcb"
+                android:textSize="12dp"
+                app:iconCode="eb69" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="cc.emw.mobile.contact.fragment.PhoneUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <cc.emw.mobile.view.SearchEditText
+                android:id="@+id/cm_header_et_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cm_search_bg"
+                android:drawableLeft="@drawable/cm_ic_search"
+                android:drawablePadding="9dp"
+                android:drawableRight="@drawable/ic_edit_input_clear"
+                android:hint="搜索"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="#333"
+                android:textColorHint="#A1A1A1"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <cc.emw.mobile.view.SwipeBackRecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <cc.emw.mobile.contact.widget.IndexBar
+        android:id="@+id/indexBar"
+        app:indexBarPressBackground="@color/partTranslucent"
+        app:indexBarTextSize="10sp"
+        android:layout_width="20dp"
+        android:layout_height="380dp"
+        android:layout_gravity="right|center_vertical" />
+
+    <TextView
+        android:id="@+id/tvSideBarHint"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_side_bar_bg"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:visibility="gone"
+        tools:text="A"
+        tools:visibility="visible" />
+
+</FrameLayout>

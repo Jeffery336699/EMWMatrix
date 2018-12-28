@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/root_view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/white">
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<include layout="@layout/cm_dialog_bar2" />
+
+	<cc.emw.mobile.view.DynamicEmoticonsKeyBoard
+		android:id="@+id/ek_bar"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+		<in.srain.cube.views.ptr.PtrClassicFrameLayout
+			android:id="@+id/load_more_list_view_ptr_frame"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+				<ListView
+					android:id="@+id/load_more_small_image_list_view"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:divider="@color/cm_divider_bg"
+					android:dividerHeight="0dip"
+					android:fadingEdge="none"
+					android:cacheColorHint="@android:color/transparent"
+					android:listSelector="@android:color/transparent"
+					android:padding="0dp"
+					android:scrollbarStyle="outsideOverlay"
+					android:headerDividersEnabled="false"
+					android:footerDividersEnabled="false" />
+				<LinearLayout
+					android:id="@+id/ll_filediscuss_blank"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@color/cm_bg"
+					android:gravity="center"
+					android:orientation="vertical"
+					android:visibility="gone">
+					<!--android:drawableTop="@drawable/blank_ico_zhishiku"-->
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:drawablePadding="30dp"
+						android:gravity="center"
+						android:text="暂无数据"
+						android:textColor="@color/cm_empty_text"
+						android:textSize="16sp" />
+				</LinearLayout>
+
+				<include layout="@layout/network_tips" />
+			</FrameLayout>
+		</in.srain.cube.views.ptr.PtrClassicFrameLayout>
+	</cc.emw.mobile.view.DynamicEmoticonsKeyBoard>
+</LinearLayout>
+</LinearLayout>

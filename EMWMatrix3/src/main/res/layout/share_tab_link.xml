@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_sharelink_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cm_border_bg"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cm_border_bg"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/share_link"
+            android:textColor="@color/dynamicadd_sharetitle_text"
+            android:textSize="13sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_sharelink_del"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#404040"
+            android:textSize="18dp"
+            app:iconCode="ec71" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_linkurl"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_sharelink_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="@string/share_linkurl_hint"
+            android:singleLine="true"
+            android:textColor="@color/cm_text"
+            android:textColorHint="@color/cm_texthint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_linkdesc"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_sharelink_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="@string/share_linkdesc_hint"
+            android:singleLine="true"
+            android:textColor="@color/cm_text"
+            android:textColorHint="@color/cm_texthint"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

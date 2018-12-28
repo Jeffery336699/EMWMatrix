@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    tools:context=".calendar.fragment.CalendarFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/cm_search_bar_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#FF335B9D"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#A9A9A9"
+                    android:textSize="16dp"
+                    app:iconCode="e990" />
+
+                <EditText
+                    android:id="@+id/et_search_keyword_calendar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="10.0dip"
+                    android:ellipsize="none"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="20dip"
+                    android:singleLine="true"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/cm_header_bar" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/iv_add_calendar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="69dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/circle_add"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:iconCode="ea07" />
+
+</FrameLayout>

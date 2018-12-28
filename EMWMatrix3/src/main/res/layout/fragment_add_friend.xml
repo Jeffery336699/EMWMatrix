@@ -1,0 +1,89 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cc.emw.mobile.contact.fragment.AddFriendFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <!--搜索-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <cc.emw.mobile.view.SearchEditText
+                android:id="@+id/cm_header_et_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cm_search_bg"
+                android:drawableLeft="@drawable/cm_ic_search"
+                android:drawablePadding="9dp"
+                android:drawableRight="@drawable/ic_edit_input_clear"
+                android:hint="手机号／名字／邮箱"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="#333"
+                android:textColorHint="#A1A1A1"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <com.gc.materialdesign.views.LayoutRipple2
+            android:id="@+id/ll_sao_yi_sao"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginLeft="12dp"
+                android:drawableLeft="@drawable/saoyisao"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:text="扫一扫"
+                android:textColor="#FF101010"
+                android:textSize="14sp" />
+
+        </com.gc.materialdesign.views.LayoutRipple2>
+
+        <TextView
+            android:id="@+id/tv_add_friend_tag_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:text="可能认识的人 (无)"
+            android:textColor="#FF989898"
+            android:textSize="12sp" />
+
+        <cc.emw.mobile.view.SwipeBackScrollView
+            android:id="@+id/swipe_scroll_add_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <cc.emw.mobile.view.MyListView
+                android:id="@+id/mlv_maybe_know"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/trans"
+                android:dividerHeight="0dp" />
+
+        </cc.emw.mobile.view.SwipeBackScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

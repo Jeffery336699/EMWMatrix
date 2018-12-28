@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/cm_header_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingTop="10dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <!-- name -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名称"
+                    android:textColor="@color/project_title1_text"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_projectmodify_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入项目名称"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textColor="@color/cm_text"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <!-- description -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="描述"
+                    android:textColor="@color/project_title1_text"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_projectmodify_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入项目描述"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textColor="@color/cm_text"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <!-- state -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="状态"
+                    android:textColor="@color/project_title1_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_projectmodify_state_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableRight="@drawable/btn_calendar_month_rightarrow"
+                    android:gravity="center|left"
+                    android:hint="请选择"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textColor="@color/cm_text"
+                    android:textSize="14sp" />
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_projectmodify_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="进行中" />
+
+                    <TextView
+                        android:id="@+id/tv_projectmodify_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="20%" />
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/pb_projectmodify_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="100"
+                    android:progress="30"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:visibility="gone" />
+
+                <!-- time -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="开始时间"
+                        android:textColor="@color/project_title1_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="结束时间"
+                        android:textColor="@color/project_title1_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_projectmodify_startTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="请选择开始时间"
+                        android:textColorHint="@color/cm_texthint"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_projectmodify_endTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="请选择结束时间"
+                        android:textColorHint="@color/cm_texthint"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- responser -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="负责人"
+                android:textColor="@color/project_title2_text" />
+
+            <ListView
+                android:id="@+id/lv_projectdetail_responser"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:listSelector="@color/transparent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cm_divider_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_projectmodify_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="13dp" >
+
+                <ImageView
+                    android:id="@+id/iv_projectmodify_portrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="portrait"
+                    android:background="@drawable/list_btn_add" />
+
+                <TextView
+                    android:id="@+id/tv_projectmodify_responser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="添加人员"
+                    android:textColor="@color/cm_text"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_projectmodify_relative_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ico_xiangguanrenwu"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="相关任务"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/iv_projectmodify_taskNum"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="12"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/list_btn_next" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="48dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_projectmodify_active_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp" >
+
+                    <TextView
+                        android:id="@+id/tv_projectmodify_relative_task"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ico_huodongricheng"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="活动日程 "
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/iv_projectmodify_scheduleNum"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="12"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/list_btn_next" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="48dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_projectmodify_repository"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp" >
+
+                    <TextView
+                        android:id="@+id/tv_projectmodify_relative_repository"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ico_zhishiku"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="知识库"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/iv_projectmodify_repositoryNum"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/list_btn_next" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- task -->
+
+</LinearLayout>

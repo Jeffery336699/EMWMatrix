@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <LinearLayout
+            android:id="@+id/down_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btn_calender_left_controll"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingLeft="5dp"
+                android:src="@drawable/btn_calendar_month_leftarrow" />
+
+            <TextView
+                android:id="@+id/show_year_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="2015/12"
+                android:textColor="@color/cal_month_time_tips"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/btn_calender_right_controll"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:src="@drawable/btn_calendar_month_rightarrow" />
+        </LinearLayout>
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15dp"
+        app:mcv_arrowColor="@color/mcv_arrow_normal"
+        app:mcv_calendarMode="month"
+        app:mcv_monthLabels="@array/custom_months"
+        app:mcv_selectionColor="@color/mcv_day_text_checked"
+        app:mcv_showOtherDates="all"
+        app:mcv_tileHeight="35dp"
+        app:mcv_weekDayLabels="@array/custom_weekdays" />
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_1" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_calendar_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="今天"
+                android:textColor="@color/cal_month_day_btn_text"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btn_calendar_dayinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_arrows"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_no_calender_tips"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="暂无事件"
+            android:textColor="@color/cal_text_name"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_calendar_month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+
+    </LinearLayout>
+
+</LinearLayout>

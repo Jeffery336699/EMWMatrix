@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.contact.GroupsCreateActivitys">
+
+    <include layout="@layout/group_create_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_group_create_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:background="@null"
+                android:hint="为圈子命名"
+                android:paddingLeft="12dp"
+                android:textColor="#8D8E97"
+                android:textColorHint="#8D8E97"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#00C4E0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:text="群组设置"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/group_create_ll_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="@dimen/all_content_leftright">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/groupcreate_private_text"
+                    android:textColor="#354052"
+                    android:textSize="16sp" />
+
+                <cc.emw.mobile.view.SwitchButton
+                    android:id="@+id/group_create_sb_apply"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    app:kswAnimationDuration="300"
+                    app:kswBackDrawable="@drawable/ios_back_drawable"
+                    app:kswBackMeasureRatio="1.5"
+                    app:kswThumbDrawable="@mipmap/ios_thumb"
+                    app:kswThumbMarginBottom="-8dp"
+                    app:kswThumbMarginLeft="-5dp"
+                    app:kswThumbMarginRight="-5dp"
+                    app:kswThumbMarginTop="-2.5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_calendar_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="18dp"
+                android:paddingRight="@dimen/all_content_leftright">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="团队颜色"
+                    android:textColor="#354052"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_calendar_color_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/share_circle_nor"
+                    android:gravity="center"
+                    android:paddingRight="2dp"
+                    android:text=""
+                    android:textColor="@color/cal_edit_text_hint"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_color_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_btn_next" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/group_create_et_memo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="30dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/groupcreate_desc_hint"
+                android:minHeight="22dp"
+                android:textColor="#8D8E97"
+                android:textColorHint="#8D8E97"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/cm_divider_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="16dp"
+                android:text="选择圈子头像（可选）"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp" />
+
+            <cc.emw.mobile.view.MyGridView
+                android:id="@+id/mgv_group_create_head_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/cm_bg"
+                android:columnWidth="75dp"
+                android:gravity="center"
+                android:horizontalSpacing="12dp"
+                android:listSelector="@null"
+                android:numColumns="4"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

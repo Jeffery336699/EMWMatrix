@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/personnel_tv_dept"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:background="@color/contact_person_list_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="产品部"
+        android:textColor="@color/contact_group_member_department"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="25dp">
+
+        <cc.emw.mobile.view.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/personnel_iv_head"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border"
+            app:border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/personnel_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/unkonw"
+                android:textColor="@color/contact_edit_text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/right_menu_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@null"
+                android:text="@string/unkonw"
+                android:textColor="@color/contact_edit_text_hint"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_guanzhude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_ico_guanzhude"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

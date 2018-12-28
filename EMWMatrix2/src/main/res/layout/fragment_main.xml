@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false" >
+
+    <cc.emw.mobile.view.ExViewPager
+        android:id="@+id/tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_divider" />
+    <View
+        android:id="@+id/tab_divider" 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_divider_bg"
+        android:layout_above="@+id/tab_view" />
+	<cc.emw.mobile.view.TabView
+	    xmlns:tab="http://schemas.android.com/apk/res-auto"  
+        android:id="@+id/tab_view"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"  
+        android:orientation="horizontal"  
+        android:background="@android:color/white"
+        tab:text_visibility="true"  
+        tab:text_size="10sp"  
+        tab:text_normal_color="@color/main_tabtext_normal"
+        tab:text_select_color="@color/main_tabtext_select"
+        tab:item_padding="10dp" />
+
+</RelativeLayout>

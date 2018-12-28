@@ -1,0 +1,106 @@
+[
+    {
+        "outputFile": "D:\\yuanhang.liu\\EMWMatrix\\libsSwipeMenuListView\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsSwipeMenuListView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 44,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endColumn": 41,
+                    "endOffset": 137
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsSwipeMenuListView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 41,
+                        "endOffset": 137
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 142,
+                    "endColumn": 54,
+                    "endOffset": 192
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsSwipeMenuListView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 142,
+                        "endColumn": 54,
+                        "endOffset": 192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 197,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 483
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsSwipeMenuListView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 197,
+                        "endLine": 11,
+                        "endColumn": 12,
+                        "endOffset": 483
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 488,
+                    "endLine": 14,
+                    "endColumn": 12,
+                    "endOffset": 643
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsSwipeMenuListView\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 488,
+                        "endLine": 14,
+                        "endColumn": 12,
+                        "endOffset": 643
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\mcv_text_date_weekday.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\bundles\\debug\\res\\color\\mcv_text_date_weekday.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\mcv_text_date_dark.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\bundles\\debug\\res\\color\\mcv_text_date_dark.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\mcv_text_date_light.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\bundles\\debug\\res\\color\\mcv_text_date_light.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\mcv_text_date_day.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsMaterialCalendarView\\build\\intermediates\\bundles\\debug\\res\\color\\mcv_text_date_day.xml"
+    }
+]

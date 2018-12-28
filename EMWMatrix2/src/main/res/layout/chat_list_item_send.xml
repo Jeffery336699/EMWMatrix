@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/chat_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/chat_time"
+        android:padding="6dp"
+        android:text="2016.3.9"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_tv_time">
+
+        <RelativeLayout
+            android:id="@+id/base_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/chat_iv_head"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/chat_tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:gravity="center_vertical"
+                android:maxWidth="220dp"
+                android:minWidth="20dp"
+                android:padding="5dp"
+                android:text="@string/unkonw"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_tv_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确定" />
+
+                <Button
+                    android:id="@+id/notSure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消" />
+            </LinearLayout>
+
+            <cc.emw.mobile.view.BubbleImageView
+                android:id="@+id/chat_iv_image"
+                android:layout_width="120dp"
+                android:layout_height="160dp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/file_layout"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/file_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chat_tv_filename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/chat_tv_filesize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/audio_layout"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/chat_iv_head"
+            android:layout_toLeftOf="@+id/chat_iv_head"
+            android:background="@drawable/mes_send"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <cc.emw.mobile.view.RoundProgressBar
+                android:id="@+id/chat_audio_bt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/chat_btn_bofang_w"
+                app:roundColor="#40D1D1D1"
+                app:roundWidth="1.8dp"
+                app:style="STROKE"
+                app:textIsDisplayable="false" />
+
+            <TextView
+                android:id="@+id/chat_audio_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/chat_audio_bt"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/chat_iv_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border"
+            app:border_width="2dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

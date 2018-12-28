@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/selector_listview"
+    android:gravity="center_vertical"
+    android:minHeight="48dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_depart_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="研发部"
+            android:textColor="#354052"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_person_group_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6人"
+            android:textColor="#7f8fa4"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/ic_tv_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textColor="#cbcbcb"
+            app:iconCode="eb6a" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+</LinearLayout>

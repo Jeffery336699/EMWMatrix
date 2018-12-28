@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/itv_dialoglist_typeicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:iconCode="e924"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/iv_dialoglist_typeicon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tv_dialoglist_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@android:style/TextAppearance.Medium"
+        android:background="@android:color/transparent"
+        android:textColor="@color/cm_text"
+        android:textSize="15sp"
+        android:text="全部"
+        />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/itv_dialoglist_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#3CC56D"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:iconCode="e924" />
+</LinearLayout>

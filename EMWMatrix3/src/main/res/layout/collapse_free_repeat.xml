@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll_collapse_free"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cc.emw.mobile.view.MyListView
+            android:id="@+id/mlv_collapse_free"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/trans"
+            android:dividerHeight="0dp" />
+
+    </ScrollView>
+
+
+</LinearLayout>

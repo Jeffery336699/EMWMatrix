@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_file_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="12dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/cm_header_civ_head"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="知识库"
+                    android:textColor="@color/cm_text"
+                    android:textSize="17sp" />
+
+                <ImageButton
+                    android:id="@+id/cm_header_btn_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="4dp"
+                    android:background="@null"
+                    android:src="@drawable/cm_ic_notice" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cm_divider_bg" />
+
+            <cc.emw.mobile.view.PagerSlidingTabStrip
+                android:id="@+id/tabstrip_file"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/white"
+                app:indicatorColor="#FF7E00"
+                app:indicatorHeight="0dp"
+                app:underlineColor="@color/cm_divider_bg"
+                app:underlineHeight="0.5dp" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout> 

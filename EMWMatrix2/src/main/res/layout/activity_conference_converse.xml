@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#444B50" >
+
+    <RelativeLayout
+        android:id="@+id/conference_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/conference_add"
+            android:layout_width="50dip"
+            android:layout_height="50dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/conference_add"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/conference_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text=""
+            android:textColor="#11CD6E"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/conference_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conference_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/converse_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/conference_rl"
+        android:layout_marginTop="45dip"
+        android:orientation="vertical" >
+
+        <cc.emw.mobile.view.MyGridView
+            android:id="@+id/gv_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:columnWidth="50dp"
+            android:gravity="center"
+            android:horizontalSpacing="18dp"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/ll_conference4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/conference4"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_conference4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/conference4_speak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/conference_speak"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_conference5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/conference5"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_conference5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/conference5_speak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/conference_speak"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_row1"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/ll_conference2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/conference2"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_conference2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/conference2_speak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/conference_speak"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_conference1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/conference1"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_conference1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/conference1_speak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/conference_speak"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_conference3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dip"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/conference3"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_conference3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/conference3_speak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/conference_speak"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/converse_rl_incall"
+            android:layout_marginBottom="10dip" >
+
+            <ImageButton
+                android:id="@+id/converse_call_mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/converse_call_hangup"
+                android:background="@null"
+                android:src="@drawable/converse_mute" />
+
+            <ImageButton
+                android:id="@+id/converse_call_hangup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/converse_call_endcall"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/converse_call_endcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/converse_call_endcall"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/converse_call_speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/converse_call_hangup"
+                android:background="@null"
+                android:src="@drawable/converse_speaker" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/converse_rl_incall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp" >
+
+            <ImageButton
+                android:id="@+id/converse_call_hangup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/converse_call_temp"
+                android:background="@drawable/converse_call_hangup"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/converse_call_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/converse_call_endcall"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/converse_call_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/converse_call_temp"
+                android:background="@drawable/converse_call_answer"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

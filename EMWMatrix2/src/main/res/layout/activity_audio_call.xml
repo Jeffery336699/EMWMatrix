@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#444b50"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/audio_call_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@null"
+        android:clickable="false"
+        android:focusable="false"
+        android:padding="10dp"
+        android:src="@drawable/white_back" />
+
+		<cc.emw.mobile.view.CircleImageView
+	        android:id="@+id/audio_call_head"
+	        android:layout_width="80dip"
+	        android:layout_height="80dip"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="30dp"
+	        android:src="@drawable/cm_img_head"
+	        app:border_color="@color/cm_headimg_border"
+	        app:border_width="2dp" />
+        <TextView
+            android:id="@+id/audio_call_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/audio_call_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+		<RelativeLayout 
+		    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingBottom="40dp">
+            <ImageButton
+	            android:id="@+id/audio_call_intelligence"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:background="@null"
+	            android:src="@drawable/call_smart" />
+	        <ImageButton
+	            android:id="@+id/audio_call_direct"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:background="@null"
+	            android:src="@drawable/call_direct" />
+	        <ImageButton
+	            android:id="@+id/audio_call_backcall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:background="@null"
+	            android:src="@drawable/call_backcall" />
+		</RelativeLayout>
+		<ImageButton
+            android:id="@+id/audio_call_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/call_free" />
+</LinearLayout>

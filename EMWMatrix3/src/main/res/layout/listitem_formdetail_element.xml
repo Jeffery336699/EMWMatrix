@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_element_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_element_name"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:gravity="left"
+            android:textColor="@color/cm_texthint"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/et_element_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:background="@drawable/stroke_black"
+            android:cursorVisible="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/cm_text"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"/>
+        <cc.emw.mobile.view.FlowLayout
+            android:id="@+id/fl_element_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/ll_element_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/stroke_black" >
+
+            <TextView
+                android:id="@+id/tv_element_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp"/>
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/itv_element_typeicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#CBCBCB"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_element_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <cc.emw.mobile.view.FlowLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2"/>
+        <com.inqbarna.tablefixheaders.TableFixHeaders
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/cm_divider_bg"/>
+</LinearLayout>

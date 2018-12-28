@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_network_tips"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="gone" >
+
+	<TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/tishi_ico_wifi"
+        android:drawablePadding="30dp"
+        android:textColor="@color/cm_network_text"
+        android:textSize="13sp"
+        android:text="网络错误或无连接，点击屏幕重试"/>
+    
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/btn_chat_more_pop"
+    android:orientation="vertical">
+    <com.gc.materialdesign.views.ButtonFlat
+        android:id="@+id/bf_chat_group_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="群组详情"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888888" />
+
+    <com.gc.materialdesign.views.ButtonFlat
+        android:id="@+id/bf_chat_importance_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重要消息查询"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+</LinearLayout>

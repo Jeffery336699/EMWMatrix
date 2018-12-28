@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_header_bar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/load_more_list_view_ptr_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+                    android:id="@+id/load_more_list_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" > -->
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.xlf.nrl.NsRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/nrl_test"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:auto_load_more="false"
+                        app:pull_refresh_enable="false">
+
+                        <com.inqbarna.tablefixheaders.TableFixHeaders
+                            android:id="@+id/table"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="horizontal|vertical" />
+                    </com.xlf.nrl.NsRefreshLayout>
+                </FrameLayout>
+                <!-- </in.srain.cube.views.loadmore.LoadMoreListViewContainer> -->
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_indicator_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/shape_ico_red"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_indicator_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/shape_ico_red"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_sale_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="#ffffff"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/sales_tv_drawerlayout_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/sales_order_tv_bg"
+                    android:drawableRight="@drawable/w"
+                    android:padding="2dp" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/sales_iv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/shape_ico_red"
+                    android:text="全部" />
+
+                <cc.emw.mobile.view.FlowLayout
+                    android:id="@+id/fl_sales_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp" />
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/horizontalbarchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/linechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/piechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_horizontal_barchart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/task_bg"
+                        android:gravity="center"
+                        android:text="水平" />
+
+                    <TextView
+                        android:id="@+id/tv_vertical_barchart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/task_bg"
+                        android:gravity="center"
+                        android:text="竖直" />
+
+                    <TextView
+                        android:id="@+id/tv_line_barchart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/task_bg"
+                        android:gravity="center"
+                        android:text="折线" />
+
+                    <TextView
+                        android:id="@+id/tv_pie_barchart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/task_bg"
+                        android:gravity="center"
+                        android:text="扇形" />
+                </LinearLayout>
+                <!--展示图标点击后的视图-->
+                <LinearLayout
+                    android:id="@+id/ll_sales_container_click_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_sales_click_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/sales_order_tv_bg"
+                        android:drawableRight="@drawable/w"
+                        android:padding="2dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_sales_select_chart_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_sales_barchart"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/barchart_selector" />
+
+                        <RadioButton
+                            android:id="@+id/rb_sales_barchart_horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/horizontal_barchart_selector" />
+
+                        <RadioButton
+                            android:id="@+id/rb_sales_linechart"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/linechart_selector" />
+
+                        <RadioButton
+                            android:id="@+id/rb_sales_piechart"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/piechart_selector" />
+
+                        <RadioButton
+                            android:id="@+id/rb_sales_excute"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/excute_chart" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_sale_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#ffffff"
+            android:clickable="true">
+
+            <LinearLayout
+                android:id="@+id/ll_sale_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ExpandableListView
+                    android:id="@+id/left_exListview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@color/cm_divider_bg"
+                    android:dividerHeight="1dp"
+                    android:fadingEdge="none"
+                    android:footerDividersEnabled="false"
+                    android:groupIndicator="@color/blue"
+                    android:headerDividersEnabled="false"
+                    android:listSelector="@android:color/transparent"
+                    android:padding="0dp"
+                    android:scrollbarStyle="outsideOverlay" />
+
+                <Button
+                    android:id="@+id/sale_btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/task_comment_edit_bg"
+                    android:text="@string/search"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <CheckBox
+        android:id="@+id/cb_dynamicplan_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:button="@drawable/cm_multi_select2"
+        android:text=""
+        android:textColor="@color/dynamicplan_content_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_dynamicplan_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="任务名称"
+        android:textColor="@color/dynamicplan_content_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_dynamicplan_finishtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="2015-10-06"
+        android:textColor="@color/dynamicplan_finishtime_text"
+        android:textSize="12sp" />
+
+</LinearLayout>

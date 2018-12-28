@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:gravity="center_vertical" >
+    <TextView
+        android:id="@+id/tv_sharevote_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unkonw"
+        android:textColor="@color/dynamicadd_sharevote_text"
+       	android:textSize="13sp" />
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="5dp"
+    	android:orientation="horizontal"
+    	android:gravity="center">
+        
+    
+    <EditText
+        android:id="@+id/et_sharevote_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:singleLine="true"
+        android:textColor="@color/cm_text"
+       	android:textSize="14sp"
+       	android:textColorHint="@color/cm_texthint"
+       	android:hint="@string/share_vote_hint" />
+	<ImageButton
+        android:id="@+id/btn_sharevote_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="@null"
+        android:src="@drawable/list_btn_del" />
+	</LinearLayout>
+</LinearLayout>

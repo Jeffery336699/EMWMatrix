@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_line_camare"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="151dp"
+                android:layout_height="match_parent">
+    <cc.emw.mobile.chat.view.PreSurfaceView
+        android:id="@+id/presurface_view"
+        android:layout_width="146dp"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/iv_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/take_picture"/>
+    <ImageView
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/iv_change_camare_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/change_camera"/>
+</RelativeLayout>

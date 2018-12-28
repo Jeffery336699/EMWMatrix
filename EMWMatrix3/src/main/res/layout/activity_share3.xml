@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_share_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/cm_dialog_bar2" />
+
+    <cc.emw.mobile.view.SwipeBackScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="15dp"
+        android:scrollbars="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+            <include layout="@layout/cm_input" />
+            <include layout="@layout/share_tab_file" />
+            <include layout="@layout/share_tab_image" />
+            <include layout="@layout/share_tab_link" />
+            <include layout="@layout/share_tab_vote" />
+            <include layout="@layout/share_tab_video" />
+            <include layout="@layout/cm_select"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </cc.emw.mobile.view.SwipeBackScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <include layout="@layout/share_tab" />
+
+</LinearLayout>

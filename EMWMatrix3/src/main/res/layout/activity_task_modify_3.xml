@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/finish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_new_page_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_dialog_bar2" />
+
+    <cc.emw.mobile.view.SwipeBackScrollView
+        android:id="@+id/swipeback_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/cm_input_et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/content_hint"
+                android:lines="3"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="20dp"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/et_taskmodify_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="@string/allot_taskname_hint"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="20dp"
+                android:singleLine="true"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_taskmodify_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="@string/task_modify_des"
+                android:lines="2"
+                android:paddingBottom="30dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_task_modify_project_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:id="@+id/itv_task_no_e925"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e925" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@id/itv_task_no_e925"
+                        android:background="@null"
+                        android:hint="关联项目"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:id="@+id/itv_task_view"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </RelativeLayout>
+
+                <!--开始时间-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_start_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="开始时间"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/task_modify_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cm_texthint"
+                        android:textColorHint="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <!--结束时间-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_finish_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="结束时间"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_finish_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cm_texthint"
+                        android:textColorHint="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--负责人-->
+                <LinearLayout
+                    android:id="@+id/rl_task_modify_charge_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e912" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_charge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="负责人"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.CircleImageView
+                        android:id="@+id/civ_task_modify_head_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/cm_img_head"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_charge_number"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#737373"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <!--执行人-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_moreuser_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e9ac" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_more_user"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="执行人"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_task_modify_head_image_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_more_user_number"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#737373"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <!--紧急程度-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_emergency_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="ea6c" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="紧急程度"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_emergency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cm_select_text"
+                        android:textColorHint="@color/cm_texthint"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tag_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="e91a" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="标签"
+                        android:textColor="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/cm_select_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#CBCBCB"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+
+                </LinearLayout>
+
+                <!--附件-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_attachment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="eb05" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_attachment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:hint="附件"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_attachment_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/cm_texthint"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <!--电子围栏-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_location_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="10dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:textColor="#737373"
+                        android:textSize="18dp"
+                        app:iconCode="ec5a" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:hint="电子围栏"
+                        android:textColor="@color/cm_text"
+                        android:textColorHint="@color/cm_text"
+                        android:textSize="14sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/cm_select2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+        </LinearLayout>
+    </cc.emw.mobile.view.SwipeBackScrollView>
+</LinearLayout>

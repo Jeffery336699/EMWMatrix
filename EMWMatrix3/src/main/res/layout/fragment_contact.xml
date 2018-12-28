@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cm_search_bars"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="#FF335B9D"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/shape_bg"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#A9A9A9"
+                    android:textSize="16dp"
+                    app:iconCode="e990" />
+                <EditText
+                    android:id="@+id/et_search_keywords"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@null"
+                    android:drawablePadding="10.0dip"
+                    android:ellipsize="none"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search"
+                    android:paddingLeft="20dip"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+                    android:textSize="14sp"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/cm_header_bar" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</FrameLayout>

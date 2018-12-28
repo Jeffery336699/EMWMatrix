@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingBottom="8dp"
+              android:paddingTop="8dp">-->
+
+<!--    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_projectarrange_timespan"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/stroke_red"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_projectarrange_progress"
+                android:layout_width="50dp"
+                android:layout_height="26dp"
+                android:layout_alignLeft="@+id/tv_projectarrange_timespan"
+                android:layout_centerVertical="true"
+                android:background="@drawable/round_icon_red"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/nav_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xiangmu_btn_yuandian" />
+        </RelativeLayout>
+
+<!--        <ImageView
+            android:id="@+id/nav_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:src="@drawable/xiangmu_btn_yuandian" />
+    </FrameLayout>
+
+    </LinearLayout>-->

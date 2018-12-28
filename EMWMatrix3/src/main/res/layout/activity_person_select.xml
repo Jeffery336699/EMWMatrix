@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/group_create_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_tag_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="vertical">
+
+        <cc.emw.mobile.view.edittag.EditTag
+            android:id="@+id/edit_tag_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_layout="@layout/view_default_input_tag"
+            app:tag_layout="@layout/view_default_tag"
+            app:delete_mode_bg="@drawable/bg_default_del_tag"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="4dp"
+            android:background="#00C4E0" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp"
+        android:text="通讯录"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_personselect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/cm_divider_bg"
+            android:dividerHeight="0dip"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="false"
+            android:listSelector="@drawable/selector_transparent"
+            android:padding="0dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TextView
+            android:id="@+id/contact_tv_letter"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/dialog_char"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <cc.emw.mobile.view.SideBar
+            android:id="@+id/contact_sidebar"
+            android:layout_width="25dip"
+            android:layout_height="300dp"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

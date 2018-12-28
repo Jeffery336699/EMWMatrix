@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null" >
+
+    <TextView
+        android:id="@+id/tv_dynamicreply_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/dynamicreply_name_text"
+        android:textSize="13sp"
+        android:text="张三" />
+    <TextView
+        android:id="@+id/tv_dynamicreply_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_dynamicreply_name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColor="@color/cm_text"
+        android:textSize="13sp"
+        android:text="回复 " />
+    <TextView
+        android:id="@+id/tv_dynamicreply_toname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_dynamicreply_temp"
+        android:textColor="@color/dynamicreply_name_text"
+        android:textSize="13sp"
+        android:text="李四：" />
+
+    <Button
+        android:id="@+id/btn_dynamicreply_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:textColor="@color/dynamicreply_reply_text"
+        android:textSize="13sp"
+        android:text="回复" />
+
+    <TextView
+        android:id="@+id/tv_dynamicreply_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dynamicreply_name"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/cm_text"
+        android:textSize="14sp"
+        android:text="回复内容" />
+
+</RelativeLayout>

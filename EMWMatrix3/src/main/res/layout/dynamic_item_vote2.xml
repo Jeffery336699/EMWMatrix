@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@null"
+	android:orientation="horizontal"
+	android:gravity="center">
+	<View
+		android:layout_width="4dp"
+		android:layout_height="match_parent"
+		android:background="#5ECBB0"/>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginLeft="12dp"
+		android:layout_marginRight="16dp">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="6dp">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textColor="@color/dynamic_title_text"
+				android:textSize="14sp"
+				android:text="投票" />
+			<TextView
+				android:id="@+id/tv_dynamicvote_count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="8dp"
+				android:textColor="@color/dynamicvote_count_text"
+				android:textSize="12sp"
+				android:text="" />
+		</LinearLayout>
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="0.5dp"
+			android:background="#DBDBDB"/>
+
+		<cc.emw.mobile.view.FlowLayout
+			android:id="@+id/fl_dynamicvote_tags"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:visibility="gone" />
+
+		<LinearLayout
+			android:id="@+id/ll_dynamicvote_voted"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+		</LinearLayout>
+
+		<cc.emw.mobile.view.ExListView
+			android:id="@+id/lv_dynamicvote_voting"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:cacheColorHint="@android:color/transparent"
+			android:listSelector="@android:color/transparent"
+			android:divider="@android:color/transparent"
+			android:dividerHeight="5dp"
+			android:paddingTop="5dp"/>
+		<Button
+			android:id="@+id/btn_dynamicvote_vote"
+			android:layout_width="match_parent"
+			android:layout_height="32dp"
+			android:layout_marginTop="16dp"
+			android:background="@drawable/dynamic_button_bg1"
+			android:textSize="14sp"
+			android:textColor="@color/dynamicvote_name_text"
+			android:text="请选择"
+			android:enabled="false"
+			android:visibility="gone" />
+	</LinearLayout>
+</LinearLayout>

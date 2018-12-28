@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <cc.emw.mobile.chat.view.MyCollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/white"
+            app:expandedTitleMarginStart="20dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/gray_1"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignBottom="@+id/iv_group_new_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/chat_team_info_title_down_bg" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/tv_group_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/cm_text"
+                    android:textSize="16sp"
+                    app:iconCode="ec6a" />
+
+                <TextView
+                    android:id="@+id/tv_group_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:textColor="@color/cm_text"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_group_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center"
+                    android:textColor="@color/cm_text"
+                    android:textSize="16sp"
+                    app:iconCode="eb3b" />
+            </android.support.v7.widget.Toolbar>
+
+            <View
+                android:id="@+id/view_group_name_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="188dp"
+                android:background="@color/cm_text"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etv_group_name"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="50dp"
+                android:background="@null"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/cm_text"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+        </cc.emw.mobile.chat.view.MyCollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/mll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <cc.emw.mobile.chat.view.MyRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:scrollbars="none" />
+
+        <View
+            android:id="@+id/view_dialog_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cm_dialog_bg"
+            android:clickable="true"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

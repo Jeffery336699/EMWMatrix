@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_reguser_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/cm_main_text"
+            android:textSize="20dp"
+            app:iconCode="eb68" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="One World!"
+            android:textColor="@color/cm_main_text"
+            android:textSize="22sp"
+            android:textStyle="bold" />-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_ic_title"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="填写登录邮箱并创建密码"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="密码长度至少为8个字符。"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <cc.emw.mobile.view.MaterialEditText
+                android:id="@+id/et_reguser_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:hint="请输入您的邮箱地址"
+                app:met_floatingLabelText="邮箱地址"
+                style="@style/MaterialEditText"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <cc.emw.mobile.view.MaterialEditText
+                    android:id="@+id/et_reguser_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:hint="请输入您的登录密码"
+                    app:met_floatingLabelText="登录密码"
+                    style="@style/MaterialEditText"/>
+                <ImageView
+                    android:id="@+id/iv_reguser_visibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="26dp"
+                    android:src="@drawable/ic_visibility_off_black" />
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_reguser_register"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/login_btn_bg"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="完成注册"
+                android:textColor="@color/login_text_color"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

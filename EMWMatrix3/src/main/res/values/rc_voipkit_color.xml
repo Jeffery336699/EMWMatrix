@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rc_voip_background_color">@color/white</color>
+    <color name="rc_voip_check_disable">@color/cm_texthint</color>
+    <color name="rc_voip_check_enable">@color/cm_main_text</color>
+</resources>

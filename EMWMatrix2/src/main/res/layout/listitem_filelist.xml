@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="57dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="0dp" >
+
+        <ImageView
+            android:id="@+id/iv_filelist_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/list_ico_folder" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_filelist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="@string/unkonw"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_filelist_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_filelist_project"
+                    android:text="@string/unkonw"
+                    android:textColor="@color/cm_texthint"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_filelist_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_filelist_project"
+                    android:layout_toRightOf="@+id/tv_filelist_time"
+                    android:layout_alignBaseline="@+id/tv_filelist_project"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/unkonw"
+                    android:textColor="@color/cm_texthint"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_filelist_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#D7E0EB"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center"
+                    android:text="项目"
+                    android:textColor="#5D7EA7"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_filelist_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/list_btn_sel_menu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_filelist_more"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:background="@color/cm_bg"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/btn_filelist_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ico_shanchu"
+            android:textColor="@color/filelist_more_text"
+            android:textSize="12sp"
+            android:text="删除" />
+		<Button
+            android:id="@+id/btn_filelist_move"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ico_yidong"
+            android:textColor="@color/filelist_more_text"
+            android:textSize="12sp"
+            android:text="移动"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btn_filelist_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ico_fenxiang"
+            android:textColor="@color/filelist_more_text"
+            android:textSize="12sp"
+            android:text="分享" />
+
+        <Button
+            android:id="@+id/btn_filelist_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ico_xiazai"
+            android:textColor="@color/filelist_more_text"
+            android:textSize="12sp"
+            android:text="下载" />
+
+        <Button
+            android:id="@+id/btn_filelist_open"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/ico_chakan"
+            android:textColor="@color/filelist_more_text"
+            android:textSize="12sp"
+            android:text="查看" />
+    </LinearLayout>
+
+</LinearLayout>

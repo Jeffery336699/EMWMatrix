@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="1dp"
+    app:contentPadding="1dp">
+    <LinearLayout
+        android:layout_margin="3dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/chat_ai_item_iv_foot_pic"
+            android:layout_width="150dp"
+            android:layout_height="140dp"/>
+        <TextView
+            android:id="@+id/chat_ai_item_foot_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:text="111"/>
+        <TextView
+            android:id="@+id/chat_ai_item_foot_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:text="111"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

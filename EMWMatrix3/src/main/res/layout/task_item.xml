@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_task_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/all_content_top"
+    android:background="@drawable/cm_border_bg"
+    android:minHeight="44dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <ImageView
+        android:id="@+id/iv_task_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/list_btn_next" />
+
+    <TextView
+        android:layout_toRightOf="@id/iv_task_item"
+        android:id="@+id/tv_task_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="谁能看见"
+        android:textColor="@color/cm_text"
+        android:textSize="16sp" />
+
+    <!-- <cc.emw.mobile.view.FlowLayout
+         android:id="@+id/cm_select_fl_select"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="5dp"
+         android:layout_marginTop="10dp"
+         android:layout_weight="1"
+         android:visibility="visible"/>-->
+    <!-- <TextView
+         android:id="@+id/cm_select_tv_name"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:layout_marginLeft="10dp"
+         android:singleLine="true"
+         android:ellipsize="middle"
+         android:gravity="right"
+         android:textColor="#2097EF"
+         android:textSize="16sp"
+         android:textColorHint="#2097EF"
+         android:hint="公开"/>-->
+
+    <ImageView
+        android:id="@+id/iv_task_item_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/list_btn_next" />
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_card.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_card.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_card_nos.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_card_nos.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_card_nos_pressed.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_card_nos_pressed.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_mints_update_progressbar.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_mints_update_progressbar.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_dialog_window.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_dialog_window.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_dialog_window.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_dialog_window.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_card.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_card.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_card_nos_pressed.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_card_nos_pressed.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_material_card_nos.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_material_card_nos.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_dialog_button.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_dialog_button.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_dialog_button.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_dialog_button.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\debug\\drawable\\cube_mints_update_progressbar.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\drawable\\cube_mints_update_progressbar.xml"
+    }
+]

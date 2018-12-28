@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_none"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="永不"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_0"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="准时"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5分钟前"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1小时前"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_3"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3小时前"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_4"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1天前"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_5"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3天前"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calendar_tx_6"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/selector_listviews"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1周前"
+            android:textColor="@color/cal_edit_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

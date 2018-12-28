@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cm_header_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/form_top_meun_white_bg">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_btn_left9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#101010"
+            android:textSize="14dp"
+            custom:iconCode="ea64"/>
+
+        <TextView
+            android:id="@+id/cm_header_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cm_header_btn_left9"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#101010"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/cm_header_tv_right9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text=""
+            android:textColor="#FFFF4C0D"
+            android:textSize="14sp"/>
+
+        <ImageButton
+            android:id="@+id/cm_header_btn_edit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/nav_btn_edit"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnStartRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始"/>
+
+    <Button
+        android:id="@+id/btnStopRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结束"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#000"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="实时识别过程"/>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#000"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvParseResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="结果"/>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

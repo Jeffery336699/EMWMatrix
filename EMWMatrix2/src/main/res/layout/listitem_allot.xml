@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingBottom="5dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="5dp" >
+
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/iv_allotitem_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/cm_img_head"
+        app:border_color="@color/cm_headimg_border"
+        app:border_width="2dp" />
+
+    <TextView
+        android:id="@+id/tv_allotitem_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:text="姓名"
+        android:textColor="@color/cm_text"
+        android:textSize="15sp" />
+
+    <ImageButton
+        android:id="@+id/btn_allotitem_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:src="@drawable/list_btn_del" />
+
+</LinearLayout>

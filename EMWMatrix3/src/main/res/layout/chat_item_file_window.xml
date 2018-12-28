@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/load_more_list_view_ptr_frame"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<RelativeLayout
+		android:id="@+id/rl_file_root"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp"
+		android:paddingBottom="5dp"
+		android:background="@color/white">
+
+		<cc.emw.mobile.view.IconTextView
+			android:id="@+id/itv_chat_file_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:textColor="#3cc56d"
+			android:textSize="20sp"
+			app:iconCode="eb6b" />
+		<ProgressBar
+			android:id="@+id/itv_chat_find_file_state_start"
+			style="?android:attr/progressBarStyleSmall"
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:layout_toRightOf="@+id/itv_chat_file_back"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="20dp"
+			android:indeterminateDuration="2500"
+			android:visibility="gone" />
+		<ImageView
+			android:id="@+id/itv_chat_send_msg2"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/chat_send_msg" />
+
+
+	</RelativeLayout>
+		<ListView
+			android:id="@+id/load_more_small_image_list_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@+id/rl_file_root"
+			android:cacheColorHint="@android:color/transparent"
+			android:listSelector="@drawable/selector_listview"
+			android:background="@color/white"
+			android:divider="@color/cm_divider_bg"
+			android:dividerHeight="0.5dip"
+			android:fadingEdge="none"
+			android:scrollbarStyle="outsideOverlay"
+			android:headerDividersEnabled="false"
+			android:footerDividersEnabled="true" />
+
+		<LinearLayout
+			android:id="@+id/ll_file_blank"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@+id/rl_file_root"
+			android:gravity="center"
+			android:orientation="vertical"
+			android:visibility="gone">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="无文件"
+				android:textColor="@color/cm_empty_text"
+				android:textSize="16sp" />
+		</LinearLayout>
+</RelativeLayout>

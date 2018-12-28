@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" 
+    android:background="@color/cm_bg">
+
+    <ImageView
+        android:id="@+id/iv_task_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_ico_red"
+        android:contentDescription="暂无图片" />
+
+    <TextView
+        android:id="@+id/tv_task_emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_task_icon"
+        android:text="非常紧急" />
+
+    <ImageView
+        android:id="@+id/iv_task_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/list_ico_gougou"
+        android:contentDescription="暂无图片" 
+        android:visibility="gone"/>
+
+</RelativeLayout>

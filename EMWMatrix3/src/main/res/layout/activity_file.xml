@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/transparent">
+<View
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_margin_left"
+    android:background="@color/activity_divider_bg" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cm_bg">
+
+    <include layout="@layout/cm_header_bar2"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_listview"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/list_ico_folder" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv1"
+                android:text="@string/file_myfile"
+                android:textColor="@color/cm_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv1"
+                android:layout_below="@id/tv1"
+                android:layout_toRightOf="@id/iv1"
+                android:text="2016-3-15 20:00     3项"
+                android:visibility="gone" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/tv111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#CBCBCB"
+                android:textSize="16dp"
+                app:iconCode="eb69" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/cm_divider_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_listview"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/list_ico_folder" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv2"
+                android:text="@string/file_sharefile"
+                android:textColor="@color/cm_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv2"
+                android:layout_below="@id/tv2"
+                android:layout_toRightOf="@id/iv2"
+                android:text="2016-3-15 20:00     3项"
+                android:visibility="gone" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/tv222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#CBCBCB"
+                android:textSize="16dp"
+                app:iconCode="eb69" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/cm_divider_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_listview"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/list_ico_folder" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv3"
+                android:text="@string/file_mysharefile"
+                android:textColor="@color/cm_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv3"
+                android:layout_below="@id/tv3"
+                android:layout_toRightOf="@id/iv3"
+                android:text="2016-3-15 20:00     3项"
+                android:visibility="gone" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/tv333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#CBCBCB"
+                android:textSize="16dp"
+                app:iconCode="eb69" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/cm_divider_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rl4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_listview"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/list_ico_folder" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv4"
+                android:text="@string/file_cancelfile"
+                android:textColor="@color/cm_text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv4"
+                android:layout_below="@id/tv4"
+                android:layout_toRightOf="@id/iv4"
+                android:text="2016-3-15 20:00     3项"
+                android:visibility="gone" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/tv444"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#CBCBCB"
+                android:textSize="16dp"
+                app:iconCode="eb69" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="55dp"
+            android:background="@color/cm_divider_bg" />
+    </LinearLayout>
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_file_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/circle_add"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:iconCode="e969"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>
+</LinearLayout>

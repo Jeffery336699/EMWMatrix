@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_listview"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="13dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="13dp">
+    <TextView
+        android:id="@+id/team_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMW"
+        android:textColor="#354052"
+        android:textSize="16dp"/>
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/tick_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:textColor="#3CC56D"
+        android:textSize="20dp"
+        custom:iconCode="e924"/>
+</LinearLayout>

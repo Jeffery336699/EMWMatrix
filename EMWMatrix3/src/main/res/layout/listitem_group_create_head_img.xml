@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_group_create_first"
+        android:layout_width="75dp"
+        android:layout_height="75dp">
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/cimg_group_create_head_img_item"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="#8D8E97"
+            />
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/cimg_select_shape"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:visibility="invisible"
+            android:src="@color/cm_dialog_bg"
+            />
+
+        <!--e931,ec02-->
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_group_head_img_select"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:iconCode="ec02" />
+
+    </RelativeLayout>
+
+</LinearLayout>

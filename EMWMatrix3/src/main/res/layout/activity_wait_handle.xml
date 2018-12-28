@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.me.WaitHandleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/head_bg"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="14dp"
+            android:paddingTop="5dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/tv_cm_header_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="5dp"
+                android:textColor="#EA5404"
+                android:textSize="20dp"
+                app:iconCode="eb68" />
+
+            <RadioGroup
+                android:id="@+id/cm_header_rg_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/cm_header_rb_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/db_calendar_selector"
+                    android:checked="true"
+                    android:padding="5dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/cm_header_rb_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/db_task_selector"
+                    android:padding="5dp" />
+
+                <View
+                    android:id="@+id/cm_header_middle_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/cm_header_rb_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/db_plan_selector"
+                    android:padding="5dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cm_header_btn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="5dp"
+                android:textColor="#EA5404"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                app:iconCode="ecd5" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/cm_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="#A9A9A9"
+                android:textSize="16dp"
+                app:iconCode="e990" />
+
+            <EditText
+                android:id="@+id/et_search_keyword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="10.0dip"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="20dip"
+                android:singleLine="true"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/up_down_shape" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_me_wait_handle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

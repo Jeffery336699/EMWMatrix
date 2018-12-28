@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F8F8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_contact_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系方式"
+                android:textColor="#DE000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="设置能查看你邮箱、电话的人"
+                android:textColor="#FF9298A4"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_contact_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所有人"
+            android:textColor="#FF9298A4"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/setting_right_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_concern_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="查看关注的人"
+            android:textColor="#DE000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_concern_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所有人"
+            android:textColor="#FF9298A4"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/setting_right_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_collect_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="查看收藏的人"
+            android:textColor="#DE000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_collect_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所有人"
+            android:textColor="#FF9298A4"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/setting_right_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_send_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="查看发布的人"
+            android:textColor="#DE000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_send_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所有人"
+            android:textColor="#FF9298A4"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/setting_right_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_work_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:text="查看职位相关"
+            android:textColor="#DE000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_work_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所有人"
+            android:textColor="#FF9298A4"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/setting_right_icon" />
+
+    </LinearLayout>
+
+</LinearLayout>

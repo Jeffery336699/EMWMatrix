@@ -1,0 +1,261 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:id="@+id/ll_calendar_month_week"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/cm_header_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageButton
+                    android:id="@+id/cal_header_btn_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/cm_header_btn_menu_pre" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_cal_switch_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:iconCode="e92c" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/show_year_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_cal_switch_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="invisible"
+                    app:iconCode="ecdc" />
+
+                <ImageButton
+                    android:id="@+id/cal_header_btn_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:src="@drawable/nav_btn_sort"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/cal_header_btn_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:src="@drawable/nav_btn_notice" />
+
+            </LinearLayout>
+
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <cc.emw.mobile.calendar.widget.HandMoveLayout
+            android:id="@+id/hand_move_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/cm_divider_bg" />
+
+            <include layout="@layout/calender_week_layout" />
+
+            <LinearLayout
+                android:id="@+id/hand_move"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/cm_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_cal_pic_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cm_bg"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cm_divider_bg" />
+                    <!-- 人员水平Scroll -->
+                    <cc.emw.mobile.calendar.view.ObservableScrollViewHor
+                        android:id="@+id/ll_person_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:background="@color/cm_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/ll_person_contain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" />
+
+                    </cc.emw.mobile.calendar.view.ObservableScrollViewHor>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cm_divider_bg" />
+
+                    <!-- 竖直时间ScrollView 加 WeekView -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 竖直时间的ScrollView-->
+                        <cc.emw.mobile.calendar.view.ObservableScrollViewVer
+                            android:id="@+id/slide_time_layout"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+                            <cc.emw.mobile.view.MyListView
+                                android:id="@+id/mlv_slide_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="1200dp"
+                                android:divider="@color/transparent"
+                                android:dividerHeight="0dp" />
+
+                        </cc.emw.mobile.calendar.view.ObservableScrollViewVer>
+
+                        <cc.emw.mobile.calendar.view.MyTwoDirectScrollView
+                            android:id="@+id/two_scroll_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/my_content_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" />
+
+                        </cc.emw.mobile.calendar.view.MyTwoDirectScrollView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cal_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/cm_border_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_calendar_month_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="2016/05/01"
+                            android:textColor="#595968"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_calendar_month_num"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="12dp"
+                            android:layout_weight="1"
+                            android:gravity="right|center_vertical"
+                            android:text="本日暂无事件"
+                            android:textColor="#7f8fa4"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dp"
+                        android:background="@null"
+                        android:divider="@color/cm_divider_bg"
+                        android:dividerHeight="0.5dp"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cm_divider_bg" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </cc.emw.mobile.calendar.widget.HandMoveLayout>
+    </LinearLayout>
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/iv_add_calendar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="69dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/circle_add"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:iconCode="ea07" />
+
+</FrameLayout>

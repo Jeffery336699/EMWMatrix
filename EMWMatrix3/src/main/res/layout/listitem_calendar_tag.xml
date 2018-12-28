@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="44dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_calendar_tag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="#无"
+            android:textColor="@color/cal_edit_text" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/icon_tv_calendar_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:textColor="#5ecbb0"
+            android:visibility="gone"
+            app:iconCode="e924" />
+    </LinearLayout>
+
+</LinearLayout>

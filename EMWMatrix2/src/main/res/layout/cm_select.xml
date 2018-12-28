@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cm_select_ll_select"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="44dp"
+    android:layout_marginTop="@dimen/all_content_top"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingLeft="18dp"
+    android:paddingRight="12dp" >
+
+    <TextView
+        android:id="@+id/cm_select_tv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/talker_ico_fenxiang"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:hint="分享范围"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textColorHint="@color/cm_text"
+        android:textSize="15sp" />
+
+    <cc.emw.mobile.view.FlowLayout
+        android:id="@+id/cm_select_fl_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/iv_share_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list_btn_next" />
+
+</LinearLayout>

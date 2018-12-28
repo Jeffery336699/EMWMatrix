@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/cm_header_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="18dp"
+        android:text="@string/mesetting_notice_text"
+        android:textColor="@color/mesetting_title_text"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_setting_receiver_msg"
+        android:layout_width="match_parent"
+        android:layout_height="44dp 	"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="18dp"
+            android:text="@string/mesetting_message_text"
+            android:textColor="@color/cm_text"
+            android:textSize="15sp" />
+
+        <cc.emw.mobile.view.SwitchButton
+            android:id="@+id/sb_setting_message"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:enabled="false"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswBackMeasureRatio="1.4"
+            app:kswThumbDrawable="@drawable/ios_thumb"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="18dp"
+        android:background="@color/cm_divider_bg"/>
+
+    <LinearLayout
+        android:id="@+id/ll_setting_receiver_voice"
+        android:layout_width="match_parent"
+        android:layout_height="44dp 	"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="18dp"
+            android:text="@string/mesetting_voice_text"
+            android:textColor="@color/cm_text"
+            android:textSize="15sp" />
+
+        <cc.emw.mobile.view.SwitchButton
+            android:id="@+id/sb_setting_voice"
+            style="@style/SwitchButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:enabled="false"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/ios_back_drawable"
+            app:kswBackMeasureRatio="1.4"
+            app:kswThumbDrawable="@drawable/ios_thumb"
+            app:kswThumbMarginBottom="-8dp"
+            app:kswThumbMarginLeft="-5dp"
+            app:kswThumbMarginRight="-5dp"
+            app:kswThumbMarginTop="-2.5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="18dp"
+        android:text="@string/mesetting_safe_text"
+        android:textColor="@color/mesetting_title_text"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_setting_secure"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="18dp"
+            android:text="@string/mesetting_password_text"
+            android:textColor="@color/cm_text"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/list_btn_next" />
+    </LinearLayout>
+
+</LinearLayout>

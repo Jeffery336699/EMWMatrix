@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@drawable/vote_radio_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center" >
+    <TextView
+        android:id="@+id/tv_dynamicvote_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:textColor="@color/cm_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_dynamicvote_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="0dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/cm_text"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/tv_dynamicvote_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/dynamicvote_percent_text"
+        android:textSize="13sp"
+        android:text="10%" />
+</LinearLayout>

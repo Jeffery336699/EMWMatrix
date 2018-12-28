@@ -1,0 +1,159 @@
+[
+    {
+        "outputFile": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 1389,
+                    "endColumn": 52,
+                    "endOffset": 1437
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 1389,
+                        "endColumn": 52,
+                        "endOffset": 1437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 1442,
+                    "endColumn": 57,
+                    "endOffset": 1495
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 1442,
+                        "endColumn": 57,
+                        "endOffset": 1495
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 1500,
+                    "endColumn": 58,
+                    "endOffset": 1554
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1500,
+                        "endColumn": 58,
+                        "endOffset": 1554
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1559,
+                    "endColumn": 42,
+                    "endOffset": 1597
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1559,
+                        "endColumn": 42,
+                        "endOffset": 1597
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1602,
+                    "endColumn": 45,
+                    "endOffset": 1643
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1602,
+                        "endColumn": 45,
+                        "endOffset": 1643
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1648,
+                    "endColumn": 50,
+                    "endOffset": 1694
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1648,
+                        "endColumn": 50,
+                        "endOffset": 1694
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1699,
+                    "endColumn": 62,
+                    "endOffset": 1757
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1699,
+                        "endColumn": 62,
+                        "endOffset": 1757
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1762,
+                    "endColumn": 51,
+                    "endOffset": 1809
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNsRefreshLayout\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1762,
+                        "endColumn": 51,
+                        "endOffset": 1809
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cm_bg" >
+    <include layout="@layout/cm_header_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/all_content_top"
+        android:scrollbars="vertical" >
+        <LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical">
+	    	<include layout="@layout/cm_input" />
+	    	
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="44dp"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="10dp"
+		        android:paddingLeft="18dp"
+		        android:paddingRight="18dp"
+		        android:background="@color/white"
+		        android:gravity="center" >
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:paddingTop="8dp"
+			        android:paddingBottom="8dp"
+		            android:gravity="center_vertical"
+		            android:textColor="@color/cm_text"
+		            android:textSize="15sp"
+		            android:text="@string/plan_type" />
+		        <cc.emw.mobile.view.SegmentedGroup
+				    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+				    android:id="@+id/segmented_plan_type"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    segmentedgroup:sc_border_width="1dp"
+				    segmentedgroup:sc_corner_radius="5dp"
+				    segmentedgroup:sc_tint_color="@color/segmentedgroup_tint_text"
+				    segmentedgroup:sc_checked_text_color="@color/segmentedgroup_checked_text" >
+				    <RadioButton
+				        android:id="@+id/rb_plan_day"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:checked="true"
+				        android:tag="1"
+				        android:text="@string/plan_type_day"
+				        style="@style/RadioButton" />
+				    <RadioButton
+				        android:id="@+id/rb_plan_week"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:tag="2"
+				        android:text="@string/plan_type_week"
+				        style="@style/RadioButton" />
+				    <RadioButton
+				        android:id="@+id/rb_plan_month"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:tag="3"
+				        android:text="@string/plan_type_month"
+				        style="@style/RadioButton" />
+				</cc.emw.mobile.view.SegmentedGroup>
+		    </LinearLayout>
+	    	<LinearLayout
+		        android:id="@+id/ll_plan_radioselect"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="0.5dp"
+		        android:paddingLeft="@dimen/all_content_leftright"
+		        android:paddingRight="@dimen/all_content_leftright"
+		        android:background="@color/white"
+		        android:gravity="center"
+		        android:visibility="gone" >
+		        <TextView
+		            android:id="@+id/tv_plan_select"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingTop="8dp"
+			        android:paddingBottom="8dp"
+		            android:drawablePadding="10dp"
+		            android:gravity="center"
+		            android:textColor="#666666"
+		            android:textSize="14sp"
+		            android:text="负责人" />
+		        <!-- android:drawableLeft="@drawable/new_img_people" -->
+				<cc.emw.mobile.view.FlowLayout
+			        android:id="@+id/fl_plan_radioperson"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginBottom="10dp"
+			        android:layout_marginLeft="5dp"
+			        android:gravity="right" />
+		        <TextView
+		            android:id="@+id/tv_plan_mainselect"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingTop="16dp"
+			        android:paddingBottom="16dp"
+			        android:paddingLeft="0dp"
+			        android:drawableRight="@drawable/list_btn_next"
+			        android:drawablePadding="10dp"
+			        android:textColorHint="@color/cm_texthint"
+					android:textSize="14sp"
+			        android:hint="请选择"/>
+		    </LinearLayout>
+	    	<cc.emw.mobile.view.ExListView
+		        android:id="@+id/lv_plan_planlist"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:cacheColorHint="@android:color/transparent"
+        		android:listSelector="@android:color/transparent"
+		        android:divider="@null"
+		        android:fadingEdge="none" />
+			<include layout="@layout/cm_select" />
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="44dp"
+			    android:layout_marginTop="10dp"
+			    android:background="@color/white"
+			    android:gravity="center">
+			    <Button 
+			        android:id="@+id/btn_plan_additem"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:drawableLeft="@drawable/list_btn_add"
+			        android:drawablePadding="5dp"
+			        android:layout_gravity="center"
+			        android:background="@null"
+			        android:textSize="15sp"
+			        android:textColor="@color/cm_text"
+			        android:text="@string/plan_add_plan" />
+			</LinearLayout>
+		</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

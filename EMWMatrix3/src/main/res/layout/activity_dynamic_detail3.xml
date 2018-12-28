@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <cc.emw.mobile.view.DynamicEmoticonsKeyBoard
+        android:id="@+id/ek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/cm_dialog_bar2"/>
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!--<in.srain.cube.views.loadmore.LoadMoreListViewContainer
+                android:id="@+id/load_more_list_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null">-->
+                <ListView
+                    android:id="@+id/load_more_small_image_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/cm_divider_bg"
+                    android:dividerHeight="0dip"
+                    android:fadingEdge="none"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:listSelector="@android:color/transparent"
+                    android:padding="0dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:headerDividersEnabled="false"
+                    android:footerDividersEnabled="false" />
+            <!--</in.srain.cube.views.loadmore.LoadMoreListViewContainer>-->
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <!--<include layout="@layout/dynamic_bottom_discuss" />-->
+    </LinearLayout>
+
+
+    </cc.emw.mobile.view.DynamicEmoticonsKeyBoard>
+</LinearLayout>
+</LinearLayout>

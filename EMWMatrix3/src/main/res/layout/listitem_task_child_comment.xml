@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="16dp">
+
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/civ_task_comment_head_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cm_img_head"
+        app:border_color="@color/cm_headimg_border"
+        app:border_width="2dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_task_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/civ_task_comment_head_image"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tv_task_comment_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_task_comment_creator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="未知"
+                    android:textColor="#354052"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tv_task_comment_creator"
+                    android:background="@drawable/task_reply" />
+
+                <TextView
+                    android:id="@+id/tv_task_comment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="创建时间"
+                    android:textColor="#7f8fa4"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_task_comment_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="加油加油！"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <!-- 子评论容器 -->
+        <LinearLayout
+            android:id="@+id/ll_task_comment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/task_comment_edit_bg"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cm_divider_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/rl_filelist_open"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="0dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_filelist_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/list_ico_folder" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/itv_filelist_exist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:textColor="#3CC56D"
+                android:textSize="12dp"
+                app:iconCode="e924" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_filelist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="@string/unkonw"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_filelist_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_filelist_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_filelist_project"
+                    android:text="@string/unkonw"
+                    android:textColor="@color/cm_texthint"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_filelist_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignBaseline="@+id/tv_filelist_project"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_toRightOf="@+id/tv_filelist_time"
+                    android:text="@string/unkonw"
+                    android:textColor="@color/cm_texthint"
+                    android:textSize="12sp" />
+                <!--android:layout_toLeftOf="@+id/tv_filelist_project"-->
+
+                <TextView
+                    android:id="@+id/tv_filelist_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#D7E0EB"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="项目"
+                    android:textColor="#5D7EA7"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_filelist_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下载中"
+                    android:textColor="@color/cm_texthint"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_filelist_download"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/filelist_barcolor" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/rl_filelist_download"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="下载"
+        android:textColor="#4A90E2"
+        android:textSize="20dp"
+        app:iconCode="eb55" />
+
+</LinearLayout>

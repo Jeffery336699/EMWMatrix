@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/unstart_text"
+        android:layout_alignTop="@+id/unstart_text"
+        android:layout_marginLeft="12dp"
+        android:gravity="center"
+        android:text="圈子与协作"
+        android:textColor="@color/task_modify_charge"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- 未开始 -->
+    <TextView
+        android:id="@+id/unstart_text"
+        style="@style/ltc_state_text"
+        android:layout_toLeftOf="@+id/processing_text"
+        android:background="@color/state_color_unstart"
+        android:text="未开始"/>
+    <TextView
+        android:id="@+id/unstart_num"
+        style="@style/ltc_state_num"
+        android:layout_alignLeft="@+id/unstart_text"
+        android:layout_alignRight="@+id/unstart_text"
+        android:text="0"/>
+
+    <!-- 进行中 -->
+    <TextView
+        android:id="@+id/processing_text"
+        style="@style/ltc_state_text"
+        android:layout_toLeftOf="@+id/finished_text"
+        android:background="@color/state_color_processing"
+        android:text="进行中"/>
+    <TextView
+        android:id="@+id/processing_num"
+        style="@style/ltc_state_num"
+        android:layout_alignLeft="@+id/processing_text"
+        android:layout_alignRight="@+id/processing_text"
+        android:text="0"/>
+
+    <!-- 已完成 -->
+    <TextView
+        android:id="@+id/finished_text"
+        style="@style/ltc_state_text"
+        android:layout_toLeftOf="@+id/delay_text"
+        android:background="@color/state_color_finished"
+        android:text="已完成"/>
+    <TextView
+        android:id="@+id/finished_num"
+        style="@style/ltc_state_num"
+        android:layout_alignLeft="@+id/finished_text"
+        android:layout_alignRight="@+id/finished_text"
+        android:text="0"/>
+
+    <!-- 已延迟 -->
+    <TextView
+        android:id="@+id/delay_text"
+        style="@style/ltc_state_text"
+        android:layout_alignParentRight="true"
+        android:background="@color/state_color_delay"
+        android:text="已延迟"/>
+    <TextView
+        android:id="@+id/delay_num"
+        style="@style/ltc_state_num"
+        android:layout_alignLeft="@+id/delay_text"
+        android:layout_alignRight="@+id/delay_text"
+        android:text="0"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/unstart_text"
+        android:background="@color/cm_divider_bg"/>
+</RelativeLayout>

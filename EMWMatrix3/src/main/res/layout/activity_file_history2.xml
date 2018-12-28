@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/ll_filedetail_root"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<include layout="@layout/cm_dialog_bar" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="@dimen/dialog_margin_headtop"
+		android:layout_marginBottom="@dimen/dialog_margin"
+		android:layout_marginLeft="@dimen/dialog_margin"
+		android:layout_marginRight="@dimen/dialog_margin"
+		android:background="@drawable/activity_dialog_bg"
+		android:orientation="vertical"
+		android:clickable="true">
+
+		<include layout="@layout/cm_header_bar"
+			android:visibility="gone"/>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_marginTop="4dp"
+		android:layout_marginBottom="4dp">
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+        <!-- <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+            android:id="@+id/load_more_list_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"> -->
+            <ListView
+                android:id="@+id/load_more_small_image_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+        		android:listSelector="@drawable/selector_listview"
+        		android:background="@color/white"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dip"
+                android:fadingEdge="none"
+                android:scrollbarStyle="outsideOverlay"
+                android:headerDividersEnabled="false"
+                android:footerDividersEnabled="true" />
+        <!-- </in.srain.cube.views.loadmore.LoadMoreListViewContainer> -->
+
+			<LinearLayout
+				android:id="@+id/ll_file_blank"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/cm_bg"
+				android:gravity="center"
+				android:orientation="vertical"
+				android:visibility="gone">
+				<!--android:drawableTop="@drawable/blank_ico_zhishiku"-->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+
+					android:drawablePadding="30dp"
+					android:gravity="center"
+					android:text="暂无数据"
+					android:textColor="@color/cm_empty_text"
+					android:textSize="16sp" />
+			</LinearLayout>
+
+			<include layout="@layout/network_tips" />
+		</FrameLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>
+</LinearLayout>

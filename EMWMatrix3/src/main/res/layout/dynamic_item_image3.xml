@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="horizontal">
+
+    <!--<com.brucetoo.imagebrowse.widget.PhotoView
+        android:id="@+id/iv_dynamicimage_img1"
+        android:layout_width="0dp"
+        android:layout_height="162dp"
+        android:layout_weight="2.5"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_1"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="162dp"
+        android:layout_marginLeft="3dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.brucetoo.imagebrowse.widget.PhotoView
+            android:id="@+id/iv_dynamicimage_img2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@color/gray_1"/>
+
+        <com.brucetoo.imagebrowse.widget.PhotoView
+            android:id="@+id/iv_dynamicimage_img3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@color/gray_1"/>
+    </LinearLayout>-->
+
+    <com.brucetoo.imagebrowse.widget.PhotoView
+        android:id="@+id/iv_dynamicimage_img1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_1"/>
+    <com.brucetoo.imagebrowse.widget.PhotoView
+        android:id="@+id/iv_dynamicimage_img2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="2dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_1"/>
+    <com.brucetoo.imagebrowse.widget.PhotoView
+        android:id="@+id/iv_dynamicimage_img3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="2dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_1"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cm_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/cm_header_bar3" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/fragment_mg"
+            android:name="cc.emw.mobile.project.fragment.ProjectMemberListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_tracking_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/circle_add"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:iconCode="ea07" />
+    </FrameLayout>
+
+
+</LinearLayout>

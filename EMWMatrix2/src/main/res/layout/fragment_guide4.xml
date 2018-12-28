@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FF9E4B"
+    android:clipChildren="false" >
+
+    <ImageView
+        android:id="@+id/welcome_04"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_bg4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/guide_phone4" />
+
+    <ImageView
+        android:id="@+id/guide4_calendar_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/guide_ico_fangda" />
+
+    <Button
+        android:id="@+id/btn_into_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="#FCE8D7"
+        android:gravity="center"
+        android:text="立即启动"
+        android:textColor="#72BFF6"
+        android:textSize="15sp" />
+
+</FrameLayout>

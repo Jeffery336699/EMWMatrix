@@ -1,0 +1,257 @@
+package cc.emw.mobile.project.fragment;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.LinearLayout;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.Event;
+import org.xutils.view.annotation.ViewInject;
+
+import java.net.ConnectException;
+import java.util.ArrayList;
+
+import cc.emw.mobile.EMWApplication;
+import cc.emw.mobile.R;
+import cc.emw.mobile.base.BaseFragment;
+import cc.emw.mobile.entity.UserInfo;
+import cc.emw.mobile.project.adapter.MemberProjectAdapter2;
+import cc.emw.mobile.project.bean.MemberProject;
+import cc.emw.mobile.project.presenter.ProjectPresenter;
+import cc.emw.mobile.project.view.IProjectMemberView;
+import cc.emw.mobile.project.view.NewProjectActivity;
+import cc.emw.mobile.project.view.NewTeamActivity;
+import cc.emw.mobile.util.CharacterParser;
+import cc.emw.mobile.util.DisplayUtil;
+import cc.emw.mobile.util.ToastUtil;
+import in.srain.cube.views.loadmore.LoadMoreContainer;
+import in.srain.cube.views.loadmore.LoadMoreHandler;
+import in.srain.cube.views.loadmore.LoadMoreListViewContainer;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
+import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.PtrHandler;
+import in.srain.cube.views.ptr.header.MaterialHeader;
+
+/**
+ * 项目按成员展示碎片
+ * Created by jven.wu on 2016/6/24.
+ */
+@ContentView(R.layout.fragment_project_memberlist)
+public class ProjectMemberListFragment2 extends BaseFragment implements IProjectMemberView {
+    @ViewInject(R.id.load_more_list_view_ptr_frame)
+    private PtrFrameLayout mPtrFrameLayout; // 下拉刷新
+    @ViewInject(R.id.load_more_list_view_container)
+    private LoadMoreListViewContainer loadMoreListViewContainer; // 加载更多
+    @ViewInject(R.id.project_lv)
+    private ExpandableListView mListView; //具可展开功能的列表
+    @ViewInject(R.id.ll_network_tips)
+    private LinearLayout mNetworkErrorPage;  //网络错误显示
+    @ViewInject(R.id.empty_ll)
+    private LinearLayout mEmptyPage; //空数据页面
+
+    private MemberProjectAdapter2 adapter; //项目按成员显示适配器
+    private ProjectPresenter presenter = new ProjectPresenter(this);
+    private MyBroadcastReceive receive;
+
+    private ArrayList<MemberProject> mDataList; //记录当前页获取的数据列表
+    private ArrayList<MemberProject> mSearchList = new ArrayList<>(); //用于记录搜索列表数据
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initView();
+    }
+
+    @Event({R.id.ll_network_tips})
+    private void onClick(View v) {
+        mPtrFrameLayout.autoRefresh(false);
+    }
+
+    /**
+     * 初始化视图
+     */
+    private void initView() {
+        setRefresh();
+        adapter = new MemberProjectAdapter2(getActivity());
+        mListView.setAdapter(adapter);
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(NewProjectActivity.BROADCAST_PROJECT_REFRESH);
+        intentFilter.addAction(NewTeamActivity.BROADCAST_TEAM_REFRESH);
+        receive = new MyBroadcastReceive();
+        getActivity().registerReceiver(receive, intentFilter);
+    }
+
+    @Override
+    public void onFirstUserVisible() {
+        //第一次加载下拉刷新时，下拉控件初始化需要时间，故这里做个延迟调用
+        mPtrFrameLayout.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mPtrFrameLayout.autoRefresh(false);
+            }
+        }, 300);
+        initListener();
+    }
+
+
+    @Override
+    public void onUserVisible() {
+        initListener();
+    }
+
+    private void initListener() {
+        ProjectFragment.mEtSearch.setText("");
+        /**增加搜索功能  */
+        ProjectFragment.mEtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                if(mDataList != null) {
+                    adapter.setData(mDataList);
+                    adapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(mDataList == null) return;
+                mSearchList.clear();
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0, size = mDataList.size(); i < size; i++) {
+                    MemberProject memberProject = mDataList.get(i);
+                    UserInfo userInfo = EMWApplication.personMap.get(memberProject.UserId);
+                    if (userInfo != null && userInfo.Name != null) {
+                        CharacterParser characterParser = CharacterParser.getInstance();
+                        String selling = characterParser.getSelling(userInfo.Name.toLowerCase());
+                        sb.delete(0, sb.length());
+                        for (int j = 0; j < userInfo.Name.length(); j++) {
+                            String substring = userInfo.Name.substring(j, j + 1);
+                            substring = characterParser.convert(substring);
+                            if (substring != null) {
+                                substring = substring.substring(0, 1);
+                                sb.append(substring);
+                            }
+                        }
+                        if (userInfo.Name.contains(s.toString().trim()) || selling.contains(s.toString().toLowerCase()) || sb.toString().contains(s.toString().toLowerCase())) {
+                            mSearchList.add(mDataList.get(i));
+                        }
+                    }
+                }
+                refreshView(mSearchList);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (TextUtils.isEmpty(s.toString().trim())) {
+                    mPtrFrameLayout.setEnabled(true);
+                } else {
+                    mPtrFrameLayout.setEnabled(false);
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().unregisterReceiver(receive);
+    }
+
+    /**
+     * 设置【下拉刷新】和【加载更多】功能
+     */
+    private void setRefresh() {
+        mPtrFrameLayout.setToggleMenu(true);
+        mPtrFrameLayout.setPinContent(false);
+        mPtrFrameLayout.setLoadingMinTime(1000);
+        // header
+        final MaterialHeader header = new MaterialHeader(getActivity());
+        int[] colors = getResources().getIntArray(R.array.google_colors);
+        header.setColorSchemeColors(colors);
+        header.setLayoutParams(new PtrFrameLayout.LayoutParams(-1, -2));
+        header.setPadding(0, 0, 0, DisplayUtil.dip2px(getActivity(), 15));
+        header.setPtrFrameLayout(mPtrFrameLayout);
+        mPtrFrameLayout.setLoadingMinTime(1000);
+        mPtrFrameLayout.setDurationToCloseHeader(1500);
+        mPtrFrameLayout.setHeaderView(header);
+        mPtrFrameLayout.addPtrUIHandler(header);
+        loadMoreListViewContainer.useDefaultFooter();
+        loadMoreListViewContainer.setAutoLoadMore(true);
+        loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
+            @Override
+            public void onLoadMore(LoadMoreContainer loadMoreContainer) {
+
+            }
+        });
+        mPtrFrameLayout.setPtrHandler(new PtrHandler() {
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame,
+                                             View content, View header) {
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame,
+                        mListView, header);
+            }
+
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                presenter.getProjects(true, true);
+            }
+        });
+    }
+
+    /**
+     * 网络请求数据后在页面上的回调
+     * @param memberProjects
+     */
+    @Override
+    public void renderView(ArrayList<MemberProject> memberProjects) {
+        mDataList = memberProjects;
+        refreshView(memberProjects);
+    }
+
+    private void refreshView(ArrayList<MemberProject> memberProjects) {
+        if (memberProjects.size() < 1) {
+            mEmptyPage.setVisibility(View.VISIBLE);
+        } else {
+            mEmptyPage.setVisibility(View.INVISIBLE);
+        }
+        mNetworkErrorPage.setVisibility(View.INVISIBLE);
+        adapter.setData(memberProjects);
+        adapter.notifyDataSetChanged();
+        mPtrFrameLayout.refreshComplete();
+    }
+
+    @Override
+    public void onError(Throwable ex) {
+        if (ex instanceof ConnectException) {
+            mNetworkErrorPage.setVisibility(View.VISIBLE);
+        } else {
+            ToastUtil.showToast(getActivity(), ex.getMessage());
+        }
+        mPtrFrameLayout.refreshComplete();
+    }
+
+    class MyBroadcastReceive extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String actionStr = intent.getAction();
+
+            if (NewProjectActivity.BROADCAST_PROJECT_REFRESH.equals(actionStr)
+                    || NewTeamActivity.BROADCAST_TEAM_REFRESH.equals(actionStr)) {
+                mPtrFrameLayout.autoRefresh(false);
+            }
+        }
+    }
+}

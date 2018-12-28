@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rl_msg_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/timela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/chat_time"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:textSize="11sp"/>
+
+        <ImageView
+            android:id="@+id/lianjie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="67dp"
+            android:src="@drawable/coment_mine_and_eles"
+            android:visibility="gone"
+        />
+        <TextView
+            android:id="@+id/view_lianjie"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:text="　"
+            android:layout_height="10dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chat_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timela"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_chat_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_time"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/ll_chat_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/timela"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/all_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <cc.emw.mobile.view.CircleImageView
+                android:id="@+id/chat_iv_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/cm_img_head"
+                app:border_color="@color/cm_headimg_border"
+                app:border_width="2dp"/>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dip"
+                android:indeterminateDuration="2500"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/base_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/chat_iv_head"
+                android:gravity="center_vertical"
+                android:minHeight="40dp">
+                <ImageView
+                    android:id="@+id/chat_iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"/>
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/civ_chat_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cm_img_head"
+                    app:border_color="@color/cm_headimg_border"
+                    app:border_width="2dp"/>
+
+                <LinearLayout
+                    android:id="@+id/file_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignRight="@id/chat_iv_image"
+                    android:gravity="center_vertical"
+                    android:minWidth="200dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/file_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/chat_tv_filename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/chat_tv_filesize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"/>
+
+                            <TextView
+                                android:id="@+id/chat_tv_xiazai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/chat_tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:gravity="center_vertical"
+                    android:maxWidth="220dp"
+                    android:minWidth="40dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/message"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/chat_tv_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/sure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="同意"
+                        android:textColor="@color/blue"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:id="@+id/chuli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="14sp"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/notSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:text="拒绝"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/audio_layout"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/chat_iv_head"
+                android:background="@drawable/otherii"
+                android:minHeight="40dp">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_chat_voice_open"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    app:iconCode="ea06"/>
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_chat_voice_show"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    app:iconCode="ea03"/>
+
+                <cc.emw.mobile.chat.view.MySeekBar
+                    android:id="@+id/seekbar_chat"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:maxHeight="1dp"
+                    android:progressDrawable="@drawable/seek_progress_drawable"/>
+                <TextView
+                    android:id="@+id/chat_audio_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="13dp"
+                    android:layout_alignLeft="@+id/seekbar_chat"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/seekbar_chat"
+                    android:layout_marginBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"/>
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/chat_audio_bt"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:iconCode="eb70"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/video_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+                <cc.emw.mobile.chat.view.BubbleImageView
+                    android:id="@+id/chat_video_thumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/black"
+                    android:scaleType="fitXY"/>
+                <cc.emw.mobile.view.VideoPlayerView
+                    android:id="@+id/chat_sf_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+                <ImageView
+                    android:id="@+id/chat_iv_play"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ico_video_play"/>
+                <ProgressBar
+                    android:id="@+id/chat_video_progress"
+                    style="@style/progressBarCustom1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+                <!--<View android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:background="@drawable/video_round_corner"/>-->
+            </RelativeLayout>
+            <cc.emw.mobile.view.CircleImageView
+                android:id="@+id/civ_chat_video_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cm_img_head"
+                app:border_color="@color/cm_headimg_border"
+                app:border_width="2dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/chat_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/gou"
+                android:paddingBottom="5dp"
+                android:text="11:11"
+                android:textColor="#FF8D8E97"
+                android:textSize="12sp"/>
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/gou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:textColor="#FF3CC56D"
+                android:textSize="12dp"
+                app:iconCode="e924"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+    <!--修改图片、视频的展示方式  保留原有代码-->
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/timela"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/chat_time"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:paddingRight="5dp"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="11sp"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/lianjie"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="left"-->
+    <!--android:layout_marginLeft="67dp"-->
+    <!--android:src="@drawable/coment_mine_and_eles"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_chat_tips"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_below="@+id/timela"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:visibility="gone">-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_chat_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:background="@drawable/chat_time"-->
+    <!--android:paddingTop="3dp"-->
+    <!--android:paddingBottom="3dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+
+    <!--android:id="@+id/ll_chat_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/timela"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/all_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<cc.emw.mobile.view.CircleImageView-->
+    <!--android:id="@+id/chat_iv_head"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:src="@drawable/cm_img_head"-->
+    <!--app:border_color="@color/cm_headimg_border"-->
+    <!--app:border_width="2dp"/>-->
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progress"-->
+    <!--style="?android:attr/progressBarStyleSmall"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="5dip"-->
+    <!--android:indeterminateDuration="2500"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/base_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toRightOf="@+id/chat_iv_head"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:minHeight="40dp">-->
+
+    <!--<cc.emw.mobile.chat.view.BubbleImageView-->
+    <!--android:id="@+id/chat_iv_image"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:maxHeight="220dp"-->
+    <!--android:maxWidth="180dp"-->
+    <!--android:visibility="gone"/>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/file_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:minWidth="200dp"-->
+    <!--android:layout_alignRight="@id/chat_iv_image"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="10dp"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/file_head"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_filename"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_filesize"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:singleLine="true"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_xiazai"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:autoLink="all"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:maxWidth="220dp"-->
+    <!--android:minWidth="40dp"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:padding="5dp"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/message"-->
+    <!--android:layout_width="180dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/chat_tv_content"-->
+    <!--android:layout_centerInParent="true">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/sure"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="同意"-->
+    <!--android:textColor="@color/blue"-->
+    <!--android:textSize="14dp"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chuli"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textSize="14sp"-->
+    <!--android:visibility="invisible"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/notSure"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:text="拒绝"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="14sp"/>-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/audio_layout"-->
+    <!--android:layout_width="280dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:minHeight="40dp"-->
+    <!--android:layout_toRightOf="@+id/chat_iv_head"-->
+    <!--android:background="@drawable/otherii">-->
+
+    <!--<cc.emw.mobile.view.IconTextView-->
+    <!--android:id="@+id/itv_chat_voice_open"-->
+    <!--android:layout_width="32dp"-->
+    <!--android:layout_height="32dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:textSize="30sp"-->
+    <!--app:iconCode="ea06"/>-->
+    <!--<cc.emw.mobile.view.IconTextView-->
+    <!--android:id="@+id/itv_chat_voice_show"-->
+    <!--android:layout_width="32dp"-->
+    <!--android:layout_height="32dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:textSize="30sp"-->
+    <!--app:iconCode="ea03"/>-->
+    <!--<cc.emw.mobile.chat.view.MySeekBar-->
+    <!--android:id="@+id/seekbar_chat"-->
+    <!--android:layout_width="180dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:max="100"-->
+    <!--android:progress="0"-->
+    <!--android:maxHeight="1dp"-->
+    <!--android:thumb="@drawable/chat_seekbar_but"-->
+    <!--android:layout_centerVertical="true"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/chat_audio_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="13dp"-->
+    <!--android:layout_alignLeft="@+id/seekbar_chat"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignStart="@+id/seekbar_chat"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:layout_marginBottom="2dp"-->
+    <!--android:text=""-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:textSize="12sp"/>-->
+
+    <!--<cc.emw.mobile.view.IconTextView-->
+    <!--android:id="@+id/chat_audio_bt"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:textColor="#FFFFFF"-->
+    <!--android:textSize="20sp"-->
+    <!--app:iconCode="eb70"/>-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/video_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toRightOf="@+id/chat_iv_head">-->
+    <!--<cc.emw.mobile.chat.view.BubbleImageView-->
+    <!--android:id="@+id/chat_video_thumb"-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="180dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:background="@color/black"/>-->
+    <!--<cc.emw.mobile.view.VideoPlayerView-->
+    <!--android:id="@+id/chat_sf_video"-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="180dp"/>-->
+    <!--<ImageView-->
+    <!--android:id="@+id/chat_iv_play"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:src="@drawable/ico_video_play"/>-->
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/chat_iv_videoload_tip"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/ico_video_loading"/>&ndash;&gt;-->
+    <!--<ProgressBar-->
+    <!--android:id="@+id/chat_video_progress"-->
+    <!--style="@style/progressBarCustom1"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:visibility="gone"/>-->
+    <!--<View android:layout_width="220dp"-->
+    <!--android:layout_height="180dp"-->
+    <!--android:background="@drawable/video_round_corner"/>-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/time_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="2dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_toLeftOf="@+id/gou"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:text="11:11"-->
+    <!--android:textColor="#FF8D8E97"-->
+    <!--android:textSize="12sp"/>-->
+
+    <!--<cc.emw.mobile.view.IconTextView-->
+    <!--android:id="@+id/gou"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#FF3CC56D"-->
+    <!--android:textSize="12dp"-->
+    <!--app:iconCode="e924"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
+
+
+    <!--老版本保留-->
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/timela"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/chat_time"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:paddingRight="5dp"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="11sp"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/lianjie"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="left"-->
+    <!--android:layout_marginLeft="67dp"-->
+    <!--android:src="@drawable/coment_others_and_gray"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_chat_tips"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_below="@+id/timela"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:visibility="gone">-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_chat_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:background="@drawable/chat_time"-->
+    <!--android:paddingTop="3dp"-->
+    <!--android:paddingBottom="3dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_chat_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/timela"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/all_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<cc.emw.mobile.view.CircleImageView-->
+    <!--android:id="@+id/chat_iv_head"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:src="@drawable/cm_img_head"-->
+    <!--app:border_color="@color/cm_headimg_border"-->
+    <!--app:border_width="2dp"/>-->
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/progress"-->
+    <!--style="?android:attr/progressBarStyleSmall"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="5dip"-->
+    <!--android:indeterminateDuration="2500"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/base_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toRightOf="@+id/chat_iv_head"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:minHeight="40dp">-->
+
+    <!--<cc.emw.mobile.chat.view.BubbleImageView-->
+    <!--android:id="@+id/chat_iv_image"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:maxHeight="220dp"-->
+    <!--android:maxWidth="180dp"-->
+    <!--android:visibility="gone"/>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/file_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:minWidth="200dp"-->
+    <!--android:layout_alignRight="@id/chat_iv_image"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="10dp"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/file_head"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_filename"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_filesize"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:singleLine="true"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_xiazai"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:autoLink="all"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:maxWidth="220dp"-->
+    <!--android:minWidth="40dp"-->
+    <!--android:padding="5dp"-->
+    <!--android:textSize="15sp"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/message"-->
+    <!--android:layout_width="180dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/chat_tv_content"-->
+    <!--android:layout_centerInParent="true">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/sure"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="同意"-->
+    <!--android:textColor="@color/blue"-->
+    <!--android:textSize="14dp"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chuli"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textSize="14sp"-->
+    <!--android:visibility="invisible"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/notSure"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:text="拒绝"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="14sp"/>-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/audio_layout"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:minHeight="40dp"-->
+    <!--android:layout_toRightOf="@+id/chat_iv_head"-->
+    <!--android:background="@drawable/other"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/chat_audio_bt"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:background="@drawable/im_left_voice"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_audio_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="18dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:paddingRight="5dp"-->
+    <!--android:textSize="13sp"/>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/video_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toRightOf="@+id/chat_iv_head">-->
+    <!--<cc.emw.mobile.chat.view.BubbleImageView-->
+    <!--android:id="@+id/chat_video_thumb"-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="180dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:background="@color/black"/>-->
+    <!--<cc.emw.mobile.view.VideoPlayerView-->
+    <!--android:id="@+id/chat_sf_video"-->
+    <!--android:layout_width="220dp"-->
+    <!--android:layout_height="180dp"/>-->
+    <!--<ImageView-->
+    <!--android:id="@+id/chat_iv_play"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:src="@drawable/ico_video_play"/>-->
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/chat_iv_videoload_tip"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/ico_video_loading"/>&ndash;&gt;-->
+    <!--<ProgressBar-->
+    <!--android:id="@+id/chat_video_progress"-->
+    <!--style="@style/progressBarCustom1"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:visibility="gone"/>-->
+    <!--<View android:layout_width="220dp"-->
+    <!--android:layout_height="180dp"-->
+    <!--android:background="@drawable/video_round_corner"/>-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/time_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="2dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/chat_tv_time"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_toLeftOf="@+id/gou"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:text="11:11"-->
+    <!--android:textColor="#FF8D8E97"-->
+    <!--android:textSize="12sp"/>-->
+
+    <!--<cc.emw.mobile.view.IconTextView-->
+    <!--android:id="@+id/gou"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:textColor="#FF3CC56D"-->
+    <!--android:textSize="12dp"-->
+    <!--app:iconCode="e924"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->

@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_mail_create_outs"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/cm_dialog_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        android:layout_marginLeft="@dimen/dialog_margin"
+        android:layout_marginRight="@dimen/dialog_margin"
+        android:layout_marginTop="@dimen/dialog_margin_headtop"
+        android:background="@drawable/activity_dialog_bg"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/cm_header_bar"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/main_mail_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/all_content_top"
+            android:layout_marginTop="@dimen/dialog_scrollview_marginTop"
+            android:clickable="true"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/et_mail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:hint="邮件主题"
+                    android:textColor="@color/cal_edit_text"
+                    android:textColorHint="@color/cal_edit_text_hint"
+                    android:textSize="18sp" />
+                <EditText
+                    android:id="@+id/et_mail_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="邮件正文"
+                    android:lines="3"
+                    android:textColor="@color/cal_edit_text"
+                    android:textColorHint="@color/cal_edit_text_hint"
+                    android:textSize="14sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_mail_allday"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="全天事件"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                    <cc.emw.mobile.view.SwitchButton
+                        android:id="@+id/sb_mail_allday"
+                        style="@style/SwitchButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:enabled="false"
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/ios_back_drawable"
+                        app:kswBackMeasureRatio="1.5"
+                        app:kswThumbDrawable="@mipmap/ios_thumb"
+                        app:kswThumbMarginBottom="-8dp"
+                        app:kswThumbMarginLeft="-5dp"
+                        app:kswThumbMarginRight="-5dp"
+                        app:kswThumbMarginTop="-2.5dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_mail_calluser_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="9dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e985" />
+                    <TextView
+                        android:id="@+id/tv_mail_calluser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="收件人"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:id="@+id/ll_mail_calluser_head"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/tv_mail_calluser_num"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                        android:id="@+id/ll_mail_answeruser_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="9dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e985" />
+                    <TextView
+                        android:id="@+id/tv_mail_answeruser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="抄送人"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:id="@+id/ll_mail_answeruser_head"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/tv_mail_answeruser_num"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="@color/cm_divider_bg" />
+                <LinearLayout
+                    android:id="@+id/ll_mail_modify_start_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:id="@+id/mail_modify_start_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="开始日期"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <!--结束时间-->
+                <LinearLayout
+                    android:id="@+id/ll_task_modify_finish_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:id="@+id/tv_task_modify_finish_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="结束日期"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="@color/cm_divider_bg" />
+                <LinearLayout
+                    android:id="@+id/ll_mail_mainuser_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="9dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e912" />
+                    <TextView
+                        android:id="@+id/tv_mail_mainuser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="负责人"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:id="@+id/ll_mail_mainuser_head"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/tv_mail_mainuser_num"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_mail_emergency_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="ea6c" />
+                    <TextView
+                        android:id="@+id/tv_mail_emergency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="紧急程度"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_mail_file_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:textColor="#8d8e97"
+                        app:iconCode="eb05" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="附件"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/tv_mail_file_num"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/tv_bg_red_point"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <LinearLayout
+                    android:id="@+id/ll_mail_busdata_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:textColor="#8d8e97"
+                        app:iconCode="eb05" />
+                    <TextView
+                        android:id="@+id/tv_mail_busdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="业务数据"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:id="@+id/ll_mail_busdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/index_ico_busdata"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_mail_busname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="业务名称"
+                                android:textColor="#595968"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="业务数据"
+                                android:textColor="#8D8E97"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+                <cc.emw.mobile.view.CollapseView
+                    android:id="@+id/cv_mail_tixing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_listview"
+                    android:minHeight="48dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+                <cc.emw.mobile.view.CollapseView
+                    android:id="@+id/cv_mail_repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_listview"
+                    android:minHeight="48dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <cc.emw.mobile.view.CollapseView
+                    android:id="@+id/cv_mail_tixing_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_listview"
+                    android:minHeight="48dp"
+                    android:visibility="gone" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <include
+                    layout="@layout/cm_select" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

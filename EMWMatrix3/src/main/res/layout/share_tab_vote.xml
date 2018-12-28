@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_sharevote_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cm_border_bg"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cm_border_bg"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/share_vote"
+            android:textColor="@color/dynamicadd_sharetitle_text"
+            android:textSize="13sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_sharevote_del"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#404040"
+            android:textSize="18dp"
+            app:iconCode="ec71" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="投票类型"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/segmented_vote_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            segmentedgroup:sc_border_width="1dp"
+            segmentedgroup:sc_checked_text_color="@color/segmentedgroup_checked_text"
+            segmentedgroup:sc_corner_radius="5dp"
+            segmentedgroup:sc_tint_color="@color/segmentedgroup_tint_text">
+
+            <RadioButton
+                android:id="@+id/rb_vote_txt"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:tag="1"
+                android:text="文字投票" />
+
+            <RadioButton
+                android:id="@+id/rb_vote_img"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="2"
+                android:text="图片投票" />
+        </cc.emw.mobile.view.SegmentedGroup>
+
+    </LinearLayout>
+
+
+    <cc.emw.mobile.view.ExListView
+        android:id="@+id/lv_sharevote_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/cm_divider_bg"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+
+    <LinearLayout
+        android:id="@+id/btn_sharevote_add"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF4C0D"
+            android:textSize="12dp"
+            app:iconCode="ea5d"
+            android:alpha="0.5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/share_add_vote"
+            android:textColor="#FFFF4C0D"
+            android:textSize="14sp"
+            android:visibility="visible"
+            android:alpha="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sharevote_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <cc.emw.mobile.view.edittag.EditVoteTag
+            android:id="@+id/edit_tag_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="6dp"
+            app:delete_mode_bg="@drawable/bg_default_del_tag"
+            app:input_layout="@layout/view_vote_input_tag"
+            app:tag_layout="@layout/view_default_tag" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sharevote_enddate"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="10dp">
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="19dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#8d8e97"
+            android:visibility="gone"
+            app:iconCode="e92c" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截止时间"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_sharevote_enddate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/cm_texthint"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:gravity="center"
+            android:textColor="#cbcbcb"
+            android:textSize="12dp"
+            app:iconCode="eb69" />
+    </LinearLayout>
+
+</LinearLayout>

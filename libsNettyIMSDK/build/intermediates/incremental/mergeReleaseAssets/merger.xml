@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\as_workspace\EMWMatrix\libsNettyIMSDK\src\main\assets"><file name="szztbr.bks" path="C:\as_workspace\EMWMatrix\libsNettyIMSDK\src\main\assets\szztbr.bks"/></source><source path="C:\as_workspace\EMWMatrix\libsNettyIMSDK\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="C:\as_workspace\EMWMatrix\libsNettyIMSDK\src\release\assets"/></dataSet></merger>

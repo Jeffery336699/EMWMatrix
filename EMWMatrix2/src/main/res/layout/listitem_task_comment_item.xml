@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_child_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="谁回复谁"
+            android:textColor="@color/dynamicreply_name_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_child_comment_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:text="回复"
+            android:textColor="@color/dynamicreply_reply_text"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_child_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="my descriptions"
+        android:textColor="@color/cm_text"
+        android:textSize="15sp" />
+
+</LinearLayout>

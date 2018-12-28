@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:background="@color/transparent">
+<View
+	android:layout_width="1dp"
+	android:layout_height="match_parent"
+	android:layout_marginLeft="@dimen/activity_margin_left"
+	android:background="@color/activity_divider_bg" />
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/cm_bg">
+    <include layout="@layout/cm_header_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight="1"
+        android:paddingBottom="@dimen/all_content_top"
+        android:scrollbars="vertical" >
+        <LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical">
+	    	<include layout="@layout/cm_input" />
+	    	
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="44dp"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="10dp"
+		        android:paddingLeft="12dp"
+		        android:paddingRight="12dp"
+		        android:background="@drawable/cm_border_bg"
+		        android:gravity="center" >
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:paddingTop="8dp"
+			        android:paddingBottom="8dp"
+		            android:gravity="center_vertical"
+		            android:textColor="@color/cm_text"
+		            android:textSize="16sp"
+		            android:text="@string/plan_type" />
+		        <cc.emw.mobile.view.SegmentedGroup
+				    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+				    android:id="@+id/segmented_plan_type"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    segmentedgroup:sc_border_width="1dp"
+				    segmentedgroup:sc_corner_radius="5dp"
+				    segmentedgroup:sc_tint_color="@color/segmentedgroup_tint_text"
+				    segmentedgroup:sc_checked_text_color="@color/segmentedgroup_checked_text" >
+				    <RadioButton
+				        android:id="@+id/rb_plan_day"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:checked="true"
+				        android:tag="1"
+				        android:text="@string/plan_type_day"
+				        style="@style/RadioButton" />
+				    <RadioButton
+				        android:id="@+id/rb_plan_week"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:tag="2"
+				        android:text="@string/plan_type_week"
+				        style="@style/RadioButton" />
+				    <RadioButton
+				        android:id="@+id/rb_plan_month"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:tag="3"
+				        android:text="@string/plan_type_month"
+				        style="@style/RadioButton" />
+				</cc.emw.mobile.view.SegmentedGroup>
+		    </LinearLayout>
+	    	<cc.emw.mobile.view.ExListView
+		        android:id="@+id/lv_plan_planlist"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+		        android:cacheColorHint="@android:color/transparent"
+        		android:listSelector="@android:color/transparent"
+				android:dividerHeight="10dp"
+		        android:divider="@color/cm_bg"
+		        android:fadingEdge="none" />
+			<include layout="@layout/cm_select" />
+
+		</LinearLayout>
+    </ScrollView>
+	<LinearLayout
+		android:id="@+id/ll_plan_additem"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginTop="10dp"
+		android:orientation="horizontal"
+		android:background="@drawable/cm_border_bg"
+		android:gravity="center">
+		<cc.emw.mobile.view.IconTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="15dp"
+			android:textColor="#5FC26D"
+			android:textSize="20dp"
+			app:iconCode="ea07" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@null"
+			android:textSize="15sp"
+			android:textColor="#5FC26D"
+			android:text="@string/plan_add_plan" />
+	</LinearLayout>
+</LinearLayout>
+</LinearLayout>

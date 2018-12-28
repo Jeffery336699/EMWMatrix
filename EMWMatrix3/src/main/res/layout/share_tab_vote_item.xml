@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:minHeight="48dp"
+	android:background="@color/white"
+	android:orientation="horizontal"
+	android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/tv_sharevote_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unkonw"
+        android:textColor="@color/cm_text"
+       	android:textSize="14sp" />
+    <EditText
+        android:id="@+id/et_sharevote_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="6dp"
+		android:gravity="right"
+        android:background="@null"
+        android:singleLine="true"
+        android:textColor="@color/cm_text"
+       	android:textSize="14sp"
+       	android:textColorHint="@color/cm_texthint"
+       	android:hint="@string/share_vote_hint" />
+	<cc.emw.mobile.view.IconTextView
+		android:id="@+id/tv_sharevote_del"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="6dp"
+		android:textSize="14dp"
+		android:textColor="#404040"
+		app:iconCode="ea79" />
+</LinearLayout>

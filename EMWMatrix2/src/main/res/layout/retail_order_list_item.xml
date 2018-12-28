@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:gravity="center"
+    android:padding="10dp" >
+	<LinearLayout 
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="订单编号："
+	        android:textColor="#666666"
+	        android:textSize="14sp" />
+	    <TextView
+	        android:id="@+id/retailorder_tv_no"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="123456789"
+	        android:textColor="#333333"
+	        android:textSize="14sp" />
+	    <TextView
+	        android:id="@+id/retailorder_tv_price"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="1000"
+	        android:textColor="#FF0000"
+	        android:textSize="14sp" />
+  		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="元"
+	        android:textColor="#666666"
+	        android:textSize="14sp" />
+	    
+	</LinearLayout>
+    <LinearLayout 
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="创建时间："
+	        android:textColor="#666666"
+	        android:textSize="14sp" />
+	    <TextView
+	        android:id="@+id/retailorder_tv_createtime"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="2016-02-02 02:02:02"
+	        android:textColor="#333333"
+	        android:textSize="14sp" />
+		<TextView
+	        android:id="@+id/retailorder_tv_paid"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="已支付"
+	        android:textColor="#333333"
+	        android:textSize="14sp" />
+	    <Button
+		    android:id="@+id/retailorder_btn_pay"
+		    android:layout_width="60dp"
+		    android:layout_height="30dp"
+		    android:background="@drawable/button_blue_blue"
+		    android:text="支付"
+		    android:textColor="@color/white"
+		    android:textSize="14sp" />
+	    
+	</LinearLayout>
+    
+
+</LinearLayout>

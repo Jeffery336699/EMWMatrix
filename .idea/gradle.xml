@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CallLib" />
+            <option value="$PROJECT_DIR$/EMWMatrix1" />
+            <option value="$PROJECT_DIR$/EMWMatrix3" />
+            <option value="$PROJECT_DIR$/IMKit" />
+            <option value="$PROJECT_DIR$/IMLib" />
+            <option value="$PROJECT_DIR$/MaterialDesign" />
+            <option value="$PROJECT_DIR$/MaterialDesignDemo" />
+            <option value="$PROJECT_DIR$/libsBarcodescanner" />
+            <option value="$PROJECT_DIR$/libsCircleProgressView" />
+            <option value="$PROJECT_DIR$/libsCrop" />
+            <option value="$PROJECT_DIR$/libsFilePicker" />
+            <option value="$PROJECT_DIR$/libsFloatingGroupExpandableListView" />
+            <option value="$PROJECT_DIR$/libsIOSDialog" />
+            <option value="$PROJECT_DIR$/libsMPChart" />
+            <option value="$PROJECT_DIR$/libsMaterialCalendarView" />
+            <option value="$PROJECT_DIR$/libsNettyIMSDK" />
+            <option value="$PROJECT_DIR$/libsNsRefreshLayout" />
+            <option value="$PROJECT_DIR$/libsNumberProgressBar" />
+            <option value="$PROJECT_DIR$/libsPickerView" />
+            <option value="$PROJECT_DIR$/libsResideMenu" />
+            <option value="$PROJECT_DIR$/libsSlidingMenu" />
+            <option value="$PROJECT_DIR$/libsSwipeBackLayout" />
+            <option value="$PROJECT_DIR$/libsSwipeMenuListView" />
+            <option value="$PROJECT_DIR$/libsTableFixHeaders" />
+            <option value="$PROJECT_DIR$/libsWeekView" />
+            <option value="$PROJECT_DIR$/libscalendarview" />
+            <option value="$PROJECT_DIR$/libscrash" />
+            <option value="$PROJECT_DIR$/libscubesdk" />
+            <option value="$PROJECT_DIR$/libsdragsortlistview" />
+            <option value="$PROJECT_DIR$/libsfab" />
+            <option value="$PROJECT_DIR$/libsguideview" />
+            <option value="$PROJECT_DIR$/libsmdtimepicker" />
+            <option value="$PROJECT_DIR$/libspickerviewcity" />
+            <option value="$PROJECT_DIR$/libspopwindow" />
+            <option value="$PROJECT_DIR$/libsptr" />
+            <option value="$PROJECT_DIR$/libsvideo" />
+            <option value="$PROJECT_DIR$/reclib" />
+            <option value="$PROJECT_DIR$/reclib-testemoticons" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

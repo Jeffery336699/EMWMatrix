@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/team_member_portrait"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/cm_img_head"
+        custom:border_color="@color/cm_headimg_border"
+        custom:border_width="2dp"/>
+    <TextView
+        android:id="@+id/team_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/team_member_portrait"
+        android:text="未知"
+        android:textColor="#354052"
+        android:textSize="16sp"/>
+    <cc.emw.mobile.view.IconTextView
+        android:visibility="invisible"
+        android:id="@+id/del_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:textColor="#ff4a40"
+        android:textSize="20dp"
+        custom:iconCode="ec93"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignLeft="@+id/team_member_name"
+        android:layout_alignParentBottom="true"
+        android:background="#D6D7DC"/>
+</RelativeLayout>

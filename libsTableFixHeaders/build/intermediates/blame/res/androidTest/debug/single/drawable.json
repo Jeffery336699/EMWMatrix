@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shadow_top.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\bundles\\debug\\res\\drawable\\shadow_top.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shadow_bottom.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\bundles\\debug\\res\\drawable\\shadow_bottom.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shadow_left.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\bundles\\debug\\res\\drawable\\shadow_left.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shadow_right.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsTableFixHeaders\\build\\intermediates\\bundles\\debug\\res\\drawable\\shadow_right.xml"
+    }
+]

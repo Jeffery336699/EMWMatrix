@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_popup_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="17dp">
+
+        <LinearLayout
+            android:id="@+id/popup_contianer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tx_1"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="所有人"
+                    android:textColor="#DE000000"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:layout_width="10dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/setting_down_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tx_2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="关注者"
+                    android:textColor="#DE000000"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:layout_width="10dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/setting_down_icon"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tx_3"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="组内人"
+                    android:textColor="#DE000000"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:layout_width="10dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/setting_down_icon"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tx_4"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:gravity="center"
+                    android:text="自己"
+                    android:textColor="#DE000000"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:layout_width="10dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/setting_down_icon"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

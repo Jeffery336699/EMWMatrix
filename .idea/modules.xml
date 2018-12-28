@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CallLib/CallLib.iml" filepath="$PROJECT_DIR$/CallLib/CallLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EMWMatrix.iml" filepath="$PROJECT_DIR$/EMWMatrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EMWMatrix1/EMWMatrix1.iml" filepath="$PROJECT_DIR$/EMWMatrix1/EMWMatrix1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EMWMatrix3/EMWMatrix3.iml" filepath="$PROJECT_DIR$/EMWMatrix3/EMWMatrix3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMLib/IMLib.iml" filepath="$PROJECT_DIR$/IMLib/IMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialDesignDemo/MaterialDesignDemo.iml" filepath="$PROJECT_DIR$/MaterialDesignDemo/MaterialDesignDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsBarcodescanner/libsBarcodescanner.iml" filepath="$PROJECT_DIR$/libsBarcodescanner/libsBarcodescanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsCircleProgressView/libsCircleProgressView.iml" filepath="$PROJECT_DIR$/libsCircleProgressView/libsCircleProgressView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsCrop/libsCrop.iml" filepath="$PROJECT_DIR$/libsCrop/libsCrop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsFilePicker/libsFilePicker.iml" filepath="$PROJECT_DIR$/libsFilePicker/libsFilePicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsFloatingGroupExpandableListView/libsFloatingGroupExpandableListView.iml" filepath="$PROJECT_DIR$/libsFloatingGroupExpandableListView/libsFloatingGroupExpandableListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsIOSDialog/libsIOSDialog.iml" filepath="$PROJECT_DIR$/libsIOSDialog/libsIOSDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsMPChart/libsMPChart.iml" filepath="$PROJECT_DIR$/libsMPChart/libsMPChart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsMaterialCalendarView/libsMaterialCalendarView.iml" filepath="$PROJECT_DIR$/libsMaterialCalendarView/libsMaterialCalendarView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsNettyIMSDK/libsNettyIMSDK.iml" filepath="$PROJECT_DIR$/libsNettyIMSDK/libsNettyIMSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsNsRefreshLayout/libsNsRefreshLayout.iml" filepath="$PROJECT_DIR$/libsNsRefreshLayout/libsNsRefreshLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsNumberProgressBar/libsNumberProgressBar.iml" filepath="$PROJECT_DIR$/libsNumberProgressBar/libsNumberProgressBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsPickerView/libsPickerView.iml" filepath="$PROJECT_DIR$/libsPickerView/libsPickerView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsResideMenu/libsResideMenu.iml" filepath="$PROJECT_DIR$/libsResideMenu/libsResideMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsSlidingMenu/libsSlidingMenu.iml" filepath="$PROJECT_DIR$/libsSlidingMenu/libsSlidingMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsSwipeBackLayout/libsSwipeBackLayout.iml" filepath="$PROJECT_DIR$/libsSwipeBackLayout/libsSwipeBackLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsSwipeMenuListView/libsSwipeMenuListView.iml" filepath="$PROJECT_DIR$/libsSwipeMenuListView/libsSwipeMenuListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsTableFixHeaders/libsTableFixHeaders.iml" filepath="$PROJECT_DIR$/libsTableFixHeaders/libsTableFixHeaders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsWeekView/libsWeekView.iml" filepath="$PROJECT_DIR$/libsWeekView/libsWeekView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libscalendarview/libscalendarview.iml" filepath="$PROJECT_DIR$/libscalendarview/libscalendarview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libscrash/libscrash.iml" filepath="$PROJECT_DIR$/libscrash/libscrash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libscubesdk/libscubesdk.iml" filepath="$PROJECT_DIR$/libscubesdk/libscubesdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsdragsortlistview/libsdragsortlistview.iml" filepath="$PROJECT_DIR$/libsdragsortlistview/libsdragsortlistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsfab/libsfab.iml" filepath="$PROJECT_DIR$/libsfab/libsfab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsguideview/libsguideview.iml" filepath="$PROJECT_DIR$/libsguideview/libsguideview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsmdtimepicker/libsmdtimepicker.iml" filepath="$PROJECT_DIR$/libsmdtimepicker/libsmdtimepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libspickerviewcity/libspickerviewcity.iml" filepath="$PROJECT_DIR$/libspickerviewcity/libspickerviewcity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libspopwindow/libspopwindow.iml" filepath="$PROJECT_DIR$/libspopwindow/libspopwindow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsptr/libsptr.iml" filepath="$PROJECT_DIR$/libsptr/libsptr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsvideo/libsvideo.iml" filepath="$PROJECT_DIR$/libsvideo/libsvideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reclib/reclib.iml" filepath="$PROJECT_DIR$/reclib/reclib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reclib-testemoticons/reclib-testemoticons.iml" filepath="$PROJECT_DIR$/reclib-testemoticons/reclib-testemoticons.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/finish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_item_chat_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_team_hint_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_team_info"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="圈子详细信息"
+                android:textColor="#0076FF"
+                android:textSize="20sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DCDEE1"/>
+
+            <TextView
+                android:id="@+id/tv_team_add"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="添加成员"
+                android:textColor="#0076FF"
+                android:textSize="20sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DCDEE1"/>
+
+            <TextView
+                android:id="@+id/tv_team_file"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="附件"
+                android:textColor="#0076FF"
+                android:textSize="20sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DCDEE1"/>
+
+            <TextView
+                android:id="@+id/tv_team_delete"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="退出并删除聊天记录"
+                android:textColor="#E2604E"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_team_null"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/ll_item_chat_team"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/chat_team_hint_bg"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#0076FF"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

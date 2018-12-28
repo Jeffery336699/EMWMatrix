@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="13dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_summarytask_arrow"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_summarytask_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/iv_summarytask_arrow"/>
+        
+        <TextView
+            android:id="@+id/tv_summarytask_project"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="13dp"
+            android:padding="2dp"
+            android:layout_toRightOf="@+id/tv_summarytask_name"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:background="@drawable/is_project_bg"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_summarytask_description2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_alignLeft="@+id/tv_summarytask_name"
+            android:layout_below="@+id/tv_summarytask_name"
+            android:layout_toLeftOf="@+id/circleView_summarytask_progress"/>
+
+        <!-- set the CircleProgressView's value use setValue() -->
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/circleView_summarytask_progress"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            CircleProgressView:cpv_autoTextSize="true"
+            CircleProgressView:cpv_barColor="#85E77B"
+            CircleProgressView:cpv_barWidth="5dp"
+            CircleProgressView:cpv_contourColor="#CCCCCC"
+            CircleProgressView:cpv_contourSize="0.5dp"
+            CircleProgressView:cpv_maxValue="100"
+            CircleProgressView:cpv_rimColor="#E5E5E5"
+            CircleProgressView:cpv_rimWidth="3dp"
+            CircleProgressView:cpv_seekMode="false"
+            CircleProgressView:cpv_showUnit="true"
+            CircleProgressView:cpv_textColor="#333333"
+            CircleProgressView:cpv_unit="%"
+            CircleProgressView:cpv_unitColor="#333333" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_summarytask_divider"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/transparent" />
+
+</LinearLayout>

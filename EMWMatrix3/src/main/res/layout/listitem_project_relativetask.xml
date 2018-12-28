@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="12dp"
+    android:paddingTop="10dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="10dp"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/iv_summarytask_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_summarytask_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_summarytask_arrow"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="22dp"
+        android:textColor="@color/cm_text"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_summarytask_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_summarytask_name"
+        android:layout_below="@+id/tv_summarytask_name"
+        android:layout_toLeftOf="@+id/iv_relativetask_select"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"/>
+
+    <!-- set the CircleProgressView's value use setValue() -->
+
+    <ImageView
+        android:id="@+id/iv_relativetask_select"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

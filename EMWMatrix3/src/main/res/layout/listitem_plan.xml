@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/workallot_tv_itemtask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="计划1"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/workplan_itv_itemdel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:alpha="0.7"
+            android:textColor="@color/cm_main_text"
+            android:textSize="20dp"
+            app:iconCode="ea79" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workplan_ll_itemtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:minHeight="54dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plan_time"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/workplan_et_itemtime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="@string/plan_time_hint"
+            android:textColor="@color/cm_text"
+            android:textColorHint="@color/cm_texthint"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/workplan_itv_itemarrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:gravity="center"
+            android:textColor="#cbcbcb"
+            android:textSize="12dp"
+            app:iconCode="eb69" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/workplan_et_itemcontent"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="@string/plan_name_hint"
+        android:textColor="@color/cm_text"
+        android:textColorHint="@color/cm_texthint"
+        android:textSize="14sp" />
+</LinearLayout>

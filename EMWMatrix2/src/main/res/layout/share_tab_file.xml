@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_sharefile_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="gone" >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/cm_bg"
+        android:paddingLeft="18dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/dynamicadd_sharetitle_text"
+       	android:textSize="13sp"
+        android:text="@string/share_file"/>
+	<LinearLayout
+		android:id="@+id/ll_sharefile_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cm_divider_bg" />
+    <Button 
+        android:id="@+id/btn_sharefile_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/list_btn_add"
+        android:drawablePadding="5dp"
+        android:layout_gravity="center"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:background="@null"
+        android:textSize="15sp"
+        android:textColor="@color/cm_text"
+        android:text="@string/share_add_file"
+        android:visibility="visible"/>
+</LinearLayout>

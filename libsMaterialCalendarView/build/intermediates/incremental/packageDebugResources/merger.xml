@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\rs\debug"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\debug\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res"><file name="mcv_text_date_dark" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\color\mcv_text_date_dark.xml" qualifiers="" type="color"/><file name="mcv_text_date_day" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\color\mcv_text_date_day.xml" qualifiers="" type="color"/><file name="mcv_text_date_light" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\color\mcv_text_date_light.xml" qualifiers="" type="color"/><file name="mcv_text_date_weekday" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\color\mcv_text_date_weekday.xml" qualifiers="" type="color"/><file name="circle_today" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\drawable\circle_today.xml" qualifiers="" type="drawable"/><file name="decorator_today" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\drawable\decorator_today.xml" qualifiers="" type="drawable"/><file name="mcv_action_next" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\drawable-xxxhdpi\mcv_action_next.png" qualifiers="xxxhdpi-v4" type="drawable"/><file name="mcv_action_previous" path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\drawable-xxxhdpi\mcv_action_previous.png" qualifiers="xxxhdpi-v4" type="drawable"/><file path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="MaterialCalendarView">
+
+        <attr format="reference" name="mcv_dateTextAppearance"/>
+        <attr format="reference" name="mcv_weekDayTextAppearance"/>
+        <attr format="reference" name="mcv_headerTextAppearance"/>
+
+        <attr format="color" name="mcv_arrowColor"/>
+        <attr format="reference" name="mcv_leftArrowMask"/>
+        <attr format="reference" name="mcv_rightArrowMask"/>
+        <attr format="color" name="mcv_selectionColor"/>
+
+        <attr format="integer" name="mcv_showOtherDates">
+            <flag name="none" value="0"/>
+            <flag name="other_months" value="1"/>
+            <flag name="out_of_range" value="2"/>
+            <flag name="decorated_disabled" value="4"/>
+            <flag name="defaults" value="4"/>
+            <flag name="all" value="7"/>
+        </attr>
+
+        <attr format="boolean" name="mcv_allowClickDaysOutsideCurrentMonth"/>
+
+        <attr format="reference" name="mcv_weekDayLabels"/>
+        <attr format="reference" name="mcv_monthLabels"/>
+
+        <attr format="dimension" name="mcv_tileSize"/>
+        <attr format="dimension" name="mcv_tileHeight"/>
+        <attr format="dimension" name="mcv_tileWidth"/>
+
+        <attr format="enum" name="mcv_firstDayOfWeek">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr>
+
+        <attr format="enum" name="mcv_calendarMode">
+            <enum name="month" value="0"/>
+            <enum name="week" value="1"/>
+        </attr>
+    </declare-styleable></file><file path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\values\colors.xml" qualifiers=""><color name="mcv_event_normal">#FF9D4A</color><color name="mcv_day_text_disable">#A4CFEE</color><color name="mcv_weekday_text_disable">#8d8e97</color><color name="mcv_day_text_checked">#ff7e00</color><color name="mcv_header_text_normal">#4E4E4E</color><color name="mcv_arrow_normal">#979797</color><color name="mcv_day_text_normal">#595968</color><color name="mcv_weekday_text_normal">#8d8e97</color></file><file path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\values\ids.xml" qualifiers=""><item name="mcv_pager" type="id"/></file><file path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\values\strings.xml" qualifiers=""><string name="next">Go to next</string><string name="calendar">Calendar</string><string name="previous">Go to previous</string></file><file path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\main\res\values\styles.xml" qualifiers=""><style name="TextAppearance.MaterialCalendarWidget.Header" parent="android:TextAppearance.DeviceDefault.Small">
+        
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/mcv_header_text_normal</item>
+    </style><style name="TextAppearance.MaterialCalendarWidget.Date" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/mcv_text_date_day</item>
+    </style><style name="TextAppearance.MaterialCalendarWidget.WeekDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/mcv_text_date_weekday</item>
+    </style></file></source><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\rs\debug"/><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="D:\yuanhang.liu\EMWMatrix\libsMaterialCalendarView\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="MaterialCalendarView"><attr format="reference" name="mcv_dateTextAppearance"/><attr format="reference" name="mcv_weekDayTextAppearance"/><attr format="reference" name="mcv_headerTextAppearance"/><attr format="color" name="mcv_arrowColor"/><attr format="reference" name="mcv_leftArrowMask"/><attr format="reference" name="mcv_rightArrowMask"/><attr format="color" name="mcv_selectionColor"/><attr format="integer" name="mcv_showOtherDates">
+            <flag name="none" value="0"/>
+            <flag name="other_months" value="1"/>
+            <flag name="out_of_range" value="2"/>
+            <flag name="decorated_disabled" value="4"/>
+            <flag name="defaults" value="4"/>
+            <flag name="all" value="7"/>
+        </attr><attr format="boolean" name="mcv_allowClickDaysOutsideCurrentMonth"/><attr format="reference" name="mcv_weekDayLabels"/><attr format="reference" name="mcv_monthLabels"/><attr format="dimension" name="mcv_tileSize"/><attr format="dimension" name="mcv_tileHeight"/><attr format="dimension" name="mcv_tileWidth"/><attr format="enum" name="mcv_firstDayOfWeek">
+            <enum name="sunday" value="1"/>
+            <enum name="monday" value="2"/>
+            <enum name="tuesday" value="3"/>
+            <enum name="wednesday" value="4"/>
+            <enum name="thursday" value="5"/>
+            <enum name="friday" value="6"/>
+            <enum name="saturday" value="7"/>
+        </attr><attr format="enum" name="mcv_calendarMode">
+            <enum name="month" value="0"/>
+            <enum name="week" value="1"/>
+        </attr></declare-styleable></configuration></mergedItems></merger>

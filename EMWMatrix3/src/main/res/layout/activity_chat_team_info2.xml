@@ -1,0 +1,188 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_main"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true">
+
+        <cc.emw.mobile.chat.view.MyCollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:contentScrim="#FFFFFF"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.brucetoo.imagebrowse.widget.PhotoView
+                android:id="@+id/iv_group_new_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@color/gray_1" />
+
+            <ImageView
+                android:id="@+id/iv_group_new_image2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/desert" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="top"
+                android:background="@drawable/chat_team_info_title_up_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignBottom="@+id/iv_group_new_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="bottom"
+                android:background="@drawable/chat_team_info_title_down_bg" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/tv_group_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:iconCode="ec6a" />
+
+                <TextView
+                    android:id="@+id/tv_group_new_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/tv_group_bg"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_group_new_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_group_new_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    app:iconCode="eb3b" />
+            </android.support.v7.widget.Toolbar>
+
+            <View
+                android:id="@+id/view_group_new_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="70dp"
+                android:background="#ffffff" />
+
+            <EditText
+                android:id="@+id/tv_group_name_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="50dp"
+                android:background="@null"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <!-- <cc.emw.mobile.view.IconTextView
+                 android:id="@+id/itv_group_new_camera"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_gravity="right|bottom"
+                 android:layout_marginBottom="15dp"
+                 android:layout_marginRight="12dp"
+                 android:background="@drawable/chat_team_info_photo_bg"
+                 android:gravity="center"
+                 android:textColor="#ffffff"
+                 android:textSize="20sp"
+                 android:visibility="gone"
+                 app:iconCode="ec02" />-->
+
+        </cc.emw.mobile.chat.view.MyCollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_photo_camera_white_24dp"
+        android:tint="#FFFFFF"
+        app:background="@drawable/chat_team_info_photo_bg"
+        app:layout_anchor="@id/abl_main"
+        app:layout_anchorGravity="bottom|end|right" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_chat_team_info_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <cc.emw.mobile.chat.view.MyRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+        <ScrollView
+            android:id="@+id/ll_my_edit_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <include layout="@layout/itme_chat_info_recyclerview" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

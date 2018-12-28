@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/rc_voip_float_box_bg"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/rc_voip_media_type"
+        android:src="@drawable/rc_voip_float_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@id/rc_time"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/rc_voice_color"
+        android:textSize="14sp"
+        android:text="00:00"
+        android:visibility="visible"/>
+
+    <FrameLayout
+        android:id="@+id/rc_voip_float_preview"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:visibility="gone" />
+</LinearLayout>

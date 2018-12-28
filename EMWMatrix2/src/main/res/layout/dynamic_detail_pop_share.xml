@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <Button
+        android:id="@+id/btn_popshare_talker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:background="@null"
+        android:drawableTop="@drawable/share_btn_dongtai"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:textColor="@color/cm_text"
+        android:textSize="13sp"
+        android:text="Talker" />
+
+    <Button
+        android:id="@+id/btn_popshare_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:background="@null"
+        android:drawableTop="@drawable/share_btn_renyuan"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:textColor="@color/cm_text"
+        android:textSize="13sp"
+        android:text="人员" />
+
+    <Button
+        android:id="@+id/btn_popshare_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:background="@null"
+        android:drawableTop="@drawable/share_btn_qunzhu"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:textColor="@color/cm_text"
+        android:textSize="13sp"
+        android:text="群组" />
+
+</RelativeLayout>

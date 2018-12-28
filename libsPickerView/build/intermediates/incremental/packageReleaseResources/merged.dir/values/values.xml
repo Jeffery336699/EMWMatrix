@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="pickerview_customTextSize">false</bool>
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="pickerview_bg_topbar">#ffffff</color>
+    <color name="pickerview_timebtn_nor">#169BFF</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_center">#585858</color>
+    <color name="pickerview_wheelview_textcolor_divider">#E5E5E5</color>
+    <color name="pickerview_wheelview_textcolor_out">#B7B7B7</color>
+    <declare-styleable name="wheelview"><attr name="gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr><attr format="dimension" name="textSizeAll"/><attr format="color" name="textColorOut"/><attr format="color" name="textColorCenter"/><attr format="color" name="dividerColor"/></declare-styleable>
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="pickerview_topbar_btn_textsize">15sp</dimen>
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <dimen name="pickerview_topbar_paddingleft">12dp</dimen>
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+    <integer name="animation_default_duration">300</integer>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+</resources>

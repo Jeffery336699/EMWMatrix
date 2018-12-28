@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.me.PersonInfoEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/head_bg">
+
+            <TextView
+                android:id="@+id/cm_header_btn_left9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:text="取消"
+                android:textColor="#FF989898"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cm_header_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="个人设置"
+                android:textColor="#FF101010"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cm_header_tv_right9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:text="完成"
+                android:textColor="#FFEA5404"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/up_down_shape" />
+
+        <cc.emw.mobile.view.SwipeBackScrollView
+            android:id="@+id/swipe_scroll_person_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <cc.emw.mobile.view.CircleImageView
+                            android:id="@+id/iv_me_head"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="15dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cm_img_head"
+                            app:border_color="#D7D7D7"
+                            app:border_width="2dp" />
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            app:iconCode="ec02" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="114dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_me_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="James Harrison"
+                            android:textColor="#FF101010"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:id="@+id/tv_me_depart_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="设计部"
+                            android:textColor="#FF989898"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:layout_marginLeft="11dp"
+                        android:gravity="center_vertical"
+                        android:text="基本资料"
+                        android:textColor="#FF101010"
+                        android:textSize="14sp" />
+
+                    <!--姓名-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="姓名"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/et_info_edit_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="right"
+                            android:paddingRight="18dp"
+                            android:text="James Harrison"
+                            android:textColor="#8A000000"
+                            android:textColorHint="#8A000000"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                    <!--部门-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="部门"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_info_edit_depart_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingRight="18dp"
+                            android:text="设计部"
+                            android:textColor="#8A000000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                    <!--手机-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="手机"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/et_info_edit_phone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="right"
+                            android:inputType="phone"
+                            android:paddingRight="18dp"
+                            android:text="15277778888"
+                            android:textColor="#8A000000"
+                            android:textColorHint="#8A000000"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                    <!--邮箱-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="邮箱"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/et_info_edit_mail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:gravity="right"
+                            android:inputType="phone"
+                            android:paddingRight="18dp"
+                            android:text="添加你的邮箱"
+                            android:textColor="#8A000000"
+                            android:textColorHint="#8A000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <!--性别-->
+                    <LinearLayout
+                        android:id="@+id/ll_me_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="性别"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_sex"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="18dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rb_man"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:checked="true"
+                                android:drawableLeft="@drawable/radio_selector"
+                                android:drawablePadding="12dp"
+                                android:text="男士"
+                                android:textColor="#8A000000"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/rb_women"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:button="@null"
+                                android:drawableLeft="@drawable/radio_selector"
+                                android:drawablePadding="12dp"
+                                android:text="女士"
+                                android:textColor="#8A000000"
+                                android:textSize="14sp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                    <!--年龄-->
+                    <LinearLayout
+                        android:id="@+id/ll_me_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="年龄"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_info_edit_age"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingRight="18dp"
+                            android:text=""
+                            android:textColor="#8A000000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/tv_add_work_experience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="工作经历"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:text="添加"
+                            android:textColor="#FFEA5404"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_experience_contain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/tv_add_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="教育背景"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_add_college"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:text="添加"
+                            android:textColor="#FFEA5404"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_college_contain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="职业技能"
+                            android:textColor="#FF101010"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_add_work_skill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:padding="12dp"
+                            android:text="添加"
+                            android:textColor="#FFEA5404"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_class_skill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/rectangle"
+                        android:gravity="left|top"
+                        android:hint="请输入职业技能"
+                        android:minHeight="60dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:textColor="#8A000000"
+                        android:textColorHint="#61000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </cc.emw.mobile.view.SwipeBackScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

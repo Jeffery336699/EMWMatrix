@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.contact.fragment.BusinessCardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/civ_user_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cm_img_head" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="James Harrison"
+                android:textColor="#FF101010"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_user_depart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设计部"
+                android:textColor="#FF989898"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="211dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="14.5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="扫一扫二维码，加我好友"
+        android:textColor="#FF989898"
+        android:textSize="14sp" />
+
+</LinearLayout>

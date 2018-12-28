@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null">
+    <cc.emw.mobile.view.CircleImageView
+        android:id="@+id/iv_dynamicreply_head"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/cm_img_head"
+        app:border_color="@color/cm_headimg_border"
+        app:border_width="0dp" />
+    <TextView
+        android:id="@+id/tv_dynamicreply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/tv_dynamicreply_del"
+        android:layout_toEndOf="@+id/iv_dynamicreply_head"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#5E5E5E"
+        android:textSize="12sp"
+        android:text="回复内容" /><!--android:textColor="@color/dynamicreply_reply_text"-->
+    <TextView
+        android:id="@+id/tv_dynamicreply_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="6dp"
+        android:text="删除"
+        android:textColor="#F15151"
+        android:textSize="12sp" />
+    <cc.emw.mobile.view.FlowLayout
+        android:id="@+id/fl_dynamicreply_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_dynamicreply_content"
+        android:layout_below="@id/tv_dynamicreply_content" />
+</RelativeLayout>

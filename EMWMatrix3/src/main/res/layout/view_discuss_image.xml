@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_shareimg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible" >
+	<!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="12dp"
+        android:background="@drawable/cm_border_bg"
+        android:gravity="center_vertical"
+        android:textColor="@color/dynamicadd_sharetitle_text"
+       	android:textSize="14sp"
+        android:text="@string/share_image"/>
+    <Button
+        android:id="@+id/btn_shareimg_add"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/cm_border_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="12dp"
+        android:textSize="14sp"
+		android:textColor="@color/dynamicadd_add_text"
+        android:text="@string/share_add_image"
+        android:visibility="visible"/>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<cc.emw.mobile.view.FlowLayout
+			android:id="@+id/fl_shareimg_item"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp" />
+	</ScrollView>-->
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/rv_show_photo"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#D1D3D8"
+		android:cacheColorHint="@android:color/transparent"
+		android:divider="@color/gray_1"
+		android:dividerHeight="0dip"
+		android:fadingEdge="none"
+		android:footerDividersEnabled="false"
+		android:headerDividersEnabled="false"
+		android:listSelector="@android:color/transparent"
+		android:scrollbarStyle="outsideOverlay"
+		android:scrollbars="none"
+		android:transcriptMode="normal" />
+</LinearLayout>

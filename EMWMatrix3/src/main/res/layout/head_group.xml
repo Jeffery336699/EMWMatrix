@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_header"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#335B9D"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:iconCode="eb68" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="附近"
+        android:textColor="#fff"
+        android:textSize="17sp" />
+
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        android:textSize="22sp"
+        app:iconCode="ecd5" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/notification"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:visibility="gone"
+        app:iconCode="e990" />
+
+</RelativeLayout>

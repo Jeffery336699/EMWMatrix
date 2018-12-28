@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_header_bg"
+    android:orientation="horizontal"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context=".me.PersonIntimateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/cm_setting_title_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cm_border_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_my_concern_self"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="查看关注的人"
+                    android:textColor="#354052"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_intimate_concern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/list_btn_next"
+                    android:gravity="center"
+                    android:text="所有人"
+                    android:textColor="@color/cal_text_name" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/cm_divider_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_collect_self"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="查看收藏的"
+                    android:textColor="#354052"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_intimate_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/list_btn_next"
+                    android:gravity="center"
+                    android:text="所有人"
+                    android:textColor="@color/cal_text_name" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/cm_divider_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_send_self"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="查看发布的"
+                    android:textColor="#354052"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_intimate_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/list_btn_next"
+                    android:gravity="center"
+                    android:text="所有人"
+                    android:textColor="@color/cal_text_name" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/cm_divider_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_work_relation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="工作相关查看"
+                    android:textColor="#354052"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_intimate_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/list_btn_next"
+                    android:gravity="center"
+                    android:text="所有人"
+                    android:textColor="@color/cal_text_name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

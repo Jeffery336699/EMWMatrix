@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SwipeMenuListView</string>
+    <item name="MENU_VIEW_ID" type="id"/>
+    <item name="CONTENT_VIEW_ID" type="id"/>
+
+</resources>

@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all_images">全部图片</string>
+    <string name="folder_image_count">共%1$d张</string>
+    <string name="preview_image_count">%1$s/%2$s</string>
+    <string name="select_limit">最多选择%1$s张图片</string>
+    <string name="complete">完成</string>
+    <string name="select_complete">完成(%1$s/%2$s)</string>
+    <string name="preview_count">预览(%1$s)</string>
+    <string name="photo_crop">图片裁剪</string>
+    <string name="origin">原图</string>
+    <string name="origin_size">原图(%1$s)</string>
+    <!-- shaobo.zhuang start-->
+    <string name="dynamic_more_all">全部</string>
+    <string name="dynamic_more_share">分享</string>
+    <string name="dynamic_more_notice">公告</string>
+    <string name="dynamic_more_schedule">日程</string>
+    <string name="dynamic_more_allot">任务</string>
+    <string name="dynamic_more_plan">计划</string>
+    <string name="dynamic_list_error">获取列表数据失败！</string>
+    <string name="dynamic_select_vote">请先选择投票项！</string>
+    <string name="dynamic_vote_success">投票成功！</string>
+    <string name="dynamic_vote_error">投票失败！</string>
+    <string name="dynamicdetail">详情</string>
+    <string name="dynamicdetail_info_error">获取信息失败！</string>
+    <string name="dynamicdetail_edittext_hint">说点什么吧~</string>
+    <string name="dynamicdetail_comment_success">评论成功！</string>
+    <string name="dynamicdetail_comment_error">评论失败！</string>
+    <string name="dynamicdetail_collect_success">收藏成功！</string>
+    <string name="dynamicdetail_collect_error">收藏失败！</string>
+    <string name="dynamicdetail_cancelcollect_success">取消收藏成功！</string>
+    <string name="dynamicdetail_cancelcollect_error">取消收藏失败！</string>
+    <string name="dynamicdetail_more_delete">删除</string>
+    <string name="dynamicdetail_commentlist_error">获取评论列表数据失败！</string>
+
+    <string name="allot">新建工作分派</string>
+    <string name="allot_taskname">名称</string>
+    <string name="allot_taskname_hint">任务名称</string>
+    <string name="allot_finishtime">完成时间</string>
+    <string name="allot_finishtime_hint">请选择完成时间</string>
+    <string name="allot_responser">负责人</string>
+    <string name="allot_executor">执行人</string>
+    <string name="allot_add_person">添加人员</string>
+    <string name="allot_empty_taskname">请输入任务名称！</string>
+    <string name="allot_empty_finishtime">请选择完成时间！</string>
+    <string name="allot_empty_responser">请添加负责人！</string>
+    <string name="allot_finishtime_less_curtime">完成时间不能少于当前时间！</string>
+
+    <string name="notice">新公告</string>
+    <string name="notice_content_hint">公告的内容...</string>
+
+    <string name="plan">新工作计划</string>
+    <string name="plan_type">计划类型</string>
+    <string name="plan_type_day">日计划</string>
+    <string name="plan_type_week">周计划</string>
+    <string name="plan_type_month">月计划</string>
+    <string name="plan_name_hint">请输入计划详情</string>
+    <string name="plan_time">开始时间</string>
+    <string name="plan_time_hint">请选择开始时间</string>
+    <string name="plan_add_plan">添加计划</string>
+    <string name="plan_empty_name">请输入名称！</string>
+    <string name="plan_empty_time">请选择日期！</string>
+
+    <string name="share">分享</string>
+    <string name="share_file">文件</string>
+    <string name="share_add_file">添加文件</string>
+    <string name="share_image">图片</string>
+    <string name="share_add_image">添加图片</string>
+    <string name="share_link">链接</string>
+    <string name="share_linkurl">网址</string>
+    <string name="share_linkurl_hint">请输入网址</string>
+    <string name="share_linkdesc">描述</string>
+    <string name="share_linkdesc_hint">请输入描述</string>
+    <string name="share_vote">投票</string>
+    <string name="share_vote_hint">请输入选项名称</string>
+    <string name="share_add_vote">添加选项</string>
+    <string name="share_empty_linkurl">请输入链接地址！</string>
+    <string name="share_empty_linkdesc">请输入链接描述！</string>
+    <string name="share_empty_votename">请输入投票项！</string>
+    <string name="share_video">视频</string>
+    <string name="share_add_record">录制</string>
+    <string name="share_add_video">从知识库上传</string>
+
+    <string name="shareto">分享到Talker</string>
+
+    <string name="file">知识库</string>
+    <string name="file_myfile">我的文件</string>
+    <string name="file_sharefile">共享给我的文件</string>
+    <string name="file_mysharefile">我分享的文件</string>
+    <string name="file_cancelfile">作废的文件</string>
+    <string name="file_share_success">分享成功！</string>
+    <string name="file_share_error">分享失败！</string>
+    <string name="filelist_more_create">新建文件夹</string>
+    <string name="filelist_more_upload">上传文件</string>
+    <string name="filelist_list_error">获取文件列表失败！</string>
+    <string name="filelist_upload_success">上传文件成功！</string>
+    <string name="filelist_upload_error">上传文件失败！</string>
+    <string name="filelist_choose_title">请选择</string>
+    <string name="filelist_choose_error">请安装文件管理器！</string>
+    <string name="filecreate_name">名称</string>
+    <string name="filecreate_desc">描述</string>
+    <string name="filecreate_name_hint">请输入文件夹名称</string>
+    <string name="filecreate_desc_hint">请输入文件夹描述</string>
+    <string name="filecreate_empty_folder">请输入文件夹名称！</string>
+    <string name="filecreate_success">创建文件夹成功！</string>
+    <string name="filecreate_error">创建文件夹失败！</string>
+    <string name="filedetail">文件详情</string>
+    <string name="filedetail_sharerange_error">获取分享范围失败！</string>
+    <string name="filedetail_relationcount_error">获取相关数量失败！</string>
+    <string name="fileselect">选择</string>
+
+    <string name="content_hint">发表一下你的想法…</string>
+    <string name="empty_content_tips">内容不能为空！</string>
+    <string name="share_range_hint">分享范围</string>
+    <string name="publish_success">发表成功！</string>
+    <string name="publish_error">发表失败！</string>
+    <string name="tv_file_relation_tips">暂无相关文件</string>
+    <!-- shaobo.zhuang end-->
+
+    <!-- tao.zhou start -->
+    <string name="my_fa_bu">去Talker记录你的工作生活吧！</string>
+    <string name="my_guang_zhu">还没有关注任何人？去通讯录找找看</string>
+    <string name="my_collection">暂无收藏，到处去逛逛吧！</string>
+    <string name="bzm">备注名</string>
+    <string name="bzm_edittext_hint">请输入备注名</string>
+    <string name="bzm_info_error">获取备注名失败！</string>
+    <string name="bzm_submit_success">编辑成功！</string>
+    <string name="bzm_submit_error">编辑失败！</string>
+
+    <string name="contactselect">选择人员</string>
+    <string name="contactselect_empty">请选择！</string>
+    <string name="contactselect_list_error">获取人员列表信息失败！</string>
+
+    <string name="groupinto">群信息</string>
+    <string name="groupinto_send_text">发起群聊</string>
+    <string name="groupinto_exit_text">退出群组</string>
+    <string name="groupinto_delete_text">解散团队</string>
+    <string name="groupinto_delete_success">解散成功！</string>
+    <string name="groupinto_delete_error">解散失败！</string>
+    <string name="groupinto_join_success">加入成功！</string>
+    <string name="groupinto_join_error">加入失败！</string>
+    <string name="groupinto_joinexist_tips">人员包含已加入成员，加入失败！</string>
+    <string name="groupinto_exit_success">退出成功！</string>
+    <string name="groupinto_exit_error">退出失败！</string>
+    <string name="groupinto_relationcount_error">获取群组关联失败！</string>
+    <string name="groupmember">群成员</string>
+    <string name="groupmember_list_error">获取群成员列表信息失败！</string>
+    <string name="groupcreate">新建团队</string>
+    <string name="groupcreate_name_hint">群组名称</string>
+    <string name="groupcreate_desc_hint">群组描述</string>
+    <string name="groupcreate_private_text">是否私有</string>
+    <string name="groupcreate_empty_name">请输入群组名称！</string>
+    <string name="groupcreate_success">创建成功！</string>
+    <string name="groupcreate_error">创建失败！</string>
+    <string name="groupselect">选择团队</string>
+    <string name="groupuninto_join_text">加入该群</string>
+
+    <string name="person">个人详情</string>
+    <string name="person_more_info">更多信息</string>
+    <string name="person_relationcount_error">获取关联数量失败！</string>
+    <string name="person_updatehead_success">修改成功！</string>
+    <string name="person_updatehead_error">修改失败！</string>
+    <string name="person_follow_success">关注成功！</string>
+    <string name="person_follow_error">关注失败！</string>
+    <string name="person_cancelfollow_success">取消关注成功！</string>
+    <string name="person_cancelfollow_error">取消关注失败！</string>
+    <string name="personmore">更多信息</string>
+    <string name="personmore_cancelfollow_text">取消关注</string>
+    <string name="personmore_name_text">备注名</string>
+    <string name="personmore_add_text">添加</string>
+
+
+    <string name="relationproject">工作项目</string>
+    <string name="relationproject_list_error">获取工作项目列表信息失败！</string>
+    <string name="relationtask">相关任务</string>
+    <string name="relationtask_list_error">获取相关任务列表信息失败！</string>
+    <string name="relationcalendar">活动日程</string>
+    <string name="relationcalendar_list_error">获取活动日程列表信息失败！</string>
+    <string name="relationfile">相关文件</string>
+    <string name="relationfile_list_error">获取知识库列表信息失败！</string>
+
+    <string name="waithandle">待办工作</string>
+
+    <string name="suggestion">意见反馈</string>
+    <string name="suggestion_content_hint">请写下你的宝贵建议或是存在的程序bug</string>
+    <string name="suggestion_contact_text">联系方式</string>
+    <string name="suggestion_phoneormail_hint">填写你的手机或邮箱</string>
+    <string name="suggestion_empty_content">意见内容不能为空！</string>
+    <string name="suggestion_submit_success">提交成功,我们将尽快处理!</string>
+
+    <string name="mesetting">系统设置</string>
+    <string name="mesetting_notice_text">通知</string>
+    <string name="mesetting_message_text">接受消息</string>
+    <string name="mesetting_voice_text">声音</string>
+    <string name="mesetting_safe_text">安全</string>
+    <string name="mesetting_password_text">修改密码</string>
+
+    <string name="mechecking_title_text">验证原密码</string>
+    <string name="mechecking_desc_text">为保证您的数据安全，修改密码前需验证\n原密码。</string>
+    <string name="mechecking_password_hint">密码</string>
+    <string name="mechecking_password_error">密码错误请重新输入!</string>
+
+    <string name="mechange">密码修改</string>
+    <string name="mechange_empty_pwone">新密码不能为空！</string>
+    <string name="mechange_empty_pwtwo">确认密码不能为空！</string>
+    <string name="mechange_password_inconformity">密码不一致！</string>
+    <string name="mechange_password_success">修改成功！</string>
+
+    <string name="actionsheet_photo">拍照</string>
+    <string name="actionsheet_pick">从相册选择</string>
+    <string name="headupload_error">头像上传失败！</string>
+    <string name="follow_tips">确认关注？</string>
+    <string name="cancelfollow_tips">确认取消关注？</string>
+    <!-- tao.zhou end -->
+
+    <string name="loading_dialog_tips1">正在登录，请稍等&#8230;</string>
+    <string name="loading_dialog_tips2">正在加载&#8230;</string>
+    <string name="loading_dialog_tips3">正在处理&#8230;</string>
+    <string name="loading_dialog_tips4">正在上传&#8230;</string>
+    <string name="loading_dialog_tips5">正在删除&#8230;</string>
+    <string name="loading_dialog_tips6">正在创建&#8230;</string>
+    <string name="download_tips">确定下载该文件？</string>
+    <string name="download_fileexist_tips">该文件已存在！</string>
+    <string name="recoverfile_tips">确认恢复到此版本？</string>
+    <string name="recoverfile_success">恢复成功</string>
+    <string name="recoverfile_error">恢复失败！</string>
+    <string name="cancelfile_tips">确认作废该文件？</string>
+    <string name="cancelfile_success">作废文件成功！</string>
+    <string name="cancelfile_error">作废文件失败！</string>
+    <string name="deletefile_tips">确认删除该文件？</string>
+    <string name="deletefile_success">删除文件成功！</string>
+    <string name="deletefile_error">删除文件失败！</string>
+    <string name="deleteimage_tips">确定删除该图片？</string>
+    <string name="deletegroup_tips">确认解散群组？</string>
+    <string name="deletedynamic_tips">确认删除该项？</string>
+    <string name="deletedynamic_success">删除成功！</string>
+    <string name="deletedynamic_error">删除失败！</string>
+    <string name="openfile_error">无法打开该文件，请先下载能查看该文件的APK！</string>
+
+    <string name="deletedynamic_tips_title">是否删除</string>
+    <string name="deletedynamic_tips_delete">删除</string>
+    <string name="app_name">Talker</string>
+
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
+    <item name="tag_third" type="id"></item>
+
+    <string name="warm_tips">温馨提示</string>
+    <string name="confirm">确认</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="login">登录</string>
+    <string name="exit">退出</string>
+    <string name="setting">设置</string>
+    <string name="download">下载</string>
+    <string name="net_not_open">网络未开启!</string>
+    <string name="search">搜索</string>
+    <string name="reset">重置</string>
+    <string name="unkonw">未知</string>
+    <string name="send">发送</string>
+    <string name="submit">提交</string>
+    <string name="start_date">开始日期</string>
+    <string name="end_date">结束日期</string>
+    <string name="timeformat">yyyy年MM月dd日  HH时mm分</string>
+    <string name="timeformat1">MM月dd日  HH时mm分</string>
+    <string name="timeformat2">yyyy/MM/dd HH:mm:ss</string>
+    <string name="timeformat3">HH:mm:ss</string>
+    <string name="timeformat4">yyyy-MM-dd HH:mm:ss</string>
+    <string name="timeformat5">yyyy-MM-dd</string>
+    <string name="timeformat6">yyyy-MM-dd HH:mm</string>
+    <string name="timeformat7">yyyy/MM/dd</string>
+    <string name="timeformat8">yyyy/MM</string>
+    <string name="timeformat14">yyyy/MM/dd HH:mm</string>
+    <string name="timeformat9">MM-dd</string>
+    <string name="timeformat10">yyyyMMddHHmmss</string>
+    <string name="timeformat11">HH时mm分</string>
+    <string name="timeformat12">yyyy年MM月</string>
+    <string name="timeformat13">dd</string>
+    <string name="timeformat15">yyyy年</string>
+    <string name="timeformat16">MM月dd日</string>
+    <string name="timeformat17">yyyy年M月d日</string>
+    <string name="timeformat18">MM/dd</string>
+
+
+    <!-- 登录 -->
+    <string name="login_hint_username">请输入您的用户名</string>
+    <string name="login_hint_password">请输入您的密码</string>
+    <string name="login_hint_comcode">请输入您的企业代码</string>
+    <string name="login_tip_name">用户名不能为空!</string>
+    <string name="login_tip_psw">密码不能为空!</string>
+    <string name="login_tip_ccode">企业代码不能为空!</string>
+    <string name="login_dialog_title">版本更新</string>
+    <string name="login_dialog_downtitle">下载新版本</string>
+    <string name="login_copy_right_en">©2008&#8211;2016 EMW Corporation. </string>
+    <string name="login_copy_right_ch">中天博日版权所有</string>
+
+    <!-- 主界面 start-->
+    <string name="main_back_tips">再按一次退出程序</string>
+    <string name="main_logout_tips">确定注销登录？</string>
+
+    <!-- 主界面 end-->
+
+    <!-- 任务begin -->
+    <string name="task_empty">暂无数据</string>
+    <string name="task_timeout">超时</string>
+    <string name="task_devide">任务分解</string>
+    <string name="task_operate">任务操作</string>
+    <string name="task_other">其他</string>
+    <!-- SprintActivity -->
+    <string name="task_relation_sprints">相关冲刺</string>
+    <string name="task_chose_sprint">请选择一个项目冲刺！</string>
+    <string name="task_add_sprint_success">任务冲刺添加成功！</string>
+    <string name="task_add_sprint_error">任务冲刺添加失败！</string>
+    <!-- TaskdetailActivity -->
+    <string name="task_detail">任务详情</string>
+    <string name="task_detail_failed">任务详情加载失败！</string>
+    <!-- TaskModifyActivity -->
+    <string name="task_modify_des">任务详情</string>
+    <string name="task_detail_chose">请选择</string>
+    <string name="task_detail_endtime">请选择结束时间</string>
+    <string name="task_modify_work_project">工作项目</string>
+    <string name="task_modify_scheduel">"活动日程 "</string>
+    <string name="task_modify_repository">知识库</string>
+    <string name="task_modify_attachment">附件</string>
+    <string name="task_modify_add_attachment">添加附件</string>
+    <string name="task_modify_create_task">新建任务</string>
+    <string name="task_modify_edit">任务编辑</string>
+    <string name="task_modify_devide">任务分解</string>
+    <string name="task_modify_emergenct">紧急程度</string>
+    <string name="task_modify_empty_taskdes">请输入任务描述！</string>
+    <string name="task_modify_beginTime">请选择开始时间！</string>
+    <string name="task_modify_endtime">请选择结束时间！</string>
+    <string name="task_modify_choose_emergency">请选择紧急状态！</string>
+    <string name="task_modify_chose_responser_tips">请选择至少一个负责人！</string>
+    <string name="task_modify_create_task_success">任务新建成功！</string>
+    <string name="task_modify_devide_task_success">任务分解成功！</string>
+    <string name="task_modify_create_task_error">任务新建失败！</string>
+    <string name="task_modify_devide_task_error">任务分解失败！</string>
+    <string name="task_modify_edit_task_success">任务编辑成功！</string>
+    <string name="task_modify_edit_task_error">任务编辑失败！</string>
+    <string name="task_modify_endtime_compare_starttime">结束时间不能小于开始时间</string>
+    <!-- 任务附件 -->
+    <string name="task_attachment_delete">删除</string>
+    <string name="task_attachment_share">[分享]</string>
+    <string name="task_attachment_download">下载</string>
+    <string name="task_attachment_scan">查看</string>
+    <string name="task_attachment_delete_tips">sorry,你没有该权限!</string>
+    <string name="task_attachment_add_success">添加文件成功!</string>
+    <string name="task_attachment_add_error">添加文件失败!</string>
+
+    <!-- 任务概览 -->
+    <string name="task_summarize_titile">名称</string>
+    <string name="task_summarize_des">描述</string>
+    <string name="task_summarize_emergency">紧急程度</string>
+    <string name="task_summarize_state">状态</string>
+    <string name="task_summarize_startTime">开始时间</string>
+    <string name="task_summarize_endTime">结束时间</string>
+    <string name="task_summarize_relation">关联</string>
+    <string name="task_summarize_operate_tips">确定执行此操作？</string>
+    <string name="task_summarize_operate_sprints">任务冲刺</string>
+    <string name="task_summarize_operate_return_work">返工</string>
+    <string name="task_summarize_operate_check">提交审核</string>
+    <string name="task_summarize_operate_finish">已完成</string>
+    <string name="task_state_process_success">任务状态修改成功!</string>
+    <string name="task_state_process_error">任务状态修改失败!</string>
+    <string name="task_state_check_success">任务提交审核成功!</string>
+    <string name="task_state_check_error">任务提交审核失败!</string>
+    <string name="task_state_return_work_success">任务返工成功!</string>
+    <string name="task_state_return_work_error">任务返工失败!</string>
+    <string name="task_state_finish_success">任务提交完成成功!</string>
+    <string name="task_state_finish_error">任务提交完成失败!</string>
+    <!-- 任务子评论 -->
+    <string name="task_child_comment">%1$s回复%2$s</string>
+    <!--WorkProjectActivity  -->
+    <string name="task_workproject_relation_project">相关项目</string>
+    <!-- 任务end -->
+
+    <!-- 项目begin -->
+    <string name="project">项目</string>
+    <string name="add_project">添加新项目</string>
+    <string name="add_task">添加新任务</string>
+    <string name="add_sprint">添加新冲刺</string>
+    <string name="collapse_btn">收缩按钮</string>
+    <string name="arrange_date">排期</string>
+    <string name="summarize">概述</string>
+    <string name="quantity">数量：%d</string>
+    <string name="project_empty_tip">项目执行从我做起</string>
+    <string name="finish">完成</string>
+    <string name="relative_task">相关任务</string>
+    <string name="relative_schedule">相关日程</string>
+    <string name="edit">编辑</string>
+    <string name="project_detail">项目详情</string>
+    <string name="name">名称</string>
+    <string name="description">描述</string>
+    <string name="state">状态</string>
+    <string name="description_tip">我的项目描述</string>
+    <string name="beg_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="new_task">新任务！</string>
+    <string name="see_prj_schedule">查看项目排期</string>
+    <string name="new_project">新建项目</string>
+    <string name="modify_project">修改项目</string>
+    <string name="progress_tip">正在处理，请稍候...</string>
+    <string name="add_success">添加成功</string>
+    <string name="modify_success">修改成功</string>
+    <string name="add_fail">添加失败</string>
+    <string name="modify_fail">修改失败</string>
+    <string name="input_prj_name">请输入项目名称</string>
+    <string name="input_prj_description">请输入项目描述</string>
+    <string name="input_prj_begtime">请输入开始时间</string>
+    <string name="input_prj_endtime">请输入结束时间</string>
+    <string name="input_prj_responder">请添加负责人</string>
+    <string name="endtime_less_begtime">结束日期不能小于开始日期</string>
+    <string name="creating">正在创建...</string>
+    <string name="add_sprint_fail">添加新冲刺失败！</string>
+    <string name="input_sprint_name">请输入项目冲刺名称！</string>
+    <string name="add_sprint_success">添加新冲刺成功！</string>
+    <string name="order_detail">订单详情</string>
+    <string name="project_schedule">项目排期</string>
+    <string name="task_state_processing_num">进行中 • %s</string>
+    <string name="task_state_unstart_num">未开始 • %s</string>
+    <string name="task_state_finished_num">已完成 • %s</string>
+    <string name="task_state_delay_num">已延迟 • %s</string>
+    <!--<string name="task_state_board_group_txt">%s • %s</string>-->
+
+    <!-- 项目end -->
+    <!-- 聊天 begin -->
+    <string name="time_start">00:00</string>
+    <string name="speak_onlong">长按说话>></string>
+    <string name="loading">正在加载...</string>
+    <string name="Photo">拍照</string>
+    <string name="photos">照片</string>
+    <string name="photoes">[照片]</string>
+    <string name="attache">知识库</string>
+    <string name="sending">正在发送...</string>
+    <string name="sendSuccess">发送成功</string>
+    <string name="network_bad">网络异常</string>
+    <string name="system_error">系统异常</string>
+    <string name="uploading">上传</string>
+    <string name="over">人员已满!</string>
+    <string name="chat">聊天</string>
+    <string name="audio">[语音]</string>
+    <string name="video">[视频]</string>
+    <string name="doc">[附件]</string>
+    <string name="road_way">[路径规划]</string>
+    <string name="delete_success">刪除成功</string>
+    <string name="cancel_audio">取消录音</string>
+    <string name="follow_mes">[流程消息]</string>
+    <string name="tooShort">录音时间过短！</string>
+    <string name="audioChat">语音聊天</string>
+    <string name="videoChat">视频聊天</string>
+    <string name="resource_error">语音资源有误!</string>
+    <string name="slid_up_cancel">上滑取消</string>
+    <string name="release_cancel">松开取消</string>
+    <!-- 聊天 end -->
+    <!--  地图 begin-->
+    <string name="BusRoute">公交路线详情</string>
+    <string name="spends">打车约</string>
+    <string name="yuan">元</string>
+    <string name="go">出发</string>
+    <string name="destination">到达终点</string>
+    <string name="buxing">步行</string>
+    <string name="mi">米</string>
+    <string name="zhan">站</string>
+    <string name="DriveRoute">驾车路线详情</string>
+    <string name="route">路线</string>
+    <string name="location_ing">定位中，稍后再试...</string>
+    <string name="no_destination">未设置终点</string>
+    <string name="searching">正在搜索</string>
+    <string name="detail_route">" 具体路线  "</string>
+    <string name="failed_location">定位失败,</string>
+    <string name="lat_log">经纬度值:</string>
+    <string name="there">附近</string>
+    <string name="no_result">没有结果</string>
+    <string name="network_error">网络错误</string>
+    <string name="search_error">搜琐错误</string>
+    <string name="WalkRouteDetail">步行路线详情</string>
+    <!--地图 end  -->
+
+    <!--  日程begin-->
+    <string name="tv_calender_blank_tips">今天很悠闲，不如约个客户见见</string>
+    <string name="tv_calender_relation_tips">暂无相关日程</string>
+    <string name="publish">发布</string>
+    <string name="excuseing">正在执行...</string>
+    <string name="ending_time">结束时间</string>
+    <string name="endingtime_notlessthan_starttime">结束时间不能少于开始时间！</string>
+    <string name="nope">无</string>
+    <string name="ontime">准时</string>
+    <string name="five_minute_per">5分钟前</string>
+    <string name="one_hours">1小时前</string>
+    <string name="three_hours">3小时前</string>
+    <string name="one_day">1天前</string>
+    <string name="three_day">3天前</string>
+    <string name="one_week">1周前</string>
+    <string name="never">永不</string>
+    <string name="service_excep">服务器异常,请稍候重试</string>
+    <string name="calendar_introduction">日程详情</string>
+    <string name="conform_to_do">确认完成代办项？</string>
+
+    <string name="edit_success">编辑成功</string>
+    <string name="edit_failed">编辑失败</string>
+    <string name="finish_success">删除成功</string>
+    <string name="finish_failed">删除失败</string>
+    <string name="design_oneself">自定</string>
+    <string name="repeat">重复</string>
+    <string name="notify">提醒</string>
+    <string name="end_notice">结束提醒</string>
+    <string name="repeat_end">重复截止</string>
+    <string name="month">月</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="has_chose">已选择</string>
+    <string name="picture_unit">张</string>
+    <string name="please_choose_pic">选择图片</string>
+    <string name="arrive_limit_count">已达到最大选择数</string>
+    <!--  日程end-->
+
+    <!-- 表单begin -->
+    <string name="is_not_null">不能为空！</string>
+    <string name="create_fail">创建失败！</string>
+    <string name="create_success">创建成功！</string>
+    <string name="chart_select">图表选项</string>
+    <!-- 表单end -->
+
+    <!-- weChat -->
+    <!-- WXPayEntryActivity -->
+    <string name="app_shares">分享</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+    <string name="enter">这是SDK_Sample的入口界面</string>
+    <string name="reg">将该app注册到微信</string>
+    <string name="goto_send">跳转到发消息界面</string>
+    <string name="goto_pay">跳转到支付界面</string>
+    <string name="goto_fav">跳转到收藏界面</string>
+    <string name="launch_wx">启动微信</string>
+    <string name="check_timeline_supported">检查是否支持发送到朋友圈</string>
+    <string name="send_to_wx_title">发送到微信</string>
+    <string name="get_from_wx_title">从微信接收</string>
+    <string name="show_from_wx_title">显示微信请求的消息</string>
+    <string name="pay_by_wx_title">通过微信支付</string>
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="launch_from_wx">Launch From Weixin</string>
+    <string name="pay_by_wx">客户端签名微信支付</string>
+    <string name="pay_by_wxap">微信支付</string>
+    <string name="check_pay">检查微信版本是否支持支付</string>
+    <string name="input_reqkey">输入reqkey</string>
+    <string name="input_package_value">输入package value</string>
+    <string name="input_sign">输入sign</string>
+    <string name="getting_access_token">正在获取access token...</string>
+    <string name="get_access_token_succ">获取access token成功</string>
+    <string name="get_access_token_fail" formatted="false">获取access token失败，原因%s</string>
+    <string name="getting_prepayid">正在获取预支付订单...</string>
+    <string name="paying">支付中</string>
+    <string name="get_prepayid_succ">获取prepayid成功</string>
+    <string name="get_prepayid_fail" formatted="false">获取prepayid失败，原因%s</string>
+    <!-- WXMediaMessage -->
+    <string name="input_openid">输入openid</string>
+    <string name="input_scope">输入scope</string>
+    <string name="receive">从微信接收</string>
+    <string name="is_timelines">是否分享到朋友圈</string>
+    <string name="send_text">发送文本</string>
+    <string name="send_text_default">这段文字发送自微信SDK示例程序</string>
+    <string name="send_img">发送图片</string>
+    <string-array name="send_img_item">
+        <item>发送图片的二进制数据</item>
+        <item>发送图片的本地路径</item>
+        <item>发送图片的URL</item>
+    </string-array>
+    <string name="send_img_file_not_exist">文件不存在</string>
+    <string name="send_file">发送文件</string>
+
+    <string-array name="send_file_item">
+        <item>发送文件的二进制数据</item>
+        <item>发送文件的本地路径</item>
+    </string-array>
+
+    <string name="send_file_file_not_exist">文件不存在</string>
+    <string name="send_pic">发送照片</string>
+    <string name="send_music">发送音乐</string>
+
+    <string-array name="send_music_item">
+        <item>发送音乐url</item>
+        <item>发送低带宽音乐url</item>
+    </string-array>
+
+    <string name="send_video">发送视频</string>
+
+    <string-array name="send_video_item">
+        <item>发送视频url</item>
+        <item>发送低带宽视频url</item>
+    </string-array>
+
+    <string name="send_webpage">发送网页</string>
+
+    <string-array name="send_webpage_item">
+        <item>发送网页url</item>
+    </string-array>
+
+    <string name="send_appdata">发送app消息</string>
+
+    <string-array name="send_appdata_item">
+        <item>发送app文件本地路径</item>
+        <item>发送app二进制数据</item>
+        <item>发送无附件的app</item>
+    </string-array>
+
+    <string name="send_emoji">发送表情消息</string>
+
+    <string-array name="send_emoji_item">
+        <item>发送表情本地路径</item>
+        <item>发送表情二进制数据</item>
+    </string-array>
+    <string-array name="send_emoji_item_format">
+        <item>发送GIF图片</item>
+        <item>发送非GIF图片</item>
+    </string-array>
+    <!-- GetFromWXActivity -->
+    <string name="share_text_to_weixin">回应文本到微信</string>
+    <string name="share_text_default">这段文字回应自微信SDK示例程序</string>
+    <string name="share_url_to_weixin">回应URL到微信</string>
+    <string name="share_pic_to_weixin">回应图片到微信</string>
+    <string name="share_music_to_weixin">回应音乐到微信</string>
+    <string name="share_video_to_weixin">回应视频到微信</string>
+    <string name="share_appdata_to_weixin">回应app消息到微信</string>
+    <string name="register_as_weixin_app_sender">注册微信事件发送器</string>
+    <string name="get_token_from_weixin">获取微信访问Token</string>
+    <string name="unregister_from_weixin">从微信反注册</string>
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+    <!-- 扫一扫 -->
+    <string name="menu_settings">Settings</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="scann">扫一扫</string>
+    <string name="scannerror">扫描失败!</string>
+    <string name="scann_oddnum">扫描单号:</string>
+    <string name="scann_file">文件</string>
+    <string name="scann_img">图片</string>
+    <string name="scann_flash">灯光</string>
+    <string name="scann_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <string name="pos_storage">入库</string>
+    <string name="pos_outbound">出库</string>
+    <string name="pos_trolley">购物车</string>
+    <string name="pos_title">收银</string>
+    <string name="pos_shopcart_total">合计：</string>
+    <string name="pos_shopcart_submit">提交账单</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- weChat -->
+
+    <!-- time tracking begin -->
+    <string name="time_tracking">Time Tracking</string>
+    <!-- time tracking end -->
+
+    <string name="calendar_Wes">三</string>
+    <string name="nowday">今天</string>
+    <string name="calendar_Sat">六</string>
+    <string name="calendar_Fri">五</string>
+    <string name="calendar_Thus">四</string>
+    <string name="calendar_Tus">二</string>
+    <string name="calendar_Mon">一</string>
+    <string name="access_fail">访问失败</string>
+    <!--chathistoryFragment-->
+    <string name="item_chat_history_deleted">item deleted</string>
+
+    <!-- Error View -->
+    <string name="error_view_click_to_refresh">点击屏幕,重新加载</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+
+    <!-- Footer View -->
+    <string name="footer_type_loading">正在加载中…</string>
+    <string name="footer_type_error">加载失败</string>
+    <string name="footer_type_net_error">网络错误</string>
+    <string name="footer_type_not_more">没有更多数据</string>
+
+    <string name="tips_not_wifi">You are currently using the mobile network, the player will continue to consume traffic</string>
+    <string name="tips_not_wifi_confirm">Resume</string>
+    <string name="tips_not_wifi_cancel">Stop play</string>
+    <string name="no_url">No mUrl</string>
+
+    <string name="check_info_title">权限提示</string>
+    <string name="check_info_message">未获得应用运行所需的基本权限，请在设置中开启权限后再使用</string>
+    <string name="check_info_exit">取消</string>
+    <string name="check_info_setting">去设置</string>
+
+    <string name="appbar_overscroll_behavior">cc.emw.mobile.me.easybehavior.behavior.AppBarLayoutOverScrollViewBehavior</string>
+    <string name="appbar_circleimageview_behavior">cc.emw.mobile.me.easybehavior.behavior.CircleImageInUsercBehavior</string>
+
+    <string name="desc_shrinkup">收起</string>
+    <string name="desc_spread">展开更多</string>
+    
+    <string name="look_details">查看详情</string>
+    <string name="i_know">知道了</string>
+    
+    <string name="time_manager">日程提醒</string>
+    <string name="talker_user_defined">  自定义  </string>
+    <string name="talker_start_time">开始时间</string>
+    <string name="talker_end_time">结束时间</string>
+    <string name="talker_middle_time">至</string>
+</resources>

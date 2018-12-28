@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--<cc.emw.mobile.view.RoundedImageView
+        android:id="@+id/iv_dynamicvote_img"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_1"
+        app:riv_corner_radius_top_left="0dp"
+        app:riv_corner_radius_top_right="0dp"/>-->
+    <ImageView
+        android:id="@+id/iv_dynamicvote_img"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_1" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/iv_dynamicvote_img"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/pb_dynamicvote_percent"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/dynamic_imgvote_barcolor" />
+        <TextView
+            android:id="@+id/tv_dynamicvote_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#9A9A9A"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/btn_dynamicvote_vote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dynamic_imgvote_button"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            android:text="投票"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_dynamicvote_voted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ico_task_wancheng"
+        android:visibility="gone"/>
+</RelativeLayout>

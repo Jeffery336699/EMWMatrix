@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_block_menu_item.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_block_menu_item.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_update_notify.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_update_notify.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_list_menu_item.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_list_menu_item.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_material_dialog.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_material_dialog.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_header_bar_title.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_header_bar_title.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_header_bar_title.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_header_bar_title.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_fragment_block_menu.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_fragment_block_menu.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_views_load_more_default_footer.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_views_load_more_default_footer.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_content_frame_with_title_header.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_content_frame_with_title_header.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_content_frame_with_title_header.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_content_frame_with_title_header.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_block_menu_item.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_block_menu_item.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_list_menu_item.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_list_menu_item.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_update_notify.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_update_notify.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_material_dialog.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_material_dialog.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_mints_base_fragment_block_menu.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_mints_base_fragment_block_menu.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\build\\intermediates\\res\\merged\\release\\layout\\cube_views_load_more_default_footer.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libscubesdk\\src\\main\\res\\layout\\cube_views_load_more_default_footer.xml"
+    }
+]

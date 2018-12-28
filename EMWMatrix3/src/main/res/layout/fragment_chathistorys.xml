@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_header_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragment_chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cc.emw.mobile.view.MyScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_chat_ai_head_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/white"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_chat_ai_head"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/chat_ai_head"
+                            android:gravity="center"
+                            android:text="EMW"
+                            android:textColor="#ffffff"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_chat_ai_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/tv_chat_ai_head"
+                            android:text="EMW"
+                            android:textColor="#354052"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="One World小助手"
+                            android:textColor="#989898"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/recent"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="@drawable/cm_border_bg"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="10dp"
+                        android:text="最近联系"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/smlv_chat_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none" />
+
+                    <TextView
+                        android:id="@+id/follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="@drawable/cm_border_bg"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="10dp"
+                        android:text="我的关注"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/head_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/longchat"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:background="@drawable/cm_border_bg"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="10dp"
+                        android:text="非活跃"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recently_online"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+            </cc.emw.mobile.view.MyScrollView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/zengjia"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="69dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/circle_add"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:iconCode="ea07" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/kongbai"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0.5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goutong" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lv_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ico_gongzuofenpai"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:textColor="@color/dynamic_title_text"
+        android:textSize="14sp"
+        android:text="工作任务分派" />
+    <cc.emw.mobile.view.ExListView
+        android:id="@+id/lv_dynamicallot_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:divider="@android:color/transparent" />
+</LinearLayout>

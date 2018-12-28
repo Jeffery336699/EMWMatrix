@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\view_downloaddialog.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\view_downloaddialog.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\view_actionsheet.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\view_actionsheet.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\activity_main.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\view_alertdialog.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\view_alertdialog.xml"
+    }
+]

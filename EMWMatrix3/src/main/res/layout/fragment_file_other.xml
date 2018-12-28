@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal"
+	android:background="@color/cm_bg">
+
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/swipe_refresh"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="vertical">
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/recycler_view"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scrollbars="vertical"
+				android:background="@color/white"
+				/>
+
+            <!--<ListView
+                android:id="@+id/load_more_small_image_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+        		android:listSelector="?android:attr/selectableItemBackground"
+        		android:background="@color/white"
+                android:divider="@color/cm_divider_bg"
+                android:dividerHeight="0.5dip"
+                android:fadingEdge="none"
+                android:scrollbarStyle="outsideOverlay"
+                android:headerDividersEnabled="false"
+                android:footerDividersEnabled="true" />-->
+
+			<LinearLayout
+				android:id="@+id/ll_file_blank"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/cm_bg"
+				android:gravity="center"
+				android:orientation="vertical"
+				android:visibility="gone">
+				<!--android:drawableTop="@drawable/blank_ico_zhishiku"-->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+
+					android:drawablePadding="30dp"
+					android:gravity="center"
+					android:text="无文件"
+					android:textColor="@color/cm_empty_text"
+					android:textSize="16sp" />
+			</LinearLayout>
+			<cc.emw.mobile.view.IconTextView
+				android:id="@+id/itv_filelist_add"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				android:layout_gravity="bottom|right"
+				android:layout_marginBottom="20dp"
+				android:layout_marginRight="12dp"
+				android:background="@drawable/circle_add"
+				android:gravity="center"
+				android:textColor="@color/white"
+				android:textSize="20dp"
+				app:iconCode="e969"
+				android:visibility="gone"/>
+
+			<include layout="@layout/network_tips" />
+		</FrameLayout>
+	</android.support.v4.widget.SwipeRefreshLayout>
+	<com.melnykov.fab.FloatingActionButton
+		android:id="@+id/ic_tv_add_chat"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="120dp"
+		android:layout_marginRight="12dp"
+		android:background="@null"
+		android:src="@drawable/chat_add"
+		app:fab_shadow="false"
+		/>
+</RelativeLayout>

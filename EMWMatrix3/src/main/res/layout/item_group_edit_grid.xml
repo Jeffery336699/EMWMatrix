@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/group_create_iv_head"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border"
+            app:border_width="0dp" />
+
+        <ImageView
+            android:id="@+id/ico_del_red"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ico_del_red"
+            android:visibility="gone"></ImageView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/group_create_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/contact_group_eidt_tv_name"
+        android:textSize="13sp" />
+
+</LinearLayout>

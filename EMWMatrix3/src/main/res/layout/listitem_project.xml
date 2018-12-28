@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingRight="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/left_stripe"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="4dp"
+            android:background="#5C74D8"/>
+        <TextView
+            android:id="@+id/project_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="1"
+            android:text="EMW for web"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#5C74D8"
+            android:textSize="14sp"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/project_more_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/list_btn_next"/>-->
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/right_icon"
+            android:layout_width="wrap_content"
+            android:minWidth="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:textColor="#989898"
+            android:gravity="center"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/project_item_stripe"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:background="#D6D7DC"/>
+</LinearLayout>

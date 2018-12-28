@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_header_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_margin_left"
+        android:background="@color/activity_divider_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/cm_header_bar"/>
+        <include layout="@layout/contact_search_bar"/>
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ExpandableListView
+                android:id="@+id/load_more_small_image_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:cacheColorHint="@android:color/transparent"
+                android:childDivider="@color/cm_divider_bg"
+                android:dividerHeight="0.5dp"
+                android:fadeScrollbars="true"
+                android:fadingEdge="none"
+                android:groupIndicator="@null"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarSize="3dip"
+                android:scrollbarStyle="outsideOverlay"/>
+            <!--<ListView
+                android:id="@+id/mlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/cm_divider_bg"
+                android:dividerHeight="0.5dip"
+                android:fadingEdge="none"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="false"
+                android:listSelector="@android:color/transparent"
+                android:padding="0dp"
+                android:scrollbarStyle="outsideOverlay" />-->
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

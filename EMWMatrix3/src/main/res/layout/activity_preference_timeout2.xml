@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_timeout_5"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="5分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_10"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="10分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_15"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="15分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_20"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="20分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_30"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="30分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_45"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="45分钟" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_60"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="1个小时" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <TextView
+        android:id="@+id/tv_timeout_none"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="28dp"
+        android:paddingRight="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@color/cal_edit_text"
+        android:textSize="15sp"
+        android:text="从不超时" />
+</LinearLayout>

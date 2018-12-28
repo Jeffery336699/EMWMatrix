@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_mail_root"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+    <!--引入卡片title按钮-->
+    <include layout="@layout/cm_dialog_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dialog_margin"
+        android:layout_marginLeft="@dimen/dialog_margin"
+        android:layout_marginRight="@dimen/dialog_margin"
+        android:layout_marginTop="@dimen/dialog_margin_headtop"
+        android:background="@drawable/activity_dialog_bg"
+        android:clickable="true"
+        android:orientation="vertical">
+        <include
+            layout="@layout/cm_header_bar"
+            android:visibility="gone" />
+        <ScrollView
+            android:id="@+id/main_service_create"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dialog_scrollview_marginTop"
+            android:layout_weight="1"
+            android:paddingBottom="15dp"
+            android:scrollbars="vertical">
+            <!--title-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/et_service_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="服务主题"
+                    android:minHeight="18dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textColor="#FF585D68"
+                    android:textColorHint="@color/cal_edit_text_hint"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/et_serivce_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="33dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="服务详情"
+                    android:minHeight="14dp"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/cal_edit_text"
+                    android:textColorHint="@color/cal_edit_text_hint"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg"/>
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg"/>
+                <!--全天事件开关-->
+                <LinearLayout
+                    android:id="@+id/ll_service_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="@dimen/all_content_leftright">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="全天事件"
+                        android:textColor="#FF354052"
+                        android:textSize="16sp" />
+
+                    <cc.emw.mobile.view.SwitchButton
+                        android:id="@+id/schedule_sb_allday_service"
+                        style="@style/SwitchButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:enabled="false"
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/ios_back_drawable"
+                        app:kswBackMeasureRatio="1.5"
+                        app:kswThumbDrawable="@mipmap/ios_thumb"
+                        app:kswThumbMarginBottom="-8dp"
+                        app:kswThumbMarginLeft="-5dp"
+                        app:kswThumbMarginRight="-5dp"
+                        app:kswThumbMarginTop="-2.5dp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg"/>
+                <LinearLayout
+                    android:id="@+id/ll_service_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#8d8e97"
+                        app:iconCode="e912" />
+                    <cc.emw.mobile.view.CircleImageView
+                        android:id="@+id/civ_service_modify_head_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/cm_img_head"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/tv_service_manage_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="负责人"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/tv_service_modify_charge_number"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toLeftOf="@+id/itv_task_modify_charge"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/all_content_leftright"
+                        android:src="@drawable/list_btn_next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg"/>
+                <LinearLayout
+                    android:id="@+id/ll_service_modify_start_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:id="@+id/service_modify_start_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="开始日期"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <!--结束时间-->
+                <LinearLayout
+                    android:id="@+id/ll_service_modify_finish_time_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:padding="12dp">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#8d8e97"
+                        android:textSize="16dp"
+                        app:iconCode="e92c" />
+
+                    <TextView
+                        android:id="@+id/tv_serivce_modify_finish_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="结束日期"
+                        android:textColor="#7F8FA4"
+                        android:textSize="16sp" />
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <LinearLayout
+                    android:id="@+id/ll_service_grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#8d8e97"
+                        app:iconCode="ea6c" />
+                    <TextView
+                        android:id="@+id/tv_service_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="优先级"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <LinearLayout
+                    android:id="@+id/ll_service_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#8d8e97"
+                        app:iconCode="eb05" />
+                    <TextView
+                        android:id="@+id/tv_service_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="附件"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/tv_service_file_number"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toLeftOf="@+id/itv_task_modify_charge"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/all_content_leftright"
+                        android:src="@drawable/list_btn_next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <LinearLayout
+                    android:id="@+id/ll_service_busdata_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/selector_listview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="19dp"
+                        android:layout_height="20dp"
+                        android:textColor="#8d8e97"
+                        app:iconCode="eb05" />
+                    <TextView
+                        android:id="@+id/tv_service_busdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="业务数据"
+                        android:textColor="#7f8fa4"
+                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:id="@+id/ll_service_busdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/index_ico_busdata"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_service_busname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="业务名称"
+                                android:textColor="#595968"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="业务数据"
+                                android:textColor="#8D8E97"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <cc.emw.mobile.view.IconTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#cbcbcb"
+                        android:textSize="12dp"
+                        app:iconCode="eb69" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <cc.emw.mobile.view.CollapseView
+                    android:id="@+id/cv_service_tixing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_listview"
+                    android:minHeight="48dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <cc.emw.mobile.view.CollapseView
+                    android:id="@+id/ll_service_schedule_repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_listview"
+                    android:minHeight="48dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <cc.emw.mobile.view.CollapseView
+                    android:id="@+id/cv_serivce_tixing_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_listview"
+                    android:minHeight="48dp"
+                    android:visibility="gone" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+                <include layout="@layout/cm_select" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

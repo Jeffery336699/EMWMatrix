@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_header_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg">
+
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cm_border_bg"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:text="最近联系"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                    <!--com.baoyz.swipemenulistview.SwipeMenuListView-->
+                    <cc.emw.mobile.chat.view.SlideCutListView
+                        android:id="@+id/smlv_chat_history"
+                        fastScrollEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="#E5E6EA"
+                        android:dividerHeight="1px"
+                        android:scrollbars="none" />
+                    <!--<ListView-->
+                    <!--android:id="@+id/smlv_chat_history"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:cacheColorHint="@android:color/transparent"-->
+                    <!--android:scrollbars="none" />-->
+                    <TextView
+                        android:id="@+id/follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cm_border_bg"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:text="我的关注"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+                        <LinearLayout
+                            android:id="@+id/head_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp" />
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/longchat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cm_border_bg"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:text="非活跃"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <!--<ListView-->
+                    <!--android:id="@+id/recently_online"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:scrollbars="none" />-->
+                    <cc.emw.mobile.chat.view.SlideCutListView
+                        android:id="@+id/recently_online"
+                        fastScrollEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="#E5E6EA"
+                        android:dividerHeight="1px"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+            </ScrollView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/zengjia"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="69dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/circle_add"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:iconCode="ea07" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/kongbai"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0.5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goutong" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lv_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:visibility="gone" />
+</LinearLayout>

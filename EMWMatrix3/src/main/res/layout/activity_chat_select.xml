@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/form_top_meun_white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_group_create_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_group_create_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/cm_text"
+            android:textSize="16dp"
+            app:iconCode="ea64" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/contact_search_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#A9A9A9"
+                android:textSize="16dp"
+                app:iconCode="e990" />
+
+            <EditText
+                android:id="@+id/et_group_create_title_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:hint="输入姓名"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/cm_text"
+                android:textColorHint="#a1a1a1"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll_chatselect_creategroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_transparent"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <cc.emw.mobile.view.IconTextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/personselect_head_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:iconCode="ecd1" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="新建圈子"
+            android:textColor="#354052"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="通讯录"
+        android:textColor="#9B9B9B"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_personselect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/cm_divider_bg"
+            android:dividerHeight="0dip"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="false"
+            android:listSelector="@drawable/selector_transparent"
+            android:padding="0dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TextView
+            android:id="@+id/contact_tv_letter"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/dialog_char"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <cc.emw.mobile.view.SideBar
+            android:id="@+id/contact_sidebar"
+            android:layout_width="25dip"
+            android:layout_height="300dp"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

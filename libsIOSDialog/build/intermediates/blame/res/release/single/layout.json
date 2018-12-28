@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\view_actionsheet.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\view_actionsheet.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\view_alertdialog.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\view_alertdialog.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\view_downloaddialog.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\view_downloaddialog.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\activity_main.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\view_downloaddialog.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\view_downloaddialog.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\view_alertdialog.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\view_alertdialog.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\view_actionsheet.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\view_actionsheet.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\layout\\activity_main.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

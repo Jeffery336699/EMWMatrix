@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <cc.emw.mobile.view.CircleImageView
+                android:id="@+id/iv_contactselect_icon"
+                android:layout_width="@dimen/usersitem_iv_size"
+                android:layout_height="@dimen/usersitem_iv_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cm_img_head"
+                app:border_color="@color/cm_headimg_border"
+                app:border_width="0dp" />
+
+            <View
+                android:id="@+id/view_contact_is_online"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/circle_is_not_online" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_contactselect_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="@string/unkonw"
+            android:textColor="#101010"
+            android:textSize="14sp" />
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/itv_contact_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#37b248"
+            android:textSize="16sp"
+            app:iconCode="ec4c" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/cm_divider_bg" />
+
+</LinearLayout>

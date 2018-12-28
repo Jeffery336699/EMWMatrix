@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="cc.emw.mobile.me.PersonRelationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/cm_setting_title_bar2" />
+
+        <LinearLayout
+            android:id="@+id/ll_setting_accounts"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cm_border_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="登陆帐号"
+                android:textColor="#DE000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_current_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="sa@zkbr.cc"
+                android:textColor="#7B8BA7"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cm_border_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_setting_secure"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="12dp"
+                    android:text="@string/mesetting_password_text"
+                    android:textColor="#DE000000"
+                    android:textSize="14sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:textColor="#CBCBCB"
+                    android:textSize="12sp"
+                    app:iconCode="eb69" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

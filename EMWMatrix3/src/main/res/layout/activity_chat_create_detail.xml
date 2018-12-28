@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/itv_chat_dynamic_create_close"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/form_top_meun_white_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="10dp"
+        android:textColor="#101010"
+        android:textSize="14sp"
+        app:iconCode="ea64"
+        android:visibility="gone"/>
+    <include layout="@layout/cm_dialog_bar2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_chat_dynamic_create_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="约会主题"
+            android:singleLine="true"
+            android:textColor="@color/cm_text"
+            android:textColorHint="@color/cm_texthint"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_chat_dynamic_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="约会详情"
+            android:lines="3"
+            android:minHeight="14dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/cm_text"
+            android:textColorHint="@color/cm_texthint"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8d8e97"
+                android:textSize="16sp"
+                app:iconCode="ea45" />
+
+            <EditText
+                android:id="@+id/et_chat_dynamic_telnum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="约会地点"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="41dp"
+            android:background="@color/cm_divider_bg" />
+
+        <com.gc.materialdesign.views.LayoutRipple2
+            android:id="@+id/ll_chat_dynamic_mainuser_root"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/icon_chat_dynamic_more_user2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8d8e97"
+                    android:textSize="16dp"
+                    app:iconCode="e912" />
+
+                <TextView
+                    android:id="@+id/tv_chat_dynamic_mainuser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/icon_chat_dynamic_more_user2"
+                    android:hint="负责人"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_chat_dynamic_mainuser_num"
+                    android:layout_width="250dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center|right"
+                    android:text=""
+                    android:textColor="#989898"
+                    android:textSize="12sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center"
+                    android:textColor="#cbcbcb"
+                    android:textSize="12dp"
+                    app:iconCode="eb69" />
+            </RelativeLayout>
+        </com.gc.materialdesign.views.LayoutRipple2>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="41dp"
+            android:background="@color/cm_divider_bg" />
+
+        <com.gc.materialdesign.views.LayoutRipple2
+            android:id="@+id/ll_chat_dynamic_calluser_root"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/icon_chat_dynamic_more_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8d8e97"
+                    android:textSize="16dp"
+                    app:iconCode="e9ac" />
+
+                <TextView
+                    android:id="@+id/tv_chat_dynamic_calluser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/icon_chat_dynamic_more_user"
+                    android:hint="参与人"
+                    android:textColor="@color/cm_text"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_chat_dynamic_calluser_num"
+                    android:layout_width="250dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:ellipsize="end"
+                    android:gravity="center|right"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#989898"
+                    android:textSize="14sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center"
+                    android:textColor="#cbcbcb"
+                    android:textSize="12dp"
+                    app:iconCode="eb69" />
+            </RelativeLayout>
+        </com.gc.materialdesign.views.LayoutRipple2>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="41dp"
+            android:background="@color/cm_divider_bg" />
+
+        <com.gc.materialdesign.views.LayoutRipple2
+            android:id="@+id/ll_chat_dynamic_startdate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8d8e97"
+                android:textSize="16dp"
+                app:iconCode="e92c" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:hint="开始时间"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btn_chat_dynamic_startdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/cm_select_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:textColor="#cbcbcb"
+                android:textSize="12dp"
+                app:iconCode="eb69" />
+        </com.gc.materialdesign.views.LayoutRipple2>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="41dp"
+            android:background="@color/cm_divider_bg" />
+
+        <com.gc.materialdesign.views.LayoutRipple2
+            android:id="@+id/ll_chat_dynamic_enddate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8d8e97"
+                android:textSize="16dp"
+                app:iconCode="e92c" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:hint="结束时间"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btn_chat_dynamic_enddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/cm_select_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:textColor="#cbcbcb"
+                android:textSize="12dp"
+                app:iconCode="eb69" />
+        </com.gc.materialdesign.views.LayoutRipple2>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8d8e97"
+                android:textSize="16sp"
+                app:iconCode="ea45" />
+
+            <TextView
+                android:id="@+id/et_chat_dynamic_pay_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="支付类型"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp" />
+            <RadioGroup
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:id="@+id/rg_select_pay_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rg_select_pay_type1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:checked="false"
+                    android:duplicateParentState="false"
+                    android:text="请客" />
+                <RadioButton
+                    android:id="@+id/rg_select_pay_type2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AA制" />
+            </RadioGroup>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_chat_dynamic_pay_number"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <cc.emw.mobile.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8d8e97"
+                android:textSize="16sp"
+                app:iconCode="ea45" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="金额/人"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/cm_text"
+                android:textSize="14sp" />
+            <EditText
+                android:gravity="right"
+                android:id="@+id/et_chat_dynamic_pay_money"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="0.0"
+                android:lines="1"
+                android:inputType="numberDecimal"
+                android:textColor="@color/cm_text"
+                android:textColorHint="@color/cm_texthint"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  元/人"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:background="#F6F6F6"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/but_chat_poi_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@null"
+            android:src="@drawable/icon_chat_back" />
+
+        <ImageButton
+            android:id="@+id/but_chat_poi_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@null"
+            android:src="@drawable/btn_next2" />
+    </RelativeLayout>
+</LinearLayout>

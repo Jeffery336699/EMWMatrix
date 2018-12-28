@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!--  
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_list_view_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+            android:id="@+id/load_more_list_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+			 >
+           
+        </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+	-->
+	<TextView 
+	    android:id="@+id/tv_project_time"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="12dp"
+	    android:paddingBottom="18dp"
+	    android:gravity="center"
+	    android:textColor="@color/cm_text"
+	    android:textSize="17sp"
+	    android:background="@drawable/shadow_bg"/>
+	<cc.emw.mobile.project.view.CustomHorizontalScrollView
+	    android:id="@+id/chs_project_horizontalScroll"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none">
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="240dp"
+	        android:orientation="vertical">
+	        <LinearLayout 
+	            android:id="@+id/ll_project_timeBar"
+	            android:layout_width="match_parent"
+	        	android:layout_height="wrap_content"
+	        	android:orientation="horizontal"
+	        	android:paddingBottom="6dp"
+	        	android:background="@color/cm_bg">
+	            
+	        </LinearLayout>
+	        <cc.emw.mobile.project.view.CustomListView
+	            android:id="@+id/lv_project_content"
+	        	android:layout_width="match_parent"
+	        	android:layout_height="match_parent"
+				android:listSelector="@color/transparent"
+	        	android:divider="@color/cm_divider_bg"
+	        	android:dividerHeight="1dp"
+	        	android:scrollbars="none"
+	        	android:headerDividersEnabled="true"/>
+		</LinearLayout>
+	</cc.emw.mobile.project.view.CustomHorizontalScrollView>
+	<View android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="@color/cm_divider_bg"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:paddingBottom="10dp"
+	    android:background="@color/cm_bg">
+	    <ExpandableListView
+        	android:id="@+id/lv_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/cm_divider_bg"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:groupIndicator="@color/blue"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:padding="0dp"
+            android:scrollbarStyle="outsideOverlay"/>
+	</LinearLayout>
+</LinearLayout>

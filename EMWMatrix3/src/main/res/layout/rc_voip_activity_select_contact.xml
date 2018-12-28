@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cm_header_bar2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/head_bg">
+
+            <cc.emw.mobile.view.IconTextView
+                android:id="@+id/cm_header_btn_left9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingBottom="1dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="20dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/cm_main_text"
+                android:textSize="16dp"
+                app:iconCode="eb68" />
+            <TextView
+                android:id="@+id/cm_header_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/cm_text"
+                android:textSize="18dp"
+                android:text="通讯录" />
+            <TextView
+                android:id="@+id/cm_header_tv_right9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="16dp"
+                android:gravity="center"
+                android:textColor="@color/cm_main_text"
+                android:textSize="14dp"
+                android:text="确定"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_contact_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/cm_search_bg"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:drawableLeft="@drawable/cm_ic_search"
+            android:drawablePadding="9dp"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="#333"
+            android:textColorHint="#A1A1A1"
+            android:textSize="14sp" />
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fl_contact_person_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" >
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/load_more_list_view_ptr_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.diegocarloslima.fgelv.lib.FloatingGroupExpandableListView
+                    android:id="@+id/contact_elv_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:childDivider="@color/cm_divider_bg"
+                    android:dividerHeight="0.5dp"
+                    android:fadeScrollbars="true"
+                    android:fadingEdge="none"
+                    android:groupIndicator="@null"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbarSize="3dip"
+                    android:scrollbarStyle="outsideOverlay" />
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+            <TextView
+                android:id="@+id/contact_tv_letter"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/dialog_char"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <cc.emw.mobile.view.SideBar
+                android:id="@+id/contact_sidebar"
+                android:layout_width="20dp"
+                android:layout_height="400dp"
+                android:layout_gravity="right|center" />
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

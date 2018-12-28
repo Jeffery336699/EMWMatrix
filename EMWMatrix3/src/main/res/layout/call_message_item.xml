@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingTop="12dp">
+
+    <TextView
+        android:id="@+id/tv_importance_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/checkbox"
+        android:text=""
+        android:textColor="@color/cm_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_importance_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_importance_name"
+        android:layout_below="@id/tv_importance_name"
+        android:layout_marginRight="30dp"
+        android:layout_toStartOf="@+id/iv_important_icon"
+        android:text=""
+        android:textColor="@color/cm_texthint"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_importance_time_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tv_importance_name"
+        android:layout_marginEnd="20dp"
+        android:text=""
+        android:textColor="@color/cm_texthint"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/iv_important_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/tv_importance_time_info"
+        android:layout_alignTop="@id/tv_importance_content"
+        android:src="@drawable/importance_icon2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_importance_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#1A000000" />
+</RelativeLayout>

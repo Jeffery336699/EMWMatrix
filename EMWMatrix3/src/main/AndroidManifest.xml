@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cc.emw.mobile"
+          android:versionCode="70"
+          android:versionName="2.5.0">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <!-- 云之讯 start -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 云之讯 end -->
+
+
+    <!-- 银联支付 start -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <uses-feature android:name="android.hardware.nfc.hce"/>
+
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+
+    <!-- 银联支付 end -->
+    <application
+        android:name=".EMWApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="14244885"/>
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="aKSGdr5nYUeD1mIVdlh2KoEC"/>
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="oYlW4gZImGwQNLhlyZrjchBTOT1NNsl2"/>
+
+        <!--适配全面屏手机 resizeableActivity = true-->
+
+        <!-- release 发布key-->
+        <!--
+                <meta-data
+                    android:name="com.amap.api.v2.apikey"
+                    android:value="099b075c388b42a9850ae8558473ef4d" />
+        -->
+
+        <!--
+            <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="bb11f227ea31908321031e9f56fa717f" />
+      -->
+
+        <!-- shaobo -->
+        <!--<meta-data号应用
+        android:name="com.amap.api.v2.apikey"
+        android:value="e253a814bf972008cd6bfd69ef29df20" />-->高德地图
+
+
+        <!-- 测试 debug key-->
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0b05f888b8a5b4cbb82061816556e9a4"/>
+
+
+        <!-- 测试 sunnydu -->
+        <!-- <meta-data -->
+        <!-- android:name="com.amap.api.v2.apikey" -->
+        <!-- android:value="055775f669db570a0065badfa683105f" /> -->
+
+        <activity
+            android:name=".chat.map.activity.ShareLocationActivity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/MapTheme2"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity
+            android:name=".chat.map.activity.SearchAddressActivity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/MapTheme2"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+
+        <!-- login begin -->
+        <service
+            android:name=".service.StartChatProgressService"
+            android:process=":com.tencent.mobileqq">
+            <intent-filter>
+                <action android:name="com.tencent.mobileqq.openprocess"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".login.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWelcome"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.GuideActivity"
+            android:theme="@style/AppThemeGuide"/>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".login.LoginActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".login.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".login.AuthCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name=".login.RegisterUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".login.ScannerLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".login.ScannerPCActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".login.TwoStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".login.ForgetPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".login.ResetPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- login end -->
+        <!-- main start -->
+        <activity
+            android:name=".main.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|navigation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".main.PhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <!-- main end -->
+        <!-- dynamic start -->
+        <activity
+            android:name=".dynamic.ShareActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".dynamic.ShareActivity2"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".dynamic.ShareToActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.PlanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.PlanDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.DynamicDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".dynamic.DynamicDiscussActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".dynamic.DynamicTypeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dialog"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".dynamic.ServiceCreateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.ServiceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.MailCreateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.MailDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.PhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".dynamic.PhoneDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.DateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.DateDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.BusDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".dynamic.BusDataActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!-- dynamic end -->
+        <!-- file start -->
+        <activity
+            android:name=".file.FileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileCreateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileSelectActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FilePreviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileDiscussActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".file.FileLookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileUpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileTalkerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.FileShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.SharePowerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".file.SharePersonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!-- file end -->
+        <!-- chat begin -->
+        <activity android:name=".chat.ShowPhotoActivity"/>
+        <activity
+            android:name=".chat.ChatTeamHintActivity"
+            android:backgroundDimEnabled="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowIsFloating="true"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".chat.ChatTeamPlayerViewPagerActivity"/>
+        <activity android:name=".chat.ChatTeamInfoActivity"/>
+        <activity
+            android:name=".chat.ChatTeamInfoActivity2"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".chat.ChatWebActivity"/>
+        <!-- android:process=":com.tencent.mobileqq" -->
+        <!-- 计划后续优化独立进程 进程添加会影响到断点调试-->
+        <activity
+            android:name=".chat.ChatAIActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".chat.TestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".chat.VideoCaptureActivity"/>
+        <activity android:name=".chat.function.ChatVideoCreateActivity"/>
+        <activity
+            android:name=".chat.TestVideoActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".chat.ChatTeamPersonSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".chat.ChatInformationActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity android:name=".chat.ChatDynamicDetailActivity"/>
+        <activity
+            android:name=".chat.DoPayActivity"
+            android:process=":com.tencent.mobileqq"
+            android:theme="@style/PopupWindow"/>
+        <activity
+            android:name=".chat.ChatPOIActivity"
+            android:process=":com.tencent.mobileqq"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".chat.ChatPOISelectorActivity"
+            android:process=":com.tencent.mobileqq"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".chat.ChatDynamicCreateActivity"
+            android:process=":com.tencent.mobileqq"
+            android:theme="@style/PopupWindow"/>
+        <!-- android:process=":com.tencent.mobileqq" -->
+        <activity
+            android:name=".chat.ChatActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- android:process=":com.tencent.mobileqq" -->
+        <activity
+            android:name=".chat.ChatGroupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".chat.ChatTeamInfoActivity3"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme"/>
+        <activity
+            android:name=".chat.function.TakePhoteActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:screenOrientation="nosensor"/>
+        <activity android:name=".chat.function.VideoCaptureActivity2"/>
+        <!--        <activity
+                    android:name=".chat.ImportantMsgActivity"
+                    android:hardwareAccelerated="true"
+                    android:process=":com.tencent.mobileqq"
+                    android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".chat.ImportantMsgActivity"
+            android:theme="@style/ContactStyle"/>
+        <!-- chat end -->
+        <!-- contact begin -->
+        <activity
+            android:name=".contact.PersonInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.ContactSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.AllPersonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.DeptSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.PersonSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.ChatSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.GroupInActivity"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.GroupSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.RelationProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.RelationTaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.RelationCalendarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.GroupsCreateActivitys"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".contact.AllGroupActivity"/>
+        <activity
+            android:name=".contact.GroupJoinActivity"
+            android:screenOrientation="portrait"/>
+        <!-- contact end -->
+        <!-- project begin -->
+        <activity
+            android:name=".project.view.TeamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".project.view.TeamMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".project.view.ObserveProjectActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".project.view.NewTeamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".project.view.NewProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".project.view.TeamListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".project.view.TaskSpectacularActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".project.view.TimeTrackingMGActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".project.view.StateBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!-- project end -->
+        <!-- task begin -->
+        <activity
+            android:name=".task.activity.TaskDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity
+            android:name=".task.activity.CommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".task.activity.TaskModifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".task.activity.TaskMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".task.activity.AttachmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".task.activity.TaskCreateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".task.activity.WorkProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".task.activity.TaskCreateLabelActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!-- task end -->
+        <!-- me begin -->
+        <activity
+            android:name=".me.TwoStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.ReleaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.CollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.PaySettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".socket.IOSocketTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".me.SuggestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.PwCheckingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.PwChangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.ConcernActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.PersonRelationActivity"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".me.PersonIntimateActivity"/>
+        <activity android:name=".me.IntimateActivity"/>
+        <activity
+            android:name=".me.NotificationActivity"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.PreferenceActivity"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.PreferenceActivity2"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.MyInfoActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.WaitHandleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.PersonInfoEditActivity"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.UpdateAliasActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity"/>
+        <activity android:name="com.ns.mutiphotochoser.GalleryActivity">
+            <intent-filter>
+
+                <!-- ***改成应用的包名 -->
+                <action android:name="com.ns.mutiphotochoser.sample.action.CHOSE_PHOTOS"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- me end -->
+        <!-- calendar begin -->
+        <activity
+            android:name=".calendar.CalendarCreateActivitys"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.CalendarRepeatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.CalendarFreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.CalendarInfoActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.CalendarEditActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.RelationFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.EmployeeSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".calendar.CalendarTagActivity"
+            android:theme="@style/ActiviytDialog"/>
+        <activity android:name=".calendar.NewCalendarTagActivity"/>
+        <!-- calendar end -->
+        <!-- form  begin -->
+        <activity
+            android:name=".form.FormActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChatTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".form.FormDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".form.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".form.FlowProcessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActiviytDialog"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".form.FormWebActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!-- form  end -->
+        <!-- sale start -->
+        <activity
+            android:name=".sale.RetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".sale.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".sale.ScannerPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeMain"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".sale.RetailCreateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".sale.RetailOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".sale.RetailDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!-- sale end -->
+        <service android:name=".service.EMWService"/>
+        <service android:name=".service.DLService"/>
+        <!-- 微信支付 begin -->
+        <activity
+            android:name="net.sourceforge.simcpux.WXPayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="net.sourceforge.simcpux.PayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="net.sourceforge.simcpux.GetFromWXActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="net.sourceforge.simcpux.SendToWXActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="net.sourceforge.simcpux.wxapi.WXEntryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="net.sourceforge.simcpux.wxapi.WXPayEntryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name="net.sourceforge.simcpux.AddFavoriteToWXActivity"/>
+        <activity android:name="net.sourceforge.simcpux.ShowFromWXActivity"/>
+        <!-- 微信支付 end -->
+        <!-- 银联支付 begin -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false"/>
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 银联支付 end -->
+
+
+        <!-- 融云 begin -->
+        <!-- new voip config start -->
+        <activity
+            android:name="io.rong.callkit.MultiVideoCallActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="io.rong.intent.action.voip.MULTIVIDEO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.rong.callkit.SingleCallActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="io.rong.intent.action.voip.SINGLEVIDEO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="io.rong.intent.action.voip.SINGLEAUDIO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.rong.callkit.MultiAudioCallActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="io.rong.intent.action.voip.MULTIAUDIO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="io.rong.callkit.CallSelectMemberActivity"/>
+        <activity
+            android:name="io.rong.callkit.CallSelectContactActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity
+            android:name="io.rong.callkit.TerminalLoginDialogActivity"
+            android:screenOrientation="portrait"/>
+        <!-- new voip config end -->
+        <receiver
+            android:name="io.rong.callkit.SealNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <!--
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cc.emw.mobile.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+        -->
+        <!-- 融云 end -->
+
+
+        <!-- 高德地图 start -->
+        <activity
+            android:name=".map.route.RouteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MapTheme"/>
+        <activity
+            android:name=".map.GeoFenceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MapTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".map.HistoryGeoFenceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".map.GroupPersonsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".map.route.activity.DriveRouteDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".map.TraBanCheLineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".map.WalkRouteDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".map.route.activity.BusRouteDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".map.LocationsPersonalListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 高德地图定位服务 -->
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- 高德地图 end -->
+
+
+        <!-- 推送服务 begin -->
+        <service
+            android:name="com.farsunset.cim.client.android.CIMPushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":cimpush"/>
+        <service
+            android:name="com.farsunset.cim.client.android.CIMPushService$CIMPushInnerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":cimpush"/>
+
+        <receiver
+            android:name="com.farsunset.cim.client.android.WakeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cc.emw.mobile.wake.gray"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.farsunset.cim.client.android.WakeReceiver$WakeNotifyService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name="com.farsunset.cim.client.android.WakeReceiver$WakeGrayInnerService"
+            android:enabled="true"
+            android:exported="false"/>
+        <!-- 消息接受广播注册 -->
+        <receiver
+            android:name=".chat.receiver.CustomCIMMessageReceiver"
+            android:exported="false">
+            <intent-filter android:priority="0x7fffffff">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <!-- 网络变化广播 -->
+                <action android:name="com.farsunset.cim.MESSAGE_RECEIVED"/>
+                <!-- 消息广播action -->
+                <action android:name="com.farsunset.cim.SENT_FAILED"/>
+                <!-- 发送sendbody失败广播 -->
+                <action android:name="com.farsunset.cim.SENT_SUCCESS"/>
+                <!-- 发送sendbody成功广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_CLOSED"/>
+                <!-- 链接意外关闭广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_FAILED"/>
+                <!-- 链接失败广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_SUCCESS"/>
+                <!-- 链接成功广播 -->
+                <action android:name="com.farsunset.cim.REPLY_RECEIVED"/>
+                <!-- 发送sendbody成功后获得replaybody回应广播 -->
+                <action android:name="com.farsunset.cim.CONNECTION_STATUS"/>
+                <!-- 获取到与服务端连接状态广播 -->
+                <!-- 【可选】 一些常用的系统广播，增强pushservice的复活机会 -->
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <!-- 推送服务 end -->
+
+        <activity
+            android:name="com.nononsenseapps.filepicker.BackHandlingFilePickerActivity"
+            android:theme="@style/FilePickerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/nnf_provider_paths"/>
+        </provider>
+
+        <activity
+            android:name=".record.CameraActivity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/BlackTheme"/>
+        <activity
+            android:name=".record.CameraCreateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".chat.imagepicker.ui.ImageBaseActivity"/>
+        <activity
+            android:name=".chat.imagepicker.ui.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:process=":com.tencent.mobileqq"
+            android:theme="@style/ImagePickerTheme"/>
+        <activity
+            android:name=".chat.imagepicker.ui.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ImagePickerTheme"/>
+        <activity
+            android:name=".chat.imagepicker.ui.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+
+        <provider
+            android:name=".chat.imagepicker.ImagePickerProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider
+            android:name=".me.imagepicker.ImagePickerProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity android:name=".record.CameraActivity2"/>
+
+        <service android:name=".service.PersonManagerService">
+            <intent-filter>
+                <action android:name="cc.emw.mobile.person_server"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".map.NearByFoodActivity"/>
+        <activity
+            android:name=".me.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity android:name=".me.imagepicker.ui.ImageBaseActivity"/>
+        <activity
+            android:name=".me.imagepicker.ui.ImageGridActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerTheme"/>
+        <activity
+            android:name=".me.imagepicker.ui.ImageCropActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/ImagePickerTheme"/>
+        <activity
+            android:name=".me.imagepicker.ui.ImagePreviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name=".contact.AddFriendActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity
+            android:name=".contact.SaoYiSaoActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/SaoYiSao"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.PersonInfoActivity2"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".contact.PersonSearchActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.WorkExperienceActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".me.EducationActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".chat.SharePosActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@style/MapTheme2"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name=".chat.PosInfoActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@style/MapTheme2"/>
+        <activity
+            android:name=".calendar.FreeRepeatActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".contact.AddFriendGroupSelectActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".chat.CallMsgActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".chat.MyStarMsgActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".chat.AddTasksWebActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".chat.CaptureTestActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".contact.ContactActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ContactStyle"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity
+            android:name=".me.PendingEventActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".me.MyTaskDetailActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".asr.AsrActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".asr.AsrTxtActivity"
+            android:theme="@style/ContactStyle"/>
+        <activity
+            android:name=".chat.PhoneBookActivity"
+            android:theme="@style/ContactStyle"/>
+    </application>
+
+</manifest>

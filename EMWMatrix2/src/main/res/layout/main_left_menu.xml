@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main_leftmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_menu_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+    <!--android:background="@drawable/ico_rightmenu_bg"-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="EMW Matrix"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <com.diegocarloslima.fgelv.lib.FloatingGroupExpandableListView
+        android:id="@+id/elv_mainmenu_navigate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"
+        android:groupIndicator="@null"
+        android:headerDividersEnabled="false"
+        android:listSelector="@drawable/main_menu_item_bg1"
+        android:padding="0dp"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <TextView
+        android:id="@+id/tv_mainmenu_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="26dp"
+        android:drawableLeft="@drawable/ico_rightmenu_login"
+        android:drawablePadding="14dp"
+        android:gravity="center"
+        android:text="注销登录"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+</LinearLayout>

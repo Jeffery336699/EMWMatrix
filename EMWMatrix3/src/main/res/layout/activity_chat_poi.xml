@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_chat_poi_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/head_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_chat_poi_find">
+
+            <ImageView
+                android:id="@+id/iv_chat_poi_find"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/icon_chat_poi_find" />
+
+            <cc.emw.mobile.chat.view.EmoticonsEditText
+                android:id="@+id/eet_chat_poi_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/iv_chat_poi_find"
+                android:gravity="center_vertical"
+                android:hint="搜索"
+                android:lineSpacingExtra="0dp"
+                android:paddingLeft="19dp"
+                android:textColor="#2E3848"
+                android:textColorHint="#A1A1A1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/chat_poi_find_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/chat_poi_find_close"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:background="#ffffff">
+
+        <cc.emw.mobile.view.autoload.PullLoadMoreRecyclerView
+            android:id="@+id/srv_chat_poi_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/gray_1"
+            android:dividerHeight="0dip"
+            android:fadingEdge="none"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:transcriptMode="normal"
+            android:transitionName="shareNames" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:background="#F6F6F6">
+
+        <ImageButton
+            android:id="@+id/but_chat_poi_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@null"
+            android:src="@drawable/icon_chat_back" />
+
+        <ImageButton
+            android:id="@+id/but_chat_poi_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@null"
+            android:src="@drawable/chat_poi_next" />
+    </RelativeLayout>
+</LinearLayout>

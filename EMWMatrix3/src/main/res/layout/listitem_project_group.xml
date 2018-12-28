@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="20dp">
+    <TextView
+        android:id="@+id/group_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="6dp"
+        android:text="EMW项目分队"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#199CBA"
+        android:textSize="14sp"/>
+    <LinearLayout
+        android:id="@+id/member_content_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp">
+        <LinearLayout
+            android:id="@+id/member_collect_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--<cc.emw.mobile.view.CircleImageView-->
+                <!--android:id="@+id/iv_responser_portrait"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginLeft="6dp"-->
+                <!--android:src="@drawable/cm_img_head"-->
+                <!--custom:border_color="@color/cm_headimg_border"-->
+                <!--custom:border_width="2dp"/>-->
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/member_num_tv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="@drawable/solid_circle_bdc3c7"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#199CBA"/>
+</RelativeLayout>

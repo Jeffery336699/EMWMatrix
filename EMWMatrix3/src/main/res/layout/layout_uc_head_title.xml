@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:layout_gravity="top"
+    app:layout_collapseMode="pin">
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/cm_header_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="12dp"
+        android:textColor="#EA5404"
+        android:textSize="19sp"
+        app:iconCode="eb68" />
+
+
+    <LinearLayout
+        android:id="@+id/title_center_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <cc.emw.mobile.me.easybehavior.widget.CircleImageView
+            android:id="@+id/civ_me_title_user_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cm_img_head" />
+
+        <TextView
+            android:id="@+id/tv_me_title_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="James Harrison"
+            android:textColor="#FF101010"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <cc.emw.mobile.me.easybehavior.widget.RoundProgressBar
+        android:id="@+id/uc_progressbar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        app:round_max="360"
+        app:round_progressColor="@android:color/white"
+        app:round_width="1dp" />
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/cm_header_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginRight="12dp"
+        android:textColor="#FF4C0B"
+        android:textSize="19sp"
+        app:iconCode="ecd5" />
+
+
+</RelativeLayout>

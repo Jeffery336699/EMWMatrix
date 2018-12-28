@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\actionsheet_bottom_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\actionsheet_bottom_selector.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\actionsheet_middle_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\actionsheet_middle_selector.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\alertdialog_right_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\alertdialog_right_selector.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\actionsheet_single_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\actionsheet_single_selector.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\alertdialog_left_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\alertdialog_left_selector.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\actionsheet_top_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\actionsheet_top_selector.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\alertdialog_single_selector.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\bundles\\debug\\res\\drawable\\alertdialog_single_selector.xml"
+    }
+]

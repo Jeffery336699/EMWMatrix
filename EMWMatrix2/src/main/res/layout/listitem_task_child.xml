@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_task_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="13dp" >
+
+        <ImageView
+            android:id="@+id/iv_task_child_icon"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/shape_ico_blue" />
+
+        <TextView
+            android:id="@+id/tv_task_child_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/iv_task_child_icon"
+            android:text="my task"
+            android:textColor="@color/cm_text"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_task_child_isDelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/tv_task_child_title"
+            android:background="@drawable/task_bg"
+            android:padding="4dp"
+            android:text="@string/task_timeout"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_task_child_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_task_child_title"
+            android:layout_below="@+id/tv_task_child_title"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/circleProgressVie_task_child_progress"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="my descriptions"
+            android:textColor="@color/cm_text"
+            android:textSize="14sp" />
+
+        <!-- set the CircleProgressView's value use setValue() -->
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/circleProgressVie_task_child_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            CircleProgressView:cpv_autoTextSize="true"
+            CircleProgressView:cpv_barColor="#85E77B"
+            CircleProgressView:cpv_barWidth="3dp"
+            CircleProgressView:cpv_contourColor="#CCCCCC"
+            CircleProgressView:cpv_contourSize="0.5dp"
+            CircleProgressView:cpv_maxValue="100"
+            CircleProgressView:cpv_rimColor="#E5E5E5"
+            CircleProgressView:cpv_rimWidth="3dp"
+            CircleProgressView:cpv_seekMode="false"
+            CircleProgressView:cpv_showUnit="true"
+            CircleProgressView:cpv_textColor="#333333"
+            CircleProgressView:cpv_unit="%"
+            CircleProgressView:cpv_unitColor="@color/gray_20" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_task_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:background="@color/cm_bg"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

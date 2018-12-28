@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_dynamicfile_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/iv_dynamicfile_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="12dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:text="@string/unkonw"
+        android:textColor="@color/cm_text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/iv_dynamicfile_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/unkonw"
+        android:textColor="@color/dynamicfile_size_text"
+        android:textSize="12sp" />
+
+</LinearLayout>

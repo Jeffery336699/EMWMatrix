@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:orientation="horizontal"
+    android:background="@null"
+    android:gravity="center_vertical">
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/tv_leftmenu_childicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:textColor="#FF8D8E97"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/tv_leftmenu_childname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FF354052"
+        android:textSize="16sp" />
+
+</LinearLayout>

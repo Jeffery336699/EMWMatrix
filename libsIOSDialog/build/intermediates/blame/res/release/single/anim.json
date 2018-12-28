@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\anim\\actionsheet_dialog_in.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\anim\\actionsheet_dialog_in.xml"
+    },
+    {
+        "merged": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\anim\\actionsheet_dialog_out.xml",
+        "source": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\anim\\actionsheet_dialog_out.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\anim\\actionsheet_dialog_out.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\anim\\actionsheet_dialog_out.xml"
+    },
+    {
+        "merged": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\res\\merged\\release\\anim\\actionsheet_dialog_in.xml",
+        "source": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\anim\\actionsheet_dialog_in.xml"
+    }
+]

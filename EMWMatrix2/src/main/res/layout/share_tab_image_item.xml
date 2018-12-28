@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp" >
+
+    <!-- <ch.halcyon.squareprogressbar.SquareProgressBar
+        android:id="@+id/iv_shareimg_icon" 
+        android:layout_width="60dp"
+    	android:layout_height="60dp"
+    	android:layout_margin="5dp"
+    	/> -->
+
+    <ImageView
+        android:id="@+id/iv_shareimg_icon" 
+        android:layout_width="60dp"
+    	android:layout_height="60dp"
+    	android:layout_margin="5dp"
+    	android:scaleType="fitXY"
+    	android:adjustViewBounds="false" />
+    <ImageView
+        android:id="@+id/iv_shareimg_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/list_btn_del"
+         />
+</FrameLayout>

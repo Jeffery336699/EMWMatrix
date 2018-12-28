@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_heads"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/cm_header_bg" >
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:padding="0dp"
+        android:src="@drawable/cm_header_btn_back" />
+
+    <TextView
+        android:id="@+id/cm_header_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="？？？"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:background="@null"
+        android:padding="0dp"
+        android:src="@drawable/nav_btn_gerenziliao" />
+
+    <ImageButton
+        android:id="@+id/cm_header_btn_right1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="51dp"
+        android:layout_toLeftOf="@+id/cm_header_btn_right"
+        android:background="@null"
+        android:padding="0dp"
+        android:src="@drawable/nav_btn_dianhua" />
+
+</RelativeLayout>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_dialog_title" />
+
+        <!--<cc.emw.mobile.view.SwipeBackScrollView-->
+        <ScrollView
+            android:id="@+id/swipeback_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <cc.emw.mobile.view.CircleImageView
+                        android:id="@+id/cIv_me_head_img"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        app:border_color="@color/cm_headimg_border" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <cc.emw.mobile.view.IconTextView
+                                android:id="@+id/ic_tv_save_bz_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center"
+                                android:textColor="@color/blue"
+                                app:iconCode="eb3b" />
+
+                            <!--eb3b e9a8-->
+
+                            <EditText
+                                android:id="@+id/tv_person_small_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:hint="请输入备注名"
+                                android:singleLine="true"
+                                android:text="暂无备注"
+                                android:textColor="#354052"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_follow_tips"
+                                android:layout_width="72dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="12dp"
+                                android:background="@drawable/person_concern_bg"
+                                android:gravity="center"
+                                android:text="关注"
+                                android:textColor="#37b248" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_person_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="姓名："
+                                android:textColor="#354052"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_person_sex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="60dp"
+                                android:text="性别："
+                                android:textColor="#354052"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_person_depart_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="部门："
+                                android:textColor="#354052"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_person_job_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text=""
+                                android:textColor="#354052"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="基本信息"
+                    android:textColor="#9b9b9b" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_person_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="12dp">
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/cm_header_bg"
+                            app:iconCode="ecd2" />
+
+                        <TextView
+                            android:id="@+id/tv_person_company_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#354052"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_person_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="12dp">
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5c74d8"
+                            app:iconCode="eb80" />
+
+                        <TextView
+                            android:id="@+id/tv_person_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#354052"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_person_mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="12dp">
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#00c4e0"
+                            app:iconCode="ea73" />
+
+                        <TextView
+                            android:id="@+id/tv_person_mail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="#354052"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="工作相关"
+                    android:textColor="#9b9b9b" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/work_project_relation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textColor="#5ecbb0"
+                            app:iconCode="e925" />
+
+                        <TextView
+                            android:id="@+id/tv_person_project"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:text="项目"
+                            android:textColor="#354052"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/relation_project_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#989898"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/list_btn_next" />
+                    </LinearLayout>
+
+                    <cc.emw.mobile.view.expandablelayout.ExpandableLoadLayout
+                        android:id="@+id/expandable_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:el_duration="300"
+                        app:el_expanded="false">
+                        <!--<android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                            />-->
+
+                    </cc.emw.mobile.view.expandablelayout.ExpandableLoadLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/task_relation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textColor="#ff7e00"
+                            app:iconCode="ec96" />
+
+                        <TextView
+                            android:id="@+id/tv_person_task"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:text="任务"
+                            android:textColor="#354052"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/relation_task_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#989898"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/list_btn_next" />
+                    </LinearLayout>
+
+                    <cc.emw.mobile.view.expandablelayout.ExpandableLoadLayout
+                        android:id="@+id/expandable_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:el_duration="300"
+                        app:el_expanded="false" />
+                    <!--<View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="42dp"
+                        android:background="@color/cm_divider_bg" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="42dp"
+                        android:background="@color/cm_divider_bg" />-->
+
+                    <LinearLayout
+                        android:id="@+id/calendar_relation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <cc.emw.mobile.view.IconTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textColor="#3cc56d"
+                            app:iconCode="ec98" />
+
+                        <TextView
+                            android:id="@+id/tv_person_calendar"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingRight="12dp"
+                            android:text="日程"
+                            android:textColor="#354052"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/relation_calendar_num"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#989898"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:background="@drawable/list_btn_next" />
+                    </LinearLayout>
+
+                    <cc.emw.mobile.view.expandablelayout.ExpandableLoadLayout
+                        android:id="@+id/expandable_schedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:el_duration="300"
+                        app:el_expanded="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/cm_divider_bg" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+        <!--</cc.emw.mobile.view.SwipeBackScrollView>-->
+
+        <View
+            android:id="@+id/view_line_chat"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/cm_divider_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tv_person_chat"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <cc.emw.mobile.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#5fc26d"
+                    app:iconCode="ea34" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="发起沟通"
+                    android:textColor="#5fc26d"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cm_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/cm_header_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dip"
+            android:orientation="vertical" >
+            <EditText 
+			    android:id="@+id/cm_input_et_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="80dp"
+		        android:paddingTop="10dp"
+		        android:paddingLeft="18dp"
+		        android:paddingRight="18dp"
+		        android:gravity="top"
+		        android:background="@color/white"
+		        android:textColorHint="@color/cm_texthint"
+		        android:textColor="@color/cm_text"
+		        android:textSize="14sp"
+		        android:hint="今天怎么样？"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@null" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:text="@string/allot_taskname"
+                    android:textColor="@color/dynamicadd_allot_text"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_allot_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@null"
+                    android:hint="@string/allot_taskname_hint"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textColor="@color/cm_text"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/cm_divider_bg" />
+
+                <!-- description -->
+
+                <!-- state -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:text="@string/allot_finishtime"
+                    android:textColor="@color/dynamicadd_allot_text"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_allot_finishtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="12dp"
+                    android:drawableRight="@drawable/list_btn_next"
+                    android:drawablePadding="10dp"
+                    android:gravity="center|left"
+                    android:hint="@string/allot_finishtime_hint"
+                    android:textColorHint="@color/cm_texthint"
+                    android:textColor="@color/cm_text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="18dp"
+                android:textColor="@color/cm_texthint"
+                android:textSize="13sp"
+                android:text="@string/allot_responser" />
+
+            <cc.emw.mobile.view.ExListView
+                android:id="@+id/lv_allot_responser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:dividerHeight="1dp"
+                android:divider="@color/cm_bg" />
+			<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cm_bg" />
+			<LinearLayout 
+			    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center">
+			    <Button
+	                android:id="@+id/btn_allot_addresponser"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="13dp"
+	                android:layout_marginBottom="13dp"
+	                android:drawableLeft="@drawable/list_btn_add"
+	                android:drawablePadding="5dp"
+	                android:background="@null"
+	                android:gravity="center"
+	                android:text="@string/allot_add_person"
+	                android:textColor="@color/cm_text"
+	                android:textSize="15sp" />
+			</LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="18dp"
+                android:textColor="@color/cm_texthint"
+                android:textSize="13sp"
+                android:text="@string/allot_executor" />
+
+            <cc.emw.mobile.view.ExListView
+                android:id="@+id/lv_allot_executor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:dividerHeight="1dp"
+                android:divider="@color/cm_bg" />
+			<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cm_bg" />
+            <LinearLayout 
+			    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center">
+			    <Button
+	                android:id="@+id/btn_allot_addexecutor"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="13dp"
+	                android:layout_marginBottom="13dp"
+	                android:drawableLeft="@drawable/list_btn_add"
+	                android:drawablePadding="5dp"
+	                android:background="@null"
+	                android:gravity="center"
+	                android:text="@string/allot_add_person"
+	                android:textColor="@color/cm_text"
+	                android:textSize="15sp" />
+			</LinearLayout>
+            
+            <include layout="@layout/cm_select" />
+            <include layout="@layout/cm_worker" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

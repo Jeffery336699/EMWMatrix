@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/root_view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/white">
+<LinearLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<include layout="@layout/cm_dialog_bar2" />
+
+    <cc.emw.mobile.view.SwipeBackScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+		android:layout_weight="1"
+        android:layout_marginBottom="15dp"
+        android:scrollbars="vertical" >
+        <LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical">
+	    	
+	    	<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="44dp"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="10dp"
+		        android:paddingLeft="12dp"
+		        android:paddingRight="12dp"
+		        android:background="@drawable/cm_border_bg"
+		        android:gravity="center" >
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:paddingTop="8dp"
+			        android:paddingBottom="8dp"
+		            android:gravity="center_vertical"
+		            android:textColor="@color/cm_text"
+		            android:textSize="14sp"
+		            android:text="@string/plan_type" />
+		        <cc.emw.mobile.view.SegmentedGroup
+				    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+				    android:id="@+id/segmented_plan_type"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    segmentedgroup:sc_border_width="1dp"
+				    segmentedgroup:sc_corner_radius="5dp"
+				    segmentedgroup:sc_tint_color="@color/segmentedgroup_tint_text"
+				    segmentedgroup:sc_checked_text_color="@color/segmentedgroup_checked_text">
+				    <RadioButton
+				        android:id="@+id/rb_plan_day"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:checked="true"
+				        android:tag="1"
+				        android:text="@string/plan_type_day"
+						android:enabled="false"
+				        style="@style/RadioButton" />
+				    <RadioButton
+				        android:id="@+id/rb_plan_week"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:tag="2"
+				        android:text="@string/plan_type_week"
+						android:enabled="false"
+				        style="@style/RadioButton" />
+				    <RadioButton
+				        android:id="@+id/rb_plan_month"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:tag="3"
+				        android:text="@string/plan_type_month"
+						android:enabled="false"
+				        style="@style/RadioButton" />
+				</cc.emw.mobile.view.SegmentedGroup>
+		    </LinearLayout>
+	    	<cc.emw.mobile.view.ExListView
+		        android:id="@+id/lv_plan_planlist"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+		        android:cacheColorHint="@android:color/transparent"
+        		android:listSelector="@android:color/transparent"
+				android:dividerHeight="10dp"
+		        android:divider="@color/cm_bg"
+		        android:fadingEdge="none" />
+
+		</LinearLayout>
+    </cc.emw.mobile.view.SwipeBackScrollView>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,316 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cc.emw.mobile.calendar.fragment.CalendarFragmentView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cm_bg"
+        android:orientation="vertical">
+
+        <!--头部-->
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_list_view_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <LinearLayout
+                android:id="@+id/ll_calendar_month_week"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal">
+
+                <cc.emw.mobile.view.CircleImageView
+                    android:id="@+id/cal_header_btn_left"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/cm_img_head" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_cal_switch_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#EA5404"
+                    android:textSize="19dp"
+                    app:iconCode="e92c" />
+
+                <TextView
+                    android:id="@+id/show_year_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/cm_text"
+                    android:textSize="17sp" />
+
+                <cc.emw.mobile.view.IconTextView
+                    android:id="@+id/itv_cal_switch_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#EA5404"
+                    android:textSize="19dp"
+                    android:visibility="invisible"
+                    app:iconCode="ecdc" />
+
+                <ImageButton
+                    android:id="@+id/cal_header_btn_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:paddingRight="4dp"
+                    android:src="@drawable/cm_ic_notice" /><!--android:background="?android:attr/selectableItemBackground"-->
+
+            </LinearLayout>
+
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/up_down_shape" />
+
+        <!--星期头部-->
+        <com.jeek.calendar.widget.calendar.WeekBarView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/week_bar_height"
+            android:background="@color/white"
+            app:week_text_size="@integer/calendar_text_size" />
+
+        <!--月周视图/视图列表详情-->
+        <com.jeek.calendar.widget.calendar.schedule.ScheduleLayout
+            android:id="@+id/slSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:default_view="month">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--月周视图-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rlMonthCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.jeek.calendar.widget.calendar.month.MonthCalendarView
+                            android:id="@+id/mcvCalendar"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/month_calendar_height"
+                            android:background="@color/calendar_bg_color"
+                            android:overScrollMode="never"
+                            app:month_day_text_size="@integer/calendar_text_size"
+                            app:month_holiday_color="@color/holiday_text_color"
+                            app:month_selected_circle_color="@color/select_circle_color"
+                            app:month_show_holiday_hint="true"
+                            app:month_show_lunar="true"
+                            app:month_show_task_hint="true" />
+                    </RelativeLayout>
+
+                    <com.jeek.calendar.widget.calendar.week.WeekCalendarView
+                        android:id="@+id/wcvCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/week_calendar_height"
+                        android:background="@color/calendar_bg_color"
+                        android:overScrollMode="never"
+                        android:visibility="gone"
+                        app:week_day_text_size="@integer/calendar_text_size"
+                        app:week_holiday_color="@color/holiday_text_color"
+                        app:week_selected_circle_color="@color/select_circle_color"
+                        app:week_show_holiday_hint="true"
+                        app:week_show_lunar="true"
+                        app:week_show_task_hint="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlScheduleList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cm_bg">
+
+                    <!--日程视图-->
+                    <LinearLayout
+                        android:id="@+id/ll_cal_pic_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/cm_bg"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/ll_cal_text_layout"
+                        android:layout_alignParentStart="true">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+                        <!-- 人员水平Scroll -->
+                        <cc.emw.mobile.calendar.view.ObservableScrollViewHor
+                            android:id="@+id/ll_person_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@color/cm_bg"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:id="@+id/ll_person_contain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" />
+
+                        </cc.emw.mobile.calendar.view.ObservableScrollViewHor>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <!-- 竖直时间ScrollView 加 WeekView -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- 竖直时间的ScrollView-->
+                            <cc.emw.mobile.calendar.view.ObservableScrollViewVer
+                                android:id="@+id/slide_time_layout"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <cc.emw.mobile.view.MyListView
+                                    android:id="@+id/mlv_slide_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:divider="@color/transparent"
+                                    android:dividerHeight="0dp" />
+
+                            </cc.emw.mobile.calendar.view.ObservableScrollViewVer>
+
+                            <com.jeek.calendar.widget.calendar.MyTwoDirectScrollViews
+                                android:id="@+id/two_scroll_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/my_content_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal" />
+
+                            </com.jeek.calendar.widget.calendar.MyTwoDirectScrollViews>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--日程列表-->
+                    <LinearLayout
+                        android:id="@+id/ll_cal_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <TextView
+                            android:id="@+id/tv_calendar_month_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:text="本日暂无事件"
+                            android:textColor="#7f8fa4"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!--<cc.emw.mobile.view.MyScrollView-->
+                            <!--android:id="@+id/scroll_cal_contain"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content">-->
+
+                            <ListView
+                                android:id="@+id/rv_calendar_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@color/cm_divider_bg"
+                                android:dividerHeight="0.5dp" />
+
+                            <!--</cc.emw.mobile.view.MyScrollView>-->
+
+                        </LinearLayout>
+
+                        <!--<com.jeek.calendar.widget.calendar.MyListViewScrollTops-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:dividerHeight="0.5dp"-->
+                        <!--android:visibility="gone" />-->
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </com.jeek.calendar.widget.calendar.schedule.ScheduleLayout>
+
+    </LinearLayout>
+
+    <cc.emw.mobile.view.IconTextView
+        android:id="@+id/iv_add_calendar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="49dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/circle_add"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:iconCode="ea07" />
+
+</FrameLayout>

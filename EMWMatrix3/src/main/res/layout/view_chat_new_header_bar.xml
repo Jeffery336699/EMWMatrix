@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/cm_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/list_view_bg">
+
+        <cc.emw.mobile.view.IconTextView
+            android:id="@+id/cm_header_btn_left"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:iconCode="eb68"/>
+
+        <TextView
+            android:id="@+id/cm_header_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@id/cm_header_btn_left"
+            android:text="高晓松"
+            android:textColor="#000000"
+            android:textSize="17sp"/>
+
+        <cc.emw.mobile.view.CircleImageView
+            android:id="@+id/cm_header_btn_right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/cm_img_head"
+            app:border_color="@color/cm_headimg_border"
+            app:border_width="2dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D8D9DB"/>
+    </RelativeLayout>
+</RelativeLayout>

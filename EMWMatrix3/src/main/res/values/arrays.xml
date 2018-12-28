@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<declare-styleable name="CropImageView">-->
+        <!--<attr name="cropMaskColor" format="color"/>-->
+        <!--<attr name="cropBorderColor" format="color"/>-->
+        <!--<attr name="cropBorderWidth" format="dimension"/>-->
+        <!--<attr name="cropFocusWidth" format="dimension"/>-->
+        <!--<attr name="cropFocusHeight" format="dimension"/>-->
+        <!--<attr name="cropStyle" format="enum">-->
+            <!--<enum name="rectangle" value="0"/>-->
+            <!--<enum name="circle" value="1"/>-->
+        <!--</attr>-->
+    <!--</declare-styleable>-->
+
+
+
+    <integer-array name="google_colors">
+        <item>@color/ptr_blue</item>
+        <item>@color/ptr_green</item>
+        <item>@color/ptr_yellow</item>
+        <item>@color/ptr_red</item>
+    </integer-array>
+
+    <string-array name="custom_weekdays">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+    <string-array name="custom_months">
+        <item>JAN</item>
+        <item>Feb</item>
+        <item>MARCH</item>
+        <item>April</item>
+        <item>MAY</item>
+        <item>June</item>
+        <item>JULY</item>
+        <item>Aug</item>
+        <item>SEPT</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>DEC</item>
+    </string-array>
+
+    <string-array name="spinner_time_choose">
+        <item>全  部</item>
+        <item>一天内</item>
+        <item>三天内</item>
+        <item>一周内</item>
+        <item>自定义</item>
+    </string-array>
+</resources>

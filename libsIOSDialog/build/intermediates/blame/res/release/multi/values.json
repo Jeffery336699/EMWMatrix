@@ -1,0 +1,892 @@
+[
+    {
+        "outputFile": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 50,
+                    "endOffset": 101
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 189,
+                        "endColumn": 50,
+                        "endOffset": 235
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 106,
+                    "endColumn": 50,
+                    "endOffset": 152
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 290,
+                        "endColumn": 50,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 157,
+                    "endColumn": 49,
+                    "endOffset": 202
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 240,
+                        "endColumn": 49,
+                        "endOffset": 285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 207,
+                    "endColumn": 50,
+                    "endOffset": 253
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 138,
+                        "endColumn": 50,
+                        "endOffset": 184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 258,
+                    "endColumn": 39,
+                    "endOffset": 293
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 98,
+                        "endColumn": 39,
+                        "endOffset": 133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 298,
+                    "endColumn": 41,
+                    "endOffset": 335
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 41,
+                        "endOffset": 93
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1160,
+                    "endColumn": 57,
+                    "endOffset": 1213
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1218,
+                    "endColumn": 55,
+                    "endOffset": 1269
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1274,
+                    "endColumn": 46,
+                    "endOffset": 1316
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 46,
+                        "endOffset": 98
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1321,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 1586
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1589,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 1854
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1591,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2381
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 764,
+                        "endLine": 35,
+                        "endColumn": 12,
+                        "endOffset": 1554
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2386,
+                    "endLine": 46,
+                    "endColumn": 12,
+                    "endOffset": 2900
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 193,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 707
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 2905,
+                    "endColumn": 72,
+                    "endOffset": 2973
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 79,
+                        "endOffset": 92
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 2978,
+                    "endColumn": 50,
+                    "endOffset": 3024
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 98,
+                        "endColumn": 57,
+                        "endOffset": 151
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3029,
+                    "endLine": 63,
+                    "endColumn": 12,
+                    "endOffset": 3660
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 937,
+                        "endLine": 22,
+                        "endColumn": 12,
+                        "endOffset": 1568
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 3665,
+                    "endLine": 79,
+                    "endColumn": 12,
+                    "endOffset": 4294
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1573,
+                        "endLine": 38,
+                        "endColumn": 12,
+                        "endOffset": 2202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 4299,
+                    "endLine": 94,
+                    "endColumn": 12,
+                    "endOffset": 4932
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2207,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 2840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 4937,
+                    "endLine": 109,
+                    "endColumn": 12,
+                    "endOffset": 5570
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 2845,
+                        "endLine": 68,
+                        "endColumn": 12,
+                        "endOffset": 3478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 5575,
+                    "endLine": 125,
+                    "endColumn": 12,
+                    "endOffset": 6210
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 3483,
+                        "endLine": 84,
+                        "endColumn": 12,
+                        "endOffset": 4118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 6215,
+                    "endLine": 140,
+                    "endColumn": 12,
+                    "endOffset": 6846
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 4123,
+                        "endLine": 99,
+                        "endColumn": 12,
+                        "endOffset": 4754
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 6851,
+                    "endLine": 155,
+                    "endColumn": 12,
+                    "endOffset": 7485
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 100,
+                        "startColumn": 4,
+                        "startOffset": 4759,
+                        "endLine": 114,
+                        "endColumn": 12,
+                        "endOffset": 5393
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 156,
+                    "startColumn": 4,
+                    "startOffset": 7490,
+                    "endLine": 170,
+                    "endColumn": 12,
+                    "endOffset": 8122
+                },
+                "from": {
+                    "file": "C:\\as_workspace\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 5398,
+                        "endLine": 129,
+                        "endColumn": 12,
+                        "endOffset": 6030
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 50,
+                    "endOffset": 101
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 189,
+                        "endColumn": 50,
+                        "endOffset": 235
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 106,
+                    "endColumn": 50,
+                    "endOffset": 152
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 290,
+                        "endColumn": 50,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 157,
+                    "endColumn": 49,
+                    "endOffset": 202
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 240,
+                        "endColumn": 49,
+                        "endOffset": 285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 207,
+                    "endColumn": 50,
+                    "endOffset": 253
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 138,
+                        "endColumn": 50,
+                        "endOffset": 184
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 258,
+                    "endColumn": 39,
+                    "endOffset": 293
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 98,
+                        "endColumn": 39,
+                        "endOffset": 133
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 298,
+                    "endColumn": 41,
+                    "endOffset": 335
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\color.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 41,
+                        "endOffset": 93
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1160,
+                    "endColumn": 57,
+                    "endOffset": 1213
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1218,
+                    "endColumn": 55,
+                    "endOffset": 1269
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1274,
+                    "endColumn": 46,
+                    "endOffset": 1316
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 46,
+                        "endOffset": 98
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1321,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 1586
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1589,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 1854
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1591,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2381
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 764,
+                        "endLine": 35,
+                        "endColumn": 12,
+                        "endOffset": 1554
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2386,
+                    "endLine": 46,
+                    "endColumn": 12,
+                    "endOffset": 2900
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 193,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 707
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 2905,
+                    "endColumn": 72,
+                    "endOffset": 2973
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 79,
+                        "endOffset": 92
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 2978,
+                    "endColumn": 50,
+                    "endOffset": 3024
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsIOSDialog\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 98,
+                        "endColumn": 57,
+                        "endOffset": 151
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3029,
+                    "endLine": 63,
+                    "endColumn": 12,
+                    "endOffset": 3660
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 937,
+                        "endLine": 22,
+                        "endColumn": 12,
+                        "endOffset": 1568
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 3665,
+                    "endLine": 79,
+                    "endColumn": 12,
+                    "endOffset": 4294
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1573,
+                        "endLine": 38,
+                        "endColumn": 12,
+                        "endOffset": 2202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 4299,
+                    "endLine": 94,
+                    "endColumn": 12,
+                    "endOffset": 4932
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 2207,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 2840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 4937,
+                    "endLine": 109,
+                    "endColumn": 12,
+                    "endOffset": 5570
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 2845,
+                        "endLine": 68,
+                        "endColumn": 12,
+                        "endOffset": 3478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 5575,
+                    "endLine": 125,
+                    "endColumn": 12,
+                    "endOffset": 6210
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 3483,
+                        "endLine": 84,
+                        "endColumn": 12,
+                        "endOffset": 4118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 6215,
+                    "endLine": 140,
+                    "endColumn": 12,
+                    "endOffset": 6846
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 85,
+                        "startColumn": 4,
+                        "startOffset": 4123,
+                        "endLine": 99,
+                        "endColumn": 12,
+                        "endOffset": 4754
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 6851,
+                    "endLine": 155,
+                    "endColumn": 12,
+                    "endOffset": 7485
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 100,
+                        "startColumn": 4,
+                        "startOffset": 4759,
+                        "endLine": 114,
+                        "endColumn": 12,
+                        "endOffset": 5393
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 156,
+                    "startColumn": 4,
+                    "startOffset": 7490,
+                    "endLine": 170,
+                    "endColumn": 12,
+                    "endOffset": 8122
+                },
+                "from": {
+                    "file": "D:\\yuanhang.liu\\EMWMatrix\\libsNumberProgressBar\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 115,
+                        "startColumn": 4,
+                        "startOffset": 5398,
+                        "endLine": 129,
+                        "endColumn": 12,
+                        "endOffset": 6030
+                    }
+                }
+            }
+        ]
+    }
+]
