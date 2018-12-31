@@ -2,5 +2,4 @@
     package="com.inqbarna.tablefixheaders"
     android:versionName="20160415">
 
-    <uses-sdk android:minSdkVersion="8" />
 </manifest>

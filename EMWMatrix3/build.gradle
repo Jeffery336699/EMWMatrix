@@ -8,15 +8,20 @@ bugly {
 }
 android {
     useLibrary 'org.apache.http.legacy'
-    compileSdkVersion 26
-    buildToolsVersion '26.0.0'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "cc.emw.mobile"
-        minSdkVersion 19
-        targetSdkVersion 22
+        minSdkVersion 21
+        targetSdkVersion 27
         multiDexEnabled true
         ndk { abiFilters "armeabi-v7a" }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
 
     dexOptions {
@@ -52,7 +57,9 @@ greendao {
 //}
 
 dependencies {
-
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
     //    compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -85,7 +92,6 @@ dependencies {
     compile files('libs/UPPayAssistEx.jar')
     compile files('libs/commons-io-2.4.jar')
     //    compile files('libs/android-support-v7-recyclerview.jar')
-
     //    compile project(':libsdragsortlistview')
     compile files('libs/AMap_Location_V3.2.0_20161205.jar')
     compile files('libs/AMap_Search_V3.6.1_20161122.jar')
@@ -103,17 +109,16 @@ dependencies {
     compile project(':libspopwindow')
     compile project(':libsmdtimepicker')
     compile 'com.android.support:multidex:1.0.0'
-    compile 'com.android.support:support-v4:26.0.0'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:design:24.0.0'
-    compile 'com.android.support:recyclerview-v7:26.0.0'
+    compile 'com.android.support:support-v4:27.1.1'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
     //    compile 'net.qiujuer.genius:ui:2.0.0-beta6'
-    compile 'com.android.support:percent:24.0.0'
-    compile 'com.android.support:cardview-v7:24.0.0'
+    compile 'com.android.support:percent:27.1.1'
+    compile 'com.android.support:cardview-v7:27.1.1'
     compile 'org.greenrobot:greendao:3.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     //    compile 'com.github.wangjiegulu:AndroidBucket:1.0.2'
-
     //    compile 'com.github.wangjiegulu:AndroidInject:1.0.2'
     compile 'me.leolin:ShortcutBadger:1.1.17@aar'
     compile 'com.github.danylovolokh:list-visibility-utils:0.2.0'
@@ -128,25 +133,22 @@ dependencies {
     compile project(':libsfab')
     compile 'com.github.bumptech.glide:glide:3.7.0'
     //io.socket依赖库
-
     //compile 'io.socket:socket.io-client:0.8.3'
     //compile 'com.github.nkzawa:socket.io-client:0.3.0'
     //腾讯buly crash
     compile 'com.tencent.bugly:crashreport:2.1.5'
     //compile 'com.tencent.bugly:nativecrashreport:2.2.0'
-
     /*二维码生成扫描添加依赖*/
-    compile 'com.github.yuzhiqiang1993:zxing:2.1.8'
-
+    compile ('com.github.yuzhiqiang1993:zxing:2.1.8'){
+        exclude group: 'com.google.zxing'
+    }
     //语音识别
     compile files('libs/bdasr_V3_20180801_d6f298a.jar')
     compile files('libs/galaxy.jar')
     compile files('libs/VoiceRecognition-1.2.jar')
-
-    compile ('io.socket:socket.io-client:0.8.3') {
+    compile('io.socket:socket.io-client:0.8.3') {
         exclude group: 'org.json', module: 'json'
     }
-
     //文件上传
     compile files('libs/apache-mime4j-0.6.jar')
     compile files('libs/httpmime-4.2.jar')

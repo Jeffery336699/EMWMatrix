@@ -2,7 +2,7 @@
           package="com.githang.androidcrash"
     android:versionName="20150521">
 
-<uses-sdk android:minSdkVersion="8"
+<uses-sdk
     android:targetSdkVersion="21"/>    
     
     <application android:allowBackup="true"

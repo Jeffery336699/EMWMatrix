@@ -2,7 +2,6 @@ package cc.emw.mobile;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Application;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -14,6 +13,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
@@ -70,7 +70,7 @@ import io.socket.emitter.Emitter;
 /**
  * User: Geek_Soledad(msdx.android@qq.com) Date: 2014-11-03 Time: 23:26 FIXME
  */
-public class EMWApplication extends Application {
+public class EMWApplication extends MultiDexApplication {
 
     /**
      * 存储异常日志路径
