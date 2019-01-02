@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/white"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <View
         android:id="@+id/rightmenu_toppadding"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp" />
 
-    <include layout="@layout/right_information_header"/>
+    <include
+        layout="@layout/right_information_header"
+        android:visibility="gone" />
+
+    <include layout="@layout/right_information_header_new" />
 
     <in.srain.cube.views.ptr.PtrClassicFrameLayout
         android:id="@+id/load_more_list_view_ptr_frame"
@@ -33,176 +37,199 @@
                 android:scrollbarStyle="outsideOverlay">
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <TextView
-                        android:id="@+id/tv_right_talker"
-                        android:layout_width="match_parent"
-                        android:layout_height="36.5dp"
-                        android:background="@color/cm_bg"
-                        android:paddingBottom="6dp"
-                        android:paddingLeft="4dp"
-                        android:paddingTop="10dp"
-                        android:text=" Talker"
-                        android:textColor="@color/dynamic_name_text"
-                        android:textSize="14sp"
-                        android:textStyle="bold"/>
-
-                    <View
-                        android:id="@+id/line_talker_top"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <cc.emw.mobile.view.MyListView
-                        android:id="@+id/list_takler"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@color/cm_divider_bg"
-                        android:dividerHeight="0.5dp"/>
-
-                    <View
-                        android:id="@+id/line_talker_bottom"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:background="@color/cm_bg"
-                        android:paddingBottom="6dp"
-                        android:paddingLeft="4dp"
-                        android:paddingTop="10dp"
-                        android:text=" 工作"
-                        android:textColor="@color/dynamic_name_text"
-                        android:textSize="14sp"
-                        android:textStyle="bold"/>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <cc.emw.mobile.view.MyListView
-                        android:id="@+id/list_work"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@color/cm_divider_bg"
-                        android:dividerHeight="0.5dp"/>
-
-                    <View
-                        android:id="@+id/line_work_bottom"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:background="@color/cm_bg"
-                        android:paddingBottom="6dp"
-                        android:paddingLeft="4dp"
-                        android:paddingTop="10dp"
-                        android:text=" 通知"
-                        android:textColor="@color/dynamic_name_text"
-                        android:textSize="14sp"
-                        android:textStyle="bold"/>
-
-                    <View
-                        android:id="@+id/line_info_top"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <cc.emw.mobile.view.MyListView
-                        android:id="@+id/list_information"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@color/cm_divider_bg"
-                        android:dividerHeight="0.5dp"/>
-
-                    <View
-                        android:id="@+id/line_info_bottom"
-                        android:layout_width="match_parent"
-                        android:layout_height="0.5dp"
-                        android:background="@color/cm_divider_bg"/>
-
-                    <cc.emw.mobile.view.MyListView
-                        android:id="@+id/mlv_comment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@color/cm_divider_bg"
-                        android:dividerHeight="0.5dp"/>
-
-                    <cc.emw.mobile.view.MyListView
-                        android:id="@+id/mlv_enjoy"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@color/cm_divider_bg"
-                        android:dividerHeight="0.5dp"
-                        android:visibility="gone"/>
-
-                    <!-- 我的粉丝列表 -->
                     <LinearLayout
-                        android:id="@+id/ll_notification_concern_layout"
+                        android:id="@+id/ll_sum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="10dp"
-                        android:visibility="gone">
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <TextView
+                            android:id="@+id/tv_right_talker"
+                            android:layout_width="match_parent"
+                            android:layout_height="36.5dp"
+                            android:background="@color/cm_bg"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="6dp"
+                            android:text=" Talker"
+                            android:textColor="@color/dynamic_name_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/line_talker_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <cc.emw.mobile.view.MyListView
+                            android:id="@+id/list_takler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cm_divider_bg"
+                            android:dividerHeight="0.5dp" />
+
+                        <View
+                            android:id="@+id/line_talker_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_weight="1"
-                            android:text="关注你的人"
+                            android:layout_height="36dp"
+                            android:background="@color/cm_bg"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="6dp"
+                            android:text=" 工作"
                             android:textColor="@color/dynamic_name_text"
-                            android:textSize="14sp"/>
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                        <LinearLayout
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
 
-                            <LinearLayout
-                                android:id="@+id/ll_notification_concern_list"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"/>
+                        <cc.emw.mobile.view.MyListView
+                            android:id="@+id/list_work"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cm_divider_bg"
+                            android:dividerHeight="0.5dp" />
+
+                        <View
+                            android:id="@+id/line_work_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:background="@color/cm_bg"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="6dp"
+                            android:text=" 通知"
+                            android:textColor="@color/dynamic_name_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/line_info_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <cc.emw.mobile.view.MyListView
+                            android:id="@+id/list_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cm_divider_bg"
+                            android:dividerHeight="0.5dp" />
+
+                        <View
+                            android:id="@+id/line_info_bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/cm_divider_bg" />
+
+                        <cc.emw.mobile.view.MyListView
+                            android:id="@+id/mlv_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cm_divider_bg"
+                            android:dividerHeight="0.5dp" />
+
+                        <cc.emw.mobile.view.MyListView
+                            android:id="@+id/mlv_enjoy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/cm_divider_bg"
+                            android:dividerHeight="0.5dp"
+                            android:visibility="gone" />
+
+                        <!-- 我的粉丝列表 -->
+                        <LinearLayout
+                            android:id="@+id/ll_notification_concern_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="10dp"
+                            android:visibility="gone">
 
                             <TextView
-                                android:id="@+id/iv_more_concern_num"
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:layout_alignParentRight="true"
-                                android:layout_marginLeft="6dp"
-                                android:background="@drawable/solid_circle_bdc3c7"
-                                android:gravity="center"
-                                android:textColor="@color/white"
-                                android:textSize="12sp"
-                                android:visibility="invisible"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:text="关注你的人"
+                                android:textColor="@color/dynamic_name_text"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_notification_concern_list"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" />
+
+                                <TextView
+                                    android:id="@+id/iv_more_concern_num"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginLeft="6dp"
+                                    android:background="@drawable/solid_circle_bdc3c7"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:visibility="invisible" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
                     </LinearLayout>
 
+                    <cc.emw.mobile.view.MyListView
+                        android:id="@+id/list_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/cm_divider_bg"
+                        android:dividerHeight="0.5dp" />
+
+                    <!--<android.support.v7.widget.RecyclerView
+
+                        android:id="@+id/ry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />-->
                 </LinearLayout>
+
+
 
             </ScrollView>
 
@@ -218,7 +245,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/xiaoxiliebiao"/>
+                    android:src="@drawable/xiaoxiliebiao" />
             </RelativeLayout>
 
         </LinearLayout>

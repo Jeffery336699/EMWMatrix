@@ -250,7 +250,7 @@ public class ContactFrament extends BaseFragment implements ViewPager.OnPageChan
 //        });
 //        informationRight = new InformationRight(activity, mSlidingMenu, false);
 //        informationRight.initRightMenu();
-        informationRight = MainActivity.informationRight;
+//        informationRight = MainActivity.informationRight;
         mBottomGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {

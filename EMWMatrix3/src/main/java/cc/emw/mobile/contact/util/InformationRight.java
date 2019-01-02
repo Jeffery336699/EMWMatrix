@@ -80,6 +80,7 @@ import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;
 import in.srain.cube.views.ptr.header.MaterialHeader;
+import q.rorbin.badgeview.QBadgeView;
 
 /**
  * Created by tao.zhou on 2017/4/26.
@@ -92,6 +93,8 @@ public class InformationRight {
     private SlidingMenu mSlidingMenu;
 
     private boolean isMainActivity;
+    private MyListView mListView_common;
+    private LinearLayout llSum;
 
     public InformationRight(Context context, SlidingMenu mSlidingMenu, boolean isMainActivity) {
         this.context = context;
@@ -214,8 +217,10 @@ public class InformationRight {
         mListView_talker = (MyListView) ((BaseActivity) context).findViewById(R.id.list_takler);
         mListView_work = (MyListView) ((BaseActivity) context).findViewById(R.id.list_work);
         mListView_information = (MyListView) ((BaseActivity) context).findViewById(R.id.list_information);
+        mListView_common = (MyListView) ((BaseActivity) context).findViewById(R.id.list_common);
         mBlankView = ((BaseActivity) context).findViewById(R.id.kongbai);
         scrollView = (ScrollView) ((BaseActivity) context).findViewById(R.id.scroll);
+        llSum = (LinearLayout) ((BaseActivity) context).findViewById(R.id.ll_sum);
 
         ImageView dismiss = (ImageView) ((BaseActivity) context).findViewById(R.id.dismiss);    //关闭右侧菜单
         dismiss.setOnClickListener(new View.OnClickListener() {
@@ -340,42 +345,50 @@ public class InformationRight {
         @Override
         public View getView(int arg0, View convertView, ViewGroup arg2) {
             final HistoryMessage msg = m1.get(arg0);
-            final ViewHolder vh;
+//            final ViewHolder vh = null;
+            final MyViewHolder mvh;
             if (null == convertView) {
-                vh = new ViewHolder();
-                convertView = LayoutInflater.from(context).inflate(R.layout.listitem_chats, null);
-                vh.content = (TextView) convertView.findViewById(R.id.content);
-                vh.head = (CircleImageView) convertView.findViewById(R.id.head);
-                vh.time = (TextView) convertView.findViewById(R.id.time);
-                vh.v1 = convertView.findViewById(R.id.bace);
-                vh.v2 = convertView.findViewById(R.id.liucheng);
-                vh.liucheng_content = (TextView) convertView.findViewById(R.id.liucheng_content);
-                vh.liucheng_time = (TextView) convertView.findViewById(R.id.liucheng_time);
-                vh.dot1 = convertView.findViewById(R.id.view_message_tag_talker_bace);
-                vh.dot2 = convertView.findViewById(R.id.view_message_tag_talker_liucheng);
-                convertView.setTag(R.id.tag_first, vh);
+                mvh = new MyViewHolder();
+//                convertView = LayoutInflater.from(context).inflate(R.layout.listitem_chats, null);
+//                vh.content = (TextView) convertView.findViewById(R.id.content);
+//                vh.head = (CircleImageView) convertView.findViewById(R.id.head);
+//                vh.time = (TextView) convertView.findViewById(R.id.time);
+//                vh.v1 = convertView.findViewById(R.id.bace);
+//                vh.v2 = convertView.findViewById(R.id.liucheng);
+//                vh.liucheng_content = (TextView) convertView.findViewById(R.id.liucheng_content);
+//                vh.liucheng_time = (TextView) convertView.findViewById(R.id.liucheng_time);
+//                vh.dot1 = convertView.findViewById(R.id.view_message_tag_talker_bace);
+//                vh.dot2 = convertView.findViewById(R.id.view_message_tag_talker_liucheng);
+                convertView = LayoutInflater.from(context).inflate(R.layout.item_section_char_content, null);
+                mvh.ivHead=convertView.findViewById(R.id.ivHead);
+                mvh.tvName=convertView.findViewById(R.id.tvName);
+                mvh.tvTime=convertView.findViewById(R.id.tvTextTime);
+                mvh.tvContent=convertView.findViewById(R.id.tvContent);
+                convertView.setTag(R.id.tag_first, mvh);
             } else {
-                vh = (ViewHolder) convertView.getTag(R.id.tag_first);
+                mvh = (MyViewHolder) convertView.getTag(R.id.tag_first);
             }
 
             try {
                 if (msg.getUnReadCount() != 0) {
-                    vh.dot1.setVisibility(View.VISIBLE);
-                    vh.dot2.setVisibility(View.VISIBLE);
+                    new QBadgeView(context).bindTarget(mvh.ivHead).setBadgeNumber(5).setBadgeBackgroundColor(0xffff4141).setBadgeTextColor(0xffFFFFFF)
+                            .stroke(0xffffffff,1,true).setBadgeTextSize(8,true)
+                            .setGravityOffset(4,2,true);
                 } else {
-                    vh.dot1.setVisibility(View.INVISIBLE);
-                    vh.dot2.setVisibility(View.INVISIBLE);
+                    new QBadgeView(context).bindTarget(mvh.ivHead).setBadgeBackgroundColor(0x00000000);
                 }
 
                 if (msg.getMessage().getContent().contains("FlowID")) {
                     Follow data = new Gson().fromJson(msg.getMessage().getContent(), Follow.class);
-                    vh.v2.setVisibility(View.VISIBLE);
-                    vh.v1.setVisibility(View.GONE);
-                    if (data.Title != null && !TextUtils.isEmpty(data.Title))
-                        vh.liucheng_content.setText(data.Title);
-                    else
-                        vh.liucheng_content.setText("你收到一个流程");
-                    vh.liucheng_time.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+//                    vh.v2.setVisibility(View.VISIBLE);
+//                    vh.v1.setVisibility(View.GONE);
+//                    if (data.Title != null && !TextUtils.isEmpty(data.Title))
+//                        vh.liucheng_content.setText(data.Title);
+//                    else
+//                        vh.liucheng_content.setText("你收到一个流程");
+//                    vh.liucheng_time.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+
+                    /****************************************************/
                     //                  流程消息点击事件
                     //                    try {
                     //                        final Follow follow = new Gson().fromJson(msg.getMessage().getContent(), Follow.class);
@@ -398,30 +411,30 @@ public class InformationRight {
                     //                    } catch (Exception e) {
                     //                        e.printStackTrace();
                     //                    }
-                } else {
-                    vh.v1.setVisibility(View.VISIBLE);
-                    vh.v2.setVisibility(View.GONE);
+                } else {//TODO:都是走这里
+//                    vh.v1.setVisibility(View.VISIBLE);
+//                    vh.v2.setVisibility(View.GONE);
                     switch (msg.getMessage().getType()) {
                         case 4://4
-                            ChatUtils.spannableEmoticonFilter(vh.content, msg.getMessage().getContent());
+                            ChatUtils.spannableEmoticonFilter(mvh.tvContent, msg.getMessage().getContent());
                             break;
                         case 9://9
-                            vh.content.setText("[视频]");
+                            mvh.tvContent.setText("[视频]");
                             break;
 //                        case 10://任务创建
 //                            vh.content.setText("[任务创建]");
 //                            break;
                         case 42://取消任务共享
-                            vh.content.setText("[取消任务共享]");
+                            mvh.tvContent.setText("[取消任务共享]");
                             break;
                         case ApiEnum.MessageType.Audio://8
-                            vh.content.setText("[语音]");
+                            mvh.tvContent.setText("[语音]");
                             break;
                         case ApiEnum.MessageType.Image://7
-                            vh.content.setText("[照片]");
+                            mvh.tvContent.setText("[照片]");
                             break;
                         case ApiEnum.MessageType.Attach://6
-                            vh.content.setText("[附件]");
+                            mvh.tvContent.setText("[附件]");
                             break;
                         case ApiEnum.MessageType.Share://10
                             Information data = new Gson().fromJson(msg.getMessage().getContent(), Information.class);
@@ -429,7 +442,7 @@ public class InformationRight {
                             SpannableString spanStr = new SpannableString(base + data.Content);
                             ForegroundColorSpan colorSpan1 = new ForegroundColorSpan(context.getResources().getColor(R.color.dynamicreply_name_text));
                             spanStr.setSpan(colorSpan1, 0, base.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-                            vh.content.setText(spanStr);
+                            mvh.tvContent.setText(spanStr);
                             break;
 //                        case ApiEnum.MessageType.Task://11
 //                            vh.content.setText("[任务]");
@@ -442,21 +455,21 @@ public class InformationRight {
 //                            break;
                         case ApiEnum.MessageType.Robot://36
 //                        case ApiEnum.MessageType.RobotSchedule://37
-                            vh.content.setText("[智能聊天回复]");
+                            mvh.tvContent.setText("[智能聊天回复]");
                             break;
                         case ApiEnum.MessageType.CHAT_LOCATION://38
-                            vh.content.setText("[位置]");
+                            mvh.tvContent.setText("[位置]");
                             break;
                         case ChatContent.DYNAMIC://39
-                            vh.content.setText("[分享消息]");
+                            mvh.tvContent.setText("[分享消息]");
                             break;
                         case ChatContent.CHAT_SHARE_LOCATION://41
-                            vh.content.setText("[位置共享]");
+                            mvh.tvContent.setText("[位置共享]");
                             break;
                         //                        case 0:
                         case ApiEnum.MessageType.PhoneStateMsg://43
                             CallInfo callInfo = new Gson().fromJson(msg.getMessage().getContent(), CallInfo.class);
-                            vh.content.setText(callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
+                            mvh.tvContent.setText(callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
                             break;
 //                        default:
 //                            if (msg.getMessage().getContent().contains("FlowID")) {
@@ -470,10 +483,10 @@ public class InformationRight {
                     }
                     // 群组消息
                     if (m1.get(arg0).getType() == 2) {
-                        vh.head.setImageResource(R.drawable.cm_img_grouphead);
+                        mvh.ivHead.setImageResource(R.drawable.cm_img_grouphead);
                         String uriGroup = String.format(Const.DOWN_ICON_URL,
                                 PrefsUtil.readUserInfo().CompanyCode, msg.getMessage().Group.Image);
-                        ImageLoader.getInstance().displayImage(uriGroup, new ImageViewAware(vh.head), optionsGroup,
+                        ImageLoader.getInstance().displayImage(uriGroup, new ImageViewAware(mvh.ivHead), optionsGroup,
                                 new ImageSize(DisplayUtil.dip2px(context, 30), DisplayUtil.dip2px(context, 30)), null, null);
                         //                        Picasso.with(context)
                         //                                .load(uriGroup)
@@ -483,11 +496,12 @@ public class InformationRight {
                         //                                .placeholder(R.drawable.cm_img_grouphead)
                         //                                .error(R.drawable.cm_img_grouphead)
                         //                                .into(vh.head);
-                    } else {
-                        vh.head.setTvBg(EMWApplication.getIconColor(msg.Receiver.ID), msg.Receiver.Name, 30);
+                    } else {//TODO:都是走这里
+                        mvh.tvName.setText(msg.Receiver.Name);
+                        mvh.ivHead.setTvBg(EMWApplication.getIconColor(msg.Receiver.ID), msg.Receiver.Name, 30);
                         String uriUser = String.format(Const.DOWN_ICON_URL,
                                 PrefsUtil.readUserInfo().CompanyCode, msg.Receiver.Image);
-                        ImageLoader.getInstance().displayImage(uriUser, new ImageViewAware(vh.head), options,
+                        ImageLoader.getInstance().displayImage(uriUser, new ImageViewAware(mvh.ivHead), options,
                                 new ImageSize(DisplayUtil.dip2px(context, 30), DisplayUtil.dip2px(context, 30)), null, null);
                         //                        Picasso.with(context)
                         //                                .load(uriUser)
@@ -498,7 +512,7 @@ public class InformationRight {
                         //                                .error(R.drawable.cm_img_head)
                         //                                .into(vh.head);
                     }
-                    vh.time.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+                    mvh.tvTime.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
                 }
                 convertView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -513,7 +527,7 @@ public class InformationRight {
                         v.getLocationInWindow(location);
                         intent.putExtra("click_pos_y", location[1]);
                         context.startActivity(intent);
-                        vh.dot1.setVisibility(View.INVISIBLE);
+//                        vh.dot1.setVisibility(View.INVISIBLE);
                     }
                 });
             } catch (Exception e) {
@@ -1381,6 +1395,13 @@ public class InformationRight {
         View v1, v2, v3, v4, v5, dot1, dot2, dot3, dot4, dot5;
     }
 
+    static class MyViewHolder {
+       TextView tvName;
+       TextView tvTime;
+       TextView tvContent;
+        CircleImageView ivHead;
+    }
+
     private void doApplyFriend(final int conId, int state) {
         API.UserPubAPI.DoPubConApply(conId, state, new RequestCallback<String>(String.class) {
 
@@ -1435,16 +1456,6 @@ public class InformationRight {
                     m1.clear();
                     for (HistoryMessage historyMessage : respList) {
                         if (historyMessage.getMessage() != null) {
-                            /************************start--原来*******************/
-//                            switch (historyMessage.getMessage().BusType) {
-//                                case 0:
-//                                    if (historyMessage.getType() == 1 || historyMessage.getType() == 2 && EMWApplication.groupMap != null &&
-//                                            EMWApplication.groupMap.get(historyMessage.getMessage().getGroupID()) != null) {
-//                                        m1.add(historyMessage);
-//                                    }
-//                                    break;
-//                            }
-                            /************************end--原来*******************/
                             m1.add(historyMessage);
                         }
 //                                        m1.add(historyMessage);

@@ -9,24 +9,36 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.graphics.drawable.ColorDrawable;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,10 +59,16 @@ import com.google.gson.Gson;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.nostra13.universalimageloader.core.assist.ImageSize;
+import com.nostra13.universalimageloader.core.imageaware.ImageViewAware;
 import com.zf.iosdialog.widget.AlertDialog;
+import com.zhy.adapter.recyclerview.CommonAdapter;
+import com.zhy.adapter.recyclerview.base.ViewHolder;
 
 import org.xutils.view.annotation.ContentView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cc.emw.mobile.EMWApplication;
@@ -61,15 +79,20 @@ import cc.emw.mobile.calendar.fragment.CalendarFragmentView;
 import cc.emw.mobile.chat.CaptureTestActivity;
 import cc.emw.mobile.chat.ChatActivity;
 import cc.emw.mobile.chat.PhoneBookActivity;
+import cc.emw.mobile.chat.base.ChatContent;
 import cc.emw.mobile.chat.base.NoDoubleClickListener;
 import cc.emw.mobile.chat.model.bean.Connections;
 import cc.emw.mobile.chat.model.bean.EmojiBean;
+import cc.emw.mobile.chat.model.bean.HistoryMessage;
+import cc.emw.mobile.chat.model.bean.Information;
 import cc.emw.mobile.chat.model.bean.MessageInfo;
 import cc.emw.mobile.chat.model.bean.Task;
 import cc.emw.mobile.chat.view.ChatUtils;
+import cc.emw.mobile.contact.ChatSelectActivity;
 import cc.emw.mobile.contact.util.InformationRight;
 import cc.emw.mobile.dynamic.fragment.DynamicChildFragment;
 import cc.emw.mobile.dynamic.fragment.DynamicFragment;
+import cc.emw.mobile.entity.CallInfo;
 import cc.emw.mobile.entity.GroupInfo;
 import cc.emw.mobile.entity.LoginResp;
 import cc.emw.mobile.entity.UserNote;
@@ -87,6 +110,7 @@ import cc.emw.mobile.net.API;
 import cc.emw.mobile.net.ApiEntity;
 import cc.emw.mobile.net.ApiEntity.Navigation;
 import cc.emw.mobile.net.ApiEntity.Template;
+import cc.emw.mobile.net.ApiEnum;
 import cc.emw.mobile.net.ApiEnum.MessageType;
 import cc.emw.mobile.net.Const;
 import cc.emw.mobile.net.RequestCallback;
@@ -106,11 +130,13 @@ import cc.emw.mobile.util.statusbar.Eyes;
 import cc.emw.mobile.view.CircleImageView;
 import cc.emw.mobile.view.DiscussEmoticonsKeyBoard;
 import cc.emw.mobile.view.ExViewPager;
+import io.rong.callkit.CallSelectContactActivity;
 import io.rong.callkit.TerminalLoginDialogActivity;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
 import io.socket.client.Socket;
 import me.leolin.shortcutbadger.ShortcutBadger;
+import q.rorbin.badgeview.QBadgeView;
 import sj.keyboard.data.EmoticonEntity;
 import sj.keyboard.interfaces.EmoticonClickListener;
 
@@ -118,14 +144,14 @@ import sj.keyboard.interfaces.EmoticonClickListener;
  * 主界面，在用
  */
 @ContentView(R.layout.activity_main)
-public class MainActivity extends BaseActivity implements CIMEventListener, LoginView, AMapLocationListener, LocationSource {
+public class MainActivity extends BaseActivity implements CIMEventListener, LoginView, AMapLocationListener, LocationSource, SwipeRefreshLayout.OnRefreshListener {
 
     private ExViewPager mViewPager;
     private SlidingMenu mSlidingMenu;
     private ExpandableListView mNavigateElv;
     ///////////////////////////////////////////////////////////////////////右侧导航
     private DisplayImageOptions options;
-    public static InformationRight informationRight;
+    //    public static InformationRight informationRight;
     //////////////////////////////////////////////////////////////////////////////////////////////////
     public static final String ACTION_REFRESH_MAIN = "cc.emw.mobile.refresh_main"; //弹出左侧菜单
     public static final String ACTION_REFRESH_MAIN_RIGHT = "cc.emw.mobile.refresh_main_right"; //弹出右侧菜单
@@ -155,6 +181,8 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
     //    @ViewInject(R.id.ek_bar)
     public static DiscussEmoticonsKeyBoard ekBar;
     private EMWApplication emwApplication;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private RecyclerView recyclerView;
     //private SlidingUpPanelLayout slidLayout;
 
     @Override
@@ -246,7 +274,7 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         mSlidingMenu.setFadeDegree(0.35f);
         mSlidingMenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT, true);
         mSlidingMenu.setMenu(R.layout.main_left_menu3);
-        mSlidingMenu.setSecondaryMenu(R.layout.right_information);
+        mSlidingMenu.setSecondaryMenu(R.layout.right_information_new);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) { //6.0设置顶部view与状态栏高度一致，不会与状态栏重叠
             int statusbarHeight = DisplayUtil.getStatusBarHeight(this);
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, statusbarHeight);
@@ -254,6 +282,22 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
             mSlidingMenu.getMenu().findViewById(R.id.leftmenu_toppadding).setLayoutParams(lp);
             mSlidingMenu.getSecondaryMenu().findViewById(R.id.rightmenu_toppadding).setLayoutParams(lp);
         }
+        swipeRefreshLayout = mSlidingMenu.getSecondaryMenu().findViewById(R.id.srl);
+        // 设定下拉圆圈的背景
+        swipeRefreshLayout.setProgressBackgroundColorSchemeColor(Color.WHITE);
+        swipeRefreshLayout.setColorSchemeColors(Color.BLUE,
+                Color.GREEN,
+                Color.YELLOW,
+                Color.RED);
+        swipeRefreshLayout.setOnRefreshListener(this);
+        recyclerView = mSlidingMenu.getSecondaryMenu().findViewById(R.id.ry);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        mSlidingMenu.getSecondaryMenu().findViewById(R.id.rl_type_root).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showPopwindows(view);
+            }
+        });
 
         mViewPager = (ExViewPager) findViewById(R.id.tab_pager);
         // mViewPager.setPagingEnabled(false); // 禁止左右滑动
@@ -349,8 +393,8 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
 
 
         //初始化右侧导航
-        informationRight = new InformationRight(this, mSlidingMenu, true);
-        informationRight.initRightMenu();
+//        informationRight = new InformationRight(this, mSlidingMenu, true);
+//        informationRight.initRightMenu();
 
         try {
 
@@ -534,6 +578,184 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         }
     }
 
+    private void showPopwindows(View v) {
+        View popupView = LayoutInflater.from(this).inflate(R.layout.popup_circle_type, null);
+        final PopupWindow window = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupView.findViewById(R.id.tv_newst).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtil.showToast(MainActivity.this, "最新");
+                window.dismiss();
+            }
+        });
+        popupView.findViewById(R.id.tv_talker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtil.showToast(MainActivity.this, "talker");
+                getChatList();
+                window.dismiss();
+            }
+        });
+        popupView.findViewById(R.id.tv_work).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtil.showToast(MainActivity.this, "工作");
+                window.dismiss();
+            }
+        });
+        popupView.findViewById(R.id.tv_notice).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtil.showToast(MainActivity.this, "通知");
+                window.dismiss();
+            }
+        });
+
+        window.setOutsideTouchable(true);
+        window.setFocusable(true);
+        window.setAnimationStyle(R.style.popup_more_anim_new);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        window.showAsDropDown(v, 0, 0);
+    }
+
+    public static ArrayList<HistoryMessage> m1 = new ArrayList<>();//Takler
+
+    // 获取聊天消息
+    public void getChatList() {
+        API.Message.GetChatRecords(new RequestCallback<HistoryMessage>(
+                HistoryMessage.class) {
+
+            @Override
+            public void onStarted() {
+
+            }
+
+            @Override
+            public void onError(Throwable arg0, boolean arg1) {
+                ToastUtil.showToast(MainActivity.this, "加载失败，请重试...");
+            }
+
+            @Override
+            public void onParseSuccess(final List<HistoryMessage> respList) {
+                if (respList != null) {
+                    m1.clear();
+                    for (HistoryMessage historyMessage : respList) {
+                        if (historyMessage.getMessage() != null) {
+                            m1.add(historyMessage);
+                        }
+                    }
+                    recyclerView.setAdapter(new CommonAdapter<HistoryMessage>(MainActivity.this, R.layout.item_section_char_content, m1) {
+                        @Override
+                        protected void convert(ViewHolder holder, HistoryMessage msg, int position) {
+                            if (msg.getUnReadCount() != 0) {
+                                new QBadgeView(holder.itemView.getContext()).bindTarget(holder.getView(R.id.ivHead)).setBadgeNumber(5).setBadgeBackgroundColor(0xffff4141).setBadgeTextColor(0xffFFFFFF)
+                                        .stroke(0xffffffff, 1, true).setBadgeTextSize(8, true)
+                                        .setGravityOffset(4, 2, true);
+                            } else {
+                                new QBadgeView(holder.itemView.getContext()).bindTarget(holder.getView(R.id.ivHead)).setBadgeBackgroundColor(0x00000000);
+                            }
+
+                            switch (msg.getMessage().getType()) {
+                                case 4://4
+                                    ChatUtils.spannableEmoticonFilter((TextView) holder.getView(R.id.tvContent), msg.getMessage().getContent());
+                                    break;
+                                case 9://9
+//                                    mvh.tvContent.setText("[视频]");
+                                    holder.setText(R.id.tvContent, "[视频]");
+                                    break;
+                                case 42://取消任务共享
+//                                    mvh.tvContent.setText("[取消任务共享]");
+                                    holder.setText(R.id.tvContent, "[取消任务共享]");
+                                    break;
+                                case ApiEnum.MessageType.Audio://8
+//                                    mvh.tvContent.setText("[语音]");
+                                    holder.setText(R.id.tvContent, "[语音]");
+                                    break;
+                                case ApiEnum.MessageType.Image://7
+//                                    mvh.tvContent.setText("[照片]");
+                                    holder.setText(R.id.tvContent, "[照片]");
+                                    break;
+                                case ApiEnum.MessageType.Attach://6
+//                                    mvh.tvContent.setText("[附件]");
+                                    holder.setText(R.id.tvContent, "[附件]");
+                                    break;
+                                case ApiEnum.MessageType.Share://10
+                                    Information data = new Gson().fromJson(msg.getMessage().getContent(), Information.class);
+                                    String base = "[Talker分享] ";
+                                    SpannableString spanStr = new SpannableString(base + data.Content);
+                                    ForegroundColorSpan colorSpan1 = new ForegroundColorSpan(holder.itemView.getContext().getResources().getColor(R.color.dynamicreply_name_text));
+                                    spanStr.setSpan(colorSpan1, 0, base.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+//                                    mvh.tvContent.setText(spanStr);
+                                    ((TextView) holder.getView(R.id.tvContent)).setText(spanStr);
+                                    break;
+                                case ApiEnum.MessageType.Robot://36
+//                                    mvh.tvContent.setText("[智能聊天回复]");
+                                    holder.setText(R.id.tvContent, "[智能聊天回复]");
+                                    break;
+                                case ApiEnum.MessageType.CHAT_LOCATION://38
+//                                    mvh.tvContent.setText("[位置]");
+                                    holder.setText(R.id.tvContent, "[位置]");
+                                    break;
+                                case ChatContent.DYNAMIC://39
+//                                    mvh.tvContent.setText("[分享消息]");
+                                    holder.setText(R.id.tvContent, "[分享消息]");
+                                    break;
+                                case ChatContent.CHAT_SHARE_LOCATION://41
+//                                    mvh.tvContent.setText("[位置共享]");
+                                    holder.setText(R.id.tvContent, "[位置共享]");
+
+                                    break;
+                                //                        case 0:
+                                case ApiEnum.MessageType.PhoneStateMsg://43
+                                    CallInfo callInfo = new Gson().fromJson(msg.getMessage().getContent(), CallInfo.class);
+//                                    mvh.tvContent.setText(callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
+                                    holder.setText(R.id.tvContent, callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
+                                    break;
+                            }
+
+                            // 群组消息
+                            CircleImageView imageView = (CircleImageView) holder.getView(R.id.ivHead);
+                            if (msg.getType() == 2) {
+                                holder.setText(R.id.tvName,"群聊");
+                                (imageView).setImageResource(R.drawable.cm_img_grouphead);
+                                String uriGroup = String.format(Const.DOWN_ICON_URL,
+                                        PrefsUtil.readUserInfo().CompanyCode, msg.getMessage().Group.Image);
+                                DisplayImageOptions optionsGroup = new DisplayImageOptions.Builder()
+                                        //                .showImageOnLoading(R.drawable.cm_img_grouphead)
+                                        //                .showImageForEmptyUri(R.drawable.cm_img_grouphead)
+                                        //                .showImageOnFail(R.drawable.cm_img_grouphead)
+                                        .cacheInMemory(true)
+                                        .bitmapConfig(Bitmap.Config.ALPHA_8)
+                                        .imageScaleType(ImageScaleType.EXACTLY)
+                                        .cacheOnDisk(true).build();
+                                ImageLoader.getInstance().displayImage(uriGroup, new ImageViewAware(imageView), optionsGroup,
+                                        new ImageSize(DisplayUtil.dip2px(holder.itemView.getContext(), 30), DisplayUtil.dip2px(holder.itemView.getContext(), 30)), null, null);
+                                //                        Picasso.with(context)
+                                //                                .load(uriGroup)
+                                //                                .resize(DisplayUtil.dip2px(context, 40), DisplayUtil.dip2px(context, 40))
+                                //                                .centerCrop()
+                                //                                .config(Bitmap.Config.ALPHA_8)
+                                //                                .placeholder(R.drawable.cm_img_grouphead)
+                                //                                .error(R.drawable.cm_img_grouphead)
+                                //                                .into(vh.head);
+                            } else {//TODO:都是走这里
+//                                mvh.tvName.setText(msg.Receiver.Name);
+                                holder.setText(R.id.tvName, msg.Receiver.Name);
+                                imageView.setTvBg(EMWApplication.getIconColor(msg.Receiver.ID), msg.Receiver.Name, 30);
+                                String uriUser = String.format(Const.DOWN_ICON_URL,
+                                        PrefsUtil.readUserInfo().CompanyCode, msg.Receiver.Image);
+                                ImageLoader.getInstance().displayImage(uriUser, new ImageViewAware(imageView), options,
+                                        new ImageSize(DisplayUtil.dip2px(holder.itemView.getContext(), 30), DisplayUtil.dip2px(holder.itemView.getContext(), 30)), null, null);
+                            }
+//                            mvh.tvTime.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+                            holder.setText(R.id.tvTextTime, StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+                        }
+                    });
+                }
+            }
+        });
+    }
+
     /*@Event(R.id.itv_dynamicbottom_send)
     private void onSendClick(View v) {
         String content = mCommentContentEt.getText().toString().trim();
@@ -561,6 +783,26 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         }
     }
 
+    private boolean isRefresh = false;//是否刷新中
+
+    @Override
+    public void onRefresh() {
+        //检查是否处于刷新状态
+        if (!isRefresh) {
+            isRefresh = true;
+            new Handler().postDelayed(new Runnable() {
+                public void run() {
+
+                    //显示或隐藏刷新进度条
+                    swipeRefreshLayout.setRefreshing(false);
+                    //修改adapter的数据
+                    getChatList();
+                    isRefresh = false;
+                }
+            }, 1000);
+        }
+    }
+
     class MyBroadcastReceive extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -582,7 +824,7 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
                 int id = intent.getIntExtra(MESSAGE_ID, 0);
                 int tag = intent.getIntExtra(MESSAGE_TYPE, 0);
                 if (tag == 0) {
-                    informationRight.getChatList(true);
+//                    informationRight.getChatList(true);
                 } else if (tag == 1) {
                     RemoveAllMessageByID(id, tag);
                 } else if (tag == 2) {
@@ -835,16 +1077,16 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
             Message msg = new Gson().fromJson(message, Message.class);
             switch (msg.getBusType()) {
                 case 0:
-                    if (informationRight != null)
-                        informationRight.getChatList(true);
+//                    if (informationRight != null)
+//                        informationRight.getChatList(true);
                     break;
                 case 1:
-                    if (informationRight != null)
-                        informationRight.getMessageWork(true);
+//                    if (informationRight != null)
+//                        informationRight.getMessageWork(true);
                     break;
                 case 2:
-                    if (informationRight != null)
-                        informationRight.getMessageNotice(true);
+//                    if (informationRight != null)
+//                        informationRight.getMessageNotice(true);
                     break;
             }
 
@@ -1195,7 +1437,7 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
             public void onSuccess(String result) {
                 if (result.equals("true")) {
                     getUnreadCount();
-                    informationRight.getMessageNotice(false);
+//                    informationRight.getMessageNotice(false);
                 }
             }
 
@@ -1217,10 +1459,10 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
             @Override
             public void onSuccess(String result) {
                 if (result.equals("true")) {
-                    if (type == 1)
-                        informationRight.getMessageWork(true);
-                    else if (type == 2)
-                        informationRight.getMessageNotice(true);
+//                    if (type == 1)
+//                        informationRight.getMessageWork(true);
+//                    else if (type == 2)
+//                        informationRight.getMessageNotice(true);
                     Intent intent = new Intent(MainActivity.ACTION_REFRESH_COUNT);
                     sendBroadcast(intent);
                 }

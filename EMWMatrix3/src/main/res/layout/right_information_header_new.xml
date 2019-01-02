@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="10dp">
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <RelativeLayout
+        android:id="@+id/rl_type_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/qb_px_14"
+            android:text="工作"
+            android:textColor="#EA5402"
+            android:textSize="@dimen/qb_px_16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvType"
+            android:layout_marginLeft="@dimen/qb_px_15"
+            android:layout_toRightOf="@+id/tvType"
+            android:src="@mipmap/ic_rest_day" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="right"
+        android:text="标记为已读"
+        android:textColor="@color/cm_text"
+        android:textSize="14sp" />
+
+</LinearLayout>
