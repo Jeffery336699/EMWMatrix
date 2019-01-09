@@ -211,7 +211,7 @@ public class ContactFrament extends BaseFragment implements ViewPager.OnPageChan
     private void init() {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(MainActivity.ACTION_RIGHT_REFRESH);
-        mReceive = new MyBroadcastReceive();
+       // mReceive = new MyBroadcastReceive();
         activity.registerReceiver(mReceive, intentFilter); // 注册监听
         CIMListenerManager.registerMessageListener(this, activity);
 //        getSwipeBackLayout().setEdgeTrackingEnabled(SwipeBackLayout.EDGE_TOP_BOTTOM);
