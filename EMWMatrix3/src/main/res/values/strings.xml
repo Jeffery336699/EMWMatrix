@@ -707,10 +707,10 @@
 
     <string name="desc_shrinkup">收起</string>
     <string name="desc_spread">展开更多</string>
-    
+
     <string name="look_details">查看详情</string>
     <string name="i_know">知道了</string>
-    
+
     <string name="time_manager">日程提醒</string>
     <string name="talker_user_defined">  自定义  </string>
     <string name="talker_start_time">开始时间</string>

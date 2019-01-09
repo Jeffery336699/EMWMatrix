@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="@dimen/qb_px_44">
+
+    <ImageView
+        android:layout_width="@dimen/qb_px_32"
+        android:layout_height="@dimen/qb_px_32"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/head"
+        android:id="@+id/ivHead"
+        android:layout_marginLeft="@dimen/qb_px_8" />
+
+    <TextView
+        android:id="@+id/tvCenterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/qb_px_18"
+        android:textColor="#323232"
+        android:text="消息"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/qb_px_20"
+        android:layout_height="@dimen/qb_px_20"
+        android:layout_centerVertical="true"
+        android:id="@+id/ivNotice"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/qb_px_8"
+        android:src="@mipmap/notice_red"
+        />
+    <ImageView
+        android:layout_width="@dimen/qb_px_20"
+        android:layout_height="@dimen/qb_px_20"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ivNotice"
+        android:layout_marginRight="@dimen/qb_px_12"
+        android:src="@mipmap/aite_red"
+        android:id="@+id/ivAite"
+        />
+</RelativeLayout>

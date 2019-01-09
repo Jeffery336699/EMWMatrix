@@ -24,6 +24,7 @@ import org.xutils.view.annotation.ViewInject;
 import cc.emw.mobile.R;
 import cc.emw.mobile.base.BaseFragment;
 import cc.emw.mobile.calendar.fragment.CalendarFragmentView;
+import cc.emw.mobile.contact.CiclerTalkFragment;
 import cc.emw.mobile.contact.ContactFrament;
 import cc.emw.mobile.dynamic.fragment.DynamicFragment;
 import cc.emw.mobile.file.fragment.FileFragment2;
@@ -169,7 +170,8 @@ public class TalkerFragment extends BaseFragment {
                     break;
                 case 2://圈子功能
 //                    fragment = new ContactFragment();
-                    fragment = new ContactFrament();
+//                    fragment = new ContactFrament();
+                    fragment = new CiclerTalkFragment();
                     break;
                 case 3://Timer Tracking
                     //项目
@@ -234,7 +236,7 @@ public class TalkerFragment extends BaseFragment {
                 mTabFileItv.setTextColor(Color.parseColor("#80FFFFFF"));
                 mTabFileTv.setTextColor(Color.parseColor("#80FFFFFF"));
                 break;
-            case R.id.ll_maintab_contact:
+            case R.id.ll_maintab_contact: //圈子
 //                Intent intent = new Intent(getActivity(), ContactActivity.class);
 //                startActivity(intent);
 //                getActivity().overridePendingTransition(R.anim.push_up_in,
