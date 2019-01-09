@@ -1,5 +1,6 @@
 package cc.emw.mobile.main;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.app.NotificationManager;
@@ -16,7 +17,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -39,6 +39,7 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,6 +70,7 @@ import com.zhy.adapter.recyclerview.base.ViewHolder;
 import org.xutils.view.annotation.ContentView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import cc.emw.mobile.EMWApplication;
@@ -82,6 +84,7 @@ import cc.emw.mobile.chat.PhoneBookActivity;
 import cc.emw.mobile.chat.base.ChatContent;
 import cc.emw.mobile.chat.base.NoDoubleClickListener;
 import cc.emw.mobile.chat.model.bean.Connections;
+import cc.emw.mobile.chat.model.bean.Dynamic;
 import cc.emw.mobile.chat.model.bean.EmojiBean;
 import cc.emw.mobile.chat.model.bean.HistoryMessage;
 import cc.emw.mobile.chat.model.bean.Information;
@@ -95,6 +98,7 @@ import cc.emw.mobile.dynamic.fragment.DynamicFragment;
 import cc.emw.mobile.entity.CallInfo;
 import cc.emw.mobile.entity.GroupInfo;
 import cc.emw.mobile.entity.LoginResp;
+import cc.emw.mobile.entity.NoticeComment;
 import cc.emw.mobile.entity.UserNote;
 import cc.emw.mobile.entity.Version;
 import cc.emw.mobile.login.LoginActivity2;
@@ -130,7 +134,6 @@ import cc.emw.mobile.util.statusbar.Eyes;
 import cc.emw.mobile.view.CircleImageView;
 import cc.emw.mobile.view.DiscussEmoticonsKeyBoard;
 import cc.emw.mobile.view.ExViewPager;
-import io.rong.callkit.CallSelectContactActivity;
 import io.rong.callkit.TerminalLoginDialogActivity;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
@@ -183,6 +186,9 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
     private EMWApplication emwApplication;
     private SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView recyclerView;
+    private TextView tvType;
+    private View vEmpty;
+    private View vProgress;
     //private SlidingUpPanelLayout slidLayout;
 
     @Override
@@ -283,6 +289,7 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
             mSlidingMenu.getSecondaryMenu().findViewById(R.id.rightmenu_toppadding).setLayoutParams(lp);
         }
         swipeRefreshLayout = mSlidingMenu.getSecondaryMenu().findViewById(R.id.srl);
+        vProgress = mSlidingMenu.getSecondaryMenu().findViewById(R.id.rl_root_progress);
         // 设定下拉圆圈的背景
         swipeRefreshLayout.setProgressBackgroundColorSchemeColor(Color.WHITE);
         swipeRefreshLayout.setColorSchemeColors(Color.BLUE,
@@ -292,6 +299,8 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         swipeRefreshLayout.setOnRefreshListener(this);
         recyclerView = mSlidingMenu.getSecondaryMenu().findViewById(R.id.ry);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        tvType = mSlidingMenu.getSecondaryMenu().findViewById(R.id.tvType);
+        vEmpty = mSlidingMenu.getSecondaryMenu().findViewById(R.id.kongbai);
         mSlidingMenu.getSecondaryMenu().findViewById(R.id.rl_type_root).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -584,14 +593,14 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         popupView.findViewById(R.id.tv_newst).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtil.showToast(MainActivity.this, "最新");
+                tvType.setText("最新");
                 window.dismiss();
             }
         });
         popupView.findViewById(R.id.tv_talker).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtil.showToast(MainActivity.this, "talker");
+                tvType.setText("talker");
                 getChatList();
                 window.dismiss();
             }
@@ -599,14 +608,16 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         popupView.findViewById(R.id.tv_work).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtil.showToast(MainActivity.this, "工作");
+                tvType.setText("工作");
+                getMessageWork();
                 window.dismiss();
             }
         });
         popupView.findViewById(R.id.tv_notice).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtil.showToast(MainActivity.this, "通知");
+                tvType.setText("通知");
+                getMessageNotice();
                 window.dismiss();
             }
         });
@@ -622,149 +633,236 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
 
     // 获取聊天消息
     public void getChatList() {
+        vProgress.setVisibility(View.VISIBLE);
         API.Message.GetChatRecords(new RequestCallback<HistoryMessage>(
                 HistoryMessage.class) {
 
             @Override
             public void onStarted() {
-
             }
 
             @Override
             public void onError(Throwable arg0, boolean arg1) {
+                vProgress.setVisibility(View.GONE);
                 ToastUtil.showToast(MainActivity.this, "加载失败，请重试...");
             }
 
             @Override
             public void onParseSuccess(final List<HistoryMessage> respList) {
-                if (respList != null) {
-                    m1.clear();
-                    for (HistoryMessage historyMessage : respList) {
-                        if (historyMessage.getMessage() != null) {
-                            m1.add(historyMessage);
-                        }
-                    }
-                    recyclerView.setAdapter(new CommonAdapter<HistoryMessage>(MainActivity.this, R.layout.item_section_char_content, m1) {
-                        @Override
-                        protected void convert(ViewHolder holder, HistoryMessage msg, int position) {
-                            if (msg.getUnReadCount() != 0) {
-                                new QBadgeView(holder.itemView.getContext()).bindTarget(holder.getView(R.id.ivHead)).setBadgeNumber(5).setBadgeBackgroundColor(0xffff4141).setBadgeTextColor(0xffFFFFFF)
-                                        .stroke(0xffffffff, 1, true).setBadgeTextSize(8, true)
-                                        .setGravityOffset(4, 2, true);
-                            } else {
-                                new QBadgeView(holder.itemView.getContext()).bindTarget(holder.getView(R.id.ivHead)).setBadgeBackgroundColor(0x00000000);
-                            }
-
-                            switch (msg.getMessage().getType()) {
-                                case 4://4
-                                    ChatUtils.spannableEmoticonFilter((TextView) holder.getView(R.id.tvContent), msg.getMessage().getContent());
-                                    break;
-                                case 9://9
-//                                    mvh.tvContent.setText("[视频]");
-                                    holder.setText(R.id.tvContent, "[视频]");
-                                    break;
-                                case 42://取消任务共享
-//                                    mvh.tvContent.setText("[取消任务共享]");
-                                    holder.setText(R.id.tvContent, "[取消任务共享]");
-                                    break;
-                                case ApiEnum.MessageType.Audio://8
-//                                    mvh.tvContent.setText("[语音]");
-                                    holder.setText(R.id.tvContent, "[语音]");
-                                    break;
-                                case ApiEnum.MessageType.Image://7
-//                                    mvh.tvContent.setText("[照片]");
-                                    holder.setText(R.id.tvContent, "[照片]");
-                                    break;
-                                case ApiEnum.MessageType.Attach://6
-//                                    mvh.tvContent.setText("[附件]");
-                                    holder.setText(R.id.tvContent, "[附件]");
-                                    break;
-                                case ApiEnum.MessageType.Share://10
-                                    Information data = new Gson().fromJson(msg.getMessage().getContent(), Information.class);
-                                    String base = "[Talker分享] ";
-                                    SpannableString spanStr = new SpannableString(base + data.Content);
-                                    ForegroundColorSpan colorSpan1 = new ForegroundColorSpan(holder.itemView.getContext().getResources().getColor(R.color.dynamicreply_name_text));
-                                    spanStr.setSpan(colorSpan1, 0, base.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-//                                    mvh.tvContent.setText(spanStr);
-                                    ((TextView) holder.getView(R.id.tvContent)).setText(spanStr);
-                                    break;
-                                case ApiEnum.MessageType.Robot://36
-//                                    mvh.tvContent.setText("[智能聊天回复]");
-                                    holder.setText(R.id.tvContent, "[智能聊天回复]");
-                                    break;
-                                case ApiEnum.MessageType.CHAT_LOCATION://38
-//                                    mvh.tvContent.setText("[位置]");
-                                    holder.setText(R.id.tvContent, "[位置]");
-                                    break;
-                                case ChatContent.DYNAMIC://39
-//                                    mvh.tvContent.setText("[分享消息]");
-                                    holder.setText(R.id.tvContent, "[分享消息]");
-                                    break;
-                                case ChatContent.CHAT_SHARE_LOCATION://41
-//                                    mvh.tvContent.setText("[位置共享]");
-                                    holder.setText(R.id.tvContent, "[位置共享]");
-
-                                    break;
-                                //                        case 0:
-                                case ApiEnum.MessageType.PhoneStateMsg://43
-                                    CallInfo callInfo = new Gson().fromJson(msg.getMessage().getContent(), CallInfo.class);
-//                                    mvh.tvContent.setText(callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
-                                    holder.setText(R.id.tvContent, callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
-                                    break;
-                            }
-
-                            // 群组消息
-                            CircleImageView imageView = (CircleImageView) holder.getView(R.id.ivHead);
-                            if (msg.getType() == 2) {
-                                holder.setText(R.id.tvName,"群聊");
-                                (imageView).setImageResource(R.drawable.cm_img_grouphead);
-                                String uriGroup = String.format(Const.DOWN_ICON_URL,
-                                        PrefsUtil.readUserInfo().CompanyCode, msg.getMessage().Group.Image);
-                                DisplayImageOptions optionsGroup = new DisplayImageOptions.Builder()
-                                        //                .showImageOnLoading(R.drawable.cm_img_grouphead)
-                                        //                .showImageForEmptyUri(R.drawable.cm_img_grouphead)
-                                        //                .showImageOnFail(R.drawable.cm_img_grouphead)
-                                        .cacheInMemory(true)
-                                        .bitmapConfig(Bitmap.Config.ALPHA_8)
-                                        .imageScaleType(ImageScaleType.EXACTLY)
-                                        .cacheOnDisk(true).build();
-                                ImageLoader.getInstance().displayImage(uriGroup, new ImageViewAware(imageView), optionsGroup,
-                                        new ImageSize(DisplayUtil.dip2px(holder.itemView.getContext(), 30), DisplayUtil.dip2px(holder.itemView.getContext(), 30)), null, null);
-                                //                        Picasso.with(context)
-                                //                                .load(uriGroup)
-                                //                                .resize(DisplayUtil.dip2px(context, 40), DisplayUtil.dip2px(context, 40))
-                                //                                .centerCrop()
-                                //                                .config(Bitmap.Config.ALPHA_8)
-                                //                                .placeholder(R.drawable.cm_img_grouphead)
-                                //                                .error(R.drawable.cm_img_grouphead)
-                                //                                .into(vh.head);
-                            } else {//TODO:都是走这里
-//                                mvh.tvName.setText(msg.Receiver.Name);
-                                holder.setText(R.id.tvName, msg.Receiver.Name);
-                                imageView.setTvBg(EMWApplication.getIconColor(msg.Receiver.ID), msg.Receiver.Name, 30);
-                                String uriUser = String.format(Const.DOWN_ICON_URL,
-                                        PrefsUtil.readUserInfo().CompanyCode, msg.Receiver.Image);
-                                ImageLoader.getInstance().displayImage(uriUser, new ImageViewAware(imageView), options,
-                                        new ImageSize(DisplayUtil.dip2px(holder.itemView.getContext(), 30), DisplayUtil.dip2px(holder.itemView.getContext(), 30)), null, null);
-                            }
-//                            mvh.tvTime.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
-                            holder.setText(R.id.tvTextTime, StringUtils.friendly_time(msg.getMessage().getCreateTime()));
-                        }
-                    });
+                vProgress.setVisibility(View.GONE);
+                if (respList == null || respList.size() == 0) {
+                    recyclerView.setVisibility(View.GONE);
+                    vEmpty.setVisibility(View.VISIBLE);
+                    return;
                 }
+                vEmpty.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
+                m1.clear();
+                for (HistoryMessage historyMessage : respList) {
+                    if (historyMessage.getMessage() != null) {
+                        m1.add(historyMessage);
+                    }
+                }
+                recyclerView.setAdapter(new CommonAdapter<HistoryMessage>(MainActivity.this, R.layout.item_section_char_content, m1) {
+                    @Override
+                    protected void convert(ViewHolder holder, HistoryMessage msg, int position) {
+                        if (msg.getUnReadCount() != 0) {
+                            new QBadgeView(holder.itemView.getContext()).bindTarget(holder.getView(R.id.ivHead)).setBadgeNumber(5).setBadgeBackgroundColor(0xffff4141).setBadgeTextColor(0xffFFFFFF)
+                                    .stroke(0xffffffff, 1, true).setBadgeTextSize(8, true)
+                                    .setGravityOffset(4, 2, true);
+                        } else {
+                            new QBadgeView(holder.itemView.getContext()).bindTarget(holder.getView(R.id.ivHead)).setBadgeBackgroundColor(0x00000000);
+                        }
+
+                        switch (msg.getMessage().getType()) {
+                            case 4://4
+                                ChatUtils.spannableEmoticonFilter((TextView) holder.getView(R.id.tvContent), msg.getMessage().getContent());
+                                break;
+                            case 9://9
+//                                    mvh.tvContent.setText("[视频]");
+                                holder.setText(R.id.tvContent, "[视频]");
+                                break;
+                            case 42://取消任务共享
+//                                    mvh.tvContent.setText("[取消任务共享]");
+                                holder.setText(R.id.tvContent, "[取消任务共享]");
+                                break;
+                            case ApiEnum.MessageType.Audio://8
+//                                    mvh.tvContent.setText("[语音]");
+                                holder.setText(R.id.tvContent, "[语音]");
+                                break;
+                            case ApiEnum.MessageType.Image://7
+//                                    mvh.tvContent.setText("[照片]");
+                                holder.setText(R.id.tvContent, "[照片]");
+                                break;
+                            case ApiEnum.MessageType.Attach://6
+//                                    mvh.tvContent.setText("[附件]");
+                                holder.setText(R.id.tvContent, "[附件]");
+                                break;
+                            case ApiEnum.MessageType.Share://10
+                                Information data = new Gson().fromJson(msg.getMessage().getContent(), Information.class);
+                                String base = "[Talker分享] ";
+                                SpannableString spanStr = new SpannableString(base + data.Content);
+                                ForegroundColorSpan colorSpan1 = new ForegroundColorSpan(holder.itemView.getContext().getResources().getColor(R.color.dynamicreply_name_text));
+                                spanStr.setSpan(colorSpan1, 0, base.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+//                                    mvh.tvContent.setText(spanStr);
+                                ((TextView) holder.getView(R.id.tvContent)).setText(spanStr);
+                                break;
+                            case ApiEnum.MessageType.Robot://36
+//                                    mvh.tvContent.setText("[智能聊天回复]");
+                                holder.setText(R.id.tvContent, "[智能聊天回复]");
+                                break;
+                            case ApiEnum.MessageType.CHAT_LOCATION://38
+//                                    mvh.tvContent.setText("[位置]");
+                                holder.setText(R.id.tvContent, "[位置]");
+                                break;
+                            case ChatContent.DYNAMIC://39
+//                                    mvh.tvContent.setText("[分享消息]");
+                                holder.setText(R.id.tvContent, "[分享消息]");
+                                break;
+                            case ChatContent.CHAT_SHARE_LOCATION://41
+//                                    mvh.tvContent.setText("[位置共享]");
+                                holder.setText(R.id.tvContent, "[位置共享]");
+
+                                break;
+                            //                        case 0:
+                            case ApiEnum.MessageType.PhoneStateMsg://43
+                                CallInfo callInfo = new Gson().fromJson(msg.getMessage().getContent(), CallInfo.class);
+//                                    mvh.tvContent.setText(callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
+                                holder.setText(R.id.tvContent, callInfo.type == 1 ? "[语音通话]" : "[视频通话]");
+                                break;
+                        }
+
+                        // 群组消息
+                        CircleImageView imageView = (CircleImageView) holder.getView(R.id.ivHead);
+                        if (msg.getType() == 2) {
+                            holder.setText(R.id.tvName, "群聊");
+                            (imageView).setImageResource(R.drawable.cm_img_grouphead);
+                            String uriGroup = String.format(Const.DOWN_ICON_URL,
+                                    PrefsUtil.readUserInfo().CompanyCode, msg.getMessage().Group.Image);
+                            DisplayImageOptions optionsGroup = new DisplayImageOptions.Builder()
+                                    //                .showImageOnLoading(R.drawable.cm_img_grouphead)
+                                    //                .showImageForEmptyUri(R.drawable.cm_img_grouphead)
+                                    //                .showImageOnFail(R.drawable.cm_img_grouphead)
+                                    .cacheInMemory(true)
+                                    .bitmapConfig(Bitmap.Config.ALPHA_8)
+                                    .imageScaleType(ImageScaleType.EXACTLY)
+                                    .cacheOnDisk(true).build();
+                            ImageLoader.getInstance().displayImage(uriGroup, new ImageViewAware(imageView), optionsGroup,
+                                    new ImageSize(DisplayUtil.dip2px(holder.itemView.getContext(), 30), DisplayUtil.dip2px(holder.itemView.getContext(), 30)), null, null);
+                            //                        Picasso.with(context)
+                            //                                .load(uriGroup)
+                            //                                .resize(DisplayUtil.dip2px(context, 40), DisplayUtil.dip2px(context, 40))
+                            //                                .centerCrop()
+                            //                                .config(Bitmap.Config.ALPHA_8)
+                            //                                .placeholder(R.drawable.cm_img_grouphead)
+                            //                                .error(R.drawable.cm_img_grouphead)
+                            //                                .into(vh.head);
+                        } else {//TODO:都是走这里
+//                                mvh.tvName.setText(msg.Receiver.Name);
+                            holder.setText(R.id.tvName, msg.Receiver.Name);
+                            imageView.setTvBg(EMWApplication.getIconColor(msg.Receiver.ID), msg.Receiver.Name, 30);
+                            String uriUser = String.format(Const.DOWN_ICON_URL,
+                                    PrefsUtil.readUserInfo().CompanyCode, msg.Receiver.Image);
+                            ImageLoader.getInstance().displayImage(uriUser, new ImageViewAware(imageView), options,
+                                    new ImageSize(DisplayUtil.dip2px(holder.itemView.getContext(), 30), DisplayUtil.dip2px(holder.itemView.getContext(), 30)), null, null);
+                        }
+//                            mvh.tvTime.setText(StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+                        holder.setText(R.id.tvTextTime, StringUtils.friendly_time(msg.getMessage().getCreateTime()));
+                    }
+                });
             }
         });
     }
 
-    /*@Event(R.id.itv_dynamicbottom_send)
-    private void onSendClick(View v) {
-        String content = mCommentContentEt.getText().toString().trim();
-        if (TextUtils.isEmpty(content)) {
-            ToastUtil.showToast(this, R.string.empty_content_tips);
-        } else {
-            reply(content, Integer.valueOf(v.getTag(R.id.tag_first).toString()), Boolean.valueOf(v.getTag(R.id.tag_second).toString()));
-        }
-    }*/
+    public static ArrayList<ApiEntity.Message> m2 = new ArrayList<>();//Work
+    public static ArrayList<ApiEntity.Message> m3 = new ArrayList<>();//Information
+
+    // 获取工作消息
+    public void getMessageWork() {
+        vProgress.setVisibility(View.VISIBLE);
+        API.Message.GetUserWorkMessages(1, 20, new RequestCallback<ApiEntity.Message>(ApiEntity.Message.class) {
+            @Override
+            public void onError(Throwable throwable, boolean b) {
+                vProgress.setVisibility(View.GONE);
+                Log.d("zrjt", "WorkError");
+            }
+
+            @Override
+            public void onParseSuccess(final List<ApiEntity.Message> respList) {
+                vProgress.setVisibility(View.GONE);
+                if (respList == null || respList.size() == 0) {
+                    recyclerView.setVisibility(View.GONE);
+                    vEmpty.setVisibility(View.VISIBLE);
+                    return;
+                }
+                vEmpty.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
+                recyclerView.setAdapter(new CommonAdapter<ApiEntity.Message>(MainActivity.this, R.layout.item_section_content, respList) {
+
+                    @Override
+                    protected void convert(ViewHolder holder, ApiEntity.Message message, int position) {
+
+                    }
+                });
+            }
+        });
+    }
+
+    /////////////////////////////// 评论通知 ///////////////////////
+    private List<ApiEntity.Message> comments = new ArrayList<>();
+    public static List<NoticeComment> noticeComments;
+    private int topId;  //标记是否为同一条动态
+
+    // 获取通知消息
+    public void getMessageNotice() {
+        vProgress.setVisibility(View.VISIBLE);
+        API.Message.GetUserNoticeMessages(1, 20, new RequestCallback<ApiEntity.Message>(ApiEntity.Message.class) {
+            @Override
+            public void onError(Throwable throwable, boolean b) {
+                Log.d("zrjt", "NoticeError");
+                vProgress.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onParseSuccess(final List<ApiEntity.Message> respList) {
+                vProgress.setVisibility(View.GONE);
+                m3.clear();
+                for (int i = 0; i < respList.size(); i++) {
+                    ApiEntity.Message message = respList.get(i);
+                    /**
+                     * 23新发布Talker通知
+                     * 30离开群组通知
+                     * 14talker回复通知
+                     * 35 CallUserApply
+                     * 需要改：
+                     * 11talker分享
+                     * 12群组邀请
+                     * 14talker回复通知
+                     * 13talker收藏
+                     */
+//                                if (message.Type == 23 || message.Type == 30 || message.Type == 14 || message.Type == 35) {//原来
+                    if (message.Type == 23 || message.Type == 30 || message.Type == 14 || message.Type == 35 || message.Type == 15) {//测试15关注通知
+                        m3.add(message);
+                    }
+                }
+                if (m3.size() == 0) {
+                    recyclerView.setVisibility(View.GONE);
+                    vEmpty.setVisibility(View.VISIBLE);
+                    return;
+                }
+
+                recyclerView.setVisibility(View.VISIBLE);
+                vEmpty.setVisibility(View.GONE);
+                recyclerView.setAdapter(new CommonAdapter<ApiEntity.Message>(MainActivity.this, R.layout.item_section_content, m3) {
+
+                    @Override
+                    protected void convert(ViewHolder holder, ApiEntity.Message message, int position) {
+
+                    }
+                });
+            }
+        });
+    }
 
     @Override
     protected void onNewIntent(Intent intent) {
@@ -790,16 +888,11 @@ public class MainActivity extends BaseActivity implements CIMEventListener, Logi
         //检查是否处于刷新状态
         if (!isRefresh) {
             isRefresh = true;
-            new Handler().postDelayed(new Runnable() {
-                public void run() {
-
-                    //显示或隐藏刷新进度条
-                    swipeRefreshLayout.setRefreshing(false);
-                    //修改adapter的数据
-                    getChatList();
-                    isRefresh = false;
-                }
-            }, 1000);
+            //显示或隐藏刷新进度条
+            swipeRefreshLayout.setRefreshing(false);
+            //修改adapter的数据
+            getChatList();
+            isRefresh = false;
         }
     }
 
