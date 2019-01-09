@@ -8,6 +8,7 @@
 
     <include layout="@layout/cicler_layout_head">
     </include>
+    <include layout="@layout/cicler_search_layout"/>
 
     <android.support.v4.view.ViewPager
         android:layout_weight="1"
