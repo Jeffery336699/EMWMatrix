@@ -105,11 +105,11 @@
         android:scrollbars="none" />
 
     <ListView
-        android:paddingLeft="16dp"
         android:id="@+id/rc_listview_select_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:divider="#9AB2C2"
         android:dividerHeight="0.5dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:paddingLeft="16dp" />
 
 </LinearLayout>

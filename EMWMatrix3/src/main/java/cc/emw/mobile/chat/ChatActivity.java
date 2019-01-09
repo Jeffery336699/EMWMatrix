@@ -1629,11 +1629,23 @@ public class ChatActivity extends ChatBaseActivity<IChatView, ChatNetPersenterIm
         });
     }
 
+
     private void openFunction(int pos) {
         switch (pos) {
             case 0://相机
-                closeContentAppAnim(1001);
-                mRlLine.setVisibility(View.VISIBLE);
+                if(ContextCompat.checkSelfPermission(this,  Manifest.permission.CAMERA) ==
+                    PackageManager.PERMISSION_DENIED){
+                    Log.d("junjun","缺少相机权限");
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},0);
+                }else{
+                    closeContentAppAnim(1001);
+                    mRlLine.setVisibility(View.VISIBLE);
+                }
+
+
+
+
+
                 /*if (mChatButtonMenu2.getVisibility() == View.GONE) {
                     openContentAppMenuAnim();
                     if (mChatButtonMenu.getVisibility() == View.VISIBLE) {
@@ -4475,6 +4487,10 @@ public class ChatActivity extends ChatBaseActivity<IChatView, ChatNetPersenterIm
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         // 此处为android 6.0以上动态授权的回调，用户自行实现。
+      if(requestCode==0){
+          closeContentAppAnim(1001);
+          mRlLine.setVisibility(View.VISIBLE);
+      }
     }
 
     /*
