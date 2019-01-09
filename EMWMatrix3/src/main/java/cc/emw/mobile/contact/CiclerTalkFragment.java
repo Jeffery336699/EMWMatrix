@@ -20,6 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import cc.emw.mobile.R;
+import cc.emw.mobile.contact.fragment.GroupFragmentNew;
 
 public class CiclerTalkFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -100,7 +101,7 @@ public class CiclerTalkFragment extends Fragment {
         public MainAdapter(FragmentManager fm) {
             super(fm);
             fragments.add(TextFragment.newInstance(titles[0]));
-            fragments.add(TextFragment.newInstance(titles[1]));
+            fragments.add(new GroupFragmentNew());
             fragments.add(TextFragment.newInstance(titles[2]));
             fragments.add(TextFragment.newInstance(titles[3]));
         }
