@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/qb_px_14"
+        android:paddingRight="@dimen/qb_px_14"
+        android:paddingBottom="@dimen/qb_px_12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/qb_px_8"
+            android:layout_marginBottom="@dimen/qb_px_8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivSmallPoint"
+                    android:layout_width="@dimen/qb_px_8"
+                    android:layout_height="@dimen/qb_px_8"
+                    android:layout_marginTop="@dimen/qb_px_6"
+                    android:layout_marginRight="@dimen/qb_px_10"
+                    android:src="@drawable/small_point" />
+
+                <TextView
+                    android:id="@+id/tvTextContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/qb_px_4"
+                    android:text="这是文本内容。。。。这是文本内容。。。。"
+                    android:textColor="#48495F"
+                    android:textSize="@dimen/qb_px_12" />
+
+                <TextView
+                    android:id="@+id/tvTextTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/qb_px_15"
+                    android:text="昨天"
+                    android:textColor="#48495F"
+                    android:textSize="@dimen/qb_px_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/qb_px_5"
+                android:background="@drawable/bt_bg_shape"
+                android:gravity="center_vertical"
+                android:padding="@dimen/qb_px_6"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/file_blue" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/qb_px_4"
+                    android:text="完成企业app原型图"
+                    android:textColor="#2A9FF6"
+                    android:textSize="@dimen/qb_px_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/qb_px_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/qb_px_6"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+                </View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/qb_px_4"
+                    android:layout_marginRight="@dimen/qb_px_16"
+                    android:text="取消"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/qb_px_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/green_shape"
+                    android:paddingLeft="@dimen/qb_px_15"
+                    android:paddingTop="@dimen/qb_px_2"
+                    android:paddingRight="@dimen/qb_px_15"
+                    android:paddingBottom="@dimen/qb_px_2"
+                    android:text="同意"
+                    android:textColor="#3DC844"
+                    android:textSize="@dimen/qb_px_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
