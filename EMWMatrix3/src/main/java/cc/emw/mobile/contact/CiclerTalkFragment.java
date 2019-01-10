@@ -1,6 +1,7 @@
 package cc.emw.mobile.contact;
 
 import android.os.Bundle;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -21,6 +22,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import cc.emw.mobile.R;
 import cc.emw.mobile.contact.fragment.GroupFragmentNew;
+import cc.emw.mobile.contact.fragment.MessageFragmentNew;
 
 public class CiclerTalkFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
@@ -100,7 +102,7 @@ public class CiclerTalkFragment extends Fragment {
 
         public MainAdapter(FragmentManager fm) {
             super(fm);
-            fragments.add(TextFragment.newInstance(titles[0]));
+            fragments.add(MessageFragmentNew.newInstance(new Bundle()));
             fragments.add(new GroupFragmentNew());
             fragments.add(TextFragment.newInstance(titles[2]));
             fragments.add(TextFragment.newInstance(titles[3]));
