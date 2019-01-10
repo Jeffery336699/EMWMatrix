@@ -159,5 +159,5 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     api project(':Indicator')
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
 }

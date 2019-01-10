@@ -12,7 +12,7 @@ public class PublicChannelFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.personal_fragment, container, false);
+        View view = inflater.inflate(R.layout.public_channel_fragment, container, false);
         return view;
     }
 }

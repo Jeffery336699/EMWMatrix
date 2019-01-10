@@ -8,8 +8,10 @@
       <module fileurl="file://$PROJECT_DIR$/EMWMatrix3/EMWMatrix3.iml" filepath="$PROJECT_DIR$/EMWMatrix3/EMWMatrix3.iml" />
       <module fileurl="file://$PROJECT_DIR$/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/IMKit/IMKit.iml" />
       <module fileurl="file://$PROJECT_DIR$/IMLib/IMLib.iml" filepath="$PROJECT_DIR$/IMLib/IMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Indicator/Indicator.iml" filepath="$PROJECT_DIR$/Indicator/Indicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaterialDesignDemo/MaterialDesignDemo.iml" filepath="$PROJECT_DIR$/MaterialDesignDemo/MaterialDesignDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Talker.iml" filepath="$PROJECT_DIR$/.idea/Talker.iml" />
       <module fileurl="file://$PROJECT_DIR$/libsBarcodescanner/libsBarcodescanner.iml" filepath="$PROJECT_DIR$/libsBarcodescanner/libsBarcodescanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/libsCircleProgressView/libsCircleProgressView.iml" filepath="$PROJECT_DIR$/libsCircleProgressView/libsCircleProgressView.iml" />
       <module fileurl="file://$PROJECT_DIR$/libsCrop/libsCrop.iml" filepath="$PROJECT_DIR$/libsCrop/libsCrop.iml" />

@@ -6,11 +6,7 @@
     android:background="@color/cm_bg"
     android:orientation="vertical"
     tools:context="cc.emw.mobile.contact.fragment.GroupFragment">
-<android.support.v4.widget.SwipeRefreshLayout
-    android:id="@+id/refresh"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,18 +33,7 @@
 
     </LinearLayout>
 
-</android.support.v4.widget.SwipeRefreshLayout>
 
 
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/iv_add_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
-        android:layout_marginBottom="49dp"
-        android:layout_marginRight="12dp"
-        android:background="@null"
-        android:src="@drawable/chat_add"
-        app:fab_shadow="false" />
 
 </FrameLayout>

@@ -109,7 +109,7 @@ public class TalkerFragment extends BaseFragment {
             String action = intent.getAction();
             if (ACTION_TALKER_ITEM.equals(action)) {
                 int item = intent.getIntExtra("item", 0);
-                Log.d(TAG, "onReceive()-> item = "+item);
+                Log.d(TAG, "onReceive()-> item = " + item);
                 View v = new View(getActivity());
                 switch (item) {
                     case 0:
@@ -170,7 +170,7 @@ public class TalkerFragment extends BaseFragment {
                     break;
                 case 2://圈子功能
 //                    fragment = new ContactFragment();
-//                    fragment = new ContactFrament();
+                    // fragment = new ContactFrament();
                     fragment = new CiclerTalkFragment();
                     break;
                 case 3://Timer Tracking

@@ -44,6 +44,7 @@ public class AddFriendActivity extends BaseActivity implements ViewPager.OnPageC
         super.onCreate(savedInstanceState);
         getSwipeBackLayout().setEdgeTrackingEnabled(SwipeBackLayout.EDGE_TOP);
         init();
+
     }
 
     private void init() {

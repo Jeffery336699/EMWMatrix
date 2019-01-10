@@ -181,8 +181,8 @@ public class AlphaTabView extends View {
      * badge
      */
     private void drawBadge(Canvas canvas) {
-        int i = getMeasuredWidth() / 10;
-        int j = getMeasuredHeight() / 5;
+        int i = getMeasuredWidth() / 14 ;
+        int j = getMeasuredHeight() / 9;
         i = i >= j ? j : i;
         if (mBadgeNumber > 0) {
             Paint backgroundPaint = new Paint();
