@@ -37,6 +37,11 @@ public class SlideRecyclerView extends RecyclerView {
     private ViewGroup mFlingView;   // 触碰的子View
     private int mPosition;  // 触碰的view的位置
     private int mMenuViewWidth;    // 菜单按钮宽度
+    private static final int VOICEFACTORY=3;//scorll速度因子
+    private int mMenuSumWidth;//总菜单宽度
+    private boolean isCurOpen;
+    private int flag=-1;//0之前  1现在
+    private View mCacheView;
 
     public SlideRecyclerView(Context context) {
         this(context, null);
@@ -66,27 +71,36 @@ public class SlideRecyclerView extends RecyclerView {
         switch (e.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 if (!mScroller.isFinished()) {  // 如果动画还没停止，则立即终止动画
-                    mScroller.abortAnimation();
+//                    mScroller.abortAnimation();
+                    return super.onInterceptTouchEvent(e);
                 }
                 mFirstX = mLastX = x;
                 mFirstY = y;
                 mPosition = pointToPosition(x, y);  // 获取触碰点所在的position
                 if (mPosition != INVALID_POSITION) {
-                    View view = mFlingView;
+
+
+                    mCacheView = mFlingView;
                     // 获取触碰点所在的view
                     mFlingView = (ViewGroup) getChildAt(mPosition - ((LinearLayoutManager) getLayoutManager()).findFirstVisibleItemPosition());
-                    // 这里判断一下如果之前触碰的view已经打开，而当前碰到的view不是那个view则立即关闭之前的view，此处并不需要担动画没完成冲突，因为之前已经abortAnimation
-                    if (view != null && mFlingView != view && view.getScrollX() != 0) {
-                        view.scrollTo(0, 0);
-                    }
                     // 这里进行了强制的要求，RecyclerView的子ViewGroup必须要有2个子view,这样菜单按钮才会有值，
                     // 需要注意的是:如果不定制RecyclerView的子View，则要求子View必须要有固定的width。
                     // 比如使用LinearLayout作为根布局，而content部分width已经是match_parent，此时如果菜单view用的是wrap_content，menu的宽度就会为0。
                     if (mFlingView.getChildCount() == 2) {
-                        mMenuViewWidth = mFlingView.getChildAt(1).getWidth();
+                        mMenuSumWidth = mFlingView.getChildAt(1).getWidth();
+                        mMenuViewWidth = mMenuSumWidth/3;
                     } else {
                         mMenuViewWidth = INVALID_CHILD_WIDTH;
                     }
+                    // 这里判断一下如果之前触碰的view已经打开，而当前碰到的view不是那个view则立即关闭之前的view，此处并不需要担动画没完成冲突，因为之前已经abortAnimation
+                    if (mCacheView != null && mFlingView != mCacheView && mCacheView.getScrollX() != 0) {
+//                        view.scrollTo(0, 0);
+                        int scrollX = mCacheView.getScrollX();
+                        flag=0;
+                        mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX)*VOICEFACTORY);
+                        invalidate();
+                    }
+
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -113,6 +127,10 @@ public class SlideRecyclerView extends RecyclerView {
 
     @Override
     public boolean onTouchEvent(MotionEvent e) {
+        if (!mScroller.isFinished()) {  // 如果动画还没停止，则立即终止动画
+//                    mScroller.abortAnimation();
+            return super.onTouchEvent(e);
+        }
         if (mIsSlide && mPosition != INVALID_POSITION) {
             float x = e.getX();
             obtainVelocity(e);
@@ -125,7 +143,8 @@ public class SlideRecyclerView extends RecyclerView {
                         float dx = mLastX - x;
                         int scrollX = mFlingView.getScrollX();
                         Log.i(TAG, "onTouchEvent: ----dx:"+dx+",scrollX:"+scrollX);
-                        if (mFlingView.getScrollX() + dx <= mMenuViewWidth
+//                        if (mFlingView.getScrollX() + dx <= mMenuViewWidth
+                        if (mFlingView.getScrollX() + dx <= mMenuSumWidth
                                 && mFlingView.getScrollX() + dx > 0) {
                             mFlingView.scrollBy((int) dx, 0);
                         }
@@ -140,15 +159,25 @@ public class SlideRecyclerView extends RecyclerView {
                         // 1.菜单被拉出宽度大于菜单宽度一半；
                         // 2.横向滑动速度大于最小滑动速度；
                         // 注意：之所以要小于负值，是因为向左滑则速度为负值
+
                         if (mVelocityTracker.getXVelocity() < -SNAP_VELOCITY) {    // 向左侧滑达到侧滑最低速度，则打开
-                            mScroller.startScroll(scrollX, 0, mMenuViewWidth - scrollX, 0, Math.abs(mMenuViewWidth - scrollX));
+                            mScroller.startScroll(scrollX, 0, mMenuSumWidth - scrollX, 0, Math.abs(mMenuSumWidth - scrollX)*VOICEFACTORY);
+                            isCurOpen=true;
                         } else if (mVelocityTracker.getXVelocity() >= SNAP_VELOCITY) {  // 向右侧滑达到侧滑最低速度，则关闭
-                            mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX));
-                        } else if (scrollX >= mMenuViewWidth / 2) { // 如果超过删除按钮一半，则打开
-                            mScroller.startScroll(scrollX, 0, mMenuViewWidth - scrollX, 0, Math.abs(mMenuViewWidth - scrollX));
-                        } else {    // 其他情况则关闭
-                            mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX));
+                            mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX)*VOICEFACTORY);
+                            isCurOpen=false;
+                        } else if (scrollX >= mMenuViewWidth / 2&&!isCurOpen) { // 如果超过删除按钮一半，则打开
+                            mScroller.startScroll(scrollX, 0, mMenuSumWidth - scrollX, 0, Math.abs(mMenuSumWidth - scrollX)*VOICEFACTORY);
+                            isCurOpen=true;
+                        }else if (scrollX<=mMenuSumWidth*5/6&&isCurOpen){
+                            mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX)*VOICEFACTORY);
+                            isCurOpen=false;
+                        }else if (scrollX>mMenuSumWidth*5/6&&isCurOpen){
+                            mScroller.startScroll(scrollX,0,mMenuSumWidth-scrollX,0,Math.abs(mMenuSumWidth - scrollX)*VOICEFACTORY);
+                        }else {    // 其他情况则关闭
+                            mScroller.startScroll(scrollX, 0, -scrollX, 0, Math.abs(scrollX)*VOICEFACTORY);
                         }
+                        flag=1;
                         invalidate();
                     }
                     mMenuViewWidth = INVALID_CHILD_WIDTH;
@@ -208,8 +237,11 @@ public class SlideRecyclerView extends RecyclerView {
 
     @Override
     public void computeScroll() {
-        if (mScroller.computeScrollOffset()) {
+        if (mScroller.computeScrollOffset()&&flag==1) {
             mFlingView.scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
+            invalidate();
+        }else if (mScroller.computeScrollOffset()&&flag==0){
+            mCacheView.scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             invalidate();
         }
     }
